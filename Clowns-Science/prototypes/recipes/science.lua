@@ -326,8 +326,8 @@ data:extend(
 			},
 			{
 				icon = "__angelsrefining__/graphics/icons/num_3.png",
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
 				icon_size = 32,
+				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
 				scale = 0.32,
 				shift = {-12, -12}
 			},
