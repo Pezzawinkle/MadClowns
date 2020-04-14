@@ -1,4 +1,8 @@
 ﻿---------------------------------------------------------------------------------------------------
+Version: 1.0.20
+  Bugfixes:
+    - Fixed error with the icon size of production science pack
+---------------------------------------------------------------------------------------------------
 Version: 1.0.19
   Bugfixes:
     - Fixed icon size of production science pack (due to omni-science update)
