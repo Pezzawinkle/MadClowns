@@ -1,0 +1,141 @@
+﻿---------------------------------------------------------------------------------------------------
+Version: 1.0.19
+  Bugfixes:
+    - Fixed icon size of production science pack (due to omni-science update)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.18
+  Bugfixes:
+    - Updated icon reference to be angelsrefining not angelspetrochem
+---------------------------------------------------------------------------------------------------
+Version: 1.0.17
+  Bugfixes:
+    - Fixed typo in info.json relating to bobwarfare
+---------------------------------------------------------------------------------------------------
+Version: 1.0.16
+  Bugfixes:
+    - Updated science pack icon sizes being wrong (for real this time)
+      - Had an issue with the icon replace script for the bob colour update
+---------------------------------------------------------------------------------------------------
+Version: 1.0.15
+  Bugfixes:
+    - Updated science pack icon sizes being wrong
+---------------------------------------------------------------------------------------------------
+Version: 1.0.14
+  Features:
+    - Updated for 0.18
+    - Pretty sure i will have to do some graphical tweaks for the next update.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.13
+  Features:
+    - Added support for bobs burner-phase tech options (i may look at adding more burner phase heavy mod support on request)
+  Bugfixes:
+    - Fixed that the alt science pack 2 was active from the start
+---------------------------------------------------------------------------------------------------
+Version: 1.0.12
+  Bugfixes:
+    - Added thumbnail to mod
+    - Fixed changelog formatting
+    - Fixed science icon bug when using omnimatter (Zelos's overriding Bobs colourupdate setting) 
+---------------------------------------------------------------------------------------------------
+Version: 1.0.11
+  Bugfixes:
+    - Fixed inherent dependancy on clowns extended materials (osmium plate in prod pack 2)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.10
+  Bugfixes:
+    - Cleaned up omnimatter overrides to be less intense (except when using the forge pack)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.09
+  Bugfixes:
+    - Rebalanced Chemical and Military packs, fixed a productivity problem
+---------------------------------------------------------------------------------------------------
+Version: 1.0.08
+  Features:
+    - Updated for 0.17, (up to 0.17.34, not sure if works beyond that yet), may have a few bugs with gas based recipes unlocking at the wrong time
+---------------------------------------------------------------------------------------------------
+Version: 1.0.07
+  Balance:
+    - Rebalanced facility recipes, replaced electrum alloy with osmium
+---------------------------------------------------------------------------------------------------
+Version: 1.0.06
+  Bugfixes:
+    - Updated dependencies.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.05
+  Bugfixes:
+    - Fixed a settings bug.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.04
+  Features:
+    - Added German locale thanks to Steino.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.03
+  Features:
+    - Added compatibility with new bob's tech icon changes.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.02
+  Features:
+    - Added productivity module supports.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.01
+  Bugfixes:
+    - Adjusted Particle Accelerator recipe, tech names.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.00
+  Bugfixes:
+    - Brought code into line with other MadClown01 mods.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.09
+  Bugfixes:
+    - Fixed a phenomenally small-yet-bad bug.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.08
+  Features:
+    - Made bobwarefare into an optional dependency
+    - Made relevant recipe only added when bobwarefare present
+---------------------------------------------------------------------------------------------------
+Version: 0.1.07
+  Balance:
+    - Added sir_cherry overrides for OmniMods to increase complexity of alternative sci pack recipes
+    - Rebalanced facility pollution generation.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.06
+  Balance:
+    - Facility recipes rebalanced by increasing base crafting times from 12 seconds to 24.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.05
+  Bugfixes:
+    - Bug fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.1.04
+  Features:
+    - Added more Particle Accelerator recipes
+    - Added opt-out space science pack generation
+    - Added MK2 Particle Accelerator, added MK2 & MK3 Facility
+  Bugfixes:
+    - Fixed icons
+    - Fixed Particle Accelerator being craftable from the start of the game
+  Balance:
+    - Rebalanced Particle Accelerator stats - doubled power use, eliminated pollution
+    - Many small icon, tech and category changes
+---------------------------------------------------------------------------------------------------
+Version: 0.1.03
+  Bugfixes:
+    - Updated dependencies
+---------------------------------------------------------------------------------------------------
+Version: 0.1.02
+  Features:
+    - Added Particle Collider
+    - Added usage of Omni icons where appropriate
+  Balance:
+    - Rebalanced Science Facility power usage from 6MW to 4MW
+---------------------------------------------------------------------------------------------------
+Version: 0.1.01
+  Support:
+    - Added support to OmniMods
+  Bugfixes:
+    - Fixed bug preventing logistic Science Facility recipe from showing
+---------------------------------------------------------------------------------------------------
+Version: 0.1.00
+  Updates:
+    - Initial release
