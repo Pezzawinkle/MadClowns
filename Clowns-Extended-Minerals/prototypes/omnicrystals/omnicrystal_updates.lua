@@ -43,14 +43,15 @@ for _,oreSet in pairs(oresList) do
 		toAdd[#toAdd+1] = {
 			type = "recipe",
 			name = oreSet.ore.."-"..gradeSet.."-salting",
-			localised_name = {"recipe-name.omnide-salting", oreSet.ore,{ "lookup."..gradeSet }},
-			localised_description = {"recipe-description.omnide-salting", { "lookup."..gradeSet }, oreSet.name},
+			localised_name = {"recipe-name.omnide-salting", "lookup."..gradeSet , oreSet.name},
+			localised_description = {"recipe-description.omnide-salting",  "lookup."..gradeSet , oreSet.name},
 			category = "omniplant",
 			subgroup = base.subgroup.."-omnide",
 			enabled = false,
 			ingredients = ing,
 			order = "b[clownsore1-crushed]",
 			icons = ic,
+			icon_size=32,
 			results = res,
 			energy_required = 5,
 		}
