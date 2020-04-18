@@ -55,7 +55,6 @@ salt_omnide_icon = function(metal)
 	elseif data.raw.item[metal].icons and data.raw.item[metal].icons[1].icon then
 		icon_2=data.raw.item[metal].icons[1].icon
 	end
-	log(serpent.block(icon_2))
 	icons[#icons+1] = {icon = "__omnimatter_crystal__/graphics/icons/omnide-salt.png",icon_size=32}
 	icons[#icons+1] = {
 		icon = icon_2,
@@ -103,12 +102,11 @@ add_crystal=function(metal,name,recipe, techlvl)
 	if data.raw.item[metal] then
 		omni.crystal.metals[#omni.crystal.metals+1]=data.raw.item[metal]
 		crystalines={}
-		local loc_key = {name}
 		local crystal =   {
 			type = "item",
 			name = metal.."-crystal",
-			localised_name = {"item-name.crystal", loc_key},
-			localised_description = {"recipe-description.pure_extraction", loc_key},
+			localised_name = {"item-name.crystal", name},
+			localised_description = {"recipe-description.pure_extraction", name},
 			icons={{icon = "__Clowns-Extended-Minerals__/graphics/icons/omnicrystals/"..metal.."-crystal.png",icon_size = 32,}},
 			subgroup = "crystallization",
 			fuel_category = "crystal",
@@ -121,8 +119,8 @@ add_crystal=function(metal,name,recipe, techlvl)
 		local shard =   {
 			type = "item",
 			name = metal.."-shard",
-			localised_name = {"item-name.shard", loc_key},
-			localised_description = {"recipe-description.pure_extraction", loc_key},
+			localised_name = {"item-name.shard", name},
+			localised_description = {"recipe-description.pure_extraction", name},
 			icons = ic,
 			subgroup = "crystallization",
 			stack_size = 200
@@ -134,7 +132,7 @@ add_crystal=function(metal,name,recipe, techlvl)
 			type = "fluid",
 			name = metal.."-omnide-solution",
 			icon_size = 32,
-			localised_name = {"fluid-name.omnide-solution", loc_key},
+			localised_name = {"fluid-name.omnide-solution", name},
 			icons = ic,
 			icon_size=32,
 			default_temperature = 25,
@@ -153,7 +151,7 @@ add_crystal=function(metal,name,recipe, techlvl)
 		local salt = {
 			type = "item",
 			name = metal.."-omnide-salt",
-			localised_name = {"item-name.omnide-salt", loc_key},
+			localised_name = {"item-name.omnide-salt", name},
 			icons = ic,
 			subgroup = "crystallization",
 			stack_size = 200
@@ -165,8 +163,8 @@ add_crystal=function(metal,name,recipe, techlvl)
 		local crystalization = {
 			type = "recipe",
 			name = metal.."-crystalization",
-			localised_name = {"recipe-name.crystallization", loc_key},
-			localised_description = {"recipe-description.pure_extraction", loc_key},
+			localised_name = {"recipe-name.crystallization", name},
+			localised_description = {"recipe-description.pure_extraction", name},
 			category = "omniplant",
 			subgroup = "crystallization",
 			enabled = false,
@@ -186,8 +184,8 @@ add_crystal=function(metal,name,recipe, techlvl)
 		local solvation = {
 			type = "recipe",
 			name = metal.."-solvation",
-			localised_name = {"recipe-name.ore-solvation", loc_key},
-			localised_description = {"recipe-description.pure_extraction", loc_key},
+			localised_name = {"recipe-name.ore-solvation", name},
+			localised_description = {"recipe-description.pure_extraction", name},
 			category = "omniplant",
 			subgroup = "solvation",
 			enabled = false,
@@ -200,9 +198,6 @@ add_crystal=function(metal,name,recipe, techlvl)
 			results = {{type = "fluid", name = metal.."-omnide-solution", amount=120}},
 			energy_required = 2.5,
 			}
-			log("solvation")
-			log(metal)
-			log(serpent.block(ic))
 		crystalines[#crystalines+1]=solvation
 
 		local icon_2 = "__omnimatter_crystal__/graphics/icons/omnide-salt.png" --if some error occurs
@@ -215,7 +210,7 @@ add_crystal=function(metal,name,recipe, techlvl)
 			type = "recipe",
 			name = metal.."-omnitraction",
 			localised_name = {"item-name."..metal},
-			localised_description = {"recipe-description.pure_extraction", loc_key},
+			localised_description = {"recipe-description.pure_extraction", name},
 			category = "omnite-extraction",
 			subgroup = "traction",
 			enabled = false,

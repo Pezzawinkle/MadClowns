@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.12
+  Features:
+    - Integrated the omnicrystal setting to use angels sorting machines
+  Bugfixes:
+    - Removed log spam
+---------------------------------------------------------------------------------------------------
 Version: 1.1.11
   Features:
     - More functional updates in preparation for omnimatter updates
@@ -20,15 +26,15 @@ Version: 1.1.8
     - Integrated the compatibility patch with omnicrystal by Kremnari (last updated in 0.16)
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
-  Bugfix:
+  Bugfixes:
     - Fixed a small oversight with the last update with relation to infinite ores requiring acid under the wrong conditions
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
-  Bugfix:
+  Bugfixes:
     - Actually fix that acid was not being added to chunk processing recipes without angels infinite ores
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-  Bugfix:
+  Bugfixes:
     - Stopped Thorium ore from spawning
     - Added incompatability with the thorium patch mod (not needed with this mod)
   Features:

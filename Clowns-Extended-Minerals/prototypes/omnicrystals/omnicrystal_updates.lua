@@ -12,10 +12,10 @@ add_crystal("magnesium-ore","Magnesium")
 
 local oresList = {
 	{ ore = "clowns-ore1", name = "Adamantite",	 },
-	{ ore = "clowns-ore2", name = "Antitate",		 },
+	{ ore = "clowns-ore2", name = "Antitate",	 },
 	{ ore = "clowns-ore3", name = "Pro-Galena",	 },
-	{ ore = "clowns-ore4", name = "Orichalcite",	 },
-	{ ore = "clowns-ore5", name = "Phosphorite",	 },
+	{ ore = "clowns-ore4", name = "Orichalcite", },
+	{ ore = "clowns-ore5", name = "Phosphorite", },
 	{ ore = "clowns-ore6", name = "Sanguinate",	 },
 	{ ore = "clowns-ore7", name = "Elionagate",	 },
 }
@@ -43,8 +43,8 @@ for _,oreSet in pairs(oresList) do
 		toAdd[#toAdd+1] = {
 			type = "recipe",
 			name = oreSet.ore.."-"..gradeSet.."-salting",
-			localised_name = {"recipe-name.omnide-salting", { "lookup."..gradeSet }, {"lookup."..oreSet.ore}},
-			localised_description = {"recipe-description.omnide-salting", { "lookup."..gradeSet }, {"lookup."..oreSet.ore}},
+			localised_name = {"recipe-name.omnide-salting", oreSet.ore,{ "lookup."..gradeSet }},
+			localised_description = {"recipe-description.omnide-salting", { "lookup."..gradeSet }, oreSet.name},
 			category = "omniplant",
 			subgroup = base.subgroup.."-omnide",
 			enabled = false,
@@ -96,6 +96,7 @@ for _,ore in pairs(pureOresList) do
 			ingredients = ing,
 			order = "b[clownsore1-crushed]",
 			icons = ic,
+			icon_size=32,
 			results = res,
 			energy_required = 5,
 		}
@@ -107,8 +108,18 @@ for _,ore in pairs(pureOresList) do
 			omni.lib.add_unlock_recipe("crystallology-3", ore.."-pure-salting")
 		elseif gradeSet=="pure" then
 			omni.lib.add_unlock_recipe("crystallology-4", ore.."-pure-salting")
+		elseif ore=="magnesium" then 
+			omni.lib.add_unlock_recipe("crystallology-3", ore.."-pure-salting")
 		end
 	end
 
 	data:extend(toAdd)
+end
+if mods["angelsrefining"] and settings.startup["angels-salt-sorting"].value then
+	for i, rec in pairs(data.raw.recipe) do
+		if rec.category == "omniplant" and string.find(rec.name,"salting") then
+		omni.lib.replace_recipe_ingredient(rec.name, "hydromnic-acid",{type = "item", name = "omni-catalyst", amount=1})
+		rec.category = "ore-sorting"
+		end
+	end
 end
