@@ -2,6 +2,8 @@
 Version: 1.0.22
   Features:
     - Prepared for updates to angels industries
+    - Updated the particle accelerator to angels data-analysers if angels tech is active
+    - Removed consumption modules being possible if pure modules are active in bobs
   Bugfixes:
     - Fixed that I was setting require behind mod checks potentially causing CRC fails in multiplayer
 ---------------------------------------------------------------------------------------------------

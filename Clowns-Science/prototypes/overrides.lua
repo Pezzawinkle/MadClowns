@@ -228,3 +228,12 @@ if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value == true the
 	table.insert(data.raw["technology"]["automation-science-pack"].effects, {type = "unlock-recipe", recipe = "alt2-science-pack-1"})
 	table.insert(data.raw["technology"]["facility-1"].prerequisites,"automation-science-pack")
 end
+if mods["bobmodules"] and settings.startup["bobmods-modules-enablerawspeedmodules"].value then
+  data.raw["assembling-machine"]["particle-accelerator-mk1"].allowed_effects={"speed", "pollution"} --remove efficiency
+  data.raw["assembling-machine"]["particle-accelerator-mk2"].allowed_effects={"speed", "pollution"} --remove efficiency
+end
+--update grouping if angels
+if mods["angelsindustries"] and settings.startup["angels-enable-tech"].value then
+  data.raw["item-subgroup"]["particle-accelerator-recipes"].group = "angels-tech"
+  data.raw["item-subgroup"]["particle-accelerator-recipes"].order = "ba[particle-accelerator]"
+end
