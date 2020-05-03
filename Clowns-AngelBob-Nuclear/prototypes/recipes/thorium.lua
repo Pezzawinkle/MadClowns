@@ -1,4 +1,5 @@
-data:extend(
+if data.raw.item["thorium-ore"] then
+	data:extend(
 {
 	{
 		type = "recipe",
@@ -62,3 +63,4 @@ data:extend(
 	},
 }
 )
+end

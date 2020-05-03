@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.13
+  Features:
+    - Prepared for updates to angels industries
+  Bugfixes:
+    - Fixed that I was setting require behind mod checks potentially causing CRC fails in multiplayer
+---------------------------------------------------------------------------------------------------
 Version: 1.1.12
   Features:
     - Integrated the omnicrystal setting to use angels sorting machines

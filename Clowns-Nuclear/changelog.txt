@@ -1,4 +1,10 @@
 ﻿---------------------------------------------------------------------------------------------------
+Version: 1.3.9
+  Features:
+    - Prepared for updates to angels industries
+  Bugfixes:
+    - Fixed that I was setting require behind mod checks potentially causing CRC fails in multiplayer
+---------------------------------------------------------------------------------------------------
 Version: 1.3.8
   Features:
     - Fixed icon scaling on artillery, nukes and uranium processing (base game change from 32-64)

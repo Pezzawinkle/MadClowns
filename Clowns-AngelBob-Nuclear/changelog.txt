@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.14
+  Bugfixes:
+    - Fixed that I was setting require behind mod checks potentially causing CRC fails in multiplayer
+  Features:
+    - Prepared for updates to angelsindustries nuclear program
+---------------------------------------------------------------------------------------------------
 Version: 1.1.13
   Bugfixes:
     - Integrated the centrifuge removal script from clowns processing
@@ -6,7 +12,7 @@ Version: 1.1.13
 Version: 1.1.12
   Features:
     - Removed redundant settings, integrated thorium setting based on if it exists.
-    - Made advanced nuclear fuels obtainable without the existance of thorium.
+    - Made advanced nuclear fuels obtainable without the existence of thorium.
     - Various small fixes and conditional category moves.
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.11

@@ -18,9 +18,8 @@ require("prototypes.recipes.sluicing")
 
 require("prototypes.technology.water-treatment")
 require("prototypes.technology.ore-refining")
-if mods["omnimatter_crystal"] then
-  require("prototypes.omnicrystals.omnicrystal_functions")
-end
+--functions for omnimatter crystals
+require("prototypes.omnicrystals.omnicrystal_functions")
 --CONFIGURE RESOURCES WITH OMNIMATTER FUNCTIONS, INPUTS ARE {NAME, TIER??, LOCALE, NAME OF MOD}
 local ore1fluid
 local ore2fluid

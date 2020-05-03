@@ -20,9 +20,7 @@ table.insert(data.raw["technology"][centri_2].effects, {type = "unlock-recipe", 
 table.insert(data.raw["technology"][centri_2].effects, {type = "unlock-recipe", recipe = "clowns-centrifuging-70%"})
 table.insert(data.raw["technology"][centri_2].effects, {type = "unlock-recipe", recipe = "clowns-centrifuging-75%"})
 table.insert(data.raw["technology"][centri_2].effects, {type = "unlock-recipe", recipe = "clowns-centrifuging-80%"})
-
 table.insert(data.raw["technology"]["water-treatment-4"].effects, {type = "unlock-recipe", recipe = "radioactive-waste-water-purification"})
-
 
 --Add ingredients to thermonuclear bomb
 data.raw["recipe"]["thermonuclear-bomb"].ingredients = {}
@@ -99,5 +97,22 @@ if mods["angelsindustries"] then
 	data.raw["item-subgroup"]["clowns-nuclear-fuels"].group = "angels-power"
 	data.raw["item-subgroup"]["clowns-nuclear-fuels"].order = "d[clowns]-ad[fuels]"
 	data.raw["item-subgroup"]["clowns-nuclear-cells"].group = "angels-power"
-	data.raw["item-subgroup"]["clowns-nuclear-cells"].order = "d[clowns]-ab[cells]"
+  data.raw["item-subgroup"]["clowns-nuclear-cells"].order = "d[clowns]-ab[cells]"
+  --set ingedient limit higher...
+  data.raw["assembling-machine"]["centrifuge"].ingredient_count=5
+  if mods["bobassembly"] and settings.startup["bobmods-assembly-centrifuge"].value then
+    data.raw["assembling-machine"]["centrifuge-2"].ingredient_count=5
+    data.raw["assembling-machine"]["centrifuge-3"].ingredient_count=5
+  end
+  if settings.startup["MCP_enable_centrifuges"].value then
+    data.raw["assembling-machine"]["centrifuge-mk2"].ingredient_count=5
+    data.raw["assembling-machine"]["centrifuge-mk3"].ingredient_count=5
+  end
 end
+--fix odd interactions
+data.raw.recipe["uranium-fuel-cell"].ingredients =
+{
+	{type="item", name="lead-plate", amount=10}, --enforce iron plate
+  {type="item", name="35%-uranium", amount=20},
+  --{type="item", name="uranium-235", amount=0}, --stop this from showing up
+}

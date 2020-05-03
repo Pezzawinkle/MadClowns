@@ -1,9 +1,5 @@
 Recipe morphing one science pack into another
 Rename technologies
 Add frontal fluid box to facility?
-Fix facility fluid boxes - some aren't connecting to pipes
 Add more complex fluid recipes
-Add osmium plate to alternative high-tech-science recipe
-Balance override for omni - approved by the Omnissiah
-KaoExtended compatibility
 check balance with some of the extended mod options

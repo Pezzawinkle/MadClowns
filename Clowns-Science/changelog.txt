@@ -1,4 +1,10 @@
 ﻿---------------------------------------------------------------------------------------------------
+Version: 1.0.22
+  Features:
+    - Prepared for updates to angels industries
+  Bugfixes:
+    - Fixed that I was setting require behind mod checks potentially causing CRC fails in multiplayer
+---------------------------------------------------------------------------------------------------
 Version: 1.0.21
   Bugfixes:
     - Fixed fluidbox issue of facility
@@ -43,7 +49,7 @@ Version: 1.0.12
   Bugfixes:
     - Added thumbnail to mod
     - Fixed changelog formatting
-    - Fixed science icon bug when using omnimatter (Zelos's overriding Bobs colourupdate setting) 
+    - Fixed science icon bug when using omnimatter (Zelos's overriding Bobs colourupdate setting)
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.11
   Bugfixes:
@@ -62,7 +68,7 @@ Version: 1.0.08
     - Updated for 0.17, (up to 0.17.34, not sure if works beyond that yet), may have a few bugs with gas based recipes unlocking at the wrong time
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.07
-  Balance:
+  Balancing:
     - Rebalanced facility recipes, replaced electrum alloy with osmium
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.06
@@ -103,12 +109,12 @@ Version: 0.1.08
     - Made relevant recipe only added when bobwarefare present
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.07
-  Balance:
+  Balancing:
     - Added sir_cherry overrides for OmniMods to increase complexity of alternative sci pack recipes
     - Rebalanced facility pollution generation.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.06
-  Balance:
+  Balancing:
     - Facility recipes rebalanced by increasing base crafting times from 12 seconds to 24.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.05
@@ -123,7 +129,7 @@ Version: 0.1.04
   Bugfixes:
     - Fixed icons
     - Fixed Particle Accelerator being craftable from the start of the game
-  Balance:
+  Balancing:
     - Rebalanced Particle Accelerator stats - doubled power use, eliminated pollution
     - Many small icon, tech and category changes
 ---------------------------------------------------------------------------------------------------
@@ -135,15 +141,15 @@ Version: 0.1.02
   Features:
     - Added Particle Collider
     - Added usage of Omni icons where appropriate
-  Balance:
+  Balancing:
     - Rebalanced Science Facility power usage from 6MW to 4MW
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.01
-  Support:
+  Features:
     - Added support to OmniMods
   Bugfixes:
     - Fixed bug preventing logistic Science Facility recipe from showing
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.00
-  Updates:
+  Features:
     - Initial release

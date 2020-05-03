@@ -4,9 +4,9 @@ require("prototypes.items.fuels")
 require("prototypes.items.water-treatment")
 
 require("prototypes.recipes.clowns-centrifuging")
-if data.raw.item["thorium-ore"] then
-  require("prototypes.recipes.thorium")
-end
+
+require("prototypes.recipes.thorium")--if thorium-ore
+
 require("prototypes.recipes.nuclear-reprocessing")
 require("prototypes.recipes.fuels")
 require("prototypes.recipes.water-treatment")

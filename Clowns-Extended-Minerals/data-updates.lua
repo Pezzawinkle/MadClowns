@@ -131,6 +131,5 @@ data.raw["resource"]["clowns-ore4"].localised_description = {"resource-descripti
 data.raw["resource"]["clowns-ore5"].localised_description = {"resource-description.clowns-ore1"}
 data.raw["resource"]["clowns-ore6"].localised_description = {"resource-description.clowns-ore1"}
 
-if mods["omnimatter_crystal"] then
-  require("prototypes.omnicrystals.omnicrystal_updates")
-end
+--if omnimatter crystal, add crystals
+require("prototypes.omnicrystals.omnicrystal_updates")
