@@ -137,7 +137,7 @@ data:extend(
 		type = "recipe",
 		name = "desert-garden-mutation",
 		category = "seed-extractor",
-		subgroup = "bio-processor-swamp",
+		subgroup = "farming-swamp-seed",
 		enabled = false,
 		energy_required = 600,
 		ingredients =
