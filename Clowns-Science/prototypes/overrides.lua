@@ -159,7 +159,13 @@ if data.raw.recipe["advanced-logistic-science-pack"] then
 			{"filter-inserter", 1}
 		},
 		results = {{type="item", name="advanced-logistic-science-pack", amount=3}}
-	}})
+  }})
+  if angelsmods and angelsmods.trigger.ores then
+    angelsmods.trigger.ores["chrome"] = true
+  end
+  if angelsmods and angelsmods.trigger.smelting_products then
+    angelsmods.trigger.smelting_products["chrome"].plate = true --in case it does not already trigger
+  end
 end
 
 if data.raw.recipe["omni-pack"] then

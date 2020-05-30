@@ -1,11 +1,23 @@
 {
   "name": "Clowns-Science",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "factorio_version": "0.18",
   "title": "MadClown01's Science",
   "author": "MadClown01",
   "contact": "",
   "homepage": "",
   "description": "Adds many science options to AngelBob games - research facility, particle accelerator and diverse alternative science pack recipes.",
-  "dependencies": [ "angelsrefining >= 0.11.0", "angelspetrochem >= 0.9.4", "angelssmelting >= 0.6.2", "bobplates >= 0.18.0", "boblogistics >= 0.18.0", "bobelectronics >= 0.18.0", "? bobtech >= 0.18.0", "? bobwarfare >= 0.18.0", "? Clowns-Processing >= 1.3.8", "? omnimatter_science >= 3.18.3", "? omnimatter >= 3.18.1"]
+  "dependencies": [
+    "angelsrefining >= 0.11.0",
+    "angelspetrochem >= 0.9.4",
+    "angelssmelting >= 0.6.2",
+    "bobplates >= 0.18.0",
+    "boblogistics >= 0.18.0",
+    "bobelectronics >= 0.18.0",
+    "? bobtech >= 0.18.0",
+    "? bobwarfare >= 0.18.0",
+    "? Clowns-Processing >= 1.3.8",
+    "? omnimatter_science >= 3.18.3",
+    "? omnimatter >= 3.18.1"
+  ]
 }

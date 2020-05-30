@@ -1,11 +1,15 @@
 ﻿---------------------------------------------------------------------------------------------------
-Version: 1.0.22
+Version: 1.0.23
+  Bugfixes:
+    - Fixed that I was setting require behind mod checks potentially causing CRC fails in multiplayer
+    - Enabled angels Chrome (if not already active) when played with angels and bobtech
+      - NOTE that this may inadvertantly activate unused angels ores as a side-effect, ill look at fixing this in the future
+---------------------------------------------------------------------------------------------------
+Version: 1.0.21
   Features:
     - Prepared for updates to angels industries
     - Updated the particle accelerator to angels data-analysers if angels tech is active
-    - Removed consumption modules being possible if pure modules are active in bobs
-  Bugfixes:
-    - Fixed that I was setting require behind mod checks potentially causing CRC fails in multiplayer
+        - Removed consumption modules being possible if pure modules are active in bobs
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.21
   Bugfixes:
