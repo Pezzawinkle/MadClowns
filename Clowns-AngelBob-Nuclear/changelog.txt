@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.15
+  Features:
+    - Reduced the mod dependancies to not require bobs
+    - Started looking at angels industries integration
+---------------------------------------------------------------------------------------------------
 Version: 1.1.14
   Bugfixes:
     - Fixed that I was setting require behind mod checks potentially causing CRC fails in multiplayer

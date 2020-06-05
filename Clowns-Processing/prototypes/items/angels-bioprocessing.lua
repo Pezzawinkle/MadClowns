@@ -1,4 +1,5 @@
-data:extend(
+if mods["angelsbioprocessing"] then
+  data:extend(
 {
 	{
 		type = "item",
@@ -20,3 +21,4 @@ data:extend(
 	},
 }
 )
+end

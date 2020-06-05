@@ -64,6 +64,6 @@ data:extend(
 		subgroup = "clowns-nuclear-fuels",
 		order = "b-c",
 		stack_size = 1
-	},
+  },
 }
 )

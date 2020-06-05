@@ -1,4 +1,5 @@
-data:extend(
+if mods["angelsbioprocessing"] then
+  data:extend(
 {
 	{
 		type = "technology",
@@ -42,3 +43,4 @@ data:extend(
 	},
 }
 )
+end

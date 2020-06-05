@@ -17,7 +17,7 @@ end]]--
 --REPLACE URANIUM-238 WITH DEPLETED URANIUM FOR MILITARY APPLICATIONS
 
 if settings.startup["depleted-uranium"].value then
-	if data.raw.recipe["shotgun-uranium-shell"] then
+	if data.raw.recipe["shotgun-uranium-shell"] and data.raw.item["cordite"] then
 		data.raw.recipe["shotgun-uranium-shell"].ingredients =
 		{
 			{"shotgun-shell-casing", 1},
@@ -249,8 +249,8 @@ else
 	data.raw["item-subgroup"]["armor"].group = "combat"
 	data.raw["item-subgroup"]["armor"].order = "a[armor]-a[all]"
 end
-
-data.raw.recipe["molten-aluminium-smelting-3"].order = "bd"
+--update aluminium
+data.raw.recipe["molten-aluminium-smelting-3"].order = "i[liquid-molten-aluminium]-d"
 data.raw.recipe["molten-aluminium-smelting-3"].icons =
 {
 	{

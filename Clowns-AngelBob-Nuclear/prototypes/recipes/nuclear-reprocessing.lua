@@ -48,7 +48,7 @@ data:extend(
 		},
 	},
 })
-if data.raw.item["thorium-ore"] then
+if data.raw.item["thorium-fuel-cell"] then
 data:extend(
 {
 	{
@@ -72,7 +72,7 @@ data:extend(
     { -- A direct copy of bobs recipe, it is better balanced
       {type="item", name="thorium-232", amount=3},
       {type="item", name="plutonium-239", amount=1},
-      {type="item", name="lead-plate", amount=5},
+      --{type="item", name="lead-plate", amount=5},
       {type="item", name="thorium-232", amount=1, probability=0.05},
       {type="item", name="plutonium-239", amount=1, probability=0.1},
     },

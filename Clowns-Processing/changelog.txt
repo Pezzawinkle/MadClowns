@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.12
+  Features:
+    - Adjusted the garden mutation recipes and added some garden generation recipes 
+      available from the start (no tech needed)
+    - Delinked from bobmods, so this can be run in vanilla or pure angels
+  Bugfixes:
+    - File consolidation if items and recipes, too many single table files for my liking
+    - Fixed a few recipe order and icon issues
+    - Moved some things that should have been in the extended materials mod to not be in this one
+---------------------------------------------------------------------------------------------------
 Version: 1.3.11
   Features:
     - Prepared for updates to angels industries

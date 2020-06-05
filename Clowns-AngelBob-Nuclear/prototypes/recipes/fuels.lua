@@ -49,7 +49,7 @@ data:extend(
 		category = "centrifuging",
 		ingredients =
 		{
-			{type="item", name="lead-plate", amount=10},
+			{type="item", name="iron-plate", amount=10},
 			{type="item", name="plutonium-239", amount=1}
 
 		},

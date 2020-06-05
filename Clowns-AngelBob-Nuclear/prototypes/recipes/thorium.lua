@@ -1,5 +1,5 @@
-if data.raw.item["thorium-ore"] then
-	data:extend(
+if data.raw.item["thorium-fuel-cell"] then
+  data:extend(
 {
 	{
 		type = "recipe",

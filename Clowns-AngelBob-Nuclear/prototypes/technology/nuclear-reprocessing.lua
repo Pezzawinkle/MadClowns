@@ -28,7 +28,7 @@ data:extend(
 		order = "e-p-b-c"
 	},
 })
-if data.raw.item["thorium-ore"] then
+if data.raw.item["thorium-fuel-cell"] then
 data:extend(
 {
 	{
@@ -47,7 +47,7 @@ data:extend(
 				recipe = "advanced-thorium-nuclear-fuel-reprocessing|b"
 			},
 		},
-		prerequisites = {"bobingabout-enrichment-process"},
+		prerequisites = {"nuclear-fuel-reprocessing-2"}, --temp
 		unit =
 		{
 			ingredients =

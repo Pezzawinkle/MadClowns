@@ -1,4 +1,5 @@
-data:extend(
+if settings.startup["MCP_enable_centrifuges"].value then
+  data:extend(
 {
 	
 	{
@@ -59,3 +60,4 @@ data:extend(
 	},
 }
 )
+end
