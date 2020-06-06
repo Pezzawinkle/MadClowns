@@ -53,7 +53,16 @@ if data.raw.recipe["thorium-plutonium-fuel-cell"] then
     {type="item", name="plutonium-239", amount=6},
     {type="item", name="thorium-232", amount=6}
   }
-  table.insert(data.raw.recipe["thorium-plutonium-fuel-cell"].results, {type="item", name=n_plate, amount=2})
+  if data.raw.recipe["thorium-plutonium-fuel-cell"].result then
+    data.raw.recipe["thorium-plutonium-fuel-cell"].results={{type="item",name=data.raw.recipe["thorium-plutonium-fuel-cell"].result,amount = data.raw.recipe["thorium-plutonium-fuel-cell"].result_amount or 1}}
+    data.raw.recipe["thorium-plutonium-fuel-cell"].result=nil
+  end
+  if data.raw.recipe["thorium-plutonium-fuel-cell"].results then
+    table.insert(data.raw.recipe["thorium-plutonium-fuel-cell"].results, {type="item", name=n_plate, amount=2})
+  elseif data.raw.recipe["thorium-plutonium-fuel-cell"].normal.results then
+    table.insert(data.raw.recipe["thorium-plutonium-fuel-cell"].normal.results, {type="item", name=n_plate, amount=2})
+    table.insert(data.raw.recipe["thorium-plutonium-fuel-cell"].expensive.results, {type="item", name=n_plate, amount=2})
+  end
 end
 --lead replacement mixing settings
 if settings.startup["reprocessing-overhaul"].value then
