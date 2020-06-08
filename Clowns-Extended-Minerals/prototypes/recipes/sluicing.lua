@@ -1,5 +1,5 @@
 local rawmulti = angelsmods.marathon.rawmulti
-
+if not clowns.special_vanilla then
 data:extend(
 {
 	{
@@ -21,7 +21,7 @@ data:extend(
 			{type="item", name="tin-ore", amount=1, probability = 0.1,},
 			{type="item", name="crystal-dust", amount=1, probability = 0.1,},
 			{type="item", name="gold-ore", amount=1, probability = 0.05,},
-			{type="item", name="chrome-ore", amount=1, probability = 0.01,},
+		  {type="item", name="chrome-ore", amount=1, probability = 0.01,},
 			{type="item", name="platinum-ore", amount=1, probability = 0.01,}
 			--Rare earth metals, zirconium
 		},
@@ -46,7 +46,7 @@ data:extend(
 		{
 			{type="fluid", name="water-saline", amount=10},
 			{type="item", name="gold-ore", amount=1, probability = 0.1,},
-			{type="item", name="chrome-ore", amount=1, probability = 0.03,},
+		  {type="item", name="chrome-ore", amount=1, probability = 0.03,},
 			{type="item", name="rutile-ore", amount=1, probability = 0.03,},
 			{type="item", name="platinum-ore", amount=1, probability = 0.03,},
 			{type="item", name="uranium-ore", amount=1, probability = 0.01,},
@@ -58,3 +58,4 @@ data:extend(
 	}
 }
 )
+end

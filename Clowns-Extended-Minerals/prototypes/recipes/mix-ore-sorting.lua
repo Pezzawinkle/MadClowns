@@ -1,5 +1,5 @@
 local rawmulti = angelsmods.marathon.rawmulti
-if mods["Clowns-Extended-Minerals"] then
+if not clowns.special_vanilla then
 	data:extend(
 	{
 		{
@@ -321,7 +321,7 @@ if mods["Clowns-Extended-Minerals"] then
 )
 end
 
-if mods["Clowns-Extended-Minerals"] and mods["Clowns-Nuclear"] then
+if mods["Clowns-AngelBob-Nuclear"] then
 	data:extend(
 	{
 		{
