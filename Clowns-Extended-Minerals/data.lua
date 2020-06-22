@@ -15,18 +15,21 @@ if not clowns.special_vanilla then
   table.insert(clowns.tables.ores,"clowns-ore2")
   table.insert(clowns.tables.ores,"clowns-ore3")
   table.insert(clowns.tables.ores,"clowns-ore6")
+  table.insert(clowns.tables.ores,"clowns-ore8")
+  table.insert(clowns.tables.ores,"clowns-ore9")
 end
 --add to angels ore triggers (for refining products)
 --CLOWNS ORES (no need to check these)
 angelsmods.trigger.ores["phosphorus"] = true --phosphorus
 angelsmods.trigger.ores["osmium"]=true --osmium
+angelsmods.trigger.ores["magnesium"]=true --osmium
 --angels intermediates not sure i need to check these... 
 angelsmods.trigger.ores["limestone"] = angelsmods.trigger.ores["limestone"] or true
 angelsmods.trigger.ores["sand"] = angelsmods.trigger.ores["sand"] or true
 angelsmods.trigger.ores["calcium-sulfate"]=true --calcium-sulfate
 angelsmods.trigger.ores["sodium-carbonate"]=true --sodium-carbonate
 if angelsmods.trigger.ores["lithium"] then
-  angelsmods.trigger.ores["litium-chloride"]=true --lithium-chloride
+  angelsmods.trigger.ores["solid-lithium"]=true --lithium-chloride
 end
 --actual ores in the ores table
 local temp_triggers={["uranium"]=table.deepcopy(angelsmods.trigger.ores["uranium"]),["fluorite"]=table.deepcopy(angelsmods.trigger.ores["fluorite"])}
@@ -45,8 +48,9 @@ require("prototypes.items.item-builder")
 require("prototypes.items.resource-processing")
 
 require("prototypes.recipes.ore-refining")
+require("prototypes.recipes.ore-sorting-mix")
 require("prototypes.recipes.ore-sorting")
-require("prototypes.recipes.mix-ore-sorting")
+require("prototypes.recipes.ore-sorting-mix-static")
 
 require("prototypes.recipes.liquification")
 --require("prototypes.recipes.mining")
@@ -58,13 +62,8 @@ require("prototypes.technology.ore-refining")
 --functions for omnimatter crystals
 require("prototypes.omnicrystals.omnicrystal_functions")
 --CONFIGURE RESOURCES WITH OMNIMATTER FUNCTIONS, INPUTS ARE {NAME, TIER??, LOCALE, NAME OF MOD}
-local ore1fluid
-local ore2fluid
-local ore3fluid
-local ore4fluid
-local ore5fluid
-local ore6fluid
-local ore7fluid
+local ore1fluid,ore2fluid,ore3fluid,ore4fluid,ore5fluid,ore6fluid,ore7fluid,ore8fluid,ore9fluid
+
 if mods["angelspetrochem"] and settings.startup["angels-enable-acids"].value then
 	ore1fluid = "liquid-hydrofluoric-acid"
 	ore2fluid = "liquid-sulfuric-acid"
@@ -72,7 +71,9 @@ if mods["angelspetrochem"] and settings.startup["angels-enable-acids"].value the
 	ore4fluid = "liquid-hydrochloric-acid"
 	ore5fluid = "liquid-nitric-acid"
 	ore6fluid = "liquid-sulfuric-acid"
-	ore7fluid = "liquid-hydrofluoric-acid"
+  ore7fluid = "liquid-hydrofluoric-acid"
+  ore8fluid = "liquid-hydrochloric-acid"
+  ore9fluid = "liquid-phosphoric-acid"
 else
 	ore1fluid = "liquid-sulfuric-acid"
 	ore2fluid = "liquid-sulfuric-acid"
@@ -80,7 +81,9 @@ else
 	ore4fluid = "liquid-sulfuric-acid"
 	ore5fluid = "liquid-sulfuric-acid"
 	ore6fluid = "liquid-sulfuric-acid"
-	ore7fluid = "liquid-sulfuric-acid"
+  ore7fluid = "liquid-sulfuric-acid"
+  ore8fluid = "liquid-sulfuric-acid"
+  ore9fluid = "liquid-sulfuric-acid"
 end
 
 if mods["omnimatter"] then
@@ -90,7 +93,9 @@ if mods["omnimatter"] then
 	omni.add_resource("clowns-ore4",2,"Orichalcite","Clowns-Extended-Minerals")
 	omni.add_resource("clowns-ore5",2,"Phosphorite","Clowns-Extended-Minerals")
 	omni.add_resource("clowns-ore6",3,"Sanguinate","Clowns-Extended-Minerals")
-	omni.add_resource("clowns-ore7",3,"Elionagate","Clowns-Extended-Minerals")
+  omni.add_resource("clowns-ore7",3,"Elionagate","Clowns-Extended-Minerals")
+  omni.add_resource("clowns-ore8",3,"Meta-Garnierite","Clowns-Extended-Minerals")
+  omni.add_resource("clowns-ore9",3,"Nova-Leucoxene","Clowns-Extended-Minerals")
 	omni.add_resource("clowns-resource1",2,"Alluvial Deposit","Clowns-Extended-Minerals")
 	omni.add_resource("clowns-resource2",2,"Oil Sands","Clowns-Extended-Minerals")
 end
@@ -144,5 +149,5 @@ angelsmods.trigger.ores["uranium"] = temp_triggers["uranium"] --uranium
 angelsmods.trigger.ores["osmium"] = nil --osmium
 angelsmods.trigger.ores["fluorite"]= temp_triggers["fluorite"]
 if angelsmods.trigger.ores["lithium"] then
-  angelsmods.trigger.ores["litium-chloride"] = nil --lithium-chloride
+  angelsmods.trigger.ores["solid-lithium"] = nil --lithium-chloride
 end

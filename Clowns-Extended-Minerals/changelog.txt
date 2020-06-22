@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.14
+  Features:
+    - Removed dependancy on bobs mods
+    - Added 2 new ores (Meta-Garnierite, Nova-Leucoxene)
+    - Added a new mixed sorting tier for a slightly higher yield of products (exacerbated by prod)
+    - Added 5 blended ores (Stannic, Plumbic, Manganic, Titanic, Phosphic)
+    - Added support to work with Angels Special-vanilla setting
+  Bugfixes:
+    - Removed duplicatated recipes from angels
+      - not deleted them yet, just hidden them to prevent base breakage
+---------------------------------------------------------------------------------------------------
 Version: 1.1.13
   Features:
     - Prepared for updates to angels industries

@@ -9,6 +9,8 @@ local ore_material = {
   ["clowns-ore5"] = {order = "e", acid = "liquid-sulfuric-acid", geode="yellow"},
   ["clowns-ore6"] = {order = "f", acid = "liquid-sulfuric-acid", geode="cyan"},
   ["clowns-ore7"] = {order = "g", acid = "liquid-sulfuric-acid", geode="blue"},
+  ["clowns-ore8"] = {order = "h", acid = "liquid-sulfuric-acid", geode="lightgreen"},
+  ["clowns-ore9"] = {order = "i", acid = "liquid-sulfuric-acid", geode="cyan"},
 }
 local acid_wastewater = {
   ["liquid-sulfuric-acid"] = "water-yellow-waste",
@@ -16,7 +18,7 @@ local acid_wastewater = {
   ["liquid-nitric-acid"] = "water-red-waste",
   ["liquid-hydrochloric-acid"] = "water-green-waste",
   ["liquid-boric-acid"] = "", --currently no wastewater
-  ["liquid-phosphoric-acid"] = "", --currently no wastewater
+  ["liquid-phosphoric-acid"] = "water-yellow-waste", --currently no wastewater
 }
 --check if angels setting is active and modify acids
 if mods["angelspetrochem"] and settings.startup["angels-enable-acids"].value then
@@ -25,6 +27,8 @@ if mods["angelspetrochem"] and settings.startup["angels-enable-acids"].value the
   ore_material["clowns-ore4"].acid = "liquid-hydrochloric-acid"
   ore_material["clowns-ore5"].acid = "liquid-nitric-acid"
   ore_material["clowns-ore7"].acid = "liquid-hydrofluoric-acid"
+  ore_material["clowns-ore8"].acid = "liquid-hydrochloric-acid"
+  ore_material["clowns-ore9"].acid = "liquid-phosphoric-acid"
 end
 for _, ore in pairs(ore_table) do
   data:extend(
@@ -33,6 +37,7 @@ for _, ore in pairs(ore_table) do
       {
         type = "recipe",
         name = ore.."-crushed",
+        localised_name = {"recipe-name.clowns-refining",ore.." Crushing"},
         category = "ore-sorting-t1",
         subgroup = "clowns-ore-processing-a",
         energy_required = 1,
@@ -52,6 +57,7 @@ for _, ore in pairs(ore_table) do
       {
         type = "recipe",
         name = ore.."-chunk",
+        localised_name = {"recipe-name.clowns-refining",ore.." Hydro Refining"},
         category = "ore-sorting-t2",
         subgroup = "clowns-ore-processing-b",
         energy_required = 2,

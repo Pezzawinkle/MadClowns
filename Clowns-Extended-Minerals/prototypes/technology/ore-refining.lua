@@ -1,3 +1,28 @@
+local crushing_eff, flotation_eff, leeching_eff, refining_eff = {}, {}, {}, {}
+for i=1,9,1 do
+  --add static recipe unlocks
+  crushing_eff[#crushing_eff+1] = {type = "unlock-recipe",recipe = "clowns-ore"..i.."-crushed"}
+  crushing_eff[#crushing_eff+1] = {type = "unlock-recipe",recipe = "clowns-ore"..i.."-crushed-processing"}
+  flotation_eff[#flotation_eff+1] = {type = "unlock-recipe",recipe = "clowns-ore"..i.."-chunk"}
+  flotation_eff[#flotation_eff+1] = {type = "unlock-recipe",recipe = "clowns-ore"..i.."-chunk-processing"}
+  leeching_eff[#leeching_eff+1] = {type = "unlock-recipe",recipe = "clowns-ore"..i.."-crystal"}
+  leeching_eff[#leeching_eff+1] = {type = "unlock-recipe",recipe = "clowns-ore"..i.."-crystal-processing"}
+  refining_eff[#refining_eff+1] = {type = "unlock-recipe",recipe = "clowns-ore"..i.."-pure"}
+  refining_eff[#refining_eff+1] = {type = "unlock-recipe",recipe = "clowns-ore"..i.."-pure-processing"}
+  --add dynamic recipe unlocks
+  if data.raw.recipe["clowns-crushed-mix"..i.."-processing"] then
+    crushing_eff[#crushing_eff+1] = {type = "unlock-recipe",recipe = "clowns-crushed-mix"..i.."-processing"}
+  end
+  if data.raw.recipe["clowns-chunk-mix"..i.."-processing"] then
+    flotation_eff[#flotation_eff+1] = {type = "unlock-recipe",recipe = "clowns-chunk-mix"..i.."-processing"}
+  end
+  if data.raw.recipe["clowns-crystal-mix"..i.."-processing"] then
+    leeching_eff[#leeching_eff+1] = {type = "unlock-recipe",recipe = "clowns-crystal-mix"..i.."-processing"}
+  end
+  if data.raw.recipe["clowns-pure-mix"..i.."-processing"] then
+    refining_eff[#refining_eff+1] = {type = "unlock-recipe",recipe = "clowns-pure-mix"..i.."-processing"}
+  end
+end
 data:extend(
 {
 	{
@@ -5,65 +30,7 @@ data:extend(
 		name = "clowns-ore-crushing",
 		icon_size = 128,
 		icon = "__angelsrefining__/graphics/technology/mechanical-refining.png",
-		effects =
-		{
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore1-crushed"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore2-crushed"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore3-crushed"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore4-crushed"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore5-crushed"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore6-crushed"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore7-crushed"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore1-crushed-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore2-crushed-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore3-crushed-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore4-crushed-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore5-crushed-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore6-crushed-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore7-crushed-processing"
-			},
-		},
+		effects = crushing_eff,
 		prerequisites = {"ore-crushing"},
 		unit =
 		{
@@ -81,65 +48,7 @@ data:extend(
 		name = "clowns-ore-floatation",
 		icon_size = 128,
 		icon = "__angelsrefining__/graphics/technology/hydro-refining.png",
-		effects =
-		{
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore1-chunk"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore2-chunk"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore3-chunk"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore4-chunk"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore5-chunk"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore6-chunk"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore7-chunk"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore1-chunk-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore2-chunk-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore3-chunk-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore4-chunk-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore5-chunk-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore6-chunk-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore7-chunk-processing"
-			},
-		},
+		effects = flotation_eff,
 		prerequisites = {"ore-floatation", "clowns-ore-crushing"},
 		unit =
 		{
@@ -158,65 +67,7 @@ data:extend(
 		name = "clowns-ore-leaching",
 		icon_size = 128,
 		icon = "__angelsrefining__/graphics/technology/chemical-refining.png",
-		effects =
-		{
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore1-crystal"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore2-crystal"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore3-crystal"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore4-crystal"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore5-crystal"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore6-crystal"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore7-crystal"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore1-crystal-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore2-crystal-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore3-crystal-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore4-crystal-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore5-crystal-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore6-crystal-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore7-crystal-processing"
-			},
-		},
+		effects = leeching_eff,
 		prerequisites = {"ore-leaching", "clowns-ore-floatation"},
 		unit =
 		{
@@ -236,65 +87,7 @@ data:extend(
 		name = "clowns-ore-refining",
 		icon_size = 128,
 		icon = "__angelsrefining__/graphics/technology/thermal-refining.png",
-		effects =
-		{
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore1-pure"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore2-pure"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore3-pure"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore4-pure"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore5-pure"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore6-pure"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore7-pure"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore1-pure-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore2-pure-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore3-pure-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore4-pure-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore5-pure-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore6-pure-processing"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "clowns-ore7-pure-processing"
-			},
-		},
+		effects = refining_eff,
 		prerequisites = {"ore-refining", "clowns-ore-leaching"},
 		unit =
 		{
@@ -320,5 +113,22 @@ if not clowns.special_vanilla then --add in the mixed sorting recipes to the tec
   if mods["Clowns-AngelBob-Nuclear"] and not ((mods["angelsindustries"] and angelsmods.industries.overhaul) or (mods["bobpower"] and mods["bobplates"])) then
     --add in thorium
     table.insert(data.raw.technology["clowns-ore-leaching"].effects,{type = "unlock-recipe",recipe = "thorium-pure-processing"})
+  end
+end
+--add in advanced ore stuffs
+if not special_vanilla then
+  for i=11,15,1 do
+    table.insert(data.raw.technology["ore-advanced-crushing"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crushed"})
+    table.insert(data.raw.technology["ore-advanced-crushing"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crushed-processing"})
+    table.insert(data.raw.technology["ore-powderizer"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-powder"})
+    table.insert(data.raw.technology["ore-powderizer"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-powder-processing"})
+    table.insert(data.raw.technology["ore-advanced-floatation"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-sludge"})
+    table.insert(data.raw.technology["ore-advanced-floatation"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-dust"})
+    table.insert(data.raw.technology["ore-advanced-floatation"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-dust-processing"})
+    table.insert(data.raw.technology["ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-solution"})
+    table.insert(data.raw.technology["ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-anode-sludge-filtering"})
+    table.insert(data.raw.technology["ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-anode-sludge"})
+    table.insert(data.raw.technology["ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crystal"})
+    table.insert(data.raw.technology["ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crystal-processing"})
   end
 end

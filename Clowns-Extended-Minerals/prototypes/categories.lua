@@ -39,25 +39,31 @@ data:extend(
 		type = "item-subgroup",
 		name = "clowns-ore-sorting-t1",
 		group = "resource-refining",
-		order = "j-e",
+		order = "j-f",
 	},
 	{
 		type = "item-subgroup",
 		name = "clowns-ore-sorting-t2",
 		group = "resource-refining",
-		order = "j-f",
+		order = "j-g",
 	},
 	{
 		type = "item-subgroup",
 		name = "clowns-ore-sorting-t3",
 		group = "resource-refining",
-		order = "j-g",
+		order = "j-h",
 	},
 	{
 		type = "item-subgroup",
 		name = "clowns-ore-sorting-t4",
 		group = "resource-refining",
-		order = "j-h",
+		order = "j-i",
+  },
+  {
+		type = "item-subgroup",
+		name = "ore-sorting-advanced-2",
+		group = "resource-refining",
+		order = "j-e",
 	},
 }
 )

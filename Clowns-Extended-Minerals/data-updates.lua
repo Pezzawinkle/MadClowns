@@ -1,35 +1,16 @@
-
-angelsmods.functions.allow_productivity("clowns-ore1-crushed-processing")
-angelsmods.functions.allow_productivity("clowns-ore2-crushed-processing")
-angelsmods.functions.allow_productivity("clowns-ore3-crushed-processing")
-angelsmods.functions.allow_productivity("clowns-ore4-crushed-processing")
-angelsmods.functions.allow_productivity("clowns-ore5-crushed-processing")
-angelsmods.functions.allow_productivity("clowns-ore6-crushed-processing")
-angelsmods.functions.allow_productivity("clowns-ore7-crushed-processing")
-
-angelsmods.functions.allow_productivity("clowns-ore1-chunk-processing")
-angelsmods.functions.allow_productivity("clowns-ore2-chunk-processing")
-angelsmods.functions.allow_productivity("clowns-ore3-chunk-processing")
-angelsmods.functions.allow_productivity("clowns-ore4-chunk-processing")
-angelsmods.functions.allow_productivity("clowns-ore5-chunk-processing")
-angelsmods.functions.allow_productivity("clowns-ore6-chunk-processing")
-angelsmods.functions.allow_productivity("clowns-ore7-chunk-processing")
-
-angelsmods.functions.allow_productivity("clowns-ore1-crystal-processing")
-angelsmods.functions.allow_productivity("clowns-ore2-crystal-processing")
-angelsmods.functions.allow_productivity("clowns-ore3-crystal-processing")
-angelsmods.functions.allow_productivity("clowns-ore4-crystal-processing")
-angelsmods.functions.allow_productivity("clowns-ore5-crystal-processing")
-angelsmods.functions.allow_productivity("clowns-ore6-crystal-processing")
-angelsmods.functions.allow_productivity("clowns-ore7-crystal-processing")
-
-angelsmods.functions.allow_productivity("clowns-ore1-pure-processing")
-angelsmods.functions.allow_productivity("clowns-ore2-pure-processing")
-angelsmods.functions.allow_productivity("clowns-ore3-pure-processing")
-angelsmods.functions.allow_productivity("clowns-ore4-pure-processing")
-angelsmods.functions.allow_productivity("clowns-ore5-pure-processing")
-angelsmods.functions.allow_productivity("clowns-ore6-pure-processing")
-angelsmods.functions.allow_productivity("clowns-ore7-pure-processing")
+for i=1,10 do --allow for many options, particularly for the second step (minimum is ore count)
+  for _,name in pairs({"-crushed","-chunk","-crystal","-pure"}) do
+    --add prod to regular ore sorting
+    if data.raw.recipe["clowns-ore".. i .. name .. "-processing"] then
+      angelsmods.functions.allow_productivity("clowns-ore".. i .. name .. "-processing")
+    end
+    --add prod to mixed ore sorting
+    if data.raw.recipe["clowns".. name .."-mix".. i .. "-processing"] then
+      angelsmods.functions.allow_productivity("clowns".. name .."-mix".. i .. "-processing")
+    end
+  end
+  
+end
 
 --ADD RESOURCE PROCESSING RECIPES TO THE APPROPRIATE TECHNOLOGIES
 

@@ -23,7 +23,9 @@ local ap_dat={
 	["infinite-clowns-ore4"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["infinite-clowns-ore5"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	--["infinite-clowns-ore6"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	["infinite-clowns-ore7"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
+  ["infinite-clowns-ore7"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
+  --["infinite-clowns-ore8"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
+  --["infinite-clowns-ore9"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["infinite-clowns-resource2"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["infinite-clowns-resource1"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 }
@@ -40,19 +42,21 @@ if not special_vanilla then
   ap_dat["clowns-ore2"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
   ap_dat["clowns-ore3"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
   ap_dat["clowns-ore6"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
-  --ap_dat["clowns-ore8"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
-  --ap_dat["clowns-ore9"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
+  ap_dat["clowns-ore8"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
+  ap_dat["clowns-ore9"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
   --ap_dat["clowns-ore10"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
   ap_dat["infinite-clowns-ore2"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
 	ap_dat["infinite-clowns-ore3"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
   ap_dat["infinite-clowns-ore6"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
+  ap_dat["infinite-clowns-ore8"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
+  ap_dat["infinite-clowns-ore9"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
 
   ore_dat["clowns-ore2"] = {--[[stage="clowns_ore2",]]ore_sheet = 4,	order = "c-b",	mining_time = 1.75*2.75--[[old time * hardness]], tint = {r = 1, g = 0, b = 0.5}}
   ore_dat["clowns-ore3"] = {--[[stage="clowns_ore3",]]ore_sheet = 3,	order = "c-c",	mining_time = 1.5*0.9--[[old time * hardness]],	tint = {r = 0.4, g = 0.4, b = 0.4}}
   ore_dat["clowns-ore6"] = {--[[stage="clowns_ore6",]]ore_sheet = 2,	order = "c-f",	mining_time = 1.75*2--[[old time * hardness]], tint = {r = 0.9020, g = 0.0000, b = 0.0000}}
-  --ore_dat["clowns-ore8"] = {--[[stage="clowns_ore6",]]ore_sheet = 2,	order = "c-f",	mining_time = 1.75*2--[[old time * hardness]], tint = {r = 0.9020, g = 0.0000, b = 0.0000}}
-  --ore_dat["clowns-ore9"] = {--[[stage="clowns_ore6",]]ore_sheet = 2,	order = "c-f",	mining_time = 1.75*2--[[old time * hardness]], tint = {r = 0.9020, g = 0.0000, b = 0.0000}}
-  --ore_dat["clowns-ore10"] = {--[[stage="clowns_ore6",]]ore_sheet = 2,	order = "c-f",	mining_time = 1.75*2--[[old time * hardness]], tint = {r = 0.9020, g = 0.0000, b = 0.0000}}
+  ore_dat["clowns-ore8"] = {--[[stage="clowns_ore8",]]ore_sheet = 2,	order = "c-h",	mining_time = 1.4*4--[[old time * hardness]], tint = {r = 0.9020, g = 0.0000, b = 0.0000}}
+  ore_dat["clowns-ore9"] = {--[[stage="clowns_ore9",]]ore_sheet = 2,	order = "c-i",	mining_time = 1.6*4--[[old time * hardness]], tint = {r = 0.9020, g = 0.0000, b = 0.0000}}
+  --ore_dat["clowns-ore10"] = {--[[stage="clowns_ore6",]]ore_sheet = 2,	order = "c-j",	mining_time = 1.75*2--[[old time * hardness]], tint = {r = 0.9020, g = 0.0000, b = 0.0000}}
 end
 local inf_dat={} --duplicate regular ore_dat into inf_dat table
 for j,ore in pairs(ore_dat) do

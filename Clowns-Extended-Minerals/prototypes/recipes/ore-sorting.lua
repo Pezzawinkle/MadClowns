@@ -26,9 +26,10 @@ local get_trigger_name = {
   ["phosphorus-ore"] = "phosphorus",
   ["solid-limestone"] = "limestone",
   ["solid-calcium-sulfate"] = "calcium-sulfate",
-  ["solid-lithium-chloride"] = "lithium-chloride",
+  ["solid-lithium"] = "solid-lithium",
   ["solid-sand"] = "sand",
   ["solid-sodium-carbonate"] = "sodium-carbonate",
+  ["magnesium-ore"] = "magnesium",
   -- TIER 2 ORES
   ["zinc-ore"] = "zinc",
   ["bauxite-ore"] = "aluminium",
@@ -79,6 +80,8 @@ local icon_lookup_table = {
 
   ["iron-slag"] = {icon = "__angelsrefining__/graphics/icons/iron-slag.png"},
 
+  ["solid-lithium"] = {icon = "__angelsrefining__/graphics/icons/solid-lithium.png"},
+  
   ["lead-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-lead.png"} or
     mods["bobores"] and {icon = "__bobores__/graphics/icons/lead-ore.png"} or
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/lead-ore.png"} or
@@ -131,6 +134,7 @@ local icon_lookup_table = {
   ["phosphorus-ore"] = {icon = "__Clowns-Processing__/graphics/icons/phosphorus-ore.png"},
 
   ["osmium-ore"] = {icon = "__Clowns-Processing__/graphics/icons/osmium-ore.png"},
+  ["manganese-ore"] = {icon = "__angelssmelting__/graphics/icons/ore-manganese.png"},
 }
 local tweaked_icon_lookup = function(icon_name, scale, shift)
   if not icon_lookup_table[icon_name] then return icon_lookup_table_fallback end
@@ -149,14 +153,21 @@ local tweaked_icon_lookup = function(icon_name, scale, shift)
 end
 --set clownsore triggers
 angelsmods.trigger.refinery_products = angelsmods.trigger.refinery_products or {} --set up if it does not already exist
-angelsmods.trigger.refinery_products["Adamantite"]= true
-angelsmods.trigger.refinery_products["Orichalcite"]= true
-angelsmods.trigger.refinery_products["Phosphorite"]= true
-angelsmods.trigger.refinery_products["Elionagate"]= true
+angelsmods.trigger.refinery_products["Adamantite"] = true
+angelsmods.trigger.refinery_products["Orichalcite"] = true
+angelsmods.trigger.refinery_products["Phosphorite"] = true
+angelsmods.trigger.refinery_products["Elionagate"] = true
 if not special_vanilla then
-  angelsmods.trigger.refinery_products["Antitate"]= true
-  angelsmods.trigger.refinery_products["Pro-Galena"]= true
-  angelsmods.trigger.refinery_products["Sanguinate"]= true
+  angelsmods.trigger.refinery_products["Antitate"] = true
+  angelsmods.trigger.refinery_products["Pro-Galena"] = true
+  angelsmods.trigger.refinery_products["Sanguinate"] = true
+  angelsmods.trigger.refinery_products["Meta-Garnierite"] = true
+  angelsmods.trigger.refinery_products["Nova-Leucoxene"] = true
+  angelsmods.trigger.refinery_products["Plumbic"] = true
+  angelsmods.trigger.refinery_products["Stannic"] = true
+  angelsmods.trigger.refinery_products["Manganic"] = true
+  angelsmods.trigger.refinery_products["Titanic"] = true
+  angelsmods.trigger.refinery_products["Phosphic"] = true
 end
 --check if the ore trigger is on
 local ore_exists = function(ore_name)
@@ -191,6 +202,7 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
       {
         type = "recipe",
         name = ore.."-crushed-processing",
+        localised_name = {"recipe-name.clowns-refining","Crushed "..ore.." Processing"},
         category = "ore-sorting",
         subgroup = "clowns-ore-sorting-t1",
         allow_decomposition = false,
@@ -220,6 +232,7 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
       {
         type = "recipe",
         name = ore.."-chunk-processing",
+        localised_name = {"recipe-name.clowns-refining",ore.." Chunk Processing"},
         category = "ore-sorting",
         subgroup = "clowns-ore-sorting-t2",
         allow_decomposition = false,
@@ -249,6 +262,7 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
       {
         type = "recipe",
         name = ore.."-crystal-processing",
+        localised_name = {"recipe-name.clowns-refining",ore.." Crystal Processing"},
         category = "ore-sorting",
         subgroup = "clowns-ore-sorting-t3",
         allow_decomposition = false,
@@ -279,6 +293,7 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
       {
         type = "recipe",
         name = ore.."-pure-processing",
+        localised_name = {"recipe-name.clowns-refining","Purified "..ore.." Processing"},
         category = "ore-sorting",
         subgroup = "clowns-ore-sorting-t4",
         allow_decomposition = false,
@@ -308,12 +323,12 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
   )
   end
 end
------------------------------------------------------------------
--- UPDATE SORTING RECIPES USING THE ABOVE FUNCTIONS AND TABLES --
------------------------------------------------------------------
+---------------------------------------------------------------------------
+     -- UPDATE SORTING RECIPES USING THE ABOVE FUNCTIONS AND TABLES --
+-- This function is a direct rip (with some tweaks) from angels-refining --
+---------------------------------------------------------------------------
 -- function to create the (regular) sorted results for an ore, disables it if it is unused
 local create_sorting_recipes = function(refinery_product, recipe_base_name, sorted_ore_results, advanced_sorting)
-  create_basic_recipe(refinery_product, recipe_base_name)
   local localisation_base_name = "clowns-ore%s"
   local recipes = {}
   for tier, tier_name in pairs(advanced_sorting and {"crushed", "powder", "dust", "crystal"} or {"crushed", "chunk", "crystal", "pure"}) do
@@ -324,7 +339,7 @@ local create_sorting_recipes = function(refinery_product, recipe_base_name, sort
         string.format(localisation_base_name, string.sub(recipe_base_name, -3, -3) .. "-" .. tier_name),
         string.format(localisation_base_name, "-" .. tier_name)
       }
-      log(serpent.block(sorted_ore_results))
+      --log(serpent.block(sorted_ore_results))
       local used_keys={}
       for ore_name, ore_amounts in pairs(sorted_ore_results or {}) do
         local ore_amount = (ore_amounts or {})[tier]
@@ -361,8 +376,6 @@ local create_sorting_recipes = function(refinery_product, recipe_base_name, sort
           localised_ores[1] = string.format(localisation_base_name, string.sub(recipe_base_name, -3, -3))
           localised_ores[2] = string.format(localisation_base_name, "")
         end
-        log(serpent.block(localised_ores))
-        log(serpent.block(used_keys))
         --trim localised_ores i too long
         angelsmods.functions.add_localization(unpack(localised_ores))
       end
@@ -381,7 +394,61 @@ local create_sorting_recipes = function(refinery_product, recipe_base_name, sort
     angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "anode-sludge-filtering"))
     angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "anode-sludge"))
   end
-  --log(serpent.block(recipes))
+  log(serpent.block(recipes))
+  return recipes
+end
+
+-- function to create the mixed sorted results for an ore, disables it if it is unused
+local create_sorting_mix_recipe = function(recipe_base_name, ore_result_products, icon_names, ingredients_overrides)
+  local recipes = {}
+  for recipe_index, ore_result_product in pairs(ore_result_products) do
+    local ore_name =
+      type(ore_result_product) == "table" and (ore_result_product[1] or ore_result_product.name) or ore_result_product
+    local ore_amount = type(ore_result_product) == "table" and (ore_result_product[2] or ore_result_product.amount) or 1
+    local recipe = {
+      name = string.format(recipe_base_name, recipe_index),
+      results = {
+        {"!!"},
+        {
+          type = type(ore_result_product) == "table" and ore_result_product.type or "item",
+          name = ore_name,
+          amount = ore_amount
+        }
+      }
+    }
+    if angelsmods.trigger.ores[get_trigger_name[ore_name] or ore_name] and ore_amount > 0 then
+      local icon_name = (icon_names or {})[recipe_index]
+      if icon_name then
+        if type(icon_name) == "table" then
+          recipe.icons = icon_name -- maybe improve this?
+        else
+          recipe.icon = string.format("__angelsrefining__/graphics/icons/%s", icon_name)
+        end
+      end
+      local ingredients_override = (ingredients_overrides or {})[recipe_index]
+      if ingredients_override then
+        local ingredients_override_used = false
+        local ingredients = {{"!!"}}
+        for _, ingredient in pairs(ingredients_override) do
+          local ingredient_name = ingredient.name or ingredient[1]
+          local ingredient_amount = ingredient.amount or ingredient[2]
+          if ingredient_amount > 0 then -- todo: check if ingredient exist in triggers?
+            table.insert(
+              ingredients,
+              {type = ingredient.type or "item", name = ingredient_name, amount = ingredient_amount}
+            )
+            ingredients_override_used = true
+          end
+        end
+        if ingredients_override_used then
+          recipe.ingredients = ingredients
+        end
+      end
+      table.insert(recipes, recipe)
+    else
+      angelsmods.functions.OV.disable_recipe(recipe.name)
+    end
+  end
   return recipes
 end
 
@@ -397,11 +464,24 @@ clowns-ore5=Phosphorite (iron)
 clowns-ore6=Sanguinate (iron)
 clowns-ore7=Elionagate (copper)
 clowns-ore8=Meta-Garnierite (copper)
-clowns-ore9=Meta-Garnierite
+clowns-ore9=Nova-Leucoxene (titanium)
 clowns-ore10=Meta-Garnierite]]
 -------------------------------------------------------------------------------
 -- REGULAR SORTING ------------------------------------------------------------
 -------------------------------------------------------------------------------
+create_basic_recipe("Adamantite", "clowns-ore1%s")
+create_basic_recipe("Orichalcite", "clowns-ore4%s")
+create_basic_recipe("Phosphorite", "clowns-ore5%s")
+create_basic_recipe("Elionagate", "clowns-ore7%s")
+if not special_vanilla then
+  create_basic_recipe("Antitate", "clowns-ore2%s")
+  create_basic_recipe("Pro-Galena", "clowns-ore3%s")
+  create_basic_recipe("Sanguinate", "clowns-ore6%s")
+  create_basic_recipe("Meta-Garnierite", "clowns-ore8%s")
+  create_basic_recipe("Nova-Leucoxene", "clowns-ore9%s")
+  
+end
+
 OV.patch_recipes(
   merge_table_of_tables {
     -- SAPHIRITE
@@ -427,7 +507,7 @@ OV.patch_recipes(
       {
         ["!!"] = (not special_vanilla) and {false, false, false, true},
         ["tin-ore"] = (not special_vanilla) and {2, 2, 3, 3},
-        ["lithium-chloride"] = (not special_vanilla) and {1, 1, 1, 2},
+        ["solid-lithium-chloride"] = (not special_vanilla) and {1, 1, 1, 2},
         ["nickel-ore"] = (not special_vanilla) and {0, 1, 1, 1},
         ["bauxite-ore"] = (not special_vanilla) and {0, 1, 1, 1},
         ["chrome-ore"] = (not special_vanilla) and {0, 0, 1, 1},
@@ -508,21 +588,228 @@ OV.patch_recipes(
         ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1}
       }
     ),
-    --[[create_sorting_recipes(
+    create_sorting_recipes(
       "Meta-Garnierite", --Mg, Fe, Ni, Mn, Al, Zn
       "clowns-ore8%s",
       {
         ["!!"] = (not special_vanilla) and {false, false, false, true},
-        ["copper-ore"] = special_vanilla and {1, 1, 2, 2} or {2, 2, 3, 3},
-        ["angels-copper-nugget"] = special_vanilla and {1, 2, 3, 5},
-        ["angels-copper-pebbles"] = special_vanilla and {2, 4, 3, 3},
-        ["angels-copper-slag"] = special_vanilla and {0, 0, 1, 1},
-        ["lead-ore"] = (not special_vanilla) and {1, 1, 1, 2}, 
-        ["cobalt-ore"] = (not special_vanilla) and{0, 1, 1, 1},
-        ["chrome-ore"] = (not special_vanilla) and{0, 1, 1, 1}, 
-        ["thorium-ore"] = (not special_vanilla) and{0, 0, 1, 1},
-        ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+        ["magnesium-ore"] = (not special_vanilla) and {2, 2, 3, 3},
+        ["iron-ore"] = (not special_vanilla) and {1, 1, 1, 2},
+        ["nickel-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["manganese-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["bauxite-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["zinc-ore"] = (not special_vanilla) and {0, 0, 0, 1}
       }
-    ),]]
+    ),
+    create_sorting_recipes(
+      "Nova-Leucoxene", --Ti, Fe, Ca, Si, Na, Al
+      "clowns-ore9%s",
+      {
+        ["!!"] = (not special_vanilla) and {false, false, false, true},
+        ["iron-ore"] = (not special_vanilla) and {2, 1, 2, 2},
+        ["quartz"] = (not special_vanilla) and {1, 1, 1, 2},
+        ["solid-calcium-sulfate"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["rutile-ore"] = (not special_vanilla) and {0, 2, 2, 2},
+        ["solid-sodium-carbonate"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["bauxite-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+      }
+    ),
+    -- STANNIC
+    --[[ore_exists("Stannic") and ]]create_sorting_recipes(
+      "Stannic",
+      "clownsore11%s",
+      {
+        ["!!"] = (not special_vanilla) and {true, true, true, true},
+        ["tin-ore"] = (not special_vanilla) and {2, 3, 4, 4},
+        ["quartz"] = (not special_vanilla) and {2, 2, 2, 2},
+        ["silver-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["zinc-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+      },
+      true
+    )--[[ or
+    nil]],
+    -- PLUMBUC
+    ore_exists("Plumbic") and create_sorting_recipes(
+      "Plumbic",
+      "clownsore12%s",
+      {
+        ["!!"] = (not special_vanilla) and {true, true, true, true},
+        ["lead-ore"] = (not special_vanilla) and {2, 3, 4, 4},
+        ["solid-calcium-sulfate"] = (not special_vanilla) and {2, 2, 2, 2},
+        ["silver-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["thorium-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+      },
+      true
+    ) or
+    nil,
+    -- PLUMBUC
+    ore_exists("Manganic") and create_sorting_recipes(
+      "Manganic",
+      "clownsore13%s",
+      {
+        ["!!"] = (not special_vanilla) and {true, true, true, true},
+        ["manganese-ore"] = (not special_vanilla) and {2, 3, 4, 4},
+        ["magnesium-ore"] = (not special_vanilla) and {2, 2, 2, 2},
+        ["bauxite-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["solid-sodium-carbonate"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["chrome-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+      },
+      true
+    ) or
+    nil,
+    -- Titanic
+    ore_exists("Titanic") and create_sorting_recipes(
+      "Titanic",
+      "clownsore14%s",
+      {
+        ["!!"] = (not special_vanilla) and {true, true, true, true},
+        ["iron-ore"] = (not special_vanilla) and {2, 3, 4, 4},
+        ["nickel-ore"] = (not special_vanilla) and {2, 2, 2, 2},
+        ["rutile-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["cobalt-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+      },
+      true
+    ) or
+    nil,
+    -- PLUMBUC
+    ore_exists("Phosphic") and create_sorting_recipes(
+      "Phosphic",
+      "clownsore15%s",
+      {
+        ["!!"] = (not special_vanilla) and {true, true, true, true},
+        ["phosphorus-ore"] = (not special_vanilla) and {2, 3, 4, 4},
+        ["copper-ore"] = (not special_vanilla) and {2, 2, 2, 2},
+        ["quartz"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["solid-limestone"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["uranium-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+      },
+      true
+    ) or
+    nil
+  }
+)
+
+-------------------------------------------------------------------------------
+-- MIXED SORTING --------------------------------------------------------------
+-------------------------------------------------------------------------------
+OV.patch_recipes(
+  merge_table_of_tables {
+    -- CRUSHED
+    create_sorting_mix_recipe( --add a sort for special vanilla items to start with
+      "clowns-crushed-mix%i-processing",
+      {
+        special_vanilla and {type = "item", name = "phosphorus-ore", amount = 4} or {type = "item", name = "iron-ore", amount = 9},
+        (not special_vanilla) and {type = "item", name = "copper-ore", amount = 9},
+        (not special_vanilla) and {type = "item", name = "tin-ore", amount = 9},
+        (not special_vanilla) and {type = "item", name = "lead-ore", amount = 9},
+        (not special_vanilla) and {type = "item", name = "manganese-ore", amount = 9},
+        (not special_vanilla) and {type = "item", name = "phosphorus-ore", amount = 9},
+      },
+      {
+        --[[1]] special_vanilla and {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("phosphorus-ore", 0.5, {10, 10})
+        } or {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("iron-ore", 0.5, {10, 10})
+        },
+        --[[2]] {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("copper-ore", 0.5, {10, 10})
+        },
+        --[[3]] {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("tin-ore", 0.5, {10, 10})
+        },
+        --[[4]] {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("lead-ore", 0.5, {10, 10})
+        },
+        --[[5]] {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("manganese-ore", 0.5, {10, 10})
+        },
+        --[[6]] {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("phosphorus-ore", 0.5, {10, 10})
+        },
+      },
+      {
+      --[[1]] special_vanilla and {{type = "item", name = "clowns-ore7", amount = 2},{type = "item", name = "clowns-ore5", amount = 2}} or nil,
+      --[[2]] nil,
+      --[[3]] nil,
+      --[[4]] nil,
+      --[[5]] nil,
+      --[[6]] nil
+      }
+    ),
+    -- CHUNK
+    create_sorting_mix_recipe(
+      "clowns-chunk-mix%i-processing",
+      {
+        special_vanilla and {type = "item", name = "fluorite-ore", amount = 3} or {type = "item", name = "fluorite-ore", amount = 8},
+        (not special_vanilla) and {type = "item", name = "quartz", amount = 8},
+        (not special_vanilla) and {type = "item", name = "nickel-ore", amount = 8},
+        (not special_vanilla) and {type = "item", name = "zinc-ore", amount = 8},
+        (not special_vanilla) and {type = "item", name = "bauxite-ore", amount = 8},
+        (not special_vanilla) and {type = "item", name = "cobalt-ore", amount = 8},
+      },
+      {
+        --[[1]]{ 
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("fluorite-ore", 0.5, {10, 10})
+        },
+        --[[2]]{
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("silica-ore", 0.5, {10, 10})
+        },
+        --[[3]]{
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("nickel-ore", 0.5, {10, 10})
+        },
+        --[[4]]{
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("zinc-ore", 0.5, {10, 10})
+        },
+        --[[5]]{
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("bauxite-ore", 0.5, {10, 10})
+        },
+        --[[6]]{
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("cobalt-ore", 0.5, {10, 10})
+        },
+      },
+      { --{"clowns-ore1","angels-ore5","clowns-ore6","angels-ore3"}
+        --[[1]] special_vanilla and {{type = "item", name = "clowns-ore1", amount = 2},{type = "item", name = "clowns-ore6", amount = 2}} or nil,
+        --[[2]] nil,
+        --[[3]] nil,
+        --[[4]] nil,
+        --[[5]] nil,
+        --[[6]] nil
+      }
+    ),
+    -- CRYSTAL
+    --[[create_sorting_mix_recipe(
+      "clowns-crystal-mix%i-processing",
+      {
+        special_vanilla and {type = "item", name = "fluorite-ore", amount = 3} or {type = "item", name = "fluorite-ore", amount = 8},
+        (not special_vanilla) and {type = "item", name = "quartz", amount = 8},
+        (not special_vanilla) and {type = "item", name = "nickel-ore", amount = 8},
+        (not special_vanilla) and {type = "item", name = "zinc-ore", amount = 8},
+        (not special_vanilla) and {type = "item", name = "bauxite-ore", amount = 8},
+        (not special_vanilla) and {type = "item", name = "cobalt-ore", amount = 8},
+      },
+      {
+        --[[1]]--{ 
+          --{icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          --tweaked_icon_lookup("fluorite-ore", 0.5, {10, 10})
+       -- },
+      --},
+ 
+    --),
   }
 )
