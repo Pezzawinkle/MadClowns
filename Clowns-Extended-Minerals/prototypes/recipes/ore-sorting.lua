@@ -202,7 +202,7 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
       {
         type = "recipe",
         name = ore.."-crushed-processing",
-        localised_name = {"recipe-name.clowns-refining","Crushed "..ore.." Processing"},
+        localised_name = {"recipe-name.clowns-refining","Crushed",{"entity-name."..ore}},
         category = "ore-sorting",
         subgroup = "clowns-ore-sorting-t1",
         allow_decomposition = false,
@@ -232,7 +232,7 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
       {
         type = "recipe",
         name = ore.."-chunk-processing",
-        localised_name = {"recipe-name.clowns-refining",ore.." Chunk Processing"},
+        localised_name = {"recipe-name.clowns-refining",{"entity-name."..ore},"Chunk"},
         category = "ore-sorting",
         subgroup = "clowns-ore-sorting-t2",
         allow_decomposition = false,
@@ -262,7 +262,7 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
       {
         type = "recipe",
         name = ore.."-crystal-processing",
-        localised_name = {"recipe-name.clowns-refining",ore.." Crystal Processing"},
+        localised_name = {"recipe-name.clowns-refining",{"entity-name."..ore},"Crystal"},
         category = "ore-sorting",
         subgroup = "clowns-ore-sorting-t3",
         allow_decomposition = false,
@@ -293,7 +293,7 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
       {
         type = "recipe",
         name = ore.."-pure-processing",
-        localised_name = {"recipe-name.clowns-refining","Purified "..ore.." Processing"},
+        localised_name = {"recipe-name.clowns-refining","Purified",{"entity-name."..ore}},
         category = "ore-sorting",
         subgroup = "clowns-ore-sorting-t4",
         allow_decomposition = false,

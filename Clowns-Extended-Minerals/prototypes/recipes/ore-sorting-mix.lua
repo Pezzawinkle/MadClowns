@@ -186,7 +186,7 @@ local create_adv_mixed_sorting = function(num)
       {
         type = "recipe",
         name = "clownsore"..num.."-crushed",
-        localised_name = {"recipe-name.clown-mix","Crushed",{"entity-name.clowns-ore"..num}},
+        localised_name = {"recipe-name.clowns-mix","Crushed",{"entity-name.clowns-ore"..num}},
         category = "ore-sorting-t1",
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 1,
@@ -205,7 +205,7 @@ local create_adv_mixed_sorting = function(num)
       {
         type = "recipe",
         name = "clownsore"..num.."-crushed-processing",
-        localised_name = {"recipe-name.clown-proc","Crushed",{"entity-name.clowns-ore"..num}},
+        localised_name = {"recipe-name.clowns-proc","Crushed",{"entity-name.clowns-ore"..num}},
         category = "ore-sorting",
         subgroup = "clowns-ore-sorting-1",
         energy_required = 1,
@@ -239,7 +239,7 @@ local create_adv_mixed_sorting = function(num)
       {
         type = "recipe",
         name = "clownsore"..num.."-powder",
-        localised_name = {"recipe-name.clown-mix",{"entity-name.clowns-ore"..num},"Powder"},
+        localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Powder"},
         category = "ore-sorting-t1-5",
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 2,
@@ -259,7 +259,7 @@ local create_adv_mixed_sorting = function(num)
       {
         type = "recipe",
         name = "clownsore"..num.."-powder-processing",
-        localised_name = {"recipe-name.clown-proc",{"entity-name.clowns-ore"..num},"Powder"},
+        localised_name = {"recipe-name.clowns-proc",{"entity-name.clowns-ore"..num},"Powder"},
         category = "ore-sorting",
         subgroup = "clowns-ore-sorting-2",
         energy_required = 1,
@@ -293,7 +293,7 @@ local create_adv_mixed_sorting = function(num)
       {
         type = "recipe",
         name = "clownsore"..num.."-sludge",
-        localised_name = {"recipe-name.clown-mix",{"entity-name.clowns-ore"..num},"Sludge"},
+        localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Sludge"},
         category = "chemistry",
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 4,
@@ -315,7 +315,7 @@ local create_adv_mixed_sorting = function(num)
       {
         type = "recipe",
         name = "clownsore"..num.."-dust",
-        localised_name = {"recipe-name.clown-mix",{"entity-name.clowns-ore"..num},"Dust"},
+        localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Dust"},
         category = "ore-sorting-t2",
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 4,
@@ -336,7 +336,7 @@ local create_adv_mixed_sorting = function(num)
       {
         type = "recipe",
         name = "clownsore"..num.."-dust-processing",
-        localised_name = {"recipe-name.clown-proc",{"entity-name.clowns-ore"..num},"Dust"},
+        localised_name = {"recipe-name.clowns-proc",{"entity-name.clowns-ore"..num},"Dust"},
         category = "ore-sorting",
         subgroup = "clowns-ore-sorting-3",
         energy_required = 1.5,
@@ -370,7 +370,7 @@ local create_adv_mixed_sorting = function(num)
       {
         type = "recipe",
         name = "clownsore"..num.."-solution",
-        localised_name = {"recipe-name.clown-mix",{"entity-name.clowns-ore"..num},"Solution"},
+        localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Solution"},
         category = "ore-sorting-t3",
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 2,
@@ -391,7 +391,7 @@ local create_adv_mixed_sorting = function(num)
       {
         type = "recipe",
         name = "clownsore"..num.."-anode-sludge-filtering",
-        localised_name = {"recipe-name.clown-mix",{"entity-name.clowns-ore"..num},"Filtering"},
+        localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Filtering"},
         category = "filtering",
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 2,
@@ -417,7 +417,7 @@ local create_adv_mixed_sorting = function(num)
       {
         type = "recipe",
         name = "clownsore"..num.."-anode-sludge",
-        localised_name = {"recipe-name.clown-mix",{"entity-name.clowns-ore"..num},"Sludge"},
+        localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Sludge"},
         category = "ore-sorting-t3-5",
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 2,
@@ -438,7 +438,7 @@ local create_adv_mixed_sorting = function(num)
       {
         type = "recipe",
         name = "clownsore"..num.."-crystal",
-        localised_name = {"recipe-name.clown-mix",{"entity-name.clowns-ore"..num},"Crystal"},
+        localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Crystal"},
         category = "crystallizing",
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 2,
@@ -455,7 +455,7 @@ local create_adv_mixed_sorting = function(num)
       {
         type = "recipe",
         name = "clownsore"..num.."-crystal-processing",
-        localised_name = {"recipe-name.clown-proc",{"entity-name.clowns-ore"..num},"Crystal"},
+        localised_name = {"recipe-name.clowns-proc",{"entity-name.clowns-ore"..num},"Crystal"},
         category = "ore-sorting",
         subgroup = "clowns-ore-sorting-4",
         energy_required = 1.5,
