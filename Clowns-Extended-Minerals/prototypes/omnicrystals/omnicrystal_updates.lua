@@ -19,6 +19,7 @@ if mods["omnimatter_crystal"] then
     { ore = "clowns-ore8", name = "Meta-Garnierite",	 },
     { ore = "clowns-ore9", name = "Nova-Leucoxene",	 },
   }
+  --convert these two tables to be more flexible, so i can deal with regular/advanced lists
   local oresGrade = { "crushed", "chunk", "crystal", "pure" }
 
   local toAdd = {}
@@ -136,13 +137,17 @@ if mods["omnimatter_crystal"] then
         local res = table.deepcopy(results_solvation(rec))
         local ore = res[1].name or res[1][1]
         ore=string.sub(ore,1,-13)
+        local lookup = ore
+        if string.find(lookup,"-ore") then
+          lookup=string.sub(lookup,1,-5)
+        end
         local ic = salt_omnide_icon(ore)
 
         toAdd[#toAdd+1] = {
           type = "recipe",
           name = "clowns-"..tier.."-mix"..j.."-pure-salting",
-          localised_name = {"recipe-name.pure-omnide-salting", {"lookup."..ore}},
-          localised_description = {"recipe-description.pure-omnide-salting", {"lookup."..ore}},
+          localised_name = {"recipe-name.pure-omnide-salting", {"lookup."..lookup}},
+          localised_description = {"recipe-description.pure-omnide-salting", {"lookup."..lookup}},
           category = "omniplant",
           subgroup = rec.subgroup.."-omnide",
           enabled = false,

@@ -4,28 +4,18 @@ local special_vanilla = clowns.special_vanilla
 --------------------------------------------------
 local ap_dat={
 	["clowns-ore1"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	--["clowns-ore2"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	--["clowns-ore3"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["clowns-ore4"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["clowns-ore5"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	--["clowns-ore6"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["clowns-ore7"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	--["clowns-ore8"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	--["clowns-ore9"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["clowns-resource1"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["clowns-resource2"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["clowns-resource3"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["clowns-resource4"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["clowns-resource5"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["infinite-clowns-ore1"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	--["infinite-clowns-ore2"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	--["infinite-clowns-ore3"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["infinite-clowns-ore4"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["infinite-clowns-ore5"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	--["infinite-clowns-ore6"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
   ["infinite-clowns-ore7"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-  --["infinite-clowns-ore8"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-  --["infinite-clowns-ore9"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["infinite-clowns-resource2"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["infinite-clowns-resource1"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 }
@@ -60,7 +50,7 @@ if not special_vanilla then
 end
 local inf_dat={} --duplicate regular ore_dat into inf_dat table
 for j,ore in pairs(ore_dat) do
-  inf_dat["infinite-"..j] = ore_dat[j]
+  inf_dat["infinite-"..j] = table.deepcopy(ore_dat[j])
 end
 ---------------------------------------------
 -- Create ores and auto-plate for each ore --
@@ -88,10 +78,11 @@ local build_tab =  {
   }
 	--log(serpent.block(build_tab))
 	angelsmods.functions.add_resource("make",build_tab)
-	angelsmods.functions.make_resource()
 end
 
+
 if mods["angelsinfiniteores"] and settings.startup["enableinfiniteclownsore1"].value == true then
+  local k=1
 	for ore_name in pairs(inf_dat) do
 		local base_ore = string.sub(ore_name,10)
 		--log(base_ore)
@@ -117,15 +108,16 @@ if mods["angelsinfiniteores"] and settings.startup["enableinfiniteclownsore1"].v
 			output_max = 1,
 			output_probability = angelsmods.ores.loweryield,
 			autoplace = {
-				starting_area = false,
-				--resource_index = 21,
+        starting_area = false,
+        resource_index = "z"..ore_dat[base_ore].order,
 				base_density = ap_dat[base_ore].base_density,--quarter the density
 				regular_rq_factor_multiplier = ap_dat[base_ore].regular_rq_factor_multiplier,
 				starting_rq_factor_multiplier = ap_dat[base_ore].starting_rq_factor_multiplier
 			}
 		}
 		--log(serpent.block(build_tab))
-		angelsmods.functions.add_resource("make",build_tab)
-		angelsmods.functions.make_resource()
+    angelsmods.functions.add_resource("make",build_tab)
+    k=k+1
 	end
 end
+angelsmods.functions.make_resource()
