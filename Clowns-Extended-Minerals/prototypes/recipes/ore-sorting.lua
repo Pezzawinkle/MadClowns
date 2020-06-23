@@ -135,6 +135,8 @@ local icon_lookup_table = {
 
   ["osmium-ore"] = {icon = "__Clowns-Processing__/graphics/icons/osmium-ore.png"},
   ["manganese-ore"] = {icon = "__angelssmelting__/graphics/icons/ore-manganese.png"},
+  ["magnesium-ore"] = {icon = "__Clowns-Processing__/graphics/icons/magnesium-ore.png"},
+  ["chrome-ore"] = {icon = "__angelssmelting__/graphics/icons/ore-chrome.png"},
 }
 local tweaked_icon_lookup = function(icon_name, scale, shift)
   if not icon_lookup_table[icon_name] then return icon_lookup_table_fallback end
@@ -394,7 +396,6 @@ local create_sorting_recipes = function(refinery_product, recipe_base_name, sort
     angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "anode-sludge-filtering"))
     angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "anode-sludge"))
   end
-  log(serpent.block(recipes))
   return recipes
 end
 
@@ -711,30 +712,37 @@ OV.patch_recipes(
       {
         --[[1]] special_vanilla and {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("phosphorus-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("phosphorus-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         } or {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("iron-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("iron-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         },
         --[[2]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("copper-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("copper-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         },
         --[[3]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("tin-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("tin-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         },
         --[[4]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("lead-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("lead-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         },
         --[[5]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("manganese-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("manganese-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         },
         --[[6]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("phosphorus-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("phosphorus-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         },
       },
       {
@@ -760,30 +768,36 @@ OV.patch_recipes(
       {
         --[[1]]{ 
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("fluorite-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("fluorite-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         },
         --[[2]]{
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("silica-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("silica-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         },
         --[[3]]{
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("nickel-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("nickel-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         },
         --[[4]]{
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("zinc-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("zinc-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         },
         --[[5]]{
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("bauxite-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("bauxite-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         },
         --[[6]]{
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("cobalt-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("cobalt-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         },
       },
-      { --{"clowns-ore1","angels-ore5","clowns-ore6","angels-ore3"}
+      { 
         --[[1]] special_vanilla and {{type = "item", name = "clowns-ore1", amount = 2},{type = "item", name = "clowns-ore6", amount = 2}} or nil,
         --[[2]] nil,
         --[[3]] nil,
@@ -793,23 +807,80 @@ OV.patch_recipes(
       }
     ),
     -- CRYSTAL
-    --[[create_sorting_mix_recipe(
+    create_sorting_mix_recipe(
       "clowns-crystal-mix%i-processing",
       {
-        special_vanilla and {type = "item", name = "fluorite-ore", amount = 3} or {type = "item", name = "fluorite-ore", amount = 8},
-        (not special_vanilla) and {type = "item", name = "quartz", amount = 8},
-        (not special_vanilla) and {type = "item", name = "nickel-ore", amount = 8},
-        (not special_vanilla) and {type = "item", name = "zinc-ore", amount = 8},
-        (not special_vanilla) and {type = "item", name = "bauxite-ore", amount = 8},
-        (not special_vanilla) and {type = "item", name = "cobalt-ore", amount = 8},
+        (not special_vanilla) and {type = "item", name = "silver-ore", amount = 7},
+        (not special_vanilla) and {type = "item", name = "gold-ore", amount = 7},
+        (not special_vanilla) and {type = "item", name = "rutile-ore", amount = 7},
+        (not special_vanilla) and {type = "item", name = "uranium-ore", amount = 7},
+        (not special_vanilla) and {type = "item", name = "magnesium-ore", amount = 7}
       },
       {
-        --[[1]]--{ 
-          --{icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          --tweaked_icon_lookup("fluorite-ore", 0.5, {10, 10})
-       -- },
-      --},
- 
-    --),
+        --[[1]]{ 
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("silver-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
+        },
+        --[[2]]{
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("gold-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
+        },
+        --[[3]]{
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("rutile-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
+        },
+        --[[4]]{
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("uranium-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
+        },
+        --[[5]]{
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("magnesium-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
+        }
+      }
+    ),
+    -- PURIFIED
+    create_sorting_mix_recipe(
+      "clowns-pure-mix%i-processing",
+      {
+        (not special_vanilla) and {type = "item", name = "tungsten-ore", amount = 5},
+        (not special_vanilla) and {type = "item", name = "thorium-ore", amount = 5},
+        (not special_vanilla) and {type = "item", name = "chrome-ore", amount = 5},
+        (not special_vanilla) and {type = "item", name = "platinum-ore", amount = 5},
+        (not special_vanilla) and {type = "item", name = "osmium-ore", amount = 5}
+      },
+      {
+        --[[1]]{ 
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("tungsten-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
+        },
+        --[[2]]{
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("thorium-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
+        },
+        --[[3]]{
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("chrome-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
+        },
+        --[[4]]{
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("platinum-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
+        },
+        --[[5]]{
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("osmium-ore", 0.5, {10, 10}),
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
+        }
+      }
+    )
   }
 )

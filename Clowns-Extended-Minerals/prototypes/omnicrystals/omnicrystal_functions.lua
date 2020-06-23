@@ -49,7 +49,9 @@ salt_omnide_icon = function(metal)
 	local nr = 5
 	--Build the icons table
 	local icons = {}
-	local icon_2 = "__omnimatter_crystal__/graphics/icons/omnide-salt.png" --if some error occurs
+  local icon_2 = "__omnimatter_crystal__/graphics/icons/omnide-salt.png" --if some error occurs
+  log(serpent.block(metal))
+  log(serpent.block(data.raw.item[metal]))
 	if data.raw.item[metal] and data.raw.item[metal].icon then
 		icon_2=data.raw.item[metal].icon
 	elseif data.raw.item[metal].icons and data.raw.item[metal].icons[1].icon then
