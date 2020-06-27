@@ -1,10 +1,6 @@
 local OV = angelsmods.functions.OV
 
 clowns.functions.replace_ing = function(name,old,new,kind)
-  log(name)
-  log(kind)
-  log(old)
-  log(new)
   --check if correct, fail otherwise
   local continue = true
   if not data.raw.recipe[name] or not (kind == "res" or kind == "ing") or not type(name) == "string" or not type(new) == "string" or not type(old) == "string" then
