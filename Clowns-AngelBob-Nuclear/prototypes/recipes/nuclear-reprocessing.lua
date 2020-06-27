@@ -48,7 +48,7 @@ data:extend(
 		},
 	},
 })
-if data.raw.item["thorium-fuel-cell"] then
+if data.raw.item["thorium-fuel-cell"] or data.raw.item["angels-thorium-fuel-cell"] then
 data:extend(
 {
 	{

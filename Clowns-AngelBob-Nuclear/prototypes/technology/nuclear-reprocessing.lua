@@ -28,7 +28,7 @@ data:extend(
 		order = "e-p-b-c"
 	},
 })
-if data.raw.item["thorium-fuel-cell"] then
+if data.raw.item["thorium-fuel-cell"] or data.raw.item["angels-thorium-fuel-cell"] then
 data:extend(
 {
 	{

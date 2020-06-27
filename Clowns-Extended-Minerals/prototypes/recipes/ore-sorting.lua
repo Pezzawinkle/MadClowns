@@ -2,157 +2,13 @@ local OV = angelsmods.functions.OV
 local rawmulti = angelsmods.marathon.rawmulti
 local special_vanilla = clowns.special_vanilla
 local ore_table = clowns.tables.ores
+-- lookup table to convert ore name to trigger name
+local get_trigger_name = clowns.tables.get_trigger_name
+local icon_lookup_table = clowns.tables.icon_lookup_table
+local tweaked_icon_lookup = clowns.tables.tweaked_icon_lookup
 -------------------------------------------------------------------------------
 -- FUNCTION AND LOOKUP TABLES SET-UP FOR SORTING ITEMS, ICONS AND CONDITIONS --
 -------------------------------------------------------------------------------
--- lookup table to convert ore name to trigger name
-local get_trigger_name = {
-  -- TIER 1 ORES
-  ["iron-ore"] = "iron",
-  ["angels-iron-nugget"] = special_vanilla and "iron" or "unused", -- special vanilla only
-  ["angels-iron-pebbles"] = special_vanilla and "iron" or "unused", -- special vanilla only
-  ["angels-iron-slag"] = special_vanilla and "iron" or "unused", -- special vanilla only
-  ["copper-ore"] = "copper",
-  ["angels-copper-nugget"] = special_vanilla and "copper" or "unused", -- special vanilla only
-  ["angels-copper-pebbles"] = special_vanilla and "copper" or "unused", -- special vanilla only
-  ["angels-copper-slag"] = special_vanilla and "copper" or "unused", -- special vanilla only
-  -- TIER 1.5 ORES
-  ["tin-ore"] = "tin",
-  ["lead-ore"] = "lead",
-  ["quartz"] = "silicon",
-  ["nickel-ore"] = "nickel",
-  ["manganese-ore"] = "manganese",
-  --Clowns T1.5 ores
-  ["phosphorus-ore"] = "phosphorus",
-  ["solid-limestone"] = "limestone",
-  ["solid-calcium-sulfate"] = "calcium-sulfate",
-  ["solid-lithium"] = "solid-lithium",
-  ["solid-sand"] = "sand",
-  ["solid-sodium-carbonate"] = "sodium-carbonate",
-  ["magnesium-ore"] = "magnesium",
-  -- TIER 2 ORES
-  ["zinc-ore"] = "zinc",
-  ["bauxite-ore"] = "aluminium",
-  ["cobalt-ore"] = "cobalt",
-  ["silver-ore"] = "silver",
-  ["fluorite-ore"] = "fluorite", -- byproduct
-  -- TIER 2.5 ORES
-  ["gold-ore"] = "gold",
-  -- TIER 3 ORES
-  ["rutile-ore"] = "titanium",
-  ["uranium-ore"] = "uranium", --need to consider adding this as a special-vanilla variant (matching angels)
-  -- TIER 4 ORES
-  ["tungsten-ore"] = "tungsten",
-  ["thorium-ore"] = "thorium",
-  ["chrome-ore"] = "chrome",
-  ["platinum-ore"] = "platinum",
-  --Clowns T4.5 ores
-  ["osmium-ore"] = "osmium",
-}
-local icon_lookup_table_fallback = {icon = "__angelsrefining__/graphics/icons/void.png"}
-local icon_lookup_table = {
-  ["bauxite-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-bauxite.png"} or
-    mods["bobores"] and {icon = "__bobores__/graphics/icons/bauxite-ore.png"} or
-    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/bauxite-ore.png"} or
-    icon_lookup_table_fallback,
-
-  ["cobalt-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-cobalt.png"} or
-    mods["bobores"] and {icon = "__bobores__/graphics/icons/cobalt-ore.png"} or
-    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/cobalt-ore.png"} or
-    icon_lookup_table_fallback,
-
-  ["copper-nugget"] = {icon = "__angelsrefining__/graphics/icons/copper-nugget.png"},
-
-  ["copper-ore"] = {icon = "__base__/graphics/icons/copper-ore.png", icon_size = 64},
-
-  ["copper-slag"] = {icon = "__angelsrefining__/graphics/icons/copper-slag.png"},
-
-  ["fluorite-ore"] = {icon = "__angelsrefining__/graphics/icons/ore-fluorite.png"},
-
-  ["gold-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-gold.png"} or
-    mods["bobores"] and {icon = "__bobores__/graphics/icons/gold-ore.png"} or
-    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/gold-ore.png"} or
-    icon_lookup_table_fallback,
-
-  ["iron-nugget"] = {icon = "__angelsrefining__/graphics/icons/iron-nugget.png"},
-
-  ["iron-ore"] = {icon = "__base__/graphics/icons/iron-ore.png", icon_size = 64},
-
-  ["iron-slag"] = {icon = "__angelsrefining__/graphics/icons/iron-slag.png"},
-
-  ["solid-lithium"] = {icon = "__angelsrefining__/graphics/icons/solid-lithium.png"},
-  
-  ["lead-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-lead.png"} or
-    mods["bobores"] and {icon = "__bobores__/graphics/icons/lead-ore.png"} or
-    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/lead-ore.png"} or
-    icon_lookup_table_fallback,
-
-  ["nickel-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-nickel.png"} or
-    mods["bobores"] and {icon = "__bobores__/graphics/icons/nickel-ore.png"} or
-    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/nickel-ore.png"} or
-    icon_lookup_table_fallback,
-
-  ["platinum-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-platinum.png"} or
-    icon_lookup_table_fallback,
-
-  ["rutile-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-rutile.png"} or
-    mods["bobores"] and {icon = "__bobores__/graphics/icons/rutile-ore.png"} or
-    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/rutile-ore.png"} or
-    icon_lookup_table_fallback,
-
-  ["silica-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-silica.png"} or
-    mods["bobores"] and {icon = "__bobores__/graphics/icons/quartz.png"} or
-    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/quartz.png"} or
-    icon_lookup_table_fallback,
-
-  ["silver-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-silver.png"} or
-    mods["bobores"] and {icon = "__bobores__/graphics/icons/silver-ore.png"} or
-    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/silver-ore.png"} or
-    icon_lookup_table_fallback,
-
-  ["thorium-ore"] = mods["angelsindustries"] and angelsmods.industries.overhaul and {icon = "__angelssmelting__/graphics/icons/ore-thorium.png", icon_size = 64} or
-    mods["bobplates"] and {icon = "__boblibrary__/graphics/icons/ore-5.png", tint = {b = 0.25, g = 1, r = 1}} or
-    icon_lookup_table_fallback,
-
-  ["tin-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-tin.png"} or
-    mods["bobores"] and {icon = "__bobores__/graphics/icons/tin-ore.png"} or
-    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/tin-ore.png"} or
-    icon_lookup_table_fallback,
-
-  ["tungsten-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-tungsten.png"} or
-    mods["bobores"] and {icon = "__bobores__/graphics/icons/tungsten-ore.png"} or
-    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/tungsten-ore.png"} or
-    icon_lookup_table_fallback,
-
-  ["uranium-ore"] = {icon = "__base__/graphics/icons/uranium-ore.png", icon_size = 64},
-
-  ["zinc-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-zinc.png"} or
-    mods["bobores"] and {icon = "__bobores__/graphics/icons/zinc-ore.png"} or
-    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/zinc-ore.png"} or
-    icon_lookup_table_fallback,
-
-  ["phosphorus-ore"] = {icon = "__Clowns-Processing__/graphics/icons/phosphorus-ore.png"},
-
-  ["osmium-ore"] = {icon = "__Clowns-Processing__/graphics/icons/osmium-ore.png"},
-  ["manganese-ore"] = {icon = "__angelssmelting__/graphics/icons/ore-manganese.png"},
-  ["magnesium-ore"] = {icon = "__Clowns-Processing__/graphics/icons/magnesium-ore.png"},
-  ["chrome-ore"] = {icon = "__angelssmelting__/graphics/icons/ore-chrome.png"},
-}
-local tweaked_icon_lookup = function(icon_name, scale, shift)
-  if not icon_lookup_table[icon_name] then return icon_lookup_table_fallback end
-  if not icon_lookup_table[icon_name].icon then return icon_lookup_table_fallback end
-
-  return {
-    icon = icon_lookup_table[icon_name].icon,
-    icon_size = icon_lookup_table[icon_name].icon_size,
-    scale = 32/(icon_lookup_table[icon_name].icon_size or 32) * (scale or 1),
-    shift = (shift[1] or shift['x'] or shift[2] or shift['y']) and {
-      shift[1] or shift['x'] or 0,
-      shift[2] or shift['y'] or 0
-    } or nil,
-    tint = icon_lookup_table[icon_name].tint
-  }
-end
 --set clownsore triggers
 angelsmods.trigger.refinery_products = angelsmods.trigger.refinery_products or {} --set up if it does not already exist
 angelsmods.trigger.refinery_products["Adamantite"] = true
@@ -181,7 +37,7 @@ local ore_exists = function(ore_name)
   end
   return false
 end
-angelsmods.functions.ore_exists = ore_exists
+--angelsmods.functions.ore_exists = ore_exists
 
 -- function to merge tables, but not override indexes, but keep (different) contents
 local merge_table_of_tables = function(recipes_table)
@@ -351,7 +207,7 @@ local create_sorting_recipes = function(refinery_product, recipe_base_name, sort
           end
         else
           --get trigger name
-          local name=get_trigger_name[ore_name]
+          local name = get_trigger_name[ore_name]
           if not angelsmods.trigger.ores[name or ore_name] then
             ore_amount = 0
           end
@@ -453,20 +309,6 @@ local create_sorting_mix_recipe = function(recipe_base_name, ore_result_products
   return recipes
 end
 
---Once this is done, main ores give a mix of iron (pebbles, nuggets, chunks and ore for copper and iron)
---Since this requires clown processing, also gives access to uranium, phosphorus, osmium and magnesium
---Since angels smelting and petrochem are active, also gives access to fluorite, limestone, sand, clay, Sodium,  
---[[
-clowns-ore1=Adamantite (iron)
-clowns-ore2=Antitate (nil)
-clowns-ore3=Pro-Galena (nil)
-clowns-ore4=Orichalcite (copper)
-clowns-ore5=Phosphorite (iron)
-clowns-ore6=Sanguinate (iron)
-clowns-ore7=Elionagate (copper)
-clowns-ore8=Meta-Garnierite (copper)
-clowns-ore9=Nova-Leucoxene (titanium)
-clowns-ore10=Meta-Garnierite]]
 -------------------------------------------------------------------------------
 -- REGULAR SORTING ------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -480,7 +322,6 @@ if not special_vanilla then
   create_basic_recipe("Sanguinate", "clowns-ore6%s")
   create_basic_recipe("Meta-Garnierite", "clowns-ore8%s")
   create_basic_recipe("Nova-Leucoxene", "clowns-ore9%s")
-  
 end
 
 OV.patch_recipes(
@@ -616,7 +457,7 @@ OV.patch_recipes(
       }
     ),
     -- STANNIC
-    --[[ore_exists("Stannic") and ]]create_sorting_recipes(
+    ore_exists("Stannic") and create_sorting_recipes(
       "Stannic",
       "clownsore11%s",
       {
@@ -628,8 +469,8 @@ OV.patch_recipes(
         ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1}
       },
       true
-    )--[[ or
-    nil]],
+    ) or
+    nil,
     -- PLUMBUC
     ore_exists("Plumbic") and create_sorting_recipes(
       "Plumbic",
@@ -645,7 +486,7 @@ OV.patch_recipes(
       true
     ) or
     nil,
-    -- PLUMBUC
+    -- MANGANIC
     ore_exists("Manganic") and create_sorting_recipes(
       "Manganic",
       "clownsore13%s",
@@ -746,7 +587,7 @@ OV.patch_recipes(
         },
       },
       {
-      --[[1]] special_vanilla and {{type = "item", name = "clowns-ore7", amount = 2},{type = "item", name = "clowns-ore5", amount = 2}} or nil,
+      --[[1]] special_vanilla and {{type = "item", name = "clowns-ore7-crushed", amount = 2},{type = "item", name = "clowns-ore5-crushed", amount = 2}} or nil,
       --[[2]] nil,
       --[[3]] nil,
       --[[4]] nil,
@@ -798,7 +639,7 @@ OV.patch_recipes(
         },
       },
       { 
-        --[[1]] special_vanilla and {{type = "item", name = "clowns-ore1", amount = 2},{type = "item", name = "clowns-ore6", amount = 2}} or nil,
+        --[[1]] special_vanilla and {{type = "item", name = "clowns-ore1-chunk", amount = 2},{type = "item", name = "clowns-ore5-chunk", amount = 2}} or nil,
         --[[2]] nil,
         --[[3]] nil,
         --[[4]] nil,
@@ -814,7 +655,7 @@ OV.patch_recipes(
         (not special_vanilla) and {type = "item", name = "gold-ore", amount = 7},
         (not special_vanilla) and {type = "item", name = "rutile-ore", amount = 7},
         (not special_vanilla) and {type = "item", name = "uranium-ore", amount = 7},
-        (not special_vanilla) and {type = "item", name = "magnesium-ore", amount = 7}
+        special_vanilla and {type = "item", name = "magnesium-ore", amount = 4} or {type = "item", name = "magnesium-ore", amount = 7}
       },
       {
         --[[1]]{ 
@@ -842,6 +683,13 @@ OV.patch_recipes(
           tweaked_icon_lookup("magnesium-ore", 0.5, {10, 10}),
           {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         }
+      },
+      {
+        nil,
+        nil,
+        nil,
+        nil,
+        special_vanilla and {{type = "item", name = "clowns-ore4-crystal", amount = 2},{type = "item", name = "clowns-ore7-crystal", amount = 2}} or nil,
       }
     ),
     -- PURIFIED
@@ -852,7 +700,7 @@ OV.patch_recipes(
         (not special_vanilla) and {type = "item", name = "thorium-ore", amount = 5},
         (not special_vanilla) and {type = "item", name = "chrome-ore", amount = 5},
         (not special_vanilla) and {type = "item", name = "platinum-ore", amount = 5},
-        (not special_vanilla) and {type = "item", name = "osmium-ore", amount = 5}
+        special_vanilla and {type = "item", name = "osmium-ore", amount = 6} or {type = "item", name = "osmium-ore", amount = 5}
       },
       {
         --[[1]]{ 
@@ -880,6 +728,13 @@ OV.patch_recipes(
           tweaked_icon_lookup("osmium-ore", 0.5, {10, 10}),
           {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
         }
+      },
+      {
+        nil,
+        nil,
+        nil,
+        nil,
+        special_vanilla and {{type = "item", name = "clowns-ore1-pure", amount = 2},{type = "item", name = "clowns-resource2", amount = 2},{type = "item", name = "clowns-ore7-pure", amount = 2}} or nil,
       }
     )
   }

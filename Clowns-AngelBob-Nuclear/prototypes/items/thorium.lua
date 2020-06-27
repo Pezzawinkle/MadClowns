@@ -1,4 +1,4 @@
-if (mods["bobores"] or mods["bobplates"] or mods["angels-industries"]) and data.raw.item["thorium-ore"] then
+if not (mods["bobores"] or mods["bobplates"] or mods["angels-industries"]) and data.raw.item["thorium-ore"] then
 data:extend(
 {
 	{

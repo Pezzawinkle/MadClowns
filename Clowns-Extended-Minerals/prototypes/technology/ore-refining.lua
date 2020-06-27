@@ -131,4 +131,6 @@ if not special_vanilla then
     table.insert(data.raw.technology["ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crystal"})
     table.insert(data.raw.technology["ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crystal-processing"})
   end
+else --special vanilla case
+  --table.insert(data.raw.technology["ore-advanced-crushing"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crushed"})
 end

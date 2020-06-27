@@ -44,7 +44,7 @@ local ore_combos = { --these are hidden when spec-vanilla is on anyway
     --[[P]] {"clowns-ore5","angels-ore6","clowns-resource1"}
   },
   [2] = --[[chunk mix]]{
-    --[[F]] {"clowns-ore1","angels-ore5","clowns-ore6","angels-ore3"},
+    --[[F]] {"clowns-ore1","angels-ore5","clowns-ore6","angels-ore3"},-- spec vanilla and c1,c5
     --[[Si]]{"angels-ore1","clowns-ore6","angels-ore9","clowns-ore9"},
     --[[Ni]]{"angels-ore8","clowns-ore2","clowns-ore4","clowns-ore8"},
     --[[Zn]]{"clowns-ore4","clowns-ore3","clowns-ore8","angels-ore2"},
@@ -56,14 +56,14 @@ local ore_combos = { --these are hidden when spec-vanilla is on anyway
     --[[Au]]{"angels-ore9","clowns-ore4","angels-ore3","angels-ore5","angels-ore4"},
     --[[Ti]]{"angels-ore5","clowns-ore9","clowns-ore1","angels-ore1","angels-ore3"},
     --[[U]] {"clowns-ore5","angels-ore3","angels-ore1","angels-ore4","angels-ore6"},
-    --[[Mg]]{"clowns-ore2","clowns-ore7","clowns-ore8","clowns-ore4","angels-ore6"}
+    --[[Mg]]{"clowns-ore2","clowns-ore7","clowns-ore8","clowns-ore4","angels-ore6"}-- spec vanilla and c4,c7
   },
   [4] = --[[pure mix]]{
     --[[W]] {"angels-ore2","angels-ore3","angels-ore6","angels-ore8","clowns-ore4"},
     --[[Th]]{"angels-ore8","angels-ore9","clowns-ore3","clowns-ore5","clowns-ore7"},
     --[[Cr]]{"angels-ore1","angels-ore8","clowns-ore1","clowns-ore2","clowns-ore7"},
     --[[Pt]]{"angels-ore5","angels-ore9","clowns-ore2","clowns-ore7","clowns-resource2"},
-    --[[Os]]{"angels-ore4","clowns-ore6","clowns-ore8","clowns-ore9","clowns-resource2"},
+    --[[Os]]{"angels-ore4","clowns-ore6","clowns-ore8","clowns-ore9","clowns-resource2"}, --spec vanilla and r2, c1, c7
   },
 }
 local adv_substitute = {["crushed"] = "crushed",["chunk"] = "powder",["crystal"] = "dust",["pure"] = "crystal"}

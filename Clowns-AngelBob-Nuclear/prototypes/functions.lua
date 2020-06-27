@@ -1,23 +1,28 @@
 local OV = angelsmods.functions.OV
 
 clowns.functions.replace_ing = function(name,old,new,kind)
+  log(name)
+  log(kind)
+  log(old)
+  log(new)
   --check if correct, fail otherwise
   local continue = true
-  if not (kind == "res" or kind == "ing") then
-    continue=false
+  if not data.raw.recipe[name] or not (kind == "res" or kind == "ing") or not type(name) == "string" or not type(new) == "string" or not type(old) == "string" then
+    continue = false
+    return
   end
-  if not type(name) == "string" then
-    continue=false
-  else
-    list=data.raw.recipe[name].kind
-  end
-  if not type(old) == "string" then
-    log("string for old please")
-    continue=false
-  end
-  if not type(new) == "string" then
-    log("string for new please")
-    continue=false
+  if data.raw.recipe[name] then
+    if kind == "res" then
+      list = data.raw.recipe[name].results
+      if not list then
+        list = data.raw.recipe[name].normal.results
+      end
+    elseif kind == "ing" then
+      list = data.raw.recipe[name].ingredients
+      if not list then
+        list = data.raw.recipe[name].normal.ingredients
+      end
+    end
   end
   if continue == true  and list then
     for i, item in pairs(list) do
@@ -43,12 +48,30 @@ clowns.functions.pre_req_repl = function(techname, old_tech, new_tech1, new_tech
 end
 
 clowns.functions.remove_res = function(name, to_rem, kind)
-  local list=data.raw.recipe[name].kind
-  index=""
-  for i,ing in pairs(list) do
-    if ing.name == to_rem or (ing.name and ing[1] == to_rem) then
-      index=i
+  local temp = data.raw.recipe[name]
+  if temp then --terminate if recipe does not exist
+    local keys, list = {},{}
+    if temp.kind then
+      keys[#keys+1] = temp.kind
     end
+    if temp.normal and temp.normal.kind then
+      keys[#keys+1] = temp.normal.kind
+    end
+    if temp.expensive and temp.expensive.kind then
+      keys[#keys+1] = temp.expensive.kind
+    end
+    --local list=data.raw.recipe[name].kind or data.raw.recipe[name].normal.kind
+    for i,list in pairs(keys) do
+      index=""
+      if list then
+        for i,ing in pairs(list) do
+          if ing.name == to_rem or (ing.name and ing[1] == to_rem) then
+            index=i
+          end
+        end
+        
+      end
+    end
+    table.remove(list,index) -- remove after loop, not while in it.
   end
-  table.remove(list,index) -- remove after loop, not while in it.
 end

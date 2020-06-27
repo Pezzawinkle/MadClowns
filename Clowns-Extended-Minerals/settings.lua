@@ -48,20 +48,34 @@ data:extend(
 		setting_type = "startup",
 		default_value = true,
 		order = "g",
+  },
+  {
+		type = "bool-setting",
+		name = "enableinfiniteclownsore8",
+		setting_type = "startup",
+		default_value = true,
+		order = "h",
+  },
+  {
+		type = "bool-setting",
+		name = "enableinfiniteclownsore9",
+		setting_type = "startup",
+		default_value = true,
+		order = "i",
 	},
 	{
 		type = "bool-setting",
 		name = "enableinfiniteclownsresource1",
 		setting_type = "startup",
 		default_value = true,
-		order = "h",
+		order = "l",
 	},
 	{
 		type = "bool-setting",
 		name = "enableinfiniteclownsresource2",
 		setting_type = "startup",
 		default_value = true,
-		order = "i",
+		order = "m",
 	},
 }
 )

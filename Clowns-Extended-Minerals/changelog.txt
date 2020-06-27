@@ -9,6 +9,7 @@ Version: 1.1.14
   Bugfixes:
     - Removed duplicatated recipes from angels
       - not deleted them yet, just hidden them to prevent base breakage
+    - Fixed infinite ores overriding reglar ores if enabled
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.13
   Features:

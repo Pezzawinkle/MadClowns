@@ -1,4 +1,5 @@
 local OV = angelsmods.functions.OV
+--set nuclear cell plate
 local n_plate="iron-plate"
 if mods["bobplates"] then
   n_plate="lead-plate"
@@ -30,6 +31,20 @@ end
 -- ANGELS INDUSTRIES NUCLEAR UPDATES --
 ---------------------------------------
 --something about replacing angels deuterium bomb result with the thermonuke etc...
+if mods["angelsindustries"] and angelsmods.industries.overhaul then
+  --fix recipes
+  clowns.functions.replace_ing("angels-uranium-fuel-cell","iron-plate",n_plate,"ing")
+  clowns.functions.replace_ing("advanced-thorium-nuclear-fuel-reprocessing|b","used-up-thorium-fuel-cell","used-up-angels-thorium-fuel-cell","ing")
+  clowns.functions.replace_ing("advanced-thorium-nuclear-fuel-reprocessing","used-up-thorium-fuel-cell","used-up-AMOX-cell","ing")
+  --==Hide fuel cell recipes==--
+  --clowns uranium-fuel cell
+  OV.remove_unlock("mixed-oxide", "mixed-oxide-fuel")
+  OV.disable_technology("mixed-oxide-fuel")
+  --clowns thorium-fuel cell
+  OV.remove_unlock("thorium-mixed-oxide", "thorium-fuel-reprocessing")
+  OV.disable_technology("thorium-fuel-reprocessing")
+  angelsmods.functions.add_flag("used-up-thorium-fuel-cell", "hidden")
+end
 
 --updates to the plutonium bomb
 if data.raw.item["electronic-logic-board"] then 
@@ -46,26 +61,8 @@ data.raw.recipe["nuclear-fuel-reprocessing"].results=
 --update nuclear fuel result metal
 table.insert(data.raw.recipe["nuclear-fuel-reprocessing"].results, {type="item", name=n_plate, amount=5})
 
---mixed thorium-plutonium cell update
-if data.raw.recipe["thorium-plutonium-fuel-cell"] then
-  data.raw.recipe["thorium-plutonium-fuel-cell"].ingredients=
-  {
-    {type="item", name="plutonium-239", amount=6},
-    {type="item", name="thorium-232", amount=6}
-  }
-  if data.raw.recipe["thorium-plutonium-fuel-cell"].result then
-    data.raw.recipe["thorium-plutonium-fuel-cell"].results={{type="item",name=data.raw.recipe["thorium-plutonium-fuel-cell"].result,amount = data.raw.recipe["thorium-plutonium-fuel-cell"].result_amount or 1}}
-    data.raw.recipe["thorium-plutonium-fuel-cell"].result=nil
-  end
-  if data.raw.recipe["thorium-plutonium-fuel-cell"].results then
-    table.insert(data.raw.recipe["thorium-plutonium-fuel-cell"].results, {type="item", name=n_plate, amount=2})
-  elseif data.raw.recipe["thorium-plutonium-fuel-cell"].normal.results then
-    table.insert(data.raw.recipe["thorium-plutonium-fuel-cell"].normal.results, {type="item", name=n_plate, amount=2})
-    table.insert(data.raw.recipe["thorium-plutonium-fuel-cell"].expensive.results, {type="item", name=n_plate, amount=2})
-  end
-end
 --lead replacement mixing settings
-if settings.startup["reprocessing-overhaul"].value then
+if settings.startup["reprocessing-overhaul"].value and data.raw.item["lead-oxide"] then --check setting and that the oxide exists
 	local rec_chance= 1
 	if data.raw.recipe["angels-roll-lead-converting"] then -- assuming full modules, assembly and coils
 		rec_chance= 0.215
@@ -87,9 +84,13 @@ if settings.startup["reprocessing-overhaul"].value then
     angelsmods.functions.allow_productivity("mixed-oxide")
     angelsmods.functions.allow_productivity("thorium-mixed-oxide")
     clowns.functions.remove_res("thorium-fuel-reprocessing",n_plate,"res")
-    table.insert(data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
-    table.insert(data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing|b"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
-    table.insert(data.raw.recipe["thorium-fuel-reprocessing"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
+    if data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing"] then
+      table.insert(data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
+      table.insert(data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing|b"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
+    end
+    if data.raw.recipe["thorium-fuel-reprocessing"] then
+      table.insert(data.raw.recipe["thorium-fuel-reprocessing"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
+    end
 	else
     table.insert(data.raw.recipe["advanced-nuclear-fuel-reprocessing-2"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
   end
@@ -125,5 +126,13 @@ data.raw.recipe["uranium-fuel-cell"].ingredients =
   {type="item", name=n_plate, amount=10}, --enforce lead plate
   {type="item", name="35%-uranium", amount=20},
 }
+data.raw.recipe["mixed-oxide"].ingredients =
+{
+  {type="item", name=n_plate, amount=2}, --enforce lead plate
+  {type="item", name="uranium-238", amount=2},
+  {type="item", name="plutonium-239", amount=2}
+}
+--globally override plutonium to be consistent 
+OV.global_replace_item("plutonium-240","plutonium-239")
 --execute functions after being called
 OV.execute()
