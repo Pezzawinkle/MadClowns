@@ -107,8 +107,12 @@ if not mods["omnimatter"] and mods["bobtech"] and settings.startup["bobmods-tech
 	data.raw.recipe["logistic-science-pack"].icons[1] = {icon = "__base__/graphics/icons/automation-science-pack.png",icon_size=64}
 	data.raw.recipe["alt1-science-pack-2"].icons[1] = {icon = "__base__/graphics/icons/automation-science-pack.png",icon_size=64}
   if data.raw.recipe["utility-science-pack"].icon then
-    data.raw.recipe["utility-science-pack"].icon={icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
+    data.raw.recipe["utility-science-pack"].icons={{icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}}
+    data.raw.recipe["utility-science-pack"].icon=nil
   else
+    if not data.raw.recipe["utility-science-pack"].icons then
+      data.raw.recipe["utility-science-pack"].icons={}
+    end
     data.raw.recipe["utility-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
   end
 	data.raw.recipe["alt1-high-tech-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
