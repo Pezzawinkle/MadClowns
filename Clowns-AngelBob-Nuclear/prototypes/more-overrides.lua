@@ -59,7 +59,8 @@ data.raw.recipe["nuclear-fuel-reprocessing"].results=
 	{type="item", name="uranium-238", amount=3},
 }
 --update nuclear fuel result metal
-table.insert(data.raw.recipe["nuclear-fuel-reprocessing"].results, {type="item", name=n_plate, amount=5})
+clowns.functions.add_to_table("nuclear-fuel-reprocessing",{type="item", name=n_plate, amount=5},"res")
+--table.insert(data.raw.recipe["nuclear-fuel-reprocessing"].results, {type="item", name=n_plate, amount=5})
 
 --lead replacement mixing settings
 if settings.startup["reprocessing-overhaul"].value and data.raw.item["lead-oxide"] then --check setting and that the oxide exists
@@ -77,22 +78,28 @@ if settings.startup["reprocessing-overhaul"].value and data.raw.item["lead-oxide
 	end
   --uranium updates
   clowns.functions.remove_res("nuclear-fuel-reprocessing",n_plate,"res")
-  table.insert(data.raw.recipe["nuclear-fuel-reprocessing"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
-  table.insert(data.raw.recipe["advanced-nuclear-fuel-reprocessing"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
+  clowns.functions.add_to_table("nuclear-fuel-reprocessing",{type="item",name="lead-oxide",amount= 2,probability=rec_chance},"res")
+  clowns.functions.add_to_table("advanced-nuclear-fuel-reprocessing",{type="item",name="lead-oxide",amount= 2,probability=rec_chance},"res")
+  --table.insert(data.raw.recipe["nuclear-fuel-reprocessing"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
+  --table.insert(data.raw.recipe["advanced-nuclear-fuel-reprocessing"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
   --thorium updates
   if data.raw.item["thorium-ore"] then
     angelsmods.functions.allow_productivity("mixed-oxide")
     angelsmods.functions.allow_productivity("thorium-mixed-oxide")
     clowns.functions.remove_res("thorium-fuel-reprocessing",n_plate,"res")
     if data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing"] then
-      table.insert(data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
-      table.insert(data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing|b"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
+      clowns.functions.add_to_table("advanced-thorium-nuclear-fuel-reprocessing",{type="item",name="lead-oxide",amount= 2,probability=rec_chance},"res")
+      clowns.functions.add_to_table("advanced-thorium-nuclear-fuel-reprocessing|b",{type="item",name="lead-oxide",amount= 2,probability=rec_chance},"res")
+      --table.insert(data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
+      --table.insert(data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing|b"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
     end
     if data.raw.recipe["thorium-fuel-reprocessing"] then
-      table.insert(data.raw.recipe["thorium-fuel-reprocessing"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
+      clowns.functions.add_to_table("thorium-fuel-reprocessing",{type="item",name="lead-oxide",amount= 2,probability=rec_chance},"res")
+      --table.insert(data.raw.recipe["thorium-fuel-reprocessing"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
     end
-	else
-    table.insert(data.raw.recipe["advanced-nuclear-fuel-reprocessing-2"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
+  else
+    clowns.functions.add_to_table("advanced-nuclear-fuel-reprocessing-2",{type="item",name="lead-oxide",amount= 2,probability=rec_chance},"res")
+    --table.insert(data.raw.recipe["advanced-nuclear-fuel-reprocessing-2"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
   end
 end
 ----------------------------------------

@@ -34,6 +34,43 @@ clowns.functions.replace_ing = function(name,old,new,kind)
   return list
 end
 
+clowns.functions.add_to_table = function(name,new,kind)
+  --check if correct, fail otherwise
+  local continue = true
+  if not data.raw.recipe[name] or not (kind == "res" or kind == "ing") or not type(name) == "string" or not type(new) == "table" then
+    continue = false
+    return
+  end
+  if data.raw.recipe[name] then
+    if kind == "res" then
+      list = data.raw.recipe[name].results
+      if not list then
+        list = data.raw.recipe[name].normal.results
+        if data.raw.recipe[name].expensive.results then
+          expensive=data.raw.recipe[name].expensive.results
+        end
+      end
+    elseif kind == "ing" then
+      list = data.raw.recipe[name].ingredients
+      if not list then
+        list = data.raw.recipe[name].normal.ingredients
+        if data.raw.recipe[name].expensive.ingredients then
+          expensive=data.raw.recipe[name].expensive.ingredients
+        end
+      end
+    end
+  end
+  if continue == true  and list then
+    list = table.insert(list,new)
+  end
+  if continue == true and expensive then
+    expensive = table.insert(expensive,new)
+  end
+  return
+end
+
+
+
 --lifted from industries...
 clowns.functions.pre_req_repl = function(techname, old_tech, new_tech1, new_tech2) -- tech prerequisite replacements
   OV.remove_prereq(techname, old_tech)
