@@ -31,7 +31,7 @@ data:extend(
 		{
 			{type="fluid", name="liquid-nitric-acid", amount=gas_param},
 		},
-		result = "advanced-logistic-science-pack"
+		result = (mods["angelsindustries"] and angelsmods.industries.tech) and "datacore-enhance-1" or "advanced-logistic-science-pack"
 	}
 }
 )
@@ -100,7 +100,7 @@ data:extend(
 			{type="fluid", name="gas-oxygen", amount=gas_param},
 			{type="fluid", name="gas-carbon-dioxide", amount=gas_param}
 		},
-		result = "automation-science-pack"
+		result = (mods["angelsindustries"] and angelsmods.industries.tech) and "datacore-basic" or "automation-science-pack"
 	},
 
 	{
@@ -129,7 +129,7 @@ data:extend(
 			{type="fluid", name="gas-chlorine", amount=gas_param},
 			{type="fluid", name="gas-carbon-dioxide", amount=gas_param}
 		},
-		result = "logistic-science-pack"
+		result = (mods["angelsindustries"] and angelsmods.industries.tech) and "datacore-logistic-1" or "logistic-science-pack"
 	},
 
 	{
@@ -158,7 +158,7 @@ data:extend(
 			{type="fluid", name="gas-ammonia", amount=gas_param},
 			{type="fluid", name="gas-carbon-monoxide", amount=gas_param}
 		},
-		result = "chemical-science-pack"
+		result = (mods["angelsindustries"] and angelsmods.industries.tech) and "datacore-energy-1" or "chemical-science-pack"
 	},
 
 	{
@@ -187,7 +187,7 @@ data:extend(
 			{type="fluid", name="liquid-sulfuric-acid", amount=gas_param},
 			{type="fluid", name="gas-carbon-monoxide", amount=gas_param}
 		},
-		result = "military-science-pack"
+		result = (mods["angelsindustries"] and angelsmods.industries.tech) and "datacore-war-1" or "military-science-pack"
 	},
 
 	{
@@ -215,7 +215,7 @@ data:extend(
 		{
 			{type="fluid", name="gas-methanol", amount=gas_param},
 		},
-		result = "production-science-pack"
+		result = (mods["angelsindustries"] and angelsmods.industries.tech) and "datacore-processing-1" or "production-science-pack"
 	},
 
 	{
@@ -243,7 +243,7 @@ data:extend(
 		{
 			{type="fluid", name="liquid-hydrofluoric-acid", amount=gas_param},
 		},
-		result = "utility-science-pack"
+		result = (mods["angelsindustries"] and angelsmods.industries.tech) and "datacore-energy-1" or "utility-science-pack"
 	},
 }
 )

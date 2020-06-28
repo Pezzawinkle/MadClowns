@@ -36,6 +36,7 @@ if mods["angelsindustries"] and angelsmods.industries.overhaul then
   clowns.functions.replace_ing("angels-uranium-fuel-cell","iron-plate",n_plate,"ing")
   clowns.functions.replace_ing("advanced-thorium-nuclear-fuel-reprocessing|b","used-up-thorium-fuel-cell","used-up-angels-thorium-fuel-cell","ing")
   clowns.functions.replace_ing("advanced-thorium-nuclear-fuel-reprocessing","used-up-thorium-fuel-cell","used-up-AMOX-cell","ing")
+  clowns.functions.replace_ing("thorium-nuclear-fuel-reprocessing","used-up-thorium-fuel-cell","used-up-AMOX-cell","ing")
   --==Hide fuel cell recipes==--
   --clowns uranium-fuel cell
   OV.remove_unlock("mixed-oxide", "mixed-oxide-fuel")
