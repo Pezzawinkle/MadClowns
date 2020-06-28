@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.24
+Date: 2020-06-29
+  Changes:
+    - Hides unused recipes in angels tech overhaul mode
+      - Preparing this to work correctly with the tech overhaul is going to take a bit longer
+---------------------------------------------------------------------------------------------------
 Version: 1.0.23
   Bugfixes:
     - Fixed that I was setting require behind mod checks potentially causing CRC fails in multiplayer

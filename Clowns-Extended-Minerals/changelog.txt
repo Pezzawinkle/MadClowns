@@ -6,6 +6,7 @@ Version: 1.1.14
     - Added a new mixed sorting tier for a slightly higher yield of products (exacerbated by prod)
     - Added 5 blended ores (Stannic, Plumbic, Manganic, Titanic, Phosphic)
     - Added support to work with Angels Special-vanilla setting
+    - Prepared changes to integrate clowns resources into angels generation code (waiting for the angels update to come through)
   Bugfixes:
     - Removed duplicatated recipes from angels
       - not deleted them yet, just hidden them to prevent base breakage

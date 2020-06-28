@@ -1,6 +1,6 @@
 local name = "clowns-resource1"
 local stage = "clowns_resource1"
-local sheet = "__Clowns-Extended-Minerals__/graphics/entity/alluvium.png"
+local sheet = "__Clowns-Extended-Minerals__/graphics/entity/alluvium-orig.png"
 local frame_count = 1
 local variation_count = 2
 local order = "ba"

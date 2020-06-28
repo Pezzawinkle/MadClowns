@@ -39,7 +39,11 @@ require("prototypes.categories")
 require("prototypes.lookup-tables")
 
 require("prototypes.generation.clowns-ore-set")
-require("prototypes.generation.clowns-resource-set")
+--require("prototypes.generation.clowns-resource-set") --waiting for angels next update to activate the new method
+require("prototypes.generation.clowns-resource1")
+require("prototypes.generation.clowns-resource2")
+require("prototypes.generation.infinite-clowns-resource1")
+require("prototypes.generation.infinite-clowns-resource2")
 angelsmods.functions.make_resource()
 
 require("prototypes.items.item-builder")

@@ -3,7 +3,7 @@ if mods["angelsinfiniteores"] and settings.startup["enableinfiniteclownsresource
 	local stage = name
 	
 	
-	local sheet = "__Clowns-Extended-Minerals__/graphics/entity/alluvium.png"
+	local sheet = "__Clowns-Extended-Minerals__/graphics/entity/alluvium-orig.png"
 	local frame_count = 1
 	local variation_count = 2
 

@@ -35,8 +35,12 @@ clowns.tables.get_trigger_name = {
   --[[A]]["solid-sodium-carbonate"] = "sodium-carbonate",
   --[[A]]["fluorite-ore"] = "fluorite", -- byproduct
 
-  --[[P]]["borax-ore"] = "borax",
-  --[[P]]["molybdenum-ore"] ="molybdenum",
+  --[[P]]["raw-borax"] = "borax", --pycoal
+  --[[P]]["nexelit-ore"] = "nexelit", --pycoal
+  --[[P]]["niobium-ore"] ="niobium", --pycoal
+  --[[P]]["molybdenum-ore"] ="molybdenum", --pyhightech
+  
+  --[[P]]["rare-earth ore"] = "rare-earth ore" --pyhightech
 }
 local icon_lookup_table_fallback = {icon = "__angelsrefining__/graphics/icons/void.png"}
 clowns.tables.icon_lookup_table = {
@@ -142,3 +146,142 @@ clowns.tables.tweaked_icon_lookup = function(icon_name, scale, shift)
     tint = clowns.tables.icon_lookup_table[icon_name].tint
   }
 end
+----------------------------
+--== ORE SORTING TABLES ==--
+----------------------------
+----------------------------------------------
+-- Normal ore tier sorting -------------------
+----------------------------------------------
+clowns.tables.adamantite =       {
+  ["!!"] = {special_vanilla, special_vanilla, special_vanilla, true},
+  ["iron-ore"] = special_vanilla and {1, 2, 3, 4} or {2, 2, 3, 3},
+  ["angels-iron-nugget"] = special_vanilla and {1, 1, 4, 2},
+  ["angels-iron-pebbles"] = special_vanilla and {2, 3, 1, 2},
+  ["angels-iron-slag"] = special_vanilla and {0, 0, 1, 4},
+  ["tin-ore"] = (not special_vanilla) and {1, 1, 1, 2},
+  ["fluorite-ore"] = {0, 1, 1, 1}, -- forced on all the time from processing
+  ["chrome-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["rutile-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["osmium-ore"] = {0, 0, 0, 1}
+}
+clowns.tables.antitate = {
+  ["!!"] = (not special_vanilla) and {false, false, false, true},
+  ["tin-ore"] = (not special_vanilla) and {2, 2, 3, 3},
+  ["solid-lithium-chloride"] = (not special_vanilla) and {1, 1, 1, 2},
+  ["nickel-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["bauxite-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["chrome-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+}
+clowns.tables.progalena = {
+  ["!!"] = (not special_vanilla) and {false, false, false, true},
+  ["lead-ore"] = (not special_vanilla) and {2, 2, 3, 3},
+  ["solid-calcium-sulfate"] = (not special_vanilla) and {1, 1, 1, 2},
+  ["silver-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["zinc-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["thorium-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["uranium-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+}
+clowns.tables.orichalcite = {
+  ["!!"] = {special_vanilla, special_vanilla, special_vanilla, true},
+  ["copper-ore"] = special_vanilla and {1, 2, 3, 4} or {2, 2, 3, 3},
+  ["angels-copper-nugget"] = special_vanilla and {1, 2, 4, 3},
+  ["angels-copper-pebbles"] = special_vanilla and {2, 3, 1, 2},
+  ["angels-copper-slag"] = special_vanilla and {0, 0, 2, 4},
+  ["manganese-ore"] = (not special_vanilla) and {1, 1, 1, 2},
+  ["nickel-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["zinc-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+}
+clowns.tables.phosphorite = {
+  ["!!"] = {special_vanilla, special_vanilla, special_vanilla, true},
+  ["iron-ore"] = special_vanilla and {3, 3, 3, 3} or {0, 1, 1, 1},
+  ["angels-iron-nugget"] = special_vanilla and {0, 1, 2, 3},
+  ["angels-iron-pebbles"] = special_vanilla and {1, 3, 1, 4},
+  ["angels-iron-slag"] = special_vanilla and {1, 1, 2, 2},
+  ["phosphorus-ore"] = {2, 2, 3, 3},
+  ["solid-limestone"] = {1, 1, 1, 2}, --always active with processing/petrochem
+  ["uranium-ore"] = {0, 0, 1, 1},
+  ["lead-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["thorium-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+}
+clowns.tables.sanguinate = {
+  ["!!"] = (not special_vanilla) and {false, false, false, true},
+  ["manganese-ore"] = (not special_vanilla) and {2, 2, 3, 3},
+  ["quartz"] = (not special_vanilla) and {1, 1, 1, 2}, 
+  ["solid-calcium-sulfate"] = (not special_vanilla) and {0, 1, 1, 1}, --always active with processing/petrochem
+  ["fluorite-ore"] = (not special_vanilla) and {0, 1, 1, 1}, --always active with processing/petrochem
+  ["phosphorus-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["rutile-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+}
+clowns.tables.elionagate = {
+  ["!!"] = {special_vanilla, special_vanilla, special_vanilla, true},
+  ["copper-ore"] = special_vanilla and {4, 3, 2, 1} or {2, 2, 3, 3},
+  ["angels-copper-nugget"] = special_vanilla and {0, 0, 2, 3},
+  ["angels-copper-pebbles"] = special_vanilla and {0, 5, 5, 6},
+  ["angels-copper-slag"] = special_vanilla and {1, 2, 3, 4},
+  ["lead-ore"] = (not special_vanilla) and {1, 1, 1, 2}, 
+  ["cobalt-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["chrome-ore"] = (not special_vanilla) and {0, 1, 1, 1}, 
+  ["thorium-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+}
+clowns.tables.metagarnierite = {
+  ["!!"] = (not special_vanilla) and {false, false, false, true},
+  ["magnesium-ore"] = (not special_vanilla) and {2, 2, 3, 3},
+  ["iron-ore"] = (not special_vanilla) and {1, 1, 1, 2},
+  ["nickel-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["manganese-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["bauxite-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["zinc-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+}
+clowns.tables.novaleucoxene = {
+  ["!!"] = (not special_vanilla) and {false, false, false, true},
+  ["iron-ore"] = (not special_vanilla) and {2, 1, 2, 2},
+  ["quartz"] = (not special_vanilla) and {1, 1, 1, 2},
+  ["solid-calcium-sulfate"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["rutile-ore"] = (not special_vanilla) and {0, 2, 2, 2},
+  ["solid-sodium-carbonate"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["bauxite-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+}
+clowns.tables.stannic = {
+  ["!!"] = (not special_vanilla) and {true, true, true, true},
+  ["tin-ore"] = (not special_vanilla) and {2, 3, 4, 4},
+  ["quartz"] = (not special_vanilla) and {2, 2, 2, 2},
+  ["silver-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["zinc-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+}
+clowns.tables.plumbic = {
+  ["!!"] = (not special_vanilla) and {true, true, true, true},
+  ["lead-ore"] = (not special_vanilla) and {2, 3, 4, 4},
+  ["solid-calcium-sulfate"] = (not special_vanilla) and {2, 2, 2, 2},
+  ["silver-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["thorium-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+}
+clowns.tables.manganic = {
+  ["!!"] = (not special_vanilla) and {true, true, true, true},
+  ["manganese-ore"] = (not special_vanilla) and {2, 3, 4, 4},
+  ["magnesium-ore"] = (not special_vanilla) and {2, 2, 2, 2},
+  ["bauxite-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["solid-sodium-carbonate"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["chrome-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+}
+clowns.tables.titanic = {
+  ["!!"] = (not special_vanilla) and {true, true, true, true},
+  ["iron-ore"] = (not special_vanilla) and {2, 3, 4, 4},
+  ["nickel-ore"] = (not special_vanilla) and {2, 2, 2, 2},
+  ["rutile-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["cobalt-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+}
+clowns.tables.phosphic = {
+  ["!!"] = (not special_vanilla) and {true, true, true, true},
+  ["phosphorus-ore"] = (not special_vanilla) and {2, 3, 4, 4},
+  ["copper-ore"] = (not special_vanilla) and {2, 2, 2, 2},
+  ["quartz"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["solid-limestone"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["uranium-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+}
