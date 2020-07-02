@@ -1,6 +1,7 @@
 -- function to know if this is special vanilla or not (DUPLICATE OF ANGELS, since this mod seems to be calling it earlier)
 if not clowns then clowns={} end
 if not clowns.functions then clowns.functions={} end
+if not clowns.tables then clowns.tables ={} end
 --check vanilla settings
 clowns.special_vanilla = true --assume true, then find out if false 
 for ore_name, ore_enabled in pairs(angelsmods.trigger.ores or {}) do
@@ -8,7 +9,10 @@ for ore_name, ore_enabled in pairs(angelsmods.trigger.ores or {}) do
     clowns.special_vanilla = false
   end
 end
-clowns.tables={}
+if mods["pyrawores"] then --force full mode
+  clowns.special_vanilla = false
+end
+--set up clowns ore listing
 clowns.tables.ores={"clowns-ore1","clowns-ore4","clowns-ore5","clowns-ore7"}
 if not clowns.special_vanilla then
   table.insert(clowns.tables.ores,"clowns-ore2")
@@ -17,23 +21,9 @@ if not clowns.special_vanilla then
   table.insert(clowns.tables.ores,"clowns-ore8")
   table.insert(clowns.tables.ores,"clowns-ore9")
 end
---add to angels ore triggers (for refining products)
---CLOWNS ORES (no need to check these)
-angelsmods.trigger.ores["phosphorus"] = true --phosphorus
-angelsmods.trigger.ores["osmium"] = true --osmium
-angelsmods.trigger.ores["magnesium"] = true --osmium
---angels intermediates not sure i need to check these... 
-angelsmods.trigger.ores["limestone"] = angelsmods.trigger.ores["limestone"] or true
-angelsmods.trigger.ores["sand"] = angelsmods.trigger.ores["sand"] or true
-angelsmods.trigger.ores["calcium-sulfate"] = true --calcium-sulfate
-angelsmods.trigger.ores["sodium-carbonate"] = true --sodium-carbonate
-if angelsmods.trigger.ores["lithium"] then
-  angelsmods.trigger.ores["solid-lithium"] = true --lithium-chloride
-end
---actual ores in the ores table
-local temp_triggers = {["uranium"] = table.deepcopy(angelsmods.trigger.ores["uranium"]),["fluorite"] = table.deepcopy(angelsmods.trigger.ores["fluorite"])}
-angelsmods.trigger.ores["uranium"] = true --uranium
-angelsmods.trigger.ores["fluorite"] = true
+--set metalic ore tables and triggers for sorting
+require("prototypes.generation.angels-trigger-sets")
+clowns.functions.triggers_on()
 
 require("prototypes.categories")
 require("prototypes.lookup-tables")
@@ -133,8 +123,15 @@ if mods["angelsinfiniteores"] and settings.startup["angels-enable-acids"].value 
 	if settings.startup["enableinfiniteclownsore7"].value then
 		data.raw["resource"]["infinite-clowns-ore7"].minable.fluid_amount = 10
 		data.raw["resource"]["infinite-clowns-ore7"].minable.required_fluid = ore7fluid
+  end
+  if settings.startup["enableinfiniteclownsore8"].value then
+		data.raw["resource"]["infinite-clowns-ore8"].minable.fluid_amount = 10
+		data.raw["resource"]["infinite-clowns-ore8"].minable.required_fluid = ore8fluid
+  end
+  if settings.startup["enableinfiniteclownsore9"].value then
+		data.raw["resource"]["infinite-clowns-ore9"].minable.fluid_amount = 10
+		data.raw["resource"]["infinite-clowns-ore9"].minable.required_fluid = ore9fluid
 	end
-
 	if settings.startup["enableinfiniteclownsresource1"].value then
 		data.raw["resource"]["infinite-clowns-resource1"].minable.fluid_amount = 10
 	end
@@ -143,16 +140,5 @@ if mods["angelsinfiniteores"] and settings.startup["angels-enable-acids"].value 
 		--data.raw["resource"]["infinite-clowns-resource2"].minable.required_fluid = "steam"
 	end
 end
---set triggers to empty after being used locally
-angelsmods.trigger.ores["phosphorus"] = nil --phosphorus
-angelsmods.trigger.ores["limestone"] = nil
-angelsmods.trigger.ores["magnesium"] = nil
-angelsmods.trigger.ores["sand"] = nil
-angelsmods.trigger.ores["calcium-sulfate"] = nil --calcium-sulfate
-angelsmods.trigger.ores["sodium-carbonate"] = nil --sodium-carbonate
-angelsmods.trigger.ores["uranium"] = temp_triggers["uranium"] --uranium
-angelsmods.trigger.ores["osmium"] = nil --osmium
-angelsmods.trigger.ores["fluorite"] = temp_triggers["fluorite"]
-if angelsmods.trigger.ores["lithium"] then
-  angelsmods.trigger.ores["solid-lithium"] = nil --lithium-chloride
-end
+--reverse triggers, and let angel take them back
+clowns.functions.triggers_off()

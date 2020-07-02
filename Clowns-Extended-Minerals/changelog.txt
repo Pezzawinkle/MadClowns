@@ -7,6 +7,7 @@ Version: 1.1.14
     - Added 5 blended ores (Stannic, Plumbic, Manganic, Titanic, Phosphic)
     - Added support to work with Angels Special-vanilla setting
     - Prepared changes to integrate clowns resources into angels generation code (waiting for the angels update to come through)
+    - Added preliminary support for Pyanodons ores, some feedback on balance/usefulness would be good (i have not played Py too much)
   Bugfixes:
     - Removed duplicatated recipes from angels
       - not deleted them yet, just hidden them to prevent base breakage

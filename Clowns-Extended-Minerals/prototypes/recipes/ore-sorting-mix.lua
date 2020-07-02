@@ -2,6 +2,7 @@ local OV = angelsmods.functions.OV
 local rawmulti = angelsmods.marathon.rawmulti
 local special_vanilla = clowns.special_vanilla
 local ore_table = clowns.tables.ores
+local ore_combos = clowns.tables.ore_combos
 ----------------------------------------------------------------------------
 -- MIXED INPUT SORTING METHODS --
 -- Start with the statics and add the results later --
@@ -33,39 +34,7 @@ if not special_vanilla then --only add angels special vanilla ores to the ore_li
 end
 --append other materials
 ore_list = merge_tabs(ore_list,{"clowns-resource1","clowns-resource2"})
-local ore_combos = { --these are hidden when spec-vanilla is on anyway
-  --LIST OF ORES USED IN EACH RECIPE (i.e. permutations), THE TIER IS SET IN THE CALL FUNCTION
-  [1] = --[[crushed mix]]{
-    --[[Fe]]{"clowns-ore1","clowns-ore2","angels-ore8"},
-    --[[Cu]]{"clowns-ore4","clowns-ore7","angels-ore9"},
-    --[[Sn]]{"angels-ore6","angels-ore9","clowns-ore4"},
-    --[[Pb]]{"angels-ore5","clowns-ore3","clowns-ore7"},
-    --[[Mn]]{"angels-ore8","clowns-ore8","angels-ore6"},
-    --[[P]] {"clowns-ore5","angels-ore6","clowns-resource1"}
-  },
-  [2] = --[[chunk mix]]{
-    --[[F]] {"clowns-ore1","angels-ore5","clowns-ore6","angels-ore3"},-- spec vanilla and c1,c5
-    --[[Si]]{"angels-ore1","clowns-ore6","angels-ore9","clowns-ore9"},
-    --[[Ni]]{"angels-ore8","clowns-ore2","clowns-ore4","clowns-ore8"},
-    --[[Zn]]{"clowns-ore4","clowns-ore3","clowns-ore8","angels-ore2"},
-    --[[Al]]{"angels-ore2","clowns-ore2","angels-ore4","clowns-ore5"},
-    --[[Co]]{"clowns-ore7","angels-ore8","angels-ore6","angels-ore3"}
-  },
-  [3] = --[[crystal mix]]{
-    --[[Ag]]{"angels-ore2","angels-ore4","clowns-ore3","clowns-ore6","angels-ore9"},
-    --[[Au]]{"angels-ore9","clowns-ore4","angels-ore3","angels-ore5","angels-ore4"},
-    --[[Ti]]{"angels-ore5","clowns-ore9","clowns-ore1","angels-ore1","angels-ore3"},
-    --[[U]] {"clowns-ore5","angels-ore3","angels-ore1","angels-ore4","angels-ore6"},
-    --[[Mg]]{"clowns-ore2","clowns-ore7","clowns-ore8","clowns-ore4","angels-ore6"}-- spec vanilla and c4,c7
-  },
-  [4] = --[[pure mix]]{
-    --[[W]] {"angels-ore2","angels-ore3","angels-ore6","angels-ore8","clowns-ore4"},
-    --[[Th]]{"angels-ore8","angels-ore9","clowns-ore3","clowns-ore5","clowns-ore7"},
-    --[[Cr]]{"angels-ore1","angels-ore8","clowns-ore1","clowns-ore2","clowns-ore7"},
-    --[[Pt]]{"angels-ore5","angels-ore9","clowns-ore2","clowns-ore7","clowns-resource2"},
-    --[[Os]]{"angels-ore4","clowns-ore6","clowns-ore8","clowns-ore9","clowns-resource2"}, --spec vanilla and r2, c1, c7
-  },
-}
+
 local adv_substitute = {["crushed"] = "crushed",["chunk"] = "powder",["crystal"] = "dust",["pure"] = "crystal"}
 local is_adv = function(table_entry,style)
   for _,i in pairs({"angels-ore8","angels-ore9"--[[,"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14","clowns-ore15"]]}) do

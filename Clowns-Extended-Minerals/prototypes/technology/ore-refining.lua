@@ -1,5 +1,5 @@
 local crushing_eff, flotation_eff, leeching_eff, refining_eff = {}, {}, {}, {}
-for i=1,9,1 do
+for i=1,9,1 do --clowns-ore count, excluding blendded
   --add static recipe unlocks
   crushing_eff[#crushing_eff+1] = {type = "unlock-recipe",recipe = "clowns-ore"..i.."-crushed"}
   crushing_eff[#crushing_eff+1] = {type = "unlock-recipe",recipe = "clowns-ore"..i.."-crushed-processing"}
