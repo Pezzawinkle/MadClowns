@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.15
+  Bugfixes:
+    - Special vanilla with omnicrystal not working
+    - omnicrystal failing when analysing inactive recipes
+---------------------------------------------------------------------------------------------------
 Version: 1.1.14
   Features:
     - Removed dependancy on bobs mods
