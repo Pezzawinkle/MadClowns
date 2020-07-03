@@ -78,7 +78,7 @@ else
   ore9fluid = "liquid-sulfuric-acid"
 end
 res1fluid = "liquid-phosphoric-acid"
-res2fluid = "liquid-phosphoric-acid"
+res2fluid = "steam"
 
 if mods["omnimatter"] then
 	omni.add_resource("clowns-ore1",3,"Adamantite","Clowns-Extended-Minerals")
@@ -133,11 +133,12 @@ if mods["angelsinfiniteores"] and settings.startup["angels-enable-acids"].value 
 		data.raw["resource"]["infinite-clowns-ore9"].minable.required_fluid = ore9fluid
 	end
 	if settings.startup["enableinfiniteclownsresource1"].value then
-		data.raw["resource"]["infinite-clowns-resource1"].minable.fluid_amount = 10
+    data.raw["resource"]["infinite-clowns-resource1"].minable.fluid_amount = 10
+    data.raw["resource"]["infinite-clowns-resource1"].minable.required_fluid = res1fluid
 	end
 	if settings.startup["enableinfiniteclownsresource2"].value then
 		data.raw["resource"]["infinite-clowns-resource2"].minable.fluid_amount = 50
-		--data.raw["resource"]["infinite-clowns-resource2"].minable.required_fluid = "steam"
+		data.raw["resource"]["infinite-clowns-resource2"].minable.required_fluid = res2fluid
 	end
 end
 --reverse triggers, and let angel take them back
