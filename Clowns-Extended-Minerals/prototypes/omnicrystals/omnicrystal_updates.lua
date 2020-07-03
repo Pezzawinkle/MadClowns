@@ -9,16 +9,19 @@ if mods["omnimatter_crystal"] then
   add_crystal("magnesium-ore","Magnesium")
 
   local oresList = {
-    { ore = "clowns-ore1", name = "Adamantite",	 },
-    { ore = "clowns-ore2", name = "Antitate",	   },
-    { ore = "clowns-ore3", name = "Pro-Galena",	 },
-    { ore = "clowns-ore4", name = "Orichalcite", },
-    { ore = "clowns-ore5", name = "Phosphorite", },
-    { ore = "clowns-ore6", name = "Sanguinate",	 },
-    { ore = "clowns-ore7", name = "Elionagate",	 },
-    { ore = "clowns-ore8", name = "Meta-Garnierite",	 },
-    { ore = "clowns-ore9", name = "Nova-Leucoxene",	 },
+    { ore = "clowns-ore1", name = "Adamantite" },
+    { ore = "clowns-ore4", name = "Orichalcite"},
+    { ore = "clowns-ore5", name = "Phosphorite"},
+    { ore = "clowns-ore7", name = "Elionagate" }
   }
+  if not clowns.special_vanilla then
+    table.insert(oresList,{ ore = "clowns-ore2", name = "Antitate"})
+    table.insert(oresList,{ ore = "clowns-ore3", name = "Pro-Galena"})
+    table.insert(oresList,{ ore = "clowns-ore6", name = "Sanguinate"})
+    table.insert(oresList,{ ore = "clowns-ore8", name = "Meta-Garnierite"})
+    table.insert(oresList,{ ore = "clowns-ore9", name = "Nova-Leucoxene"})
+  end
+
   --convert these two tables to be more flexible, so i can deal with regular/advanced lists
   local oresGrade = { "crushed", "chunk", "crystal", "pure" }
 
@@ -119,9 +122,9 @@ if mods["omnimatter_crystal"] then
   --new additions list where name is clowns-tier-mix#-processing
   toAdd={} --nil it out
   for i,tier in pairs(oresGrade) do --grade
-    for j=1,10,1 do --number
+    for j=1,12,1 do --number
       local rec = data.raw.recipe["clowns-"..tier.."-mix"..j.."-processing"]
-      if rec then
+      if rec and rec.normal.results[1].name ~= "angels-void" then
         local gradeSet = tier
         if not data.raw["item-subgroup"][rec.subgroup.."-omnide"] then
           local cat = {

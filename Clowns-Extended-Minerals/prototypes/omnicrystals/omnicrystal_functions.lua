@@ -25,13 +25,14 @@ ingrediences_solvation=function(recipe)
 end
 
 results_solvation=function(recipe)
-	local ing = {}
+  local ing = {}
+  log(serpent.block(recipe))
 	--ing[#ing+1]={type = "fluid", name = "hydromnic-acid", amount = 120}
 	for _, i in pairs(recipe.normal.results) do
 		if i.name ~= "slag" and not string.find(i.name,"void") then
 			ing[#ing+1]={type = "item", name=i.name.."-omnide-salt", amount = i.amount}
 		end
-	end
+  end
 	return ing
 end
 
@@ -50,8 +51,6 @@ salt_omnide_icon = function(metal)
 	--Build the icons table
 	local icons = {}
   local icon_2 = "__omnimatter_crystal__/graphics/icons/omnide-salt.png" --if some error occurs
-  log(serpent.block(metal))
-  log(serpent.block(data.raw.item[metal]))
 	if data.raw.item[metal] and data.raw.item[metal].icon then
 		icon_2=data.raw.item[metal].icon
 	elseif data.raw.item[metal].icons and data.raw.item[metal].icons[1].icon then

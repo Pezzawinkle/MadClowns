@@ -34,7 +34,11 @@ if mods["pycoalprocessing"] then
   angelsmods.trigger.refinery_products["nexelit-ore"] = true
   angelsmods.trigger.refinery_products["niobium-ore"] = true
   angelsmods.trigger.refinery_products["rare-earth-dust"] = true
-  angelsmods.trigger.refinery_products["molybdenum-ore"] = true
+  if mods["pyfusionenergy"] then
+    angelsmods.trigger.refinery_products["molybdenum-ore"] = true
+    angelsmods.trigger.refinery_products["regolite-rock"] = true
+    angelsmods.trigger.refinery_products["kimberlite-rock"] = true
+  end
 end
 
 --check if the ore trigger is on
