@@ -40,7 +40,7 @@ if mods["omnimatter_science"] and mods["bobplates"] then
 	data.raw.recipe["production-science-pack"].icons =
 	{
 		{
-			icon = "__omnimatter_science__/graphics/icons/production-science-pack.png",
+			icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png",
 			icon_size=64,
 		},
 		{
@@ -54,7 +54,7 @@ if mods["omnimatter_science"] and mods["bobplates"] then
 	data.raw.recipe["alt1-production-science-pack"].icons =
 	{
 		{
-			icon = "__omnimatter_science__/graphics/icons/production-science-pack.png",
+			icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png",
 			icon_size=64,
 		},
 		{
@@ -68,7 +68,7 @@ if mods["omnimatter_science"] and mods["bobplates"] then
 	data.raw.recipe["alt2-production-science-pack"].icons =
 	{
 		{
-			icon = "__omnimatter_science__/graphics/icons/production-science-pack.png",
+			icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png",
 			icon_size=64,
 		},
 		{
@@ -82,7 +82,7 @@ if mods["omnimatter_science"] and mods["bobplates"] then
 	data.raw.recipe["facility-production-science-pack"].icons =
 	{
 		{
-			icon = "__omnimatter_science__/graphics/icons/production-science-pack.png",
+			icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png",
 			icon_size=64,
 		},
 		{
