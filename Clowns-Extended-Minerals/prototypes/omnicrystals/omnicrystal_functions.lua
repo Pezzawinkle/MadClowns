@@ -26,7 +26,7 @@ end
 
 results_solvation=function(recipe)
   local ing = {}
-  log(serpent.block(recipe))
+  --log(serpent.block(recipe))
 	--ing[#ing+1]={type = "fluid", name = "hydromnic-acid", amount = 120}
 	for _, i in pairs(recipe.normal.results) do
 		if i.name ~= "slag" and not string.find(i.name,"void") then

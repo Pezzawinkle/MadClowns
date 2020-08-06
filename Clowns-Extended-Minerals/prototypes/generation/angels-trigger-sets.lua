@@ -16,21 +16,21 @@ if mods["pycoalprocessing"] then
 end
 
 clowns.functions.triggers_on = function()
+ -- log(serpent.block(angelsmods.trigger.ores))
   for _,trig in pairs(trigger_tab) do
     --check they exist already first
-    if angelsmods.trigger.ores[trigger] then
-      table.insert(temp_triggers,"["..trigger.."]="..table.deepcopy(angelsmods.trigger.ores[trigger]))
+    if angelsmods.trigger.ores[trig] then
+      temp_triggers[trig] = table.deepcopy(angelsmods.trigger.ores[trig])
     end
     angelsmods.trigger.ores[trig] = true
   end
+ -- log(serpent.block(temp_triggers))
+ -- log(serpent.block(angelsmods.trigger.ores))
 end
 
 clowns.functions.triggers_off = function()
   for _,trig in pairs(trigger_tab) do
-    --check they exist already first
-    if angelsmods.trigger.ores[trigger] then
-      table.insert(temp_triggers,"["..trigger.."] = "..table.deepcopy(angelsmods.trigger.ores[trigger]))
-    end
     angelsmods.trigger.ores[trig] = temp_triggers[trig] or nil
   end
+ -- log(serpent.block(angelsmods.trigger.ores))
 end
