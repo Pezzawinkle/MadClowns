@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.17
+Date: 2020-06-29
+  Bugfixes:
+    - Fixed old style sorting recipes trying to work when not intended
+---------------------------------------------------------------------------------------------------
+Version: 1.1.17
+  Bugfixes:
+    - Fixed old style sorting recipes trying to work when not intended
+    - Fixed broken function breaking fluorite activation system with petrochem
+---------------------------------------------------------------------------------------------------
 Version: 1.1.15
   Bugfixes:
     - Special vanilla with omnicrystal not working
