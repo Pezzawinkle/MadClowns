@@ -18,7 +18,7 @@ if not clowns.special_vanilla then
   table.insert(data.raw["technology"]["water-washing-2"].effects, {type = "unlock-recipe", recipe = "clowns-resource1-sluicing"}) --is this not a processing item?
 end
 
---if omnimatter crystal, add crystals
-require("prototypes.omnicrystals.omnicrystal_updates")
 --pyanodon updates
 require("prototypes.pyanodon_updates")
+--if omnimatter crystal, add crystals
+require("prototypes.omnicrystals.omnicrystal_updates")

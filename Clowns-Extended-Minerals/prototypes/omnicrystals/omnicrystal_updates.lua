@@ -7,6 +7,12 @@ if mods["omnimatter_crystal"] then
   add_crystal("solid-sodium-carbonate", "Sodium Carbonate")
   add_crystal("osmium-ore", "Osmium")
   add_crystal("magnesium-ore","Magnesium")
+  if mods["pycoalprocessing"] then
+    --add_crystal("raw-borax", "Raw Borax")
+    --add_crystal("nexelit-ore", "Nexelit")
+    --add_crystal("niobium-ore", "Niobium")
+    add_crystal("rare-earth-dust", "Rare Earth Dust")
+  end
 
   local oresList = {
     { ore = "clowns-ore1", name = "Adamantite" },
