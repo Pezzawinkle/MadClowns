@@ -35,86 +35,88 @@ end
 if settings.startup["allow-space-science-generation"].value == true then
 	table.insert(data.raw["technology"]["particle-accelerator-2"].effects, {type = "unlock-recipe", recipe = "particle-accelerator-4"})
 end
+if not (mods["angelsindustries"] and angelsmods.industries.tech) then
 
-if mods["omnimatter_science"] and mods["bobplates"] then
-	data.raw.recipe["production-science-pack"].icons =
-	{
-		{
-			icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png",
-			icon_size=64,
-		},
-		{
-			icon = "__angelsrefining__/graphics/icons/num_1.png",
-			icon_size=32,
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12}
-		}
-	}
-	data.raw.recipe["alt1-production-science-pack"].icons =
-	{
-		{
-			icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png",
-			icon_size=64,
-		},
-		{
-			icon = "__angelsrefining__/graphics/icons/num_2.png",
-			icon_size=32,
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12}
-		}
-	}
-	data.raw.recipe["alt2-production-science-pack"].icons =
-	{
-		{
-			icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png",
-			icon_size=64,
-		},
-		{
-			icon = "__angelsrefining__/graphics/icons/num_3.png",
-			icon_size=32,
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12}
-		}
-	}
-	data.raw.recipe["facility-production-science-pack"].icons =
-	{
-		{
-			icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png",
-			icon_size=64,
-		},
-		{
-			icon = "__Clowns-Science__/graphics/icons/facility.png",
-			icon_size=32,
-			scale = 0.32,
-			shift = {-12, -12}
-		}
-	}
-end
-
-
-if not mods["omnimatter"] and mods["bobtech"] and settings.startup["bobmods-tech-colorupdate"].value then
-	data.raw.recipe["facility-science-pack-1"].icons[1] = {icon = "__base__/graphics/icons/utility-science-pack.png",icon_size=64}
-	data.raw.recipe["facility-science-pack-2"].icons[1] = {icon = "__base__/graphics/icons/automation-science-pack.png",icon_size=64}
-	data.raw.recipe["facility-high-tech-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
-
-	data.raw.recipe["automation-science-pack"].icons[1] = {icon = "__base__/graphics/icons/utility-science-pack.png",icon_size=64}
-	data.raw.recipe["alt1-science-pack-1"].icons[1] = {icon = "__base__/graphics/icons/utility-science-pack.png",icon_size=64}
-	data.raw.recipe["alt2-science-pack-1"].icons[1] = {icon = "__base__/graphics/icons/utility-science-pack.png",icon_size=64}
-
-	data.raw.recipe["logistic-science-pack"].icons[1] = {icon = "__base__/graphics/icons/automation-science-pack.png",icon_size=64}
-	data.raw.recipe["alt1-science-pack-2"].icons[1] = {icon = "__base__/graphics/icons/automation-science-pack.png",icon_size=64}
-  if data.raw.recipe["utility-science-pack"].icon then
-    data.raw.recipe["utility-science-pack"].icons={{icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}}
-    data.raw.recipe["utility-science-pack"].icon=nil
-  else
-    if not data.raw.recipe["utility-science-pack"].icons then
-      data.raw.recipe["utility-science-pack"].icons={}
-    end
-    data.raw.recipe["utility-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
+  if mods["omnimatter_science"] and mods["bobplates"] then
+    data.raw.recipe["production-science-pack"].icons =
+    {
+      {
+        icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png",
+        icon_size=64,
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
+        icon_size=32,
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12}
+      }
+    }
+    data.raw.recipe["alt1-production-science-pack"].icons =
+    {
+      {
+        icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png",
+        icon_size=64,
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
+        icon_size=32,
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12}
+      }
+    }
+    data.raw.recipe["alt2-production-science-pack"].icons =
+    {
+      {
+        icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png",
+        icon_size=64,
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
+        icon_size=32,
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12}
+      }
+    }
+    data.raw.recipe["facility-production-science-pack"].icons =
+    {
+      {
+        icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png",
+        icon_size=64,
+      },
+      {
+        icon = "__Clowns-Science__/graphics/icons/facility.png",
+        icon_size=32,
+        scale = 0.32,
+        shift = {-12, -12}
+      }
+    }
   end
-	data.raw.recipe["alt1-high-tech-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
-	data.raw.recipe["alt2-high-tech-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
+
+
+  if not mods["omnimatter"] and mods["bobtech"] and settings.startup["bobmods-tech-colorupdate"].value then
+    data.raw.recipe["facility-science-pack-1"].icons[1] = {icon = "__base__/graphics/icons/utility-science-pack.png",icon_size=64}
+    data.raw.recipe["facility-science-pack-2"].icons[1] = {icon = "__base__/graphics/icons/automation-science-pack.png",icon_size=64}
+    data.raw.recipe["facility-high-tech-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
+
+    data.raw.recipe["automation-science-pack"].icons[1] = {icon = "__base__/graphics/icons/utility-science-pack.png",icon_size=64}
+    data.raw.recipe["alt1-science-pack-1"].icons[1] = {icon = "__base__/graphics/icons/utility-science-pack.png",icon_size=64}
+    data.raw.recipe["alt2-science-pack-1"].icons[1] = {icon = "__base__/graphics/icons/utility-science-pack.png",icon_size=64}
+
+    data.raw.recipe["logistic-science-pack"].icons[1] = {icon = "__base__/graphics/icons/automation-science-pack.png",icon_size=64}
+    data.raw.recipe["alt1-science-pack-2"].icons[1] = {icon = "__base__/graphics/icons/automation-science-pack.png",icon_size=64}
+    if data.raw.recipe["utility-science-pack"].icon then
+      data.raw.recipe["utility-science-pack"].icons={{icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}}
+      data.raw.recipe["utility-science-pack"].icon=nil
+    else
+      if not data.raw.recipe["utility-science-pack"].icons then
+        data.raw.recipe["utility-science-pack"].icons={}
+      end
+      data.raw.recipe["utility-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
+    end
+    data.raw.recipe["alt1-high-tech-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
+    data.raw.recipe["alt2-high-tech-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
+  end
 end
