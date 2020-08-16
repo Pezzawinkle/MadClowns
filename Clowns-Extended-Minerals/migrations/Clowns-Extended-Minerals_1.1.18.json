@@ -1,0 +1,35 @@
+{
+  "recipe":
+  [
+    ["lithium-chloride-crystalization", "lithium-chloride-crystal"],
+    ["lithium-chloride-omnitraction", "lithium-chloride-crystal-omnitraction"],
+    ["lithium-chloride-solvation", "lithium-chloride-omnide-solution"],
+    ["magnesium-ore-crystalization", "magnesium-ore-crystal"],
+    ["magnesium-ore-omnitraction", "magnesium-ore-crystal-omnitraction"],
+    ["magnesium-ore-solvation", "magnesium-ore-omnide-solution"],
+    ["osmium-ore-crystalization", "osmium-ore-crystal"],
+    ["osmium-ore-omnitraction", "osmium-ore-crystal-omnitraction"],
+    ["osmium-ore-solvation", "osmium-ore-omnide-solution"],
+    ["phosphorus-ore-crystalization", "phosphorus-ore-crystal"],
+    ["phosphorus-ore-omnitraction", "phosphorus-ore-crystal-omnitraction"],
+    ["phosphorus-ore-solvation", "phosphorus-ore-omnide-solution"],
+    ["platinum-ore-crystalization", "platinum-ore-crystal"],
+    ["platinum-ore-omnitraction", "platinum-ore-crystal-omnitraction"],
+    ["platinum-ore-solvation", "platinum-ore-omnide-solution"],
+    ["solid-calcium-sulfate-crystalization", "solid-calcium-sulfate-crystal"],
+    ["solid-calcium-sulfate-omnitraction", "solid-calcium-sulfate-crystal-omnitraction"],
+    ["solid-calcium-sulfate-solvation", "solid-calcium-sulfate-omnide-solution"],
+    ["solid-limestone-crystalization", "solid-limestone-crystal"],
+    ["solid-limestone-omnitraction", "solid-limestone-crystal-omnitraction"],
+    ["solid-limestone-solvation", "solid-limestone-omnide-solution"],
+    ["solid-sodium-carbonate-crystalization", "solid-sodium-carbonate-crystal"],
+    ["solid-sodium-carbonate-omnitraction", "solid-sodium-carbonate-crystal-omnitraction"],
+    ["solid-sodium-carbonate-solvation", "solid-sodium-carbonate-omnide-solution"],
+    ["thorium-ore-crystalization", "thorium-ore-crystal"],
+    ["thorium-ore-omnitraction", "thorium-ore-crystal-omnitraction"],
+    ["thorium-ore-solvation", "thorium-ore-omnide-solution"],
+    ["magnesium-ore-crystalization", "magnesium-ore-crystal"],
+    ["magnesium-ore-omnitraction", "magnesium-ore-crystal-omnitraction"],
+    ["magnesium-ore-solvation", "magnesium-ore-omnide-solution"]
+  ]
+}
