@@ -12,6 +12,7 @@ if mods["omnimatter_crystal"] then
     --add_crystal("nexelit-ore", "Nexelit")
     --add_crystal("niobium-ore", "Niobium")
     add_crystal("rare-earth-dust", "Rare Earth Dust")
+    add_crystal("molybdenum-ore", "Molybdenum")
   end
 
   local oresList = {

@@ -143,7 +143,7 @@ add_crystal=function(metal,name,recipe, techlvl)
 			max_temperature = 100,
 			pressure_to_speed_ratio = 0.4,
 			flow_to_energy_ratio = 0.59,
-		}
+    }
 		crystalines[#crystalines+1]=omnide
 
 		--omni.lib.create_barrel(omnide)
@@ -163,7 +163,7 @@ add_crystal=function(metal,name,recipe, techlvl)
 
 		local crystalization = {
 			type = "recipe",
-			name = metal.."-crystalization",
+			name = metal.."-crystal",
 			localised_name = {"recipe-name.crystallization", name},
 			localised_description = {"recipe-description.pure_extraction", name},
 			category = "omniplant",
@@ -184,7 +184,7 @@ add_crystal=function(metal,name,recipe, techlvl)
 		ic = metal_omnide_icon(metal)
 		local solvation = {
 			type = "recipe",
-			name = metal.."-solvation",
+			name = metal.."-omnide-solution",
 			localised_name = {"recipe-name.ore-solvation", name},
 			localised_description = {"recipe-description.pure_extraction", name},
 			category = "omniplant",
@@ -209,7 +209,7 @@ add_crystal=function(metal,name,recipe, techlvl)
 		end
 		local omnitraction = {
 			type = "recipe",
-			name = metal.."-omnitraction",
+			name = metal.."-crystal-omnitraction",
 			localised_name = {"item-name."..metal},
 			localised_description = {"recipe-description.pure_extraction", name},
 			category = "omnite-extraction",
@@ -227,7 +227,7 @@ add_crystal=function(metal,name,recipe, techlvl)
 		if not techlvl then
 			techlvl = 1
 		end
-		for _,each in pairs({"-solvation", "-crystalization", "-omnitraction"}) do
+		for _,each in pairs({"-crystal", "-omnide-solution", "-crystal-omnitraction"}) do
 			omni.lib.add_unlock_recipe("crystallology-"..techlvl, metal..each)
 		end
 		data:extend(crystalines)
