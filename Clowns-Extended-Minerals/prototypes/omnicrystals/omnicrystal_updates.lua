@@ -1,5 +1,5 @@
 if mods["omnimatter_crystal"] then
-  add_crystal("lithium-chloride", "Lithium Chloride")
+  add_crystal("solid-lithium", "Lithium Chloride")
   add_crystal("solid-calcium-sulfate", "Calcium Sulfate")
   add_crystal("thorium-ore", "Thorium")
   add_crystal("phosphorus-ore", "Phosphorus")

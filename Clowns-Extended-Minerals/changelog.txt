@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.18
-Date: 2020-??-??
+Date: 2020-08-19
   Bugfixes:
     - Fixed Omnicrystal errors
     - Fixes for pyanodon compatibility
+    - Fixed lithium chloride being handled incorrectly
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.17
 Date: 2020-06-29

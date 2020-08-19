@@ -1,6 +1,6 @@
 local temp_triggers = {}
 local trigger_tab = {"phosphorus","osmium","magnesium","limestone","sand","calcium-sulfate","sodium-carbonate","uranium","fluorite"} 
-if angelsmods.trigger.ores["lithium"] then
+if not special_vanilla then 
   table.insert(trigger_tab,"solid-lithium")
 end
 if mods["pycoalprocessing"] then

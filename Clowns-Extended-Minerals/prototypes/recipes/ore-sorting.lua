@@ -16,6 +16,7 @@ angelsmods.trigger.refinery_products["Adamantite"] = true
 angelsmods.trigger.refinery_products["Orichalcite"] = true
 angelsmods.trigger.refinery_products["Phosphorite"] = true
 angelsmods.trigger.refinery_products["Elionagate"] = true
+--angelsmods.trigger.refinery_products["lithium"] = true 
 if not special_vanilla then
   angelsmods.trigger.refinery_products["Antitate"] = true
   angelsmods.trigger.refinery_products["Pro-Galena"] = true
