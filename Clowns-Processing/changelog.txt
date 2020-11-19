@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.13
+  Features:
+    - Quickpatch of Phosphoric acid recipe interferring with pyanodons variant (for those so inclined)
+---------------------------------------------------------------------------------------------------
 Version: 1.3.12
   Features:
     - Adjusted the garden mutation recipes and added some garden generation recipes 

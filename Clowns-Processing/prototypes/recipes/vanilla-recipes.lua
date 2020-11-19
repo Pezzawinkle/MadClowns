@@ -564,7 +564,7 @@ data:extend(
   --phosphoric acid
   {
     type = "recipe",
-    name = "phosphoric-acid",
+    name = "phosphoric-acid-1",
     icons =angelsmods.functions.create_liquid_recipe_icon({"liquid-phosphoric-acid"}, {{ r = 244, g = 125, b = 001 },{ 242, 242, 242 },{ 214, 012, 012 }}), 
     category = "chemistry",
     subgroup = "clowns-phosphorus",

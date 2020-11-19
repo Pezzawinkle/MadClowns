@@ -18,7 +18,7 @@ if mods["angelsbioprocessing"] then
 				},
 				{
 					type = "unlock-recipe",
-					recipe = "phosphoric-acid"
+					recipe = "phosphoric-acid-1"
 				},
 				{
 					type = "unlock-recipe",
@@ -58,7 +58,7 @@ else
 				},
 				{
 					type = "unlock-recipe",
-					recipe = "phosphoric-acid"
+					recipe = "phosphoric-acid-1"
 				},
 			},
 			prerequisites = {"basic-chemistry-2", "angels-metallurgy-1", "angels-sulfur-processing-1", "ore-crushing"},
