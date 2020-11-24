@@ -3,7 +3,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "nuclear-fuel-reprocessing-2",
-		icon_size = 128,
+		icon_size = 256,
 		icon = "__base__/graphics/technology/nuclear-fuel-reprocessing.png",
 		effects =
 		{

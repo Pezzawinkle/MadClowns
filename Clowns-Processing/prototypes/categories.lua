@@ -17,15 +17,16 @@ data:extend(
 		order = "k",
 		inventory_order = "k",
 		icon = "__base__/graphics/technology/armor-making.png",
-		icon_size = 128,
+		icon_size = 256,
 	},
 	{
 		type = "item-group",
 		name = "fortifications",
 		order = "k",
 		inventory_order = "k",
-		icon = "__base__/graphics/technology/turrets.png",
-		icon_size = 128,
+		icon = "__base__/graphics/technology/gate.png",
+		icon_size = 256,
+		icon_mipmaps = 4
 	},
 	{
 		type = "item-subgroup",

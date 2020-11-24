@@ -43,7 +43,9 @@ if mods["angelsbioprocessing"] then
 	},
 }
 )
-table.insert(data.raw["technology"]["farming-2"].effects, {type = "unlock-recipe", recipe = "desert-garden-generation"})
-table.insert(data.raw["technology"]["farming-2"].effects, {type = "unlock-recipe", recipe = "swamp-garden-generation"})
-table.insert(data.raw["technology"]["farming-2"].effects, {type = "unlock-recipe", recipe = "temperate-garden-generation"})
+	local recipes={"desert-garden-generation","swamp-garden-generation","temperate-garden-generation"}
+	for _,rec in pairs(recipes) do
+		table.insert(data.raw["technology"]["bio-farm-1"].effects,{type = "unlock-recipe", recipe = rec})
+	end
+	table.insert(data.raw["technology"]["bio-farm-1"].prerequisites,"phosphorus-processing-1")
 end

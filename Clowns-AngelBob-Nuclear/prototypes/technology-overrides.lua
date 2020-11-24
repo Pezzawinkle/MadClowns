@@ -27,6 +27,7 @@ else
 end
 --remove kovarex and remove it from bobingabout prereq
 data.raw.technology["kovarex-enrichment-process"].enabled = false
+clowns.functions.pre_req_repl("atomic-bomb","kovarex-enrichment-process","nuclear-power")
 if data.raw.technology["bobingabout-enrichment-process"] then
   OV.remove_prereq("bobingabout-enrichment-process", "kovarex-enrichment-process")
   clowns.functions.pre_req_repl("thorium-nuclear-fuel-reprocessing-2", "nuclear-fuel-reprocessing-2", "bobingabout-enrichment-process")
