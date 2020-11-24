@@ -18,6 +18,7 @@ data:extend(
 		inventory_order = "k",
 		icon = "__base__/graphics/technology/armor-making.png",
 		icon_size = 256,
+        icon_mipmaps = 4
 	},
 	{
 		type = "item-group",
