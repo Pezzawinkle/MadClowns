@@ -73,12 +73,12 @@ if mods["angelsbioprocessing"] then
 		type = "recipe",
 		name = "swamp-garden-generation",
 		icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
-    icon_size = 32,
-    category = "seed-extractor",
-    subgroup = "farming-swamp-seed",
-		order = "g[temperate-garden-generation]",
+    	icon_size = 32,
+    	category = "swamp-farming",
+    	subgroup = "farming-swamp-seed",
+		order = "g[temperate-garden-generation]-c",
 		energy_required = 600,
-		enabled = true,
+		enabled = false,
 		ingredients =
 		{
 			{type = "item", name = "solid-soil", amount = 1000},
@@ -95,9 +95,9 @@ if mods["angelsbioprocessing"] then
 	{
 		type = "recipe",
 		name = "temperate-garden-generation",
-		category = "seed-extractor",
+		category = "temperate-farming",
 		subgroup = "farming-temperate-seed",
-		enabled = true,
+		enabled = false,
 		energy_required = 1000,
 		ingredients =
 		{
@@ -111,15 +111,15 @@ if mods["angelsbioprocessing"] then
 		},
 		icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
 		icon_size = 32,
-		order = "ac",
+		order = "g[temperate-garden-generation]-c",
   },
   --desert from soil
 	{
 		type = "recipe",
 		name = "desert-garden-generation",
-		category = "seed-extractor",
+		category = "desert-farming",
 		subgroup = "farming-desert-seed",
-		enabled = true,
+		enabled = false,
 		energy_required = 1000,
 		ingredients =
 		{
@@ -133,7 +133,7 @@ if mods["angelsbioprocessing"] then
 		},
 		icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
 		icon_size = 32,
-		order = "bc",
+		order = "g[temperate-garden-generation]-c",
   },
   --temperate mutation
 	{

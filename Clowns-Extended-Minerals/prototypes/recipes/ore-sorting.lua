@@ -69,7 +69,7 @@ end
 -- Localisation Functions --
 -------------------------------------------------------------------------------
 -- function to create localised descriptions for the regular sorting ores
-local create_basic_sorting_localisation = function(localised_base_name, sorting_tier_names, sorting_results, has_ore)
+local create_basic_clowns_sorting_localisation = function(localised_base_name, sorting_tier_names, sorting_results, has_ore)
   -- extract the higher tier sorting results
   local higher_tiers_additional_results = {}
   local any_tier_results = {}
@@ -116,7 +116,7 @@ local create_basic_sorting_localisation = function(localised_base_name, sorting_
         table.insert(localised_sorting_results[tier].sorting, {"",
           string.format("[img=item/%s]", tier_result),
           {"item-description.loc-space"},
-          {string.format("item-description.loc-%s", get_trigger_name[tier_result] or tier_result)}
+          {string.format("item-description.loc-%s", (special_vanilla and tier_result or nil) or get_trigger_name[tier_result] or tier_result)}
         })
       end
     end
@@ -125,7 +125,7 @@ local create_basic_sorting_localisation = function(localised_base_name, sorting_
         table.insert(localised_sorting_results[tier].refining, {"",
           string.format("[img=item/%s]", tier_result),
           {"item-description.loc-space"},
-          {string.format("item-description.loc-%s", get_trigger_name[tier_result] or tier_result)}
+          {string.format("item-description.loc-%s", (special_vanilla and tier_result or nil) or get_trigger_name[tier_result] or tier_result)}
         })
       end
     end
@@ -137,37 +137,45 @@ local create_basic_sorting_localisation = function(localised_base_name, sorting_
   for _=1,7 do
     table.insert(localised_indentation, {"item-description.loc-space"})
   end
+  
   for tier, tier_localisation in pairs(localised_sorting_results) do
+    --log(serpent.block(tier_localisation))
     tiered_localised_description[tier] = {""}
 
     if tier_localisation.sorting and next(tier_localisation.sorting) then
       local sorting = {""}
-      if #tiered_localised_description[tier] > 1 then
+      if #tiered_localised_description[tier] > 1 then --protection new line
         table.insert(sorting, {"item-description.loc-nl"})
       end
-      table.insert(sorting, {"item-description.angels-ore-sorting"})
+      table.insert(sorting, {"item-description.angels-ore-sorting"}) --listing title
       for _, sorting_localised_result in pairs(tier_localisation.sorting) do
-        table.insert(sorting, {"", {"item-description.loc-nl"}, localised_indentation})
+        table.insert(sorting, {"", {"item-description.loc-nl"}, localised_indentation}) --indent
         table.insert(sorting, sorting_localised_result)
       end
+      --log(serpent.block(sorting))
       table.insert(tiered_localised_description[tier], sorting)
     end
+    --log(serpent.block(tiered_localised_description[tier]))
     if tier_localisation.refining and next(tier_localisation.refining) then
       local refining = {""}
-      if #tiered_localised_description[tier] > 1 then
+      if #tiered_localised_description[tier] > 1 then --protection new line
         table.insert(refining, {"item-description.loc-nl"})
       end
-      if tier_localisation.sorting and next(tier_localisation.sorting) then
+      if tier_localisation.sorting and next(tier_localisation.sorting) then --new title
         table.insert(refining, {"item-description.angels-ore-refining-again"})
       else
-        table.insert(refining, {"item-description.angels-ore-refining"})
+        table.insert(refining, {"item-description.angels-ore-refining"}) --for raw ores, full refine title
       end
       for _, refining_localised_result in pairs(tier_localisation.refining) do
-        table.insert(refining, {"", {"item-description.loc-nl"}, localised_indentation})
+        --log("2d")
+        table.insert(refining, {"", {"item-description.loc-nl"}, localised_indentation}) --indent
         table.insert(refining, refining_localised_result)
       end
+      table.insert(refining, {"", {"item-description.loc-nl"}, localised_indentation})
       table.insert(tiered_localised_description[tier], refining)
+      --log(serpent.block(refining))
     end
+    --log(serpent.block(tiered_localised_description[tier]))
   end
 
   -- add the localisation to the the item
@@ -392,10 +400,12 @@ local create_sorting_recipes = function(refinery_product, recipe_base_name, sort
     angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "anode-sludge"))
   end
 
-  create_basic_sorting_localisation(
-    string.format("clowns-ore%s", string.sub(recipe_base_name, -3, -3) .. "%s"),
-    tiers, sorting_results, not advanced_sorting
-  )
+  if string.find(recipe_base_name,"clowns-ore",1) then
+    loc_base_name=string.format("clownsore%s", string.sub(recipe_base_name, -4, -3) .. "%s")
+  else
+    loc_base_name=string.format("clowns-ore%s", string.sub(recipe_base_name, -3, -3) .. "%s")
+  end
+  create_basic_clowns_sorting_localisation(loc_base_name, tiers, sorting_results, not advanced_sorting)
   return recipes
 end
 

@@ -43,4 +43,7 @@ if mods["angelsbioprocessing"] then
 	},
 }
 )
+table.insert(data.raw["technology"]["farming-2"].effects, {type = "unlock-recipe", recipe = "desert-garden-generation"})
+table.insert(data.raw["technology"]["farming-2"].effects, {type = "unlock-recipe", recipe = "swamp-garden-generation"})
+table.insert(data.raw["technology"]["farming-2"].effects, {type = "unlock-recipe", recipe = "temperate-garden-generation"})
 end

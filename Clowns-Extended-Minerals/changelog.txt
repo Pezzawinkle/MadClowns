@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.19
+Date: 2020-11-19
+  Changes:
+    - Patched that the signal for platinum was hidden when it was required
+    - Another pass at fixing the localisation of ore processing
+---------------------------------------------------------------------------------------------------
 Version: 1.1.18
 Date: 2020-08-19
   Bugfixes:
@@ -9,11 +15,7 @@ Date: 2020-08-19
 Version: 1.1.17
 Date: 2020-06-29
   Bugfixes:
-    - Fixed old style sorting recipes trying to work when not intended
----------------------------------------------------------------------------------------------------
-Version: 1.1.17
-  Bugfixes:
-    - Fixed old style sorting recipes trying to work when not intended
+    - Fixed old style sorting recipes trying to work when not intended 
     - Fixed broken function breaking fluorite activation system with petrochem
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.15

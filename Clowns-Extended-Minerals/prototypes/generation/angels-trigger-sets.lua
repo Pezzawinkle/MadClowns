@@ -1,5 +1,5 @@
 local temp_triggers = {}
-local trigger_tab = {"phosphorus","osmium","magnesium","limestone","sand","calcium-sulfate","sodium-carbonate","uranium","fluorite"} 
+local trigger_tab = {"phosphorus","osmium","magnesium","limestone","sand","calcium-sulfate","sodium-carbonate","uranium","fluorite","platinum"} 
 if not special_vanilla then 
   table.insert(trigger_tab,"solid-lithium")
 end
