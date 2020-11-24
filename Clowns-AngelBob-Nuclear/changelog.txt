@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.16
+Date: 2020-11-24
+  Changes:
+    - Updated to version 1.1
+    - Fixed that atomic bomb was not researchable
+    - Icon size patches for vanilla icon changes
+---------------------------------------------------------------------------------------------------
 Version: 1.1.15
   Features:
     - Reduced the mod dependancies to not require bobs
