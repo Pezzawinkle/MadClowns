@@ -227,9 +227,10 @@ add_crystal=function(metal,name,recipe, techlvl)
 		if not techlvl then
 			techlvl = 1
 		end
-		for _,each in pairs({"-crystal", "-omnide-solution", "-crystal-omnitraction"}) do
-			omni.lib.add_unlock_recipe("crystallology-"..techlvl, metal..each)
-		end
+		--log(serpent.block(crystalines))
 		data:extend(crystalines)
+		for _,each in pairs({"-crystal", "-omnide-solution", "-crystal-omnitraction"}) do
+			omni.lib.add_unlock_recipe("omnitech-crystallology-"..techlvl, metal..each)
+		end
 	end
 end

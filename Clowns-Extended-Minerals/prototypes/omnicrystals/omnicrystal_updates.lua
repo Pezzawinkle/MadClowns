@@ -13,6 +13,9 @@ if mods["omnimatter_crystal"] then
     --add_crystal("niobium-ore", "Niobium")
     add_crystal("rare-earth-dust", "Rare Earth Dust")
     add_crystal("molybdenum-ore", "Molybdenum")
+    if mods["PyCoalTBaA"] then
+      add_crystal("sodium-carbonate", "Sodium Carbonate")
+    end
   end
 
   local oresList = {
@@ -33,6 +36,7 @@ if mods["omnimatter_crystal"] then
   local oresGrade = { "crushed", "chunk", "crystal", "pure" }
 
   local toAdd = {}
+  local toTech = {}
   for _,oreSet in pairs(oresList) do
     for _,gradeSet in pairs(oresGrade) do
       local baseName = oreSet.ore.."-"..gradeSet.."-processing"
@@ -50,7 +54,6 @@ if mods["omnimatter_crystal"] then
       local ing = table.deepcopy(ingrediences_solvation(base))
       local res = table.deepcopy(results_solvation(base))
       local ic = salt_omnide_icon(oreSet.ore.."-"..gradeSet)
-
       toAdd[#toAdd+1] = {
         type = "recipe",
         name = oreSet.ore.."-"..gradeSet.."-salting",
@@ -67,18 +70,18 @@ if mods["omnimatter_crystal"] then
         energy_required = 5,
       }
       if gradeSet=="crushed" then
-        omni.lib.add_unlock_recipe("crystallology-1", oreSet.ore.."-"..gradeSet.."-salting")
+        toTech[#toTech+1] = {"omnitech-crystallology-1", oreSet.ore.."-"..gradeSet.."-salting"}
       elseif gradeSet=="chunk" then
-        omni.lib.add_unlock_recipe("crystallology-2", oreSet.ore.."-"..gradeSet.."-salting")
+        toTech[#toTech+1] = {"omnitech-crystallology-2", oreSet.ore.."-"..gradeSet.."-salting"}
       elseif gradeSet=="crystal" then
-        omni.lib.add_unlock_recipe("crystallology-3", oreSet.ore.."-"..gradeSet.."-salting")
+        toTech[#toTech+1] = {"omnitech-crystallology-3", oreSet.ore.."-"..gradeSet.."-salting"}
       elseif gradeSet=="pure" then
-        omni.lib.add_unlock_recipe("crystallology-4", oreSet.ore.."-"..gradeSet.."-salting")
+        toTech[#toTech+1] = {"omnitech-crystallology-4", oreSet.ore.."-"..gradeSet.."-salting"}
       end
     end
   end
   --old additions list, where rec name is [ore.."-pure-processing"]
-  local pureOresList = {"chrome", "osmium", "phosphorus", "platinum", "thorium","manganese","magnesium"}
+  local pureOresList = {"chrome", "osmium", "phosphorus", "platinum", "thorium", "manganese", "magnesium"}
 
   if not clowns.special_vanilla then
     for _,ore in pairs(pureOresList) do
@@ -98,7 +101,6 @@ if mods["omnimatter_crystal"] then
         local ing = table.deepcopy(ingrediences_solvation(rec))
         local res = table.deepcopy(results_solvation(rec))
         local ic = salt_omnide_icon(ore.."-ore")
-
         toAdd[#toAdd+1] = {
           type = "recipe",
           name = ore.."-pure-salting",
@@ -115,15 +117,15 @@ if mods["omnimatter_crystal"] then
           energy_required = 5,
         }
         if gradeSet=="crushed" then
-          omni.lib.add_unlock_recipe("crystallology-1", ore.."-pure-salting")
+          toTech[#toTech+1] = {"omnitech-crystallology-1", ore.."-pure-salting"}
         elseif gradeSet=="chunk" then
-          omni.lib.add_unlock_recipe("crystallology-2", ore.."-pure-salting")
+          toTech[#toTech+1] = {"omnitech-crystallology-2", ore.."-pure-salting"}
         elseif gradeSet=="crystal" then
-          omni.lib.add_unlock_recipe("crystallology-3", ore.."-pure-salting")
+          toTech[#toTech+1] = {"omnitech-crystallology-3", ore.."-pure-salting"}
         elseif gradeSet=="pure" then
-          omni.lib.add_unlock_recipe("crystallology-4", ore.."-pure-salting")
+          toTech[#toTech+1] = {"omnitech-crystallology-4", ore.."-pure-salting"}
         elseif ore=="magnesium" then 
-          omni.lib.add_unlock_recipe("crystallology-3", ore.."-pure-salting")
+          toTech[#toTech+1] = {"omnitech-crystallology-3", ore.."-pure-salting"}
         end
       end
       data:extend(toAdd)
@@ -171,15 +173,18 @@ if mods["omnimatter_crystal"] then
             energy_required = 5,
           }
           if tier=="crushed" then
-            omni.lib.add_unlock_recipe("crystallology-1", "clowns-"..tier.."-mix"..j.."-pure-salting")
+            toTech[#toTech+1] = {"omnitech-crystallology-1", "clowns-"..tier.."-mix"..j.."-pure-salting"}
           elseif tier=="chunk" then
-            omni.lib.add_unlock_recipe("crystallology-2", "clowns-"..tier.."-mix"..j.."-pure-salting")
+            toTech[#toTech+1] = {"omnitech-crystallology-2", "clowns-"..tier.."-mix"..j.."-pure-salting"}
           elseif tier=="crystal" then
-            omni.lib.add_unlock_recipe("crystallology-3", "clowns-"..tier.."-mix"..j.."-pure-salting")
+            toTech[#toTech+1] = {"omnitech-crystallology-3", "clowns-"..tier.."-mix"..j.."-pure-salting"}
           elseif tier=="pure" then
-            omni.lib.add_unlock_recipe("crystallology-4", "clowns-"..tier.."-mix"..j.."-pure-salting")
+            toTech[#toTech+1] = {"omnitech-crystallology-4", "clowns-"..tier.."-mix"..j.."-pure-salting"}
           end
           data:extend(toAdd)
+          for i,n in pairs(toTech) do
+            omni.lib.add_unlock_recipe(n[1],n[2])
+          end
         end
         if mods["angelsrefining"] and settings.startup["angels-salt-sorting"].value then
           for i, rec in pairs(data.raw.recipe) do
