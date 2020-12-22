@@ -26,7 +26,6 @@ end
 
 results_solvation=function(recipe)
   local ing = {}
-  --log(serpent.block(recipe))
 	--ing[#ing+1]={type = "fluid", name = "hydromnic-acid", amount = 120}
 	for _, i in pairs(recipe.normal.results) do
 		if i.name ~= "slag" and not string.find(i.name,"void") then
@@ -227,7 +226,6 @@ add_crystal=function(metal,name,recipe, techlvl)
 		if not techlvl then
 			techlvl = 1
 		end
-		--log(serpent.block(crystalines))
 		data:extend(crystalines)
 		for _,each in pairs({"-crystal", "-omnide-solution", "-crystal-omnitraction"}) do
 			omni.lib.add_unlock_recipe("omnitech-crystallology-"..techlvl, metal..each)

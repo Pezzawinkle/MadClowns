@@ -78,8 +78,12 @@ end
 ]]
 if settings.startup["fluid-cleanup"].value == true and data.raw["item-group"]["bob-fluid-products"] then
 	data.raw["item-subgroup"]["bob-fluid"].group = "bob-resource-products"
-	data.raw["item-subgroup"]["bob-fluid-electrolysis"].group = "bob-resource-products"
-	data.raw["item-subgroup"]["bob-fluid-pump"].group = "bob-resource-products"
+	if data.raw["item-subgroup"]["bob-fluid-electrolysis"] then
+		data.raw["item-subgroup"]["bob-fluid-electrolysis"].group = "bob-resource-products"
+	end
+	if data.raw["item-subgroup"]["bob-fluid-pump"] then
+		data.raw["item-subgroup"]["bob-fluid-pump"].group = "bob-resource-products"
+	end
 end
 --[[
 if settings.startup["fortifications-group"].value == true then
