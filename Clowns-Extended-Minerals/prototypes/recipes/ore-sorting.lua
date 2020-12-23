@@ -480,8 +480,17 @@ if not special_vanilla then
   create_basic_recipe("Meta-Garnierite", "clowns-ore8%s")
   create_basic_recipe("Nova-Leucoxene", "clowns-ore9%s")
 end
-
+if clowns.special_vanilla then
 OV.patch_recipes(
+  merge_table_of_tables {
+    create_sorting_recipes("Adamantite"     , "clowns-ore1%s", CT.adamantite),
+    create_sorting_recipes("Orichalcite"    , "clowns-ore4%s", CT.orichalcite),
+    create_sorting_recipes("Phosphorite"    , "clowns-ore5%s", CT.phosphorite),
+    create_sorting_recipes("Elionagate"     , "clowns-ore7%s", CT.elionagate),
+  }
+)
+else
+  OV.patch_recipes(
   merge_table_of_tables {
     create_sorting_recipes("Adamantite"     , "clowns-ore1%s", CT.adamantite),
     create_sorting_recipes("Antitate"       , "clowns-ore2%s", CT.antitate),
@@ -499,7 +508,7 @@ OV.patch_recipes(
     ore_exists("Phosphic") and create_sorting_recipes("Phosphic","clownsore15%s", CT.phosphic, true) or nil
   }
 )
-
+end
 -------------------------------------------------------------------------------
 -- MIXED SORTING --------------------------------------------------------------
 -------------------------------------------------------------------------------

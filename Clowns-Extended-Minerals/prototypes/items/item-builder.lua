@@ -1,5 +1,7 @@
 --ore table
-local ore_table={"clowns-ore1","clowns-ore2","clowns-ore3","clowns-ore4","clowns-ore5","clowns-ore6","clowns-ore7","clowns-ore8", "clowns-ore9"}
+local ore_table=
+--[[clowns.special_vanilla and {"clowns-ore1","clowns-ore4","clowns-ore5","clowns-ore7"}
+or]] {"clowns-ore1","clowns-ore2","clowns-ore3","clowns-ore4","clowns-ore5","clowns-ore6","clowns-ore7","clowns-ore8", "clowns-ore9"}
 
 for _, name in pairs(ore_table) do
 data:extend(
@@ -187,4 +189,80 @@ for _, name in pairs({"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14
       },
     }
   )
+end
+if clowns.special_vanilla then --hide non-compliant
+  angelsmods.functions.add_flag("clowns-ore2", "hidden")
+  angelsmods.functions.add_flag("clowns-ore2-crushed", "hidden")
+  angelsmods.functions.add_flag("clowns-ore2-chunk", "hidden")
+  angelsmods.functions.add_flag("clowns-ore2-crystal", "hidden")
+  angelsmods.functions.add_flag("clowns-ore2-pure", "hidden")
+
+  angelsmods.functions.add_flag("clowns-ore3", "hidden")
+  angelsmods.functions.add_flag("clowns-ore3-crushed", "hidden")
+  angelsmods.functions.add_flag("clowns-ore3-chunk", "hidden")
+  angelsmods.functions.add_flag("clowns-ore3-crystal", "hidden")
+  angelsmods.functions.add_flag("clowns-ore3-pure", "hidden")
+
+  angelsmods.functions.add_flag("clowns-ore6", "hidden")
+  angelsmods.functions.add_flag("clowns-ore6-crushed", "hidden")
+  angelsmods.functions.add_flag("clowns-ore6-chunk", "hidden")
+  angelsmods.functions.add_flag("clowns-ore6-crystal", "hidden")
+  angelsmods.functions.add_flag("clowns-ore6-pure", "hidden")
+
+  angelsmods.functions.add_flag("clowns-ore8", "hidden")
+  angelsmods.functions.add_flag("clowns-ore8-crushed", "hidden")
+  angelsmods.functions.add_flag("clowns-ore8-chunk", "hidden")
+  angelsmods.functions.add_flag("clowns-ore8-crystal", "hidden")
+  angelsmods.functions.add_flag("clowns-ore8-pure", "hidden")
+
+  angelsmods.functions.add_flag("clowns-ore9", "hidden")
+  angelsmods.functions.add_flag("clowns-ore9-crushed", "hidden")
+  angelsmods.functions.add_flag("clowns-ore9-chunk", "hidden")
+  angelsmods.functions.add_flag("clowns-ore9-crystal", "hidden")
+  angelsmods.functions.add_flag("clowns-ore9-pure", "hidden")
+
+  angelsmods.functions.add_flag("clowns-ore11-crushed", "hidden")
+  angelsmods.functions.add_flag("clowns-ore11-powder", "hidden")
+  angelsmods.functions.add_flag("clowns-ore11-dust", "hidden")
+  angelsmods.functions.add_flag("clowns-ore11-crystal", "hidden")
+  data.raw.fluid["clowns-ore11-sludge"].hidden = true
+  data.raw.fluid["clowns-ore11-solution"].hidden = true
+  data.raw.fluid["clowns-ore11-anode-sludge"].hidden = true
+  data.raw.fluid["clowns-ore11-slime"].hidden = true
+
+  angelsmods.functions.add_flag("clowns-ore12-crushed", "hidden")
+  angelsmods.functions.add_flag("clowns-ore12-powder", "hidden")
+  angelsmods.functions.add_flag("clowns-ore12-dust", "hidden")
+  angelsmods.functions.add_flag("clowns-ore12-crystal", "hidden")
+  data.raw.fluid["clowns-ore12-sludge"].hidden = true
+  data.raw.fluid["clowns-ore12-solution"].hidden = true
+  data.raw.fluid["clowns-ore12-anode-sludge"].hidden = true
+  data.raw.fluid["clowns-ore12-slime"].hidden = true
+
+  angelsmods.functions.add_flag("clowns-ore13-crushed", "hidden")
+  angelsmods.functions.add_flag("clowns-ore13-powder", "hidden")
+  angelsmods.functions.add_flag("clowns-ore13-dust", "hidden")
+  angelsmods.functions.add_flag("clowns-ore13-crystal", "hidden")
+  data.raw.fluid["clowns-ore13-sludge"].hidden = true
+  data.raw.fluid["clowns-ore13-solution"].hidden = true
+  data.raw.fluid["clowns-ore13-anode-sludge"].hidden = true
+  data.raw.fluid["clowns-ore13-slime"].hidden = true
+
+  angelsmods.functions.add_flag("clowns-ore14-crushed", "hidden")
+  angelsmods.functions.add_flag("clowns-ore14-powder", "hidden")
+  angelsmods.functions.add_flag("clowns-ore14-dust", "hidden")
+  angelsmods.functions.add_flag("clowns-ore14-crystal", "hidden")
+  data.raw.fluid["clowns-ore14-sludge"].hidden = true
+  data.raw.fluid["clowns-ore14-solution"].hidden = true
+  data.raw.fluid["clowns-ore14-anode-sludge"].hidden = true
+  data.raw.fluid["clowns-ore14-slime"].hidden = true
+
+  angelsmods.functions.add_flag("clowns-ore15-crushed", "hidden")
+  angelsmods.functions.add_flag("clowns-ore15-powder", "hidden")
+  angelsmods.functions.add_flag("clowns-ore15-dust", "hidden")
+  angelsmods.functions.add_flag("clowns-ore15-crystal", "hidden")
+  data.raw.fluid["clowns-ore15-sludge"].hidden = true
+  data.raw.fluid["clowns-ore15-solution"].hidden = true
+  data.raw.fluid["clowns-ore15-anode-sludge"].hidden = true
+  data.raw.fluid["clowns-ore15-slime"].hidden = true
 end

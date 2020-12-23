@@ -29,7 +29,7 @@ end
 
 local ore_list = table.deepcopy(ore_table)
 ore_list = merge_tabs(ore_list,{"angels-ore1","angels-ore2","angels-ore3","angels-ore4"})
-if not special_vanilla then --only add angels special vanilla ores to the ore_list
+if not clowns.special_vanilla then --only add angels special vanilla ores to the ore_list
   ore_list = merge_tabs(ore_list,{"angels-ore5","angels-ore6","angels-ore7","angels-ore8"}) --7 and 8 are the advanced (combo) ores
 end
 --append other materials
@@ -479,6 +479,8 @@ for j=1,#ore_combos, 1 do
     create_mixed_sorting(i,j)
   end
 end
-for k=11,15,1 do
-  create_adv_mixed_sorting(k)
+if not clowns.special_vanilla then
+  for k=11,15,1 do
+    create_adv_mixed_sorting(k)
+  end
 end

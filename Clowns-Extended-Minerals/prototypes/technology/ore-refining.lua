@@ -1,5 +1,6 @@
 local crushing_eff, flotation_eff, leeching_eff, refining_eff = {}, {}, {}, {}
-for i=1,9,1 do --clowns-ore count, excluding blendded
+local ore=clowns.special_vanilla and {1,4,5,7} or {1,2,3,4,5,6,7,8,9}
+for _,i in pairs(ore) do --clowns-ore count, excluding blendded
   --add static recipe unlocks
   crushing_eff[#crushing_eff+1] = {type = "unlock-recipe",recipe = "clowns-ore"..i.."-crushed"}
   crushing_eff[#crushing_eff+1] = {type = "unlock-recipe",recipe = "clowns-ore"..i.."-crushed-processing"}
@@ -116,7 +117,7 @@ if not clowns.special_vanilla then --add in the mixed sorting recipes to the tec
   end
 end
 --add in advanced ore stuffs
-if not special_vanilla then
+if not clowns.special_vanilla then
   for i=11,15,1 do
     table.insert(data.raw.technology["ore-advanced-crushing"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crushed"})
     table.insert(data.raw.technology["ore-advanced-crushing"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crushed-processing"})
