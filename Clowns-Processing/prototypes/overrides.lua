@@ -259,7 +259,8 @@ data.raw.recipe["molten-aluminium-smelting-3"].icons =
 {
 	{
 		icon = "__angelssmelting__/graphics/icons/molten-aluminium.png",
-		icon_size=32
+		icon_size = 64,
+		icon_mipmaps = 4,
 	},
 	{
 		icon = "__angelsrefining__/graphics/icons/num_4.png",

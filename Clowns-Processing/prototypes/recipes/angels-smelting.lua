@@ -27,6 +27,8 @@ if mods["bobplates"] or (mods["angelsindustries"] and angelsmods.industries.over
     {
       {
         icon = "__angelssmelting__/graphics/icons/molten-iron.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
       },
       {
         icon = "__angelsrefining__/graphics/icons/num_6.png",
@@ -61,6 +63,8 @@ else --include a magnesium sink for vanilla cases
     {
       {
         icon = "__angelssmelting__/graphics/icons/molten-steel.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
       },
       {
         icon = "__angelsrefining__/graphics/icons/num_2.png",
@@ -97,6 +101,8 @@ if angelsmods.trigger.smelting_products["aluminium"].plate then
     {
       {
         icon = "__angelssmelting__/graphics/icons/molten-aluminium.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
       },
       {
         icon = "__angelsrefining__/graphics/icons/num_3.png",
@@ -131,6 +137,8 @@ if angelsmods.trigger.smelting_products["aluminium"].plate then
       {
         {
           icon = "__angelssmelting__/graphics/icons/molten-aluminium.png",
+          icon_size = 64,
+          icon_mipmaps = 4,
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_5.png",
@@ -168,6 +176,8 @@ if angelsmods.trigger.smelting_products["brass"].plate then
       {
         {
           icon = "__angelssmelting__/graphics/icons/molten-brass.png",
+          icon_size = 64,
+          icon_mipmaps = 4,
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
