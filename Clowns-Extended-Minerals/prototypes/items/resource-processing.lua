@@ -18,7 +18,7 @@ data:extend(
 		order = "a",
 		stack_size = 1000,
 	},
-	{
+	--[[{--zombrine??
 		type = "fluid",
 		name = "liquid-clowns-resource4",
 		icon = "__Clowns-Processing__/graphics/icons/liquid-clowns-resource4.png",
@@ -30,6 +30,6 @@ data:extend(
 		max_temperature = 100,
 		pressure_to_speed_ratio = 0.4,
 		flow_to_energy_ratio = 0.59,
-	},
+	},]]
 }
 )
