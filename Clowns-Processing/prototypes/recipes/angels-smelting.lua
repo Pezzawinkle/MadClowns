@@ -235,7 +235,9 @@ if angelsmods.trigger.smelting_products["titanium"].plate then
     main_product= "ingot-titanium",
     icons = {
       {
-        icon = "__angelssmelting__/graphics/icons/ingot-titanium.png"
+        icon = "__angelssmelting__/graphics/icons/ingot-titanium.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
       },
       {
         icon = "__angelsrefining__/graphics/icons/num_3.png",

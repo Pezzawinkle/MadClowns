@@ -2,12 +2,6 @@ data:extend(
 {
 	{
 		type = "bool-setting",
-		name = "tile-stack-override",
-		setting_type = "startup",
-		default_value = false,
-	},
-	{
-		type = "bool-setting",
 		name = "depleted-uranium",
 		setting_type = "startup",
 		default_value = true,

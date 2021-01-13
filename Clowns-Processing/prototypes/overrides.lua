@@ -1,14 +1,3 @@
---OPTIONAL TILE STACK SIZE OVERRIDE
-
-if settings.startup["tile-stack-override"].value then
-	data.raw.item["landfill"].stack_size = 1000
-	data.raw.item["stone-brick"].stack_size = 1000
-	data.raw.item["concrete"].stack_size = 1000
-	data.raw.item["hazard-concrete"].stack_size = 1000
-	data.raw.item["refined-concrete"].stack_size = 1000
-	data.raw.item["refined-hazard-concrete"].stack_size = 1000
-end
-
 --[[OPTIONAL REMOVE BOB'S BULLETS
 if settings.startup["bob-bullet-override"].value and mods["bobwarfare"] then
 	--DO THINGS SOME DAY :o
