@@ -14,6 +14,10 @@ end
 
 table.insert(data.raw["technology"]["water-treatment-4"].effects, {type = "unlock-recipe", recipe = "intermediate-salination"})
 
+if data.raw.recipe["nickel-piercing-rounds-magazine"] then
+  table.insert(data.raw["technology"]["military-2"].effects, {type = "unlock-recipe", recipe = "nickel-piercing-rounds-magazine"})
+end
+
 if data.raw.recipe["molten-aluminium-smelting-4"] then
   table.insert(data.raw["technology"]["angels-aluminium-smelting-2"].effects, {type = "unlock-recipe", recipe = "molten-aluminium-smelting-4"})
 end

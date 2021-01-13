@@ -4,6 +4,7 @@ Date: 2021-??-??
   Features:
     - Removed superfluous setting regarding stack size for tiles.
       - Actually taken care of in angelsrefining
+    - Piercing round tech fix
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.14
 Date: 2020-11-24

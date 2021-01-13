@@ -5,7 +5,7 @@ if data.raw.item["bronze-alloy"] and data.raw.item["angels-plate-nickel"] then
     {
       type = "recipe",
       name = "nickel-piercing-rounds-magazine",
-      --enabled = false,
+      enabled = false,
       energy_required = 3,
       ingredients =
       {
