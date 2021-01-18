@@ -26,7 +26,7 @@ data:extend(
 		type = "item-subgroup",
 		name = "omni-pack",
 		group = "intermediate-products",
-		order = "m-a-a",
+		order = "m-b-a",
 	},
 	{
 		type = "item-subgroup",

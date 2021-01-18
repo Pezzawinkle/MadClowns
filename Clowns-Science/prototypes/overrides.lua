@@ -58,11 +58,11 @@ data.raw["tool"]["production-science-pack"].subgroup = "production-science-pack"
 data.raw["tool"]["utility-science-pack"].subgroup = "utility-science-pack"
 
 data.raw["tool"]["automation-science-pack"].order = "a-a"
-data.raw["tool"]["logistic-science-pack"].order = "a-a"
-data.raw["tool"]["chemical-science-pack"].order = "a-a"
-data.raw["tool"]["military-science-pack"].order = "a-a"
-data.raw["tool"]["production-science-pack"].order = "a-a"
-data.raw["tool"]["utility-science-pack"].order = "a-a"
+data.raw["tool"]["logistic-science-pack"].order = "c-a"
+data.raw["tool"]["chemical-science-pack"].order = "g-a"
+data.raw["tool"]["military-science-pack"].order = "i-a"
+data.raw["tool"]["production-science-pack"].order = "k-a"
+data.raw["tool"]["utility-science-pack"].order = "m-a"
 
 if data.raw.recipe["advanced-logistic-science-pack"] then
 	data.raw.recipe["advanced-logistic-science-pack"].icons ={
@@ -74,8 +74,9 @@ if data.raw.recipe["advanced-logistic-science-pack"] then
 			shift = {-12, -12}}}
 	data.raw.recipe["advanced-logistic-science-pack"].icon_size = 32
 	data.raw["tool"]["advanced-logistic-science-pack"].subgroup = "advanced-logistic-science-pack"
-	data.raw["tool"]["advanced-logistic-science-pack"].order = "a-a"
+	data.raw["tool"]["advanced-logistic-science-pack"].order = "o-a"
 	table.insert(data.raw["technology"]["advanced-logistic-science-pack"].effects, {type = "unlock-recipe", recipe = "alt1-logistic-science-pack"})
+
 	data:extend({{
 		type = "recipe",
 		name = "alt1-logistic-science-pack",
@@ -106,10 +107,14 @@ if data.raw.recipe["advanced-logistic-science-pack"] then
     angelsmods.trigger.smelting_products["chrome"].plate = true --in case it does not already trigger
   end
 end
+if data.raw.tool["token-bio"] then
+	data.raw["tool"]["token-bio"].subgroup = "logistic-science-pack"
+	data.raw["tool"]["token-bio"].order = "c-b"
+end
 
 if data.raw.recipe["omni-pack"] then
 	data.raw["tool"]["omni-pack"].subgroup = "omni-pack"
-	data.raw["tool"]["omni-pack"].order = "a-a"
+	data.raw["tool"]["omni-pack"].order = "e-a"
 end
 
 local new_ing = "gas-carbon-monoxide"
