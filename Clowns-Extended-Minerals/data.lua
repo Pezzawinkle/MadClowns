@@ -81,17 +81,17 @@ res1fluid = "liquid-phosphoric-acid"
 res2fluid = "steam"
 
 if mods["omnimatter"] then
-	omni.add_resource("clowns-ore1",3,"Adamantite","Clowns-Extended-Minerals")
-	omni.add_resource("clowns-ore2",2,"Antitate","Clowns-Extended-Minerals")
-	omni.add_resource("clowns-ore3",2,"Pro-Galena","Clowns-Extended-Minerals")
-	omni.add_resource("clowns-ore4",2,"Orichalcite","Clowns-Extended-Minerals")
-	omni.add_resource("clowns-ore5",2,"Phosphorite","Clowns-Extended-Minerals")
-	omni.add_resource("clowns-ore6",3,"Sanguinate","Clowns-Extended-Minerals")
-  omni.add_resource("clowns-ore7",3,"Elionagate","Clowns-Extended-Minerals")
-  omni.add_resource("clowns-ore8",3,"Meta-Garnierite","Clowns-Extended-Minerals")
-  omni.add_resource("clowns-ore9",3,"Nova-Leucoxene","Clowns-Extended-Minerals")
-	omni.add_resource("clowns-resource1",2,"Alluvial Deposit","Clowns-Extended-Minerals")
-	omni.add_resource("clowns-resource2",2,"Oil Sands","Clowns-Extended-Minerals")
+	omni.matter.add_resource("clowns-ore1",3,"Adamantite","Clowns-Extended-Minerals")
+	omni.matter.add_resource("clowns-ore2",2,"Antitate","Clowns-Extended-Minerals")
+	omni.matter.add_resource("clowns-ore3",2,"Pro-Galena","Clowns-Extended-Minerals")
+	omni.matter.add_resource("clowns-ore4",2,"Orichalcite","Clowns-Extended-Minerals")
+	omni.matter.add_resource("clowns-ore5",2,"Phosphorite","Clowns-Extended-Minerals")
+	omni.matter.add_resource("clowns-ore6",3,"Sanguinate","Clowns-Extended-Minerals")
+  omni.matter.add_resource("clowns-ore7",3,"Elionagate","Clowns-Extended-Minerals")
+  omni.matter.add_resource("clowns-ore8",3,"Meta-Garnierite","Clowns-Extended-Minerals")
+  omni.matter.add_resource("clowns-ore9",3,"Nova-Leucoxene","Clowns-Extended-Minerals")
+	omni.matter.add_resource("clowns-resource1",2,"Alluvial Deposit","Clowns-Extended-Minerals")
+	omni.matter.add_resource("clowns-resource2",2,"Oil Sands","Clowns-Extended-Minerals")
 end
 
 --APPLY THE EFFECTS OF SETTINGS THAT ARE RELEVANT TO ANGEL'S INFINITE ORES
