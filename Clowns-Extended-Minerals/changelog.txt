@@ -5,6 +5,7 @@ Date: 2021-01-??
     - Updated for 1.1.7
     - Hide infinite ore settings if angelsinfiniteores is not active
     - Disable/remove clowns-resource4 (found as a barrel) as that was not implemented.
+    - Patched to work with latest Omnimatter function lib
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.20
 Date: 2020-11-24
