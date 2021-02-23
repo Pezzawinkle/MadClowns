@@ -357,7 +357,7 @@ clowns.functions.get_icon_table = function(table)
       list[i]={
         {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
         clowns.tables.tweaked_icon_lookup(table[i].name, 0.5, {10, 10}), 
-        {icon = "__Clowns-Extended-Minerals__/graphics/icons/advsorting-overlay.png"}
+        {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png"}
       }
     else --if false
       list[i]=icon_lookup_table_fallback

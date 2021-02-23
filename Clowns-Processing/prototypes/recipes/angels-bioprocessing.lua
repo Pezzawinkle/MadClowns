@@ -205,8 +205,16 @@ if mods["angelsbioprocessing"] then
 	{
 		type = "recipe",
 		name = "diammonium-phosphate-fertilizer",
-		icon = "__angelsbioprocessing__/graphics/icons/solid-fertilizer.png",
-		icon_size = 32,
+		icons = {
+			{
+				icon = "__angelsbioprocessing__/graphics/icons/solid-fertilizer.png",
+				icon_size = 32, icon_mipmaps = 1
+			},
+			{
+				icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png",
+				icon_size = 32, icon_mipmaps = 1
+			},
+		},
 		category = "chemistry",
 		subgroup = "clowns-phosphorus",
 		order = "c",

@@ -1,43 +1,41 @@
 if settings.startup["MCP_enable_centrifuges"].value then
+  data.raw.item["centrifuge"].icon = nil
+  data.raw.item["centrifuge"].icons = angelsmods.functions.add_number_icon_layer(
+    {
+      {
+        icon = "__base__/graphics/icons/centrifuge.png",
+        icon_size = 64, icon_mipmaps = 4, scale = 0.5
+      }
+    },
+    1, angelsmods.refining.number_tint)
+
   local centrifuge_2_item = util.table.deepcopy(data.raw.item["centrifuge"])
   centrifuge_2_item.localised_name={"centrifuge","MK2"}
   centrifuge_2_item.name = "centrifuge-mk2"
   centrifuge_2_item.place_result = "centrifuge-mk2"
   centrifuge_2_item.order = "a-b"--base centrifuge is g, overriden to a-a
-  centrifuge_2_item.icon = nil
-  centrifuge_2_item.icons =
-  {
+  centrifuge_2_item.icons = angelsmods.functions.add_number_icon_layer(
     {
-      icon = "__base__/graphics/icons/centrifuge.png"
+      {
+        icon = "__base__/graphics/icons/centrifuge.png",
+        icon_size = 64, icon_mipmaps = 4, scale = 0.5
+      }
     },
-    {
-      icon = "__angelsrefining__/graphics/icons/num_2.png",
-      tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-      icon_size=32,
-      scale = 0.32,
-      shift = {-12, -12}
-    }
-  }
+    2, angelsmods.refining.number_tint)
 
   local centrifuge_3_item = util.table.deepcopy(data.raw.item["centrifuge"])
   centrifuge_3_item.name = "centrifuge-mk3"
   centrifuge_3_item.place_result = "centrifuge-mk3"
   centrifuge_3_item.localised_name={"centrifuge","MK3"}
   centrifuge_3_item.order = "a-c"
-  centrifuge_3_item.icon = nil
-  centrifuge_3_item.icons =
-  {
+  centrifuge_3_item.icons = angelsmods.functions.add_number_icon_layer(
     {
-      icon = "__base__/graphics/icons/centrifuge.png",
+      {
+        icon = "__base__/graphics/icons/centrifuge.png",
+        icon_size = 64, icon_mipmaps = 4, scale = 0.5
+      }
     },
-    {
-      icon = "__angelsrefining__/graphics/icons/num_3.png",
-      tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-      icon_size=32,
-      scale = 0.32,
-      shift = {-12, -12}
-    }
-  }
+    3, angelsmods.refining.number_tint)
 
   local centrifuge_2 = util.table.deepcopy(data.raw["assembling-machine"]["centrifuge"])
   centrifuge_2.name = "centrifuge-mk2"

@@ -741,7 +741,7 @@ data:extend(
 		icon_size = 32,
 		category = "chemical-smelting",
 		subgroup = "clowns-uranium",
-		order = "a",
+		order = "c",
 		energy_required = 10,
 		enabled = false,
 		allow_decomposition = false,
@@ -754,6 +754,9 @@ data:extend(
 		{
 			{type = "item", name = "solid-uranium-oxide", amount = 24}
 		},
+    icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.get_object_icons("solid-uranium-oxide"),
+      1, angelsmods.smelting.number_tint),
 	},
 	{
 		type = "recipe",
@@ -775,6 +778,9 @@ data:extend(
 		{
 			{type = "item", name = "solid-uranium-oxide", amount = 24},
 		},
+    icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.get_object_icons("solid-uranium-oxide"),
+      2, angelsmods.smelting.number_tint),
   },
   --diuranate
 	{
@@ -784,7 +790,7 @@ data:extend(
 		icon_size = 32,
 		category = "chemistry",
 		subgroup = "clowns-uranium",
-		order = "c",
+		order = "b",
 		energy_required = 5,
 		enabled = false,
 		allow_decomposition = false,
@@ -806,7 +812,7 @@ data:extend(
 		icon_size = 32,
 		category = "chemistry",
 		subgroup = "clowns-uranium",
-		order = "b",
+		order = "a",
 		energy_required = 5,
 		enabled = false,
 		allow_decomposition = false,

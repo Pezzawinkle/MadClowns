@@ -18,18 +18,14 @@ data:extend(
 	{
 		type = "item",
 		name = "sluicer",
-		icons={
+		icons = angelsmods.functions.add_number_icon_layer(
 			{
-				icon = "__Clowns-Processing__/graphics/icons/sluicer.png"
+				{
+					icon = "__Clowns-Processing__/graphics/icons/sluicer.png",
+					icon_size = 32, icon_mipmaps = 1
+				}
 			},
-			{
-				icon = "__angelsrefining__/graphics/icons/num_1.png",
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.32,
-				shift = {-12, -12}
-			},
-		},
-		icon_size = 32,
+			1, angelsmods.refining.number_tint),
 		subgroup = "washing-building",
 		order = "c-a",
 		place_result = "sluicer",
@@ -40,17 +36,14 @@ data:extend(
 		type = "assembling-machine",
 		name = "sluicer",
 		fast_replaceable_group = "sluicer",
-		icons={
+		icons = angelsmods.functions.add_number_icon_layer(
 			{
-				icon = "__Clowns-Processing__/graphics/icons/sluicer.png",
+				{
+					icon = "__Clowns-Processing__/graphics/icons/sluicer.png",
+					icon_size = 32, icon_mipmaps = 1
+				}
 			},
-			{
-				icon = "__angelsrefining__/graphics/icons/num_1.png",
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.32,
-				shift = {-12, -12}
-			},
-		},
+			1, angelsmods.refining.number_tint),
 		icon_size = 32,
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {hardness = 0.8, mining_time = 0.8, result = "sluicer"},
@@ -151,20 +144,14 @@ data:extend(
 	{
 		type = "item",
 		name = "sluicer-2",
-		icons={
+		icons = angelsmods.functions.add_number_icon_layer(
 			{
-				icon = "__Clowns-Processing__/graphics/icons/sluicer.png",
-				tint = {r = 237/255, g = 191/255, b = 29/255},
-				icon_size=32,
+				{
+					icon = "__Clowns-Processing__/graphics/icons/sluicer.png",
+					icon_size = 32, icon_mipmaps = 1
+				}
 			},
-			{
-				icon = "__angelsrefining__/graphics/icons/num_2.png",
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.32,
-				shift = {-12, -12},
-				icon_size=32,
-			}
-		},
+			2, angelsmods.refining.number_tint),
 		subgroup = "washing-building",
 		order = "c-a",
 		place_result = "sluicer-2",
@@ -175,20 +162,14 @@ data:extend(
 		type = "assembling-machine",
 		name = "sluicer-2",
 		fast_replaceable_group = "sluicer",
-		icons={
+		icons = angelsmods.functions.add_number_icon_layer(
 			{
-				icon = "__Clowns-Processing__/graphics/icons/sluicer.png",
-				tint = {r = 237/255, g = 191/255, b = 29/255},
-				icon_size=32,
+				{
+					icon = "__Clowns-Processing__/graphics/icons/sluicer.png",
+					icon_size = 32, icon_mipmaps = 1
+				}
 			},
-			{
-				icon = "__angelsrefining__/graphics/icons/num_2.png",
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.32,
-				shift = {-12, -12},
-				icon_size=32,
-			}
-		},
+			2, angelsmods.refining.number_tint),
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {hardness = 0.8, mining_time = 0.8, result = "sluicer-2"},
 		max_health = 1000,

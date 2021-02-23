@@ -244,18 +244,13 @@ else
 end
 --update aluminium
 data.raw.recipe["molten-aluminium-smelting-3"].order = "i[liquid-molten-aluminium]-d"
-data.raw.recipe["molten-aluminium-smelting-3"].icons =
-{
-	{
-		icon = "__angelssmelting__/graphics/icons/molten-aluminium.png",
-		icon_size = 64,
-		icon_mipmaps = 4,
-	},
-	{
-		icon = "__angelsrefining__/graphics/icons/num_4.png",
-		icon_size=32,
-		tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-		scale = 0.32,
-		shift = {-12, -12},
-	}
-}
+data.raw.recipe["molten-aluminium-smelting-3"].icons = angelsmods.functions.add_number_icon_layer(
+	angelsmods.functions.get_object_icons("liquid-molten-aluminium"),
+	4, angelsmods.smelting.number_tint)
+--update titanium sponge
+data.raw.recipe["liquid-titanium-tetrachloride-smelting"].icons = angelsmods.functions.add_number_icon_layer(
+  {{icon = "__angelssmelting__/graphics/icons/sponge-titanium.png",	icon_size = 32}},
+  1, angelsmods.smelting.number_tint)
+data.raw.recipe["sponge-magnesium-titanium-smelting"].icons = angelsmods.functions.add_number_icon_layer(
+  {{icon = "__angelssmelting__/graphics/icons/sponge-titanium.png",	icon_size = 32}},
+  2, angelsmods.smelting.number_tint)
