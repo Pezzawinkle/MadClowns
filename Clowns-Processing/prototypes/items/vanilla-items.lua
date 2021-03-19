@@ -384,5 +384,17 @@ data:extend(
       pressure_to_speed_ratio = 0.4,
       flow_to_energy_ratio = 0.59,
     },
+    --Osmium Bullets
   }
 )
+osmiumbullet=table.deepcopy(data.raw.ammo["uranium-rounds-magazine"])
+osmiumbullet.name="osmium-rounds-magazine"
+osmiumbullet.ammo_type.action.action_delivery.target_effects[2].damage = {amount = 20, type = "physical"}
+osmiumbullet.ammo_type.action.action_delivery.target_effects[3] = {type = "damage",damage = { amount = 6, type = "explosion"}}
+osmiumbullet.order = "a[basic-clips]-d[osmium-rounds-magazine]"
+osmiumbullet.icon = nil
+osmiumbullet.icons = {
+  {icon = "__Clowns-Processing__/graphics/icons/osmium-rounds-magazine.png", icon_size = 64, icon_mipmaps = 4--[[, tint = {95,56,75}]]}
+}
+osmiumbullet.pictures.layers[1].filename = "__Clowns-Processing__/graphics/icons/osmium-rounds-magazine.png"
+data:extend({osmiumbullet})

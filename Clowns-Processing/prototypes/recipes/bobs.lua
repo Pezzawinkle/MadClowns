@@ -43,9 +43,9 @@ if data.raw.item["platinum-ore"] and data.raw.item["gold-ore"] then
         {type = "item", name = "iron-ore", amount = 1, probability = 0.2},
         {type = "item", name = "copper-ore", amount = 1, probability = 0.1},
         {type = "item", name = "crystal-dust", amount = 1, probability = 0.1},
-        {type = "item", name = "gold-ore", amount = 1, probability = 0.05},
-        {type = "item", name = "chrome-ore", amount = 1, probability = 0.01},
-        {type = "item", name = "platinum-ore", amount = 1, probability = 0.01}
+        {type = "item", name = clowns.special_vanilla and "osmium-ore" or "gold-ore", amount = 1, probability = 0.05},
+        {type = "item", name = clowns.special_vanilla and "angels-iron-pebbles" or "chrome-ore", amount = 1, probability = 0.01},
+        {type = "item", name = clowns.special_vanilla and "angels-copper-pebbles" or "platinum-ore", amount = 1, probability = 0.01}
       },
       energy_required = 5,
       subgroup = "water-washing",

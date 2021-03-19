@@ -147,6 +147,8 @@ if settings.startup["equipment-group"].value then
 	data.raw.item["personal-laser-defense-equipment"].subgroup = "personal-laser-defences"
 
 	data.raw.item["discharge-defense-equipment"].subgroup = "misc1"
+	data.raw.item["discharge-defense-remote"].subgroup = "misc1"
+	data.raw.item["belt-immunity-equipment"].subgroup = "shields"
 
 	if mods["bobequipment"] then
 		data.raw.item["battery-mk3-equipment"].subgroup = "batteries"
@@ -243,14 +245,18 @@ else
 	data.raw["item-subgroup"]["armor"].order = "a[armor]-a[all]"
 end
 --update aluminium
-data.raw.recipe["molten-aluminium-smelting-3"].order = "i[liquid-molten-aluminium]-d"
-data.raw.recipe["molten-aluminium-smelting-3"].icons = angelsmods.functions.add_number_icon_layer(
-	angelsmods.functions.get_object_icons("liquid-molten-aluminium"),
-	4, angelsmods.smelting.number_tint)
+if angelsmods.trigger.smelting_products["aluminium"].plate then
+	data.raw.recipe["molten-aluminium-smelting-3"].order = "i[liquid-molten-aluminium]-d"
+	data.raw.recipe["molten-aluminium-smelting-3"].icons = angelsmods.functions.add_number_icon_layer(
+		angelsmods.functions.get_object_icons("liquid-molten-aluminium"),
+		4, angelsmods.smelting.number_tint)
+end
 --update titanium sponge
-data.raw.recipe["liquid-titanium-tetrachloride-smelting"].icons = angelsmods.functions.add_number_icon_layer(
-  {{icon = "__angelssmelting__/graphics/icons/sponge-titanium.png",	icon_size = 32}},
-  1, angelsmods.smelting.number_tint)
-data.raw.recipe["sponge-magnesium-titanium-smelting"].icons = angelsmods.functions.add_number_icon_layer(
-  {{icon = "__angelssmelting__/graphics/icons/sponge-titanium.png",	icon_size = 32}},
-  2, angelsmods.smelting.number_tint)
+if angelsmods.trigger.smelting_products["titanium"].plate then
+	data.raw.recipe["liquid-titanium-tetrachloride-smelting"].icons = angelsmods.functions.add_number_icon_layer(
+		{{icon = "__angelssmelting__/graphics/icons/sponge-titanium.png",	icon_size = 32}},
+		1, angelsmods.smelting.number_tint)
+	data.raw.recipe["sponge-magnesium-titanium-smelting"].icons = angelsmods.functions.add_number_icon_layer(
+		{{icon = "__angelssmelting__/graphics/icons/sponge-titanium.png",	icon_size = 32}},
+		2, angelsmods.smelting.number_tint)
+end

@@ -1,4 +1,4 @@
--- function to know if this is special vanilla or not (DUPLICATE OF ANGELS, since this mod seems to be calling it earlier)
+--[[ function to know if this is special vanilla or not (DUPLICATE OF ANGELS, since this mod seems to be calling it earlier)
 if not clowns then clowns={} end
 if not clowns.functions then clowns.functions={} end
 if not clowns.tables then clowns.tables ={} end
@@ -11,7 +11,7 @@ for ore_name, ore_enabled in pairs(angelsmods.trigger.ores or {}) do
 end
 if mods["pyrawores"] then --force full mode
   clowns.special_vanilla = false
-end
+end]]
 --set up clowns ore listing
 clowns.tables.ores={"clowns-ore1","clowns-ore4","clowns-ore5","clowns-ore7"}
 if not clowns.special_vanilla then

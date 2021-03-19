@@ -27,8 +27,12 @@ data:extend(
 				type = "unlock-recipe",
 				recipe = "clowns-plate-osmium"
 			},
+			{
+				type = "unlock-recipe",
+				recipe = "osmium-rounds-magazine"
+			},
 		},
-		prerequisites = {"powder-metallurgy-1", "ore-processing-2"},
+		prerequisites = {"powder-metallurgy-1", "ore-processing-2", "military-4"},
 		unit =
 		{
 			ingredients =

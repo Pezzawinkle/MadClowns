@@ -1,3 +1,19 @@
+-- function to know if this is special vanilla or not (DUPLICATE OF ANGELS, since this mod seems to be calling it earlier)
+if not clowns then clowns={} end
+if not clowns.functions then clowns.functions={} end
+if not clowns.tables then clowns.tables ={} end
+--check vanilla settings
+clowns.special_vanilla = true --assume true, then find out if false 
+for ore_name, ore_enabled in pairs(angelsmods.trigger.ores or {}) do
+  if ore_enabled and ore_name ~= "iron" and ore_name ~= "copper" and ore_name ~= "uranium" then
+    clowns.special_vanilla = false
+  end
+end
+if mods["pyrawores"] then --force full mode
+  clowns.special_vanilla = false
+end
+
+
 require("prototypes.categories")
 
 -- ITEMS

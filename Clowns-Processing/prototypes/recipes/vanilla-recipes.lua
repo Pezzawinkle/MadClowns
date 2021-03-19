@@ -800,5 +800,21 @@ data:extend(
 			{type = "item", name = "solid-uranyl-nitrate", amount = 12}
 		},
 	},
+  --Osmium Bullets
+  {
+    type = "recipe",
+    name = "osmium-rounds-magazine",
+    category = "advanced-crafting",
+    subgroup = "ammo",
+    energy_required = 10,
+    enabled = false,
+    allow_decomposition = false,
+    ingredients = {
+      {"piercing-rounds-magazine",1},
+      {"clowns-plate-osmium",1}
+    },
+    result = "osmium-rounds-magazine",
+    order = "a[basic-clips]-d[osmium-rounds-magazine]"
+  }
 }
 )
