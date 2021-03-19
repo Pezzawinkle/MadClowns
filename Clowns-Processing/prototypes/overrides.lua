@@ -147,7 +147,7 @@ if settings.startup["equipment-group"].value then
 	data.raw.item["personal-laser-defense-equipment"].subgroup = "personal-laser-defences"
 
 	data.raw.item["discharge-defense-equipment"].subgroup = "misc1"
-	data.raw.item["discharge-defense-remote"].subgroup = "misc1"
+	data.raw.capsule["discharge-defense-remote"].subgroup = "misc1"
 	data.raw.item["belt-immunity-equipment"].subgroup = "shields"
 
 	if mods["bobequipment"] then
