@@ -190,3 +190,9 @@ if mods["angelsindustries"] and angelsmods.industries.tech then
   data.raw["item-subgroup"]["particle-accelerator-recipes"].group = "angels-tech"
   data.raw["item-subgroup"]["particle-accelerator-recipes"].order = "ba[particle-accelerator]"
 end
+-----------------------------------------
+-- enable recipes from angels
+-----------------------------------------
+angelsmods.trigger.smelting_products["manganese"].plate = true
+angelsmods.trigger.smelting_products["manganese"].ingot = true
+angelsmods.trigger.ores["manganese"] = true
