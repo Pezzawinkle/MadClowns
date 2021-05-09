@@ -17,4 +17,10 @@ angelsmods.functions.make_void("water-radioactive-waste", "water")
 if mods["angelsindustries"] then
   --update nuclear cells
   clowns.functions.replace_ing("angels-advanced-mixed-oxide-reprocessing","uranium-235","35%-uranium","res")
+  --lower plutonium returns on thorium reprocessing
+  angelsmods.functions.OV.patch_recipes({
+    {name="advanced-thorium-nuclear-fuel-reprocessing|b", results={{"plutonium-239",2}}},
+    {name="advanced-thorium-nuclear-fuel-reprocessing", results={{"thorium-232",0}}}
+  })
+  data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing"].localised_name={"recipe-name.advanced-clowns-amox-reprocessing"}
 end
