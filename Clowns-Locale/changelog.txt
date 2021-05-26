@@ -1,0 +1,24 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+  Changes:
+    - Fixed locale issues with Bobs Inserter Overhaul. This may leave Bobs Inserter locales unchaged when the Overhaul is turned off but I am to lazy now to implement logic to fix that.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+  Changes:
+    - Update to 0.17
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+  Changes:
+    - Made changes suggested by SuperSandro2000.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+  Changes:
+    - Incorporated further boblogistics changes.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+  Changes:
+    - Incorporated boblogistics changes.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+  Changes:
+    - Initial release.

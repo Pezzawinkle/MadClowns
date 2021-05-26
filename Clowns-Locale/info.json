@@ -1,0 +1,15 @@
+{
+  "name": "Clowns-Locale",
+  "version": "1.1.2",
+  "factorio_version": "0.17",
+  "title": "MadClown01's AngelBob Locale Fixes",
+  "author": "MadClown01",
+  "contact": "",
+  "homepage": "",
+  "description": "Updates Vanilla & AngelBob locale to have consistent capitalization and naming conventions",
+  "dependencies": [
+	"base >= 0.17.0", 
+	"angelsrefining >= 0.10.0",
+	"? bobwarfare >= 0.17.0"
+	]
+}

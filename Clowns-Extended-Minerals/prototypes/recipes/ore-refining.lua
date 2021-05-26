@@ -38,7 +38,7 @@ for _, ore in pairs(ore_table) do
         type = "recipe",
         name = ore.."-crushed",
         localised_name = {"recipe-name.clowns-mix",{"entity-name."..ore},"Crushing"},
-        category = "ore-sorting-t1",
+        category = "ore-sorting",
         subgroup = "clowns-ore-processing-a",
         energy_required = 1,
         enabled = false,
@@ -58,7 +58,7 @@ for _, ore in pairs(ore_table) do
         type = "recipe",
         name = ore.."-chunk",
         localised_name = {"recipe-name.clowns-mix",{"entity-name."..ore},"Hydro Refining"},
-        category = "ore-sorting-t2",
+        category = "ore-sorting-2",--t2
         subgroup = "clowns-ore-processing-b",
         energy_required = 2,
         enabled = false,
@@ -81,7 +81,7 @@ for _, ore in pairs(ore_table) do
 		  {
         type = "recipe",
         name = ore.."-crystal",
-        category = "ore-sorting-t3",
+        category = "ore-sorting-3", --t3
         subgroup = "clowns-ore-processing-c",
         energy_required = 2,
         enabled = false,
@@ -102,7 +102,7 @@ for _, ore in pairs(ore_table) do
       {
         type = "recipe",
         name = ore.."-pure",
-        category = "ore-sorting-t4",
+        category = "ore-sorting-4", --t4
         subgroup = "clowns-ore-processing-d",
         energy_required = 2,
         enabled = false,

@@ -26,6 +26,30 @@ data:extend(
 	},
 	{
 		type = "recipe",
+		name = "advanced-nuclear-fuel-reprocessing|b",
+		energy_required = 50,
+		enabled = false,
+		category = "chemistry",
+		ingredients =
+		{
+			{type="item", name="used-up-uranium-fuel-cell", amount=5},
+			{type="fluid", name="liquid-nitric-acid", amount=350}--20
+		},
+		icons = {{icon = "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-reprocessing.png", icon_size = 32,}},
+		icon_size=32,
+		subgroup = "clowns-nuclear-cells",
+		order = "c-b-a",
+		results =
+		{
+			{type="item", name="uranium-238", amount=3},
+			{type="item", name="plutonium-239", amount=2},
+			{type="item", name="strontium-90", amount=1},--1
+			{type="item", name="caesium-137", amount=5},--1
+			{type="fluid", name="water-radioactive-waste", amount=350}--100 (matching the waste liq)
+		},
+	},
+	{
+		type = "recipe",
 		name = "advanced-nuclear-fuel-reprocessing-2",
 		energy_required = 50,
 		enabled = false,
@@ -129,7 +153,7 @@ end
 ----------------------------------------
 -- for helmod testing purposes only
 ---------------------------------------
---[[data:extend({
+data:extend({
 	{
 		type = "recipe",
 		name = "thorium-fuel-burning",
@@ -138,7 +162,7 @@ end
 		category = "chemistry",
 		ingredients =
 		{
-			{type="item", name="thorium-fuel-cell", amount=1},
+			{type="item", name = (mods["angelsindustries"] and angelsmods.industries.overhaul) and "angels-throrium-fuel-cell" or "thorium-fuel-cell", amount=1},
 		},
 		icons= {{icon = "__Clowns-Nuclear__/graphics/icons/thorium-nuclear-fuel-reprocessing.png", icon_size = 32,}},
 		icon_size=32,
@@ -146,7 +170,7 @@ end
 		order = "c-b-b",
 		results =
 		{
-			{type="item", name=(mods["angelsindustries"] and angelsmods.industries.overhaul) and "used-up-angels-thorium-fuel-cell" or "used-up-thorium-fuel-cell", amount=1}
+			{type="item", name = (mods["angelsindustries"] and angelsmods.industries.overhaul) and "used-up-angels-thorium-fuel-cell" or "used-up-thorium-fuel-cell", amount=1}
 		},
 	},
 	{
@@ -192,4 +216,4 @@ if mods["angelsindustries"] and angelsmods.industries.overhaul then
 		},
 	},
 })
-end]]
+end

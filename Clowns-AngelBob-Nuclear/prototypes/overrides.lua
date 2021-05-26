@@ -11,7 +11,8 @@ if data.raw.item["thorium-fuel-cell"] then
     --table.insert(data.raw.recipe["thorium-nuclear-fuel-reprocessing"].ingredients,{type="item", name=plate, amount=5})
   clowns.functions.replace_ing("radiothermal-fuel","iron-plate",plate,"ing")
 else
-	table.insert(data.raw["technology"]["nuclear-fuel-reprocessing-2"].effects, {type = "unlock-recipe", recipe = "advanced-nuclear-fuel-reprocessing-2"})
+	angelsmods.functions.OV.add_unlock("nuclear-fuel-reprocessing-2","advanced-nuclear-fuel-reprocessing-2")
+  angelsmods.functions.OV.add_unlock("nuclear-fuel-reprocessing-2","advanced-nuclear-fuel-reprocessing|b")
 end
 angelsmods.functions.make_void("water-radioactive-waste", "water")
 if mods["angelsindustries"] then

@@ -108,7 +108,7 @@ if not clowns.special_vanilla then
 		{
 			type = "recipe",
 			name = "chrome-pure-processing",
-			category = "ore-sorting",
+			category = "ore-sorting-3",
 			subgroup = "ore-sorting-advanced",
 			allow_decomposition = false,
 			normal =
@@ -159,7 +159,7 @@ if not clowns.special_vanilla then
 		{
 			type = "recipe",
 			name = "magnesium-pure-processing",
-			category = "ore-sorting",
+			category = "ore-sorting-2",
 			subgroup = "ore-sorting-advanced",
 			allow_decomposition = false,
 			normal =
@@ -214,7 +214,7 @@ if not clowns.special_vanilla then
 		{
 			type = "recipe",
 			name = "platinum-pure-processing",
-			category = "ore-sorting",
+			category = "ore-sorting-4",
 			subgroup = "ore-sorting-advanced",
 			allow_decomposition = false,
 			normal =
@@ -267,7 +267,7 @@ if not clowns.special_vanilla then
 		{
 			type = "recipe",
 			name = "osmium-pure-processing",
-			category = "ore-sorting",
+			category = "ore-sorting-4",
 			subgroup = "ore-sorting-advanced",
 			allow_decomposition = false,
 			normal =
@@ -327,7 +327,7 @@ if mods["Clowns-AngelBob-Nuclear"] then
 		{
 			type = "recipe",
 			name = "thorium-pure-processing",
-			category = "ore-sorting",
+			category = "ore-sorting-4",
 			subgroup = "ore-sorting-advanced",
 			allow_decomposition = false,
 			normal =
