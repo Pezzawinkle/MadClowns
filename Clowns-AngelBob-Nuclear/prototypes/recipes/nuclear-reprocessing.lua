@@ -9,7 +9,7 @@ data:extend(
 		ingredients =
 		{
 			{type="item", name="used-up-uranium-fuel-cell", amount=5},
-			{type="fluid", name="liquid-nitric-acid", amount=240}--20
+			{type="fluid", name="liquid-nitric-acid", amount=300}--20
 		},
 		icons = {{icon = "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-reprocessing.png", icon_size = 32,}},
 		icon_size=32,
@@ -17,11 +17,11 @@ data:extend(
 		order = "c-b-a",
 		results =
 		{
-			{type="item", name="uranium-238", amount=3},
+			{type="item", name="uranium-238", amount=4},
 			{type="item", name="plutonium-239", amount=2},
-			{type="item", name="strontium-90", amount=3},--1
+			{type="item", name="strontium-90", amount=1},--1
 			{type="item", name="caesium-137", amount=3},--1
-			{type="fluid", name="water-radioactive-waste", amount=240}--100 (matching the waste liq)
+			{type="fluid", name="water-radioactive-waste", amount=300}--100 (matching the waste liq)
 		},
 	},
 	{
@@ -157,12 +157,12 @@ data:extend({
 	{
 		type = "recipe",
 		name = "thorium-fuel-burning",
-		energy_required = 300,
+		energy_required = 50000,
 		enabled = false,
 		category = "chemistry",
 		ingredients =
 		{
-			{type="item", name = (mods["angelsindustries"] and angelsmods.industries.overhaul) and "angels-throrium-fuel-cell" or "thorium-fuel-cell", amount=1},
+			{type="item", name = (mods["angelsindustries"] and angelsmods.industries.overhaul) and "angels-thorium-fuel-cell" or "thorium-fuel-cell", amount=1},
 		},
 		icons= {{icon = "__Clowns-Nuclear__/graphics/icons/thorium-nuclear-fuel-reprocessing.png", icon_size = 32,}},
 		icon_size=32,
@@ -176,7 +176,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "uranium-fuel-burning",
-		energy_required = 200,
+		energy_required = 2000,
 		enabled = false,
 		category = "chemistry",
 		ingredients =
@@ -199,7 +199,7 @@ if mods["angelsindustries"] and angelsmods.industries.overhaul then
 	{
 		type = "recipe",
 		name = "amox-fuel-burning",
-		energy_required = 200,
+		energy_required = 8000,
 		enabled = false,
 		category = "chemistry",
 		ingredients =
@@ -215,5 +215,24 @@ if mods["angelsindustries"] and angelsmods.industries.overhaul then
 			{type="item", name="used-up-AMOX-cell", amount=1}
 		},
 	},
+	{
+		type = "recipe",
+		name = "uranium-234-fuel-burning",
+		energy_required = 1500,
+		enabled = false,
+		category = "chemistry",
+		ingredients =
+		{
+			{type="item", name="angels-uranium-fuel-cell", amount=1},
+		},
+		icons= {{icon = "__Clowns-Nuclear__/graphics/icons/thorium-nuclear-fuel-reprocessing.png", icon_size = 32,}},
+		icon_size=32,
+		subgroup = "clowns-nuclear-cells",
+		order = "c-b-b",
+		results =
+		{
+			{type="item", name="used-up-uranium-fuel-cell", amount=1}
+		},
+	}
 })
 end
