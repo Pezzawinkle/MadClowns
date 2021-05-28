@@ -5,7 +5,7 @@ if not clowns.special_vanilla then
 		{
 			type = "recipe",
 			name = "manganese-pure-processing",
-			category = "ore-sorting",
+			category = "ore-sorting-2",
 			subgroup = "ore-sorting-advanced",
 
 			allow_decomposition = false,
