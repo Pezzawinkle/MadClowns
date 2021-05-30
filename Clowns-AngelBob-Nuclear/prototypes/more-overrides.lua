@@ -45,6 +45,9 @@ if mods["angelsindustries"] and angelsmods.industries.overhaul then
   OV.remove_unlock("thorium-mixed-oxide", "thorium-fuel-reprocessing")
   OV.disable_technology("thorium-fuel-reprocessing")
   angelsmods.functions.add_flag("used-up-thorium-fuel-cell", "hidden")
+  --use angels version
+  OV.global_replace_item("thorium-fuel-cell","angels-thorium-fuel-cell")
+  OV.global_replace_item("used-up-thorium-fuel-cell","used-up-angels-thorium-fuel-cell")
 end
 
 --updates to the plutonium bomb

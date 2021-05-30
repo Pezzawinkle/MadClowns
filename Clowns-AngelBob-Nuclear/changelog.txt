@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.18
+  Features:
+    - corrected a recipe oversight
+    - More angels industries changes
+---------------------------------------------------------------------------------------------------
 Version: 1.1.17
   Features:
     - Substantial angels industries integration
