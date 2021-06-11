@@ -64,7 +64,14 @@ data.raw.technology["nuclear-power"].effects =
 		recipe = "steam-turbine"
 	}
 }
-
+--REMOVE URANIUM CELL FROM URANIUM PROCESSING
+local tech_top = data.raw.technology["uranium-processing"].effects
+for i,tech in pairs(tech_top) do
+	if tech.recipe == "uranium-fuel-cell" then
+		table.remove(tech_top,i)
+		break
+	end
+end
 --CHANGE FEATURES OF URANIUM-238 AND URANIUM-235
 
 data.raw.item["uranium-238"].subgroup = "clowns-uranium-centrifuging"

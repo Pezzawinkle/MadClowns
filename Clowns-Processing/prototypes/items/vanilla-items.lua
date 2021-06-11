@@ -396,5 +396,9 @@ osmiumbullet.icon = nil
 osmiumbullet.icons = {
   {icon = "__Clowns-Processing__/graphics/icons/osmium-rounds-magazine.png", icon_size = 64, icon_mipmaps = 4--[[, tint = {95,56,75}]]}
 }
-osmiumbullet.pictures.layers[1].filename = "__Clowns-Processing__/graphics/icons/osmium-rounds-magazine.png"
+if not osmiumbullet.pictures then
+  osmiumbullet.pictures = {layers={}}
+else
+    osmiumbullet.pictures.layers[1].filename = "__Clowns-Processing__/graphics/icons/osmium-rounds-magazine.png"
+end
 data:extend({osmiumbullet})
