@@ -140,3 +140,7 @@ data.raw.recipe["nuclear-fuel"].ingredients =
 
 data.raw.item["nuclear-fuel"].order = "a-a"
 data.raw.item["nuclear-fuel"].subgroup = "clowns-nuclear-fuels"
+
+if mods["angelsindustries"] then
+	data.raw["assembling-machine"].centrifuge.ingredient_count = 5
+end
