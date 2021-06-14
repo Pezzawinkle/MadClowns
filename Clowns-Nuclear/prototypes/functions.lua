@@ -1,9 +1,17 @@
-local OV = angelsmods.functions.OV
+local OV = mods["angelsrefining"] and angelsmods.functions.OV or clowns.functions
 
 clowns.functions.replace_ing = function(name,old,new,kind)
   --check if correct, fail otherwise
   local continue = true
-  if not data.raw.recipe[name] or not (kind == "res" or kind == "ing") or not type(name) == "string" or not type(new) == "string" or not type(old) == "string" then
+  local new_name=""
+  local new_amount=0
+  if type(new)=="table" then
+    new_name = new.name or new[1]
+    new_amount = new.amount or new[2]
+  elseif type(new)=="string" then
+    new_name=new
+  end
+  if not data.raw.recipe[name] or not (kind == "res" or kind == "ing") or not type(name) == "string" or not type(new_name) == "string" or not type(old) == "string" then
     continue = false
     return
   end
@@ -22,11 +30,16 @@ clowns.functions.replace_ing = function(name,old,new,kind)
   end
   if continue == true  and list then
     for i, item in pairs(list) do
-      if item.name then
-        if item.name == old then
-          item.name = new
-        elseif type(item[1]) == "string" and item[1] == old then
-          item[1] = new
+      if item.name and item.name == old then
+        item.name = new_name
+      elseif type(item[1]) == "string" and item[1] == old then
+        item[1] = new_name
+      end
+      if new_amount ~= 0 then
+        if item.amount then
+          item.amount=new_amount
+        elseif item[2] then
+          item[2]=new_amount
         end
       end
     end
@@ -69,7 +82,54 @@ clowns.functions.add_to_table = function(name,new,kind)
   return
 end
 
+clowns.functions.remove_unlock = function(techname, recipe)
+  local tech_top = data.raw.technology[techname].effects
+  for i,tech in pairs(tech_top) do
+    if tech.recipe == recipe then
+      table.remove(tech_top,i)
+      break
+    end
+  end
+end
 
+clowns.functions.add_unlock = function(techname, rec)
+  local tech_top = data.raw.technology[techname].effects
+  local to_add = true
+  for i,tech in pairs(tech_top) do
+    if tech.recipe == rec then
+      to_add=false
+      break
+    end
+  end
+  if to_add == true then
+    table.insert(tech_top,{type = "unlock-recipe",recipe = rec})
+  end
+end
+
+clowns.functions.remove_prereq = function(techname,prereq)
+  local tech_top = data.raw.technology[techname].prerequisites
+  for i, tech in pairs(tech_top) do
+    if tech == prereq then
+      table.remove(tech_top,i)
+      break
+    end
+  end
+end
+
+clowns.functions.add_prereq = function(techname,prereq)
+  --sanity check
+  local tech_top = data.raw.technology[techname].prerequisites
+  local to_add = true
+  for i, tech in pairs(tech_top) do
+    if tech == prereq then
+      to_add=false
+      break
+    end
+  end
+  if to_add == true then
+    table.insert(tech_top,prereq)
+  end
+end
 
 --lifted from industries...
 clowns.functions.pre_req_repl = function(techname, old_tech, new_tech1, new_tech2) -- tech prerequisite replacements
