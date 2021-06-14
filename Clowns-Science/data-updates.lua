@@ -97,26 +97,56 @@ if not (mods["angelsindustries"] and angelsmods.industries.tech) then
 
 
   if not mods["omnimatter"] and mods["bobtech"] and settings.startup["bobmods-tech-colorupdate"].value then
-    data.raw.recipe["facility-science-pack-1"].icons[1] = {icon = "__base__/graphics/icons/utility-science-pack.png",icon_size=64}
-    data.raw.recipe["facility-science-pack-2"].icons[1] = {icon = "__base__/graphics/icons/automation-science-pack.png",icon_size=64}
-    data.raw.recipe["facility-high-tech-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
-
-    data.raw.recipe["automation-science-pack"].icons[1] = {icon = "__base__/graphics/icons/utility-science-pack.png",icon_size=64}
-    data.raw.recipe["alt1-science-pack-1"].icons[1] = {icon = "__base__/graphics/icons/utility-science-pack.png",icon_size=64}
-    data.raw.recipe["alt2-science-pack-1"].icons[1] = {icon = "__base__/graphics/icons/utility-science-pack.png",icon_size=64}
-
-    data.raw.recipe["logistic-science-pack"].icons[1] = {icon = "__base__/graphics/icons/automation-science-pack.png",icon_size=64}
-    data.raw.recipe["alt1-science-pack-2"].icons[1] = {icon = "__base__/graphics/icons/automation-science-pack.png",icon_size=64}
-    if data.raw.recipe["utility-science-pack"].icon then
-      data.raw.recipe["utility-science-pack"].icons={{icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}}
-      data.raw.recipe["utility-science-pack"].icon=nil
-    else
-      if not data.raw.recipe["utility-science-pack"].icons then
-        data.raw.recipe["utility-science-pack"].icons={}
+    --science pack 1
+    for _,rec in pairs({"facility-science-pack-1","alt1-science-pack-1","alt2-science-pack-1","automation-science-pack"}) do
+      --find old icon and replace it with the new one
+      local search=data.raw.recipe[rec]
+      if search and search.icons then
+        for i,ico in pairs(search.icons) do
+          if ico.icon == "__base__/graphics/icons/automation-science-pack.png" then
+            ico.icon = "__base__/graphics/icons/utility-science-pack.png"
+            break
+          end
+        end
+      elseif search and search.icon then
+        search.icon=nil
+        search.icon_size=nil
+        search.icons={{icon = "__base__/graphics/icons/utility-science-pack.png",icon_size=64}}
       end
-      data.raw.recipe["utility-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
     end
-    data.raw.recipe["alt1-high-tech-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
-    data.raw.recipe["alt2-high-tech-science-pack"].icons[1] = {icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}
+    --science pack 2
+    for _,rec in pairs({"facility-science-pack-2","alt1-science-pack-2","alt2-science-pack-2","logistic-science-pack"}) do
+      --find old icon and replace it with the new one
+      local search=data.raw.recipe[rec]
+      if search and search.icons then
+        for i,ico in pairs(search.icons) do
+          if ico.icon == "__base__/graphics/icons/logistic-science-pack.png" then
+            ico.icon = "__base__/graphics/icons/automation-science-pack.png"
+            break
+          end
+        end
+      elseif search and search.icon then
+        search.icon=nil
+        search.icon_size=nil
+        search.icons={{icon = "__base__/graphics/icons/automation-science-pack.png",icon_size=64}}
+      end
+    end
+    --high-tech
+    for _,rec in pairs({"facility-high-tech-science-pack","alt1-high-tech-science-pack","alt2-high-tech-science-pack","utility-science-pack"}) do
+      --find old icon and replace it with the new one
+      local search=data.raw.recipe[rec]
+      if search and search.icons then
+        for i,ico in pairs(search.icons) do
+          if ico.icon == "__base__/graphics/icons/utility-science-pack.png" then
+            ico.icon = "__base__/graphics/icons/logistic-science-pack.png"
+            break
+          end
+        end
+      elseif search and search.icon then
+        search.icon=nil
+        search.icon_size=nil
+        search.icons={{icon = "__base__/graphics/icons/logistic-science-pack.png",icon_size=64}}
+      end
+    end
   end
 end
