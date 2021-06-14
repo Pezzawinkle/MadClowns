@@ -12,5 +12,5 @@ require("prototypes.recipes.water-treatment")
 
 require("prototypes.technology.fuels")
 require("prototypes.technology.nuclear-reprocessing")
-
+require("prototypes.technology.thorium-processing")
 require("prototypes.overrides")

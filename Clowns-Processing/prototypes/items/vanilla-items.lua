@@ -389,8 +389,12 @@ data:extend(
 )
 osmiumbullet=table.deepcopy(data.raw.ammo["uranium-rounds-magazine"])
 osmiumbullet.name="osmium-rounds-magazine"
-osmiumbullet.ammo_type.action.action_delivery.target_effects[2].damage = {amount = 20, type = "physical"}
-osmiumbullet.ammo_type.action.action_delivery.target_effects[3] = {type = "damage",damage = { amount = 6, type = "explosion"}}
+if osmiumbullet.ammo_type.action and osmiumbullet.ammo_type.action.action_delivery then
+  osmiumbullet.ammo_type.action.action_delivery.target_effects[2].damage = {amount = 20, type = "physical"}
+  osmiumbullet.ammo_type.action.action_delivery.target_effects[3] = {type = "damage",damage = { amount = 6, type = "explosion"}}
+else
+  table.insert(osmiumbullet.ammo_type.action,{action_delivery={target_effects={{damage = {amount = 20, type = "physical"}},{type = "damage", damage = { amount = 6, type = "explosion"}}}}})
+end
 osmiumbullet.order = "a[basic-clips]-d[osmium-rounds-magazine]"
 osmiumbullet.icon = nil
 osmiumbullet.icons = {

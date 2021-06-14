@@ -1,8 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.18
+Date: 2021-06-14
   Features:
     - corrected a recipe oversight
     - More angels industries changes
+    - Added a thorium ore processing chain
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.17
   Features:

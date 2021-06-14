@@ -67,7 +67,7 @@ if data.raw.item["thorium-fuel-cell"] then
       name = "thorium-ore-processing",
       category = "liquifying",
       energy_required = 30,
-      enabled = true,
+      enabled = false,
       ingredients = {
         {"thorium-ore",10},
         {type="fluid",name="liquid-hydrofluoric-acid",amount=100}
@@ -84,7 +84,7 @@ if data.raw.item["thorium-fuel-cell"] then
       name = "thorium-crystallisation",
       energy_required = 60,
       category = "chemistry",
-      enabled = true,
+      enabled = false,
       ingredients = {
         {type="fluid",name="thorium-solution",amount=26},
         {type="fluid",name="water-purified",amount=180}
@@ -100,7 +100,7 @@ if data.raw.item["thorium-fuel-cell"] then
       name = "thorium-purification",
       energy_required = 18,
       category = "washing-plant",
-      enabled = true,
+      enabled = false,
       ingredients = {
         {"thorium-salt",13},
         {type="fluid",name="liquid-naphtha",amount=200}
