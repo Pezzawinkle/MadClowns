@@ -97,8 +97,7 @@ data:extend(
       base_color = {r = 0.957, g = 0.49, b = 0},
       flow_color = {r = 0.957, g = 0.49, b = 0},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59,
+,
     },
     ------------------------
     -- Mercury processing --
@@ -114,8 +113,7 @@ data:extend(
       base_color = {r = 0.75, g = 0.75, b = 0.75},
       flow_color = {r = 0.8, g = 0.8, b = 0},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59,
+,
     },
     --liquid-dmm
     {
@@ -128,8 +126,7 @@ data:extend(
       base_color = {r = 0.1, g = 0.8, b = 0.7},
       flow_color = {r = 0.1, g = 0.8, b = 0.7},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59,
+,
     },
     --neurotixin-capsule
     {
@@ -183,8 +180,7 @@ data:extend(
       base_color = {r = 1, g = 0.6, b = 0.6},
       flow_color = {r = 1, g = 0.6, b = 0.6},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59,
+,
     },
     --------------------------
     -- Magnesium processing --
@@ -240,8 +236,7 @@ data:extend(
       base_color = {r = 242/255, g = 212/255, b = 194/255},
       flow_color = {r = 242/255, g = 212/255, b = 194/255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59,
+,
       auto_barrel = false
     },
     --plate
@@ -381,8 +376,7 @@ data:extend(
       base_color = {r = 0.71, g = 0.816, b = 0},
       flow_color = {r = 0.71, g = 0.816, b = 0},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59,
+,
     },
     --Osmium Bullets
   }

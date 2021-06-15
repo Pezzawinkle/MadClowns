@@ -139,8 +139,6 @@ for _, name in pairs({"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14
         base_color = {r = 132 / 255, g = 176 / 255, b = 11 / 255},
         flow_color = {r = 132 / 255, g = 176 / 255, b = 11 / 255},
         max_temperature = 100,
-        pressure_to_speed_ratio = 0.4,
-        flow_to_energy_ratio = 0.59
       },
       --Solution
       {
@@ -154,8 +152,6 @@ for _, name in pairs({"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14
         base_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
         flow_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
         max_temperature = 100,
-        pressure_to_speed_ratio = 0.4,
-        flow_to_energy_ratio = 0.59
       },
       --Anode-sludge
       {
@@ -169,8 +165,6 @@ for _, name in pairs({"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14
         base_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
         flow_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
         max_temperature = 100,
-        pressure_to_speed_ratio = 0.4,
-        flow_to_energy_ratio = 0.59
       },
       --Slime
       {
@@ -184,8 +178,6 @@ for _, name in pairs({"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14
         base_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
         flow_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
         max_temperature = 100,
-        pressure_to_speed_ratio = 0.4,
-        flow_to_energy_ratio = 0.59
       },
     }
   )
