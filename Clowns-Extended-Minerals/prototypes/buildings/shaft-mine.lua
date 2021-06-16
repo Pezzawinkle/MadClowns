@@ -33,7 +33,7 @@ data:extend(
 		icon = "__Clowns-Extended-Minerals__/graphics/icons/shaft-mine.png",
 		icon_size = 32,
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
-		minable = {hardness = 0.8, mining_time = 1.2, result = "shaft-mine"},
+		minable = {mining_time = 1.2, result = "shaft-mine"},
 		max_health = 500,
 		corpse = "medium-remnants",
 		dying_explosion = "medium-explosion",
