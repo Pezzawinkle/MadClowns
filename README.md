@@ -28,4 +28,30 @@ Forum and further discussions can be found here: [Madclowns Processing](https://
 For bug reports/compatibility issues or feature requests, please visit: [github](https://github.com/Pezzawinkle/MadClowns) and/or [Discord](https://discord.gg/ZPE9kRyXN7).
 
 ## MadClown01's Extended AngelBob Minerals
---to-do
+This mod extends angelsrefining ores to a whole new level:
+ - Adds 9 new regular ores, 2 alternative resources, 5 blended ores
+ - Adds a new tier of catalytic sorting (using extra ingredients for higher yield)
+ - Has native compatibility for some of Pyanodons ores
+ - Has native omnimatter and omnicrystal compatibility
+ 
+## MadClown01's Vanilla Nuclear
+This mod replaces the simplified kovarex process with a simple enrichment system.
+ - Also tweaks the nuclear weapons systems to use the new enrichment products
+ - Compatible with many nuclear mods (Best use the AB nuclear mod for AB compatibility though)
+ - Updated spent fuel reprocessing to reflect the plutonium generated
+ - A simplified MOX system
+ 
+## MadClown01's AngelBob Nuclear
+This mod builds on the enrichment processes of the vanilla mod
+ - Adds uranium ore processing from natural uranium (0.07% ore) to uranium hexafluoride (an angelssmelting chain)
+ - Adds a Thorium processing chain
+ - Depleted uranium processing and weapons usage
+ - Thermonuclear bomb for a larger damage and area
+ - Enhanced nuclear fuel down 2 paths (Thermal and Propulsion) for various uses
+ - Advanced nuclera fuel reprocessing to extract useful isotopes
+ - Compatible with Angelsindustries Nuclear overhaul and many of bobs configurations
+ 
+## MadClown01's Science
+This mod focusses on adding alternative methods to produce science packs, if you want a change from the vanilla AB ingredients, have a go with this mod.
+ - NOT CURRENTLY FUNCTIONAL WITH ANGELS TECH OVERHAUL!!!
+ - Alternative recipes for bobs/vanilla science packs for variety
