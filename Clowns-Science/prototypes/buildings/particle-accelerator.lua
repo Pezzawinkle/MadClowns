@@ -60,21 +60,12 @@ data:extend(
 		type = "item",
 		name = "particle-accelerator-mk1",
 		fast_replaceable_group = "particle-accelerator",
-		icons =
-		{
+		icons = angelsmods.functions.add_number_icon_layer({
 			{
-				icon = "__Clowns-Science__/graphics/icons/particle-accelerator.png"
-			},
-			{
-				icon = "__angelsrefining__/graphics/icons/num_1.png",
-				icon_size=32,
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.32,
-				shift = {-12, -12}
+				icon = "__Clowns-Science__/graphics/icons/particle-accelerator.png",
+				icon_size = 32
 			}
-		},
-		icon_size = 32,
---	flags = {"goes-to-quickbar"},
+		}, 1 , clowns.icon_tint),
 		subgroup = "advanced-science",
 		order = "b-a",
 		place_result = "particle-accelerator-mk1",
@@ -84,21 +75,12 @@ data:extend(
 	{
 		type = "item",
 		name = "particle-accelerator-mk2",
-		icons =
-		{
+		icons = angelsmods.functions.add_number_icon_layer({
 			{
-				icon = "__Clowns-Science__/graphics/icons/particle-accelerator.png"
-			},
-			{
-				icon = "__angelsrefining__/graphics/icons/num_2.png",
-				icon_size=32,
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.32,
-				shift = {-12, -12}
+				icon = "__Clowns-Science__/graphics/icons/particle-accelerator.png",
+				icon_size = 32
 			}
-		},
-		icon_size = 32,
---	flags = {"goes-to-quickbar"},
+		}, 2 , clowns.icon_tint),
 		subgroup = "advanced-science",
 		order = "b-b",
 		place_result = "particle-accelerator-mk2",
@@ -109,20 +91,12 @@ data:extend(
 		type = "assembling-machine",
 		name = "particle-accelerator-mk1",
 		fast_replaceable_group = "particle-accelerator",
-		icons =
-		{
+		icons = angelsmods.functions.add_number_icon_layer({
 			{
-				icon = "__Clowns-Science__/graphics/icons/particle-accelerator.png"
-			},
-			{
-				icon = "__angelsrefining__/graphics/icons/num_1.png",
-				icon_size=32,
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.32,
-				shift = {-12, -12}
+				icon = "__Clowns-Science__/graphics/icons/particle-accelerator.png",
+				icon_size = 32
 			}
-		},
-		icon_size = 32,
+		}, 1 , clowns.icon_tint),
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 1.2, result = "particle-accelerator-mk1"},
 		max_health = 500,
@@ -189,20 +163,12 @@ data:extend(
 		type = "assembling-machine",
 		name = "particle-accelerator-mk2",
 		fast_replaceable_group = "particle-accelerator",
-		icons =
-		{
+		icons = angelsmods.functions.add_number_icon_layer({
 			{
-				icon = "__Clowns-Science__/graphics/icons/particle-accelerator.png"
-			},
-			{
-				icon = "__angelsrefining__/graphics/icons/num_1.png",
-				icon_size=32,
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.32,
-				shift = {-12, -12}
+				icon = "__Clowns-Science__/graphics/icons/particle-accelerator.png",
+				icon_size = 32
 			}
-		},
-		icon_size = 32,
+		}, 2 , clowns.icon_tint),
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 1.2, result = "particle-accelerator-mk2"},
 		max_health = 500,
