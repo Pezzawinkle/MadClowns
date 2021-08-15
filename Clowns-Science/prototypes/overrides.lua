@@ -1,7 +1,6 @@
 local gas_param = 100
 local icons = clowns.tables.science_icons
 --ICONS
-log(serpent.block(icons))
 local icon_checker = function(recipe_name, tag, number)
 	data.raw.recipe[recipe_name].icons = data.raw.recipe[recipe_name].icons or {}
 	data.raw.recipe[recipe_name].icons = angelsmods.functions.add_number_icon_layer({icons[tag]}, number , clowns.icon_tint)
@@ -158,9 +157,9 @@ for _,pack in pairs({"automation","logistic","chemical","production","utility","
 		data.raw.recipe[pack.."-science-pack"].order="a-a"
 		for i=1,2 do
 			if data.raw.recipe[pack.."-science-pack-alt"..i] then
-				data.raw.recipe[pack.."-science-pack-alt"..i].order = "a-"..i
+				data.raw.recipe[pack.."-science-pack-alt"..i].order = "a-a[alt"..i.."]"
 			else
-				log(pack.."-science-pack-alt"..i..": DOES NOT EXIST")
+				--log(pack.."-science-pack-alt"..i..": DOES NOT EXIST")
 			end
 		end
 		if data.raw.recipe[pack.."-science-pack-facility"] then
