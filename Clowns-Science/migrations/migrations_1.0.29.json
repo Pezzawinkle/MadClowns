@@ -1,0 +1,32 @@
+{
+  "recipe":
+  [
+    ["facility-science-pack-1", "automation-science-pack-facility"],
+    ["facility-science-pack-2", "logistic-science-pack-facility"],
+    ["facility-science-pack-3", "chemical-science-pack-facility"],
+    ["facility-military-science-pack", "military-science-pack-facility"],
+    ["facility-production-science-pack", "production-science-pack-facility"],
+    ["facility-high-tech-science-pack", "utility-science-pack-facility"],
+    ["facility-omni-pack", "omni-science-pack-facility"],
+    ["facility-logistic-science-pack","advanced-logistic-science-pack-facility"],
+    ["alt1-science-pack-1", "automation-science-pack-alt1"],
+    ["alt2-science-pack-1", "automation-science-pack-alt2"],
+    ["alt3-science-pack-1", "automation-science-pack-alt3"],
+    ["alt1-science-pack-2", "logistic-science-pack-alt1"],
+    ["alt2-science-pack-2", "logistic-science-pack-alt2"],
+    ["alt3-science-pack-2", "logistic-science-pack-alt3"],
+    ["alt1-science-pack-3", "chemical-science-pack-alt1"],
+    ["alt2-science-pack-3", "chemical-science-pack-alt2"],
+    ["alt3-science-pack-3", "chemical-science-pack-alt3"],
+    ["alt1-military-science-pack", "military-science-pack-alt1"],
+    ["alt2-military-science-pack", "military-science-pack-alt2"],
+    ["alt3-military-science-pack", "military-science-pack-alt3"],
+    ["alt1-production-science-pack", "production-science-pack-alt1"],
+    ["alt2-production-science-pack", "production-science-pack-alt2"],
+    ["alt3-production-science-pack", "production-science-pack-alt3"],
+    ["alt1-high-tech-science-pack", "utility-science-pack-alt1"],
+    ["alt2-high-tech-science-pack", "utility-science-pack-alt2"],
+    ["alt3-high-tech-science-pack", "utility-science-pack-alt3"],
+    ["alt1-logistic-science-pack", "advanced-logistic-science-pack-alt1"]
+  ]
+}

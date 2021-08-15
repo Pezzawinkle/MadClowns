@@ -36,11 +36,11 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "facility-science-pack-1"
+				recipe = "automation-science-pack-facility"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "facility-science-pack-2"
+				recipe = "logistic-science-pack-facility"
 			}
 		}
 	},
