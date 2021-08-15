@@ -33,7 +33,6 @@ data.raw["tool"]["utility-science-pack"].order = "m-a"
 if data.raw.recipe["advanced-logistic-science-pack"] then
 	data.raw["tool"]["advanced-logistic-science-pack"].subgroup = "advanced-logistic-science-pack"
 	data.raw["tool"]["advanced-logistic-science-pack"].order = "o-a"
-	table.insert(data.raw["technology"]["advanced-logistic-science-pack"].effects, {type = "unlock-recipe", recipe = "advanced-logistic-science-pack-alt1"})
 
 	data:extend({{
 		type = "recipe",
@@ -64,7 +63,7 @@ if data.raw.tool["token-bio"] then
 end
 
 if data.raw.recipe["omni-pack"] then
-	data.raw["tool"]["omni-pack"].subgroup = "omni-pack"
+	data.raw["tool"]["omni-pack"].subgroup = "omni-science-pack"
 	data.raw["tool"]["omni-pack"].order = "e-a"
 end
 
@@ -88,34 +87,20 @@ if data.raw.recipe["clowns-plate-osmium"] and not (mods["angelsindustries"] and 
 			{"accumulator", 1},
 		}
 end
---unlock facility regarless of angels industries
-table.insert(data.raw["technology"]["military-science-pack"].effects, {type = "unlock-recipe", recipe = "military-science-pack-facility"})
-table.insert(data.raw["technology"]["chemical-science-pack"].effects, {type = "unlock-recipe", recipe = "chemical-science-pack-facility"})
-table.insert(data.raw["technology"]["utility-science-pack"].effects, {type = "unlock-recipe", recipe = "utility-science-pack-facility"})
-table.insert(data.raw["technology"]["production-science-pack"].effects, {type = "unlock-recipe", recipe = "production-science-pack-facility"})
-if data.raw.recipe["advanced-logistic-science-pack"] then
-  table.insert(data.raw["technology"]["advanced-logistic-science-pack"].effects, {type = "unlock-recipe", recipe = "advanced-logistic-science-pack-facility"})
-end
-if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value == true then
-  table.insert(data.raw["technology"]["facility-1"].prerequisites,"automation-science-pack")
+--unlock facility regardless of angels industries
+if mods["angelspetrochem"] then
+	table.insert(data.raw["technology"]["military-science-pack"].effects, {type = "unlock-recipe", recipe = "military-science-pack-facility"})
+	table.insert(data.raw["technology"]["chemical-science-pack"].effects, {type = "unlock-recipe", recipe = "chemical-science-pack-facility"})
+	table.insert(data.raw["technology"]["utility-science-pack"].effects, {type = "unlock-recipe", recipe = "utility-science-pack-facility"})
+	table.insert(data.raw["technology"]["production-science-pack"].effects, {type = "unlock-recipe", recipe = "production-science-pack-facility"})
+	if data.raw.recipe["advanced-logistic-science-pack"] then
+		table.insert(data.raw["technology"]["advanced-logistic-science-pack"].effects, {type = "unlock-recipe", recipe = "advanced-logistic-science-pack-facility"})
+	end
+	if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value == true then
+		table.insert(data.raw["technology"]["facility-1"].prerequisites,"automation-science-pack")
+	end
 end
 if not (mods["angelsindustries"] and angelsmods.industries.tech) then
-  table.insert(data.raw["technology"]["logistic-science-pack"].effects, {type = "unlock-recipe", recipe = "logistic-science-pack-alt1"})
-
-  table.insert(data.raw["technology"]["military-science-pack"].effects, {type = "unlock-recipe", recipe = "military-science-pack-alt1"})
-  if data.raw.recipe["military-science-pack-alt2"] then
-    table.insert(data.raw["technology"]["military-science-pack"].effects, {type = "unlock-recipe", recipe = "military-science-pack-alt2"})
-  end
-  
-  table.insert(data.raw["technology"]["chemical-science-pack"].effects, {type = "unlock-recipe", recipe = "chemical-science-pack-alt1"})
-  table.insert(data.raw["technology"]["chemical-science-pack"].effects, {type = "unlock-recipe", recipe = "chemical-science-pack-alt2"})
-  
-  table.insert(data.raw["technology"]["utility-science-pack"].effects, {type = "unlock-recipe", recipe = "utility-science-pack-alt1"})
-  table.insert(data.raw["technology"]["utility-science-pack"].effects, {type = "unlock-recipe", recipe = "utility-science-pack-alt2"})
-  
-  table.insert(data.raw["technology"]["production-science-pack"].effects, {type = "unlock-recipe", recipe = "production-science-pack-alt1"})
-  table.insert(data.raw["technology"]["production-science-pack"].effects, {type = "unlock-recipe", recipe = "production-science-pack-alt2"})
-
   if mods["omnimatter_crystal"] then
     omni.lib.add_recipe_ingredient("chemical-science-pack-alt1","basic-crystallonic")
     omni.lib.add_recipe_ingredient("chemical-science-pack-alt2","basic-crystallonic")
@@ -129,8 +114,6 @@ if not (mods["angelsindustries"] and angelsmods.industries.tech) then
   if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value == true then
     data.raw.recipe["automation-science-pack-alt1"].enabled=false
     data.raw.recipe["automation-science-pack-alt2"].enabled=false
-    table.insert(data.raw["technology"]["automation-science-pack"].effects, {type = "unlock-recipe", recipe = "automation-science-pack-alt1"})
-    table.insert(data.raw["technology"]["automation-science-pack"].effects, {type = "unlock-recipe", recipe = "automation-science-pack-alt2"})
   end
 end
 if mods["bobmodules"] and settings.startup["bobmods-modules-enablerawspeedmodules"].value then
@@ -145,23 +128,17 @@ end
 -----------------------------------------
 -- enable recipes from angels
 -----------------------------------------
-angelsmods.trigger.smelting_products["manganese"].plate = true
-angelsmods.trigger.smelting_products["manganese"].ingot = true
-angelsmods.trigger.ores["manganese"] = true
-
+if mods["angelsmelting"] then
+	angelsmods.trigger.smelting_products["manganese"].plate = true
+	angelsmods.trigger.smelting_products["manganese"].ingot = true
+	angelsmods.trigger.ores["manganese"] = true
+end
 --------------------------------------------------------------------------------------------------
 -- RECIPE ORDER CLEAN-UP
 --------------------------------------------------------------------------------------------------
 for _,pack in pairs({"automation","logistic","chemical","production","utility","military","advanced-logistic","omni"}) do
 	if data.raw.recipe[pack.."-science-pack"] then
 		data.raw.recipe[pack.."-science-pack"].order="a-a"
-		for i=1,2 do
-			if data.raw.recipe[pack.."-science-pack-alt"..i] then
-				data.raw.recipe[pack.."-science-pack-alt"..i].order = "a-a[alt"..i.."]"
-			else
-				--log(pack.."-science-pack-alt"..i..": DOES NOT EXIST")
-			end
-		end
 		if data.raw.recipe[pack.."-science-pack-facility"] then
 			data.raw.recipe[pack.."-science-pack-facility"].order = "b"
 		end

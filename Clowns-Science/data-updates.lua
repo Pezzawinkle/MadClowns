@@ -1,4 +1,8 @@
-angelsmods.functions.allow_productivity("facility-science-pack-1")
+for _,tech in pairs(clowns.tables.tech_unlock) do
+  log(serpent.block(tech))
+  table.insert(data.raw["technology"][tech[1] .."-science-pack"].effects,{type = "unlock-recipe", recipe = tech[1].."-science-pack-alt"..tech[2]})
+end
+--[[angelsmods.functions.allow_productivity("facility-science-pack-1")
 angelsmods.functions.allow_productivity("facility-science-pack-2")
 angelsmods.functions.allow_productivity("facility-science-pack-3")
 angelsmods.functions.allow_productivity("facility-production-science-pack")
@@ -27,7 +31,7 @@ angelsmods.functions.allow_productivity("alt2-production-science-pack")
 angelsmods.functions.allow_productivity("alt1-high-tech-science-pack")
 angelsmods.functions.allow_productivity("alt2-high-tech-science-pack")
 angelsmods.functions.allow_productivity("alt1-military-science-pack")
-
+]]
 if data.raw.recipe["facility-omni-pack"] then
 	table.insert(data.raw["technology"]["facility-1"].effects, {type = "unlock-recipe", recipe = "facility-omni-pack"})
 end

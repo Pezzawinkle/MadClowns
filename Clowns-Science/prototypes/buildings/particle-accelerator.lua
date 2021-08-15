@@ -19,7 +19,7 @@ if mods["Clowns-Processing"] and mods["Clowns-Extended-Minerals"] then
 else
 	recipe_1 =
 	{
-		{"processing-unit", 100},
+		{mods["bobelectronics"] and "processing-unit" or "advanced-circuit", 100},
 		{"steel-plate", 100},
 		{"iron-gear-wheel", 100},
 		{"pipe", 100},
@@ -28,10 +28,10 @@ else
 	recipe_2 =
 	{
 		{"particle-accelerator-mk1", 1},
-		{"advanced-processing-unit", 100},
-		{"cobalt-plate", 100},
-		{"tungsten-gear-wheel", 100},
-		{"tungsten-pipe", 100},
+		{mods["bobelectronics"] and "advanced-processing-unit" or "processing-unit", 100},
+		{mods["bobplates"] and "cobalt-plate" or "steel-plate", 100},
+		{mods["bobplates"] and "tungsten-gear-wheel" or "iron-gear-wheel", 100},
+		{(mods["bobplates"] and mods["boblogistics"]) and "tungsten-pipe" or "pipe", 100},
 		{"stone-brick", 100}
 	}
 end

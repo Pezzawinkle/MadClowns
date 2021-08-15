@@ -7,6 +7,7 @@ local ctrig=clowns.triggers
   ["omnimatter"] = mods["omnimatter"] and true or false,
   ["bobtech_colours"] = mods["bobtech"] and settings.startup["bobmods-tech-colorupdate"].value or false,
   ["bobtech_default"] = mods["bobtech"] and true or false,
+  ["bobplates"] = mods["bobplates"] and true or false
   --else vanilla(ish)
 }]]
 clowns.tables.science_icons = {
@@ -50,8 +51,8 @@ clowns.tables.science_icons = {
     {icon = "__base__/graphics/icons/production-science-pack.png", icon_size = 64},
 
   -- alternative science packs
-  ["advlog"] = ctrig.bobtech_default and {icon = "__bobtech__/graphics/icons/logistic-science-pack.png", icon_size = 32},
-  ["omnipack"] = (mods["omnimatter_science"] and ctrig.krastorio) and {icon = "__omnimatter_science__/graphics/technology/omni-tech-card.png", icon_size = 128} or
+  ["advanced-logostics"] = ctrig.bobtech_default and {icon = "__bobtech__/graphics/icons/logistic-science-pack.png", icon_size = 32},
+  ["omni"] = (mods["omnimatter_science"] and ctrig.krastorio) and {icon = "__omnimatter_science__/graphics/technology/omni-tech-card.png", icon_size = 128} or
     mods["omnimatter_science"] and {icon = "__base__/graphics/icons/production-science-pack.png", icon_size = 64},
   ["pypack"] = mods["pyalienlife"] and {icon = "__pyalienlifegraphics__/graphics/icons/py_science_pack.png",icon_size = 64},
 }
@@ -162,3 +163,97 @@ Ings refers to how many ingredients per pack in final step]]
   -- Production  | Plate | Fluids | Power | Fuel | Complex | Ings
   -- Utility     | Plate | Fluids | Power | Fuel | Complex | Ings
   -- Space       | Plate | Fluids | Power | Fuel | Complex | Ings
+
+  clowns.tables.pack_costs = {
+    --automation budget = 3000
+    ["automation_1"] = {theme="support", result_count = 2, ingredients = {
+        {"wooden-chest",3},
+        {"pipe",6}
+      }}, --8000
+    ["automation_2"] = {theme="copper", result_count = 1, ingredients = {
+        {"copper-cable",6}, 
+        {"iron-stick",3}
+      }}, --4500
+    ["automation_3"] = {theme="wood", result_count = 1, ingredients = {
+        {"small-electric-pole",2}, 
+        {"wooden-chest",2}
+      }}, --6000
+    ["automation_4"] = {theme="burner", result_count = 4, ingredients = {
+        {"burner-inserter",2}, 
+        {"burner-mining-drill",1}
+      }}, --5000
+    --logistics budget = 7000
+    ["logistic_1"]  = {theme="light", result_count = 2, ingredients = {
+        {"boiler",1}, 
+        {"small-lamp",2}
+      }}, --9500
+    ["logistic_2"]  = {theme="insert", result_count = 4, ingredients = {
+        {"filter-inserter",1}, 
+        {"steel-plate",2}
+      }}, --8125 (or 6125 if you don't count steel)
+    ["logistic_3"]  = {theme="belts", result_count = 7, ingredients = {
+        {"splitter",2}, 
+        {"underground-belt",1}
+      }}, --7941
+    ["logistic_4"]  = {theme="pipes", result_count = 2, ingredients = {
+        {"pipe-to-ground",1}, 
+        {"underground-belt",1}
+      }},-- 8125
+    --military budget = 17500 (19500 without steel)
+    ["military_1"]   = {theme="ammo", result_count = 3, ingredients = {
+        {"piercing-rounds-magazine",3}, 
+        {"shotgun-shell",1},
+        {"grenade",2}
+      }},--21334 (25334 with steel)
+    ["military_2"]   = {theme="aoe", result_count = 4, ingredients = {
+        {"explosives",1}, 
+        {"shotgun",2}, 
+        {"stone-wall",3}
+      }},--24375
+    ["military_3"]   = {theme="wall", result_count = 9, ingredients = {
+        {"gun-turret",1}, 
+        {"gate",1}, 
+        {"heavy-armor",1}
+      }},--23558 (46668 with steel)
+    ["military_4"]   = {theme="explore", result_count = 12, ingredients = {
+        {"radar",2}, 
+        {"heavy-armor",1}, 
+        {"night-vision-equipment",1}
+      }}, --22500 (42500 with steel)
+    --chemical budget = 20000
+    ["chemical_1"]   = {theme="prod", result_amount = 2, ingredients = {
+        {"electronic-circuit",3},
+        {"battery",1},
+        {"chemical-plant",1},
+        {"steel-plate",10}
+      }},
+    ["chemical_2"]   = {theme="fuel", result_amount = 2, ingredients = {
+        {"plastic-bar",2},
+        {"solid-fuel",2},
+        {"long-handed-inserter", 1},
+        {"concrete",10}
+      }},
+    ["chemical_3"]   = {theme="acid", result_count = 3, ingredients = {
+        {"sulfur",4},
+        {"copper-plate",2},
+        {"oil-refinery",1},
+        {"battery",2}
+      }},
+    ["chemical_4"]   = {theme="oil", result_amount = 2, ingredients = {
+        {"pumpjack",1},
+        {"chemical-plant",1},
+        {"underground-pipe",4},
+        {"plastic-bar",2}
+      }},
+
+
+}
+--config updates
+if ctrig.bobplates then --bobplates --access to alloys and other fancy materials
+  --stone pipe shows without logistics
+  clowns.tables.pack_costs["automation_1"].ingredients[1][2]={"stone-pipe", 5}
+  --also check logistics
+  if mods["boblogistics"] then --fancy pipes, belts and inserters
+    --check balance with and without belt overhaul
+  end
+end

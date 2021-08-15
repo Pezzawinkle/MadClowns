@@ -10,9 +10,11 @@ clowns.triggers = {
   ["omnimatter"] = mods["omnimatter"] and true or false,
   ["bobtech_colours"] = mods["bobtech"] and settings.startup["bobmods-tech-colorupdate"].value or false,
   ["bobtech_default"] = mods["bobtech"] and true or false,
+  ["bobplates"] = mods["bobplates"] and true or false
   --else vanilla(ish)
 }
 require("prototypes.categories")
+require("prototypes.functions")
 require("prototypes.fallback-data")
 require("prototypes.recipes.science")
 require("prototypes.recipes.facility")

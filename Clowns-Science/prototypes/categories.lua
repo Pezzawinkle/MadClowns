@@ -24,7 +24,7 @@ data:extend(
 	},
 	{
 		type = "item-subgroup",
-		name = "omni-pack",
+		name = "omni-science-pack",
 		group = "intermediate-products",
 		order = "m-b-a",
 	},

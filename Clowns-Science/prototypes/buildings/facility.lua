@@ -1,4 +1,5 @@
-data:extend(
+if mods["angelspetrochem"] then --i may also activate these with pyanodons
+	data:extend(
 {
 	{
 		type = "recipe",
@@ -7,7 +8,7 @@ data:extend(
 		energy_required = 2,
 		ingredients =
 		{
-			{"basic-circuit-board", 20},
+			mods["bobelectronics"] and {"basic-circuit-board", 20} or {"electronic-circuit",30},
 			{"pipe", 20},
 			{"stone-brick", 100}
 		},
@@ -356,3 +357,4 @@ data:extend(
 	},
 }
 )
+end

@@ -1,4 +1,3 @@
-local rawmulti = angelsmods.marathon.rawmulti
 local energy_param = 24
 local gas_param = 100
 local order = "b"
@@ -9,148 +8,149 @@ local overlay = {
 	scale = 0.32,
 	shift = {-12, -12}
 	}
-
-if data.raw.recipe["advanced-logistic-science-pack"] then
-data:extend(
-{
+if mods["angelspetrochem"] then --i may also activate these with pyanodons
+	if data.raw.recipe["advanced-logistic-science-pack"] then
+	data:extend(
 	{
-		type = "recipe",
-		name = "advanced-logistic-science-pack-facility",
-		category = "facility",
-		enabled = false,
-		energy_required = energy_param,
-		subgroup = "advanced-logistic-science-pack",
-		order = "b",
-		icons = {icons.advlog,overlay},
-		ingredients =
 		{
-			{type="fluid", name="liquid-nitric-acid", amount=gas_param},
-		},
-		result = clowns.triggers.angels_tech and "datacore-enhance-1" or "advanced-logistic-science-pack"
+			type = "recipe",
+			name = "advanced-logistic-science-pack-facility",
+			category = "facility",
+			enabled = false,
+			energy_required = energy_param,
+			subgroup = "advanced-logistic-science-pack",
+			order = "b",
+			icons = {icons["advanced-logistic"],overlay},
+			ingredients =
+			{
+				{type="fluid", name="liquid-nitric-acid", amount=gas_param},
+			},
+			result = clowns.triggers.angels_tech and "datacore-enhance-1" or "advanced-logistic-science-pack"
+		}
 	}
-}
-)
-end
+	)
+	end
 
-if data.raw.recipe["omni-pack"] and data.raw.fluid["omniston"] then
-data:extend(
-{
+	if data.raw.recipe["omni-pack"] and data.raw.fluid["omniston"] then
+	data:extend(
 	{
-		type = "recipe",
-		name = "omni-science-pack-facility",
-		category = "facility",
-		enabled = false,
-		energy_required = energy_param,
-		subgroup = "omni-pack",
-		order = "b",
-		icons = {icons.omnipack,overlay},
-		ingredients =
 		{
-			{type="fluid", name="omniston", amount=gas_param},
-			{type="fluid", name="gas-carbon-dioxide", amount=gas_param}
-		},
-		result = "omni-pack"
+			type = "recipe",
+			name = "omni-science-pack-facility",
+			category = "facility",
+			enabled = false,
+			energy_required = energy_param,
+			subgroup = "omni-pack",
+			order = "b",
+			icons = {icons.omni,overlay},
+			ingredients =
+			{
+				{type="fluid", name="omniston", amount=gas_param},
+				{type="fluid", name="gas-carbon-dioxide", amount=gas_param}
+			},
+			result = "omni-pack"
+		}
 	}
-}
-)
+	)
+	end
+
+	data:extend(
+	{
+		{
+			type = "recipe",
+			name = "automation-science-pack-facility",
+			category = "facility",
+			enabled = false,
+			energy_required = energy_param,
+			subgroup = "automation-science-pack",
+			order = "b",
+			icons = {icons.automation,overlay},
+			ingredients =
+			{
+				{type="fluid", name="gas-oxygen", amount=gas_param},
+				{type="fluid", name="gas-carbon-dioxide", amount=gas_param}
+			},
+			result = clowns.triggers.angels_tech and "datacore-basic" or "automation-science-pack"
+		},
+
+		{
+			type = "recipe",
+			name = "logistic-science-pack-facility",
+			category = "facility",
+			enabled = false,
+			energy_required = energy_param,
+			subgroup = "logistic-science-pack",
+			order = "b",
+			icons = {icons.logistic,overlay},
+			ingredients =
+			{
+				{type="fluid", name="gas-chlorine", amount=gas_param},
+				{type="fluid", name="gas-carbon-dioxide", amount=gas_param}
+			},
+			result = clowns.triggers.angels_tech and "datacore-logistic-1" or "logistic-science-pack"
+		},
+		{
+			type = "recipe",
+			name = "chemical-science-pack-facility",
+			category = "facility",
+			enabled = false,
+			energy_required = energy_param*2,
+			subgroup = "chemical-science-pack",
+			order = "b",
+			icons = {icons.chemical,overlay},
+			ingredients =
+			{
+				{type="fluid", name="gas-ammonia", amount=gas_param},
+				{type="fluid", name="gas-carbon-monoxide", amount=gas_param}
+			},
+			result = clowns.triggers.angels_tech and "datacore-energy-1" or "chemical-science-pack"
+		},
+		{
+			type = "recipe",
+			name = "military-science-pack-facility",
+			category = "facility",
+			enabled = false,
+			energy_required = energy_param,
+			subgroup = "military-science-pack",
+			order = "b",
+			icons = {icons.military,overlay},
+			ingredients =
+			{
+				{type="fluid", name="liquid-sulfuric-acid", amount=gas_param},
+				{type="fluid", name="gas-carbon-monoxide", amount=gas_param}
+			},
+			result = clowns.triggers.angels_tech and "datacore-war-1" or "military-science-pack"
+		},
+		{
+			type = "recipe",
+			name = "production-science-pack-facility",
+			category = "facility",
+			enabled = false,
+			energy_required = energy_param*2,
+			subgroup = "production-science-pack",
+			order = "b",
+			icons = {icons.production,overlay},
+			ingredients =
+			{
+				{type="fluid", name="gas-methanol", amount=gas_param},
+			},
+			result = clowns.triggers.angels_tech and "datacore-processing-1" or "production-science-pack"
+		},
+		{
+			type = "recipe",
+			name = "utility-science-pack-facility",
+			category = "facility",
+			enabled = false,
+			energy_required = energy_param*2,
+			subgroup = "utility-science-pack",
+			order = "b",
+			icons = {icons.utility,overlay},
+			ingredients =
+			{
+				{type="fluid", name="liquid-hydrofluoric-acid", amount=gas_param},
+			},
+			result = clowns.triggers.angels_tech and "datacore-enhance-1" or "utility-science-pack"
+		},
+	}
+	)
 end
-
-data:extend(
-{
-	{
-		type = "recipe",
-		name = "automation-science-pack-facility",
-		category = "facility",
-		enabled = false,
-		energy_required = energy_param,
-		subgroup = "automation-science-pack",
-		order = "b",
-		icons = {icons.automation,overlay},
-		ingredients =
-		{
-			{type="fluid", name="gas-oxygen", amount=gas_param},
-			{type="fluid", name="gas-carbon-dioxide", amount=gas_param}
-		},
-		result = clowns.triggers.angels_tech and "datacore-basic" or "automation-science-pack"
-	},
-
-	{
-		type = "recipe",
-		name = "logistic-science-pack-facility",
-		category = "facility",
-		enabled = false,
-		energy_required = energy_param,
-		subgroup = "logistic-science-pack",
-		order = "b",
-		icons = {icons.logistic,overlay},
-		ingredients =
-		{
-			{type="fluid", name="gas-chlorine", amount=gas_param},
-			{type="fluid", name="gas-carbon-dioxide", amount=gas_param}
-		},
-		result = clowns.triggers.angels_tech and "datacore-logistic-1" or "logistic-science-pack"
-	},
-	{
-		type = "recipe",
-		name = "chemical-science-pack-facility",
-		category = "facility",
-		enabled = false,
-		energy_required = energy_param*2,
-		subgroup = "chemical-science-pack",
-		order = "b",
-		icons = {icons.chemical,overlay},
-		ingredients =
-		{
-			{type="fluid", name="gas-ammonia", amount=gas_param},
-			{type="fluid", name="gas-carbon-monoxide", amount=gas_param}
-		},
-		result = clowns.triggers.angels_tech and "datacore-energy-1" or "chemical-science-pack"
-	},
-	{
-		type = "recipe",
-		name = "military-science-pack-facility",
-		category = "facility",
-		enabled = false,
-		energy_required = energy_param,
-		subgroup = "military-science-pack",
-		order = "b",
-		icons = {icons.military,overlay},
-		ingredients =
-		{
-			{type="fluid", name="liquid-sulfuric-acid", amount=gas_param},
-			{type="fluid", name="gas-carbon-monoxide", amount=gas_param}
-		},
-		result = clowns.triggers.angels_tech and "datacore-war-1" or "military-science-pack"
-	},
-	{
-		type = "recipe",
-		name = "production-science-pack-facility",
-		category = "facility",
-		enabled = false,
-		energy_required = energy_param*2,
-		subgroup = "production-science-pack",
-		order = "b",
-		icons = {icons.production,overlay},
-		ingredients =
-		{
-			{type="fluid", name="gas-methanol", amount=gas_param},
-		},
-		result = clowns.triggers.angels_tech and "datacore-processing-1" or "production-science-pack"
-	},
-	{
-		type = "recipe",
-		name = "utility-science-pack-facility",
-		category = "facility",
-		enabled = false,
-		energy_required = energy_param*2,
-		subgroup = "utility-science-pack",
-		order = "b",
-		icons = {icons.utility,overlay},
-		ingredients =
-		{
-			{type="fluid", name="liquid-hydrofluoric-acid", amount=gas_param},
-		},
-		result = clowns.triggers.angels_tech and "datacore-enhance-1" or "utility-science-pack"
-	},
-}
-)
