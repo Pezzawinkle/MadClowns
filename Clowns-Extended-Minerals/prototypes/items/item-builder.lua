@@ -136,8 +136,8 @@ for _, name in pairs({"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14
         subgroup = "fluids-refining",
         default_temperature = 25,
         heat_capacity = "1KJ",
-        base_color = {r = 132 / 255, g = 176 / 255, b = 11 / 255},
-        flow_color = {r = 132 / 255, g = 176 / 255, b = 11 / 255},
+        base_color = shifts[name].A,--{r = 132 / 255, g = 176 / 255, b = 11 / 255},
+        flow_color = shifts[name].B,--{r = 132 / 255, g = 176 / 255, b = 11 / 255},
         max_temperature = 100,
       },
       --Solution
@@ -149,8 +149,8 @@ for _, name in pairs({"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14
         subgroup = "fluids-refining",
         default_temperature = 25,
         heat_capacity = "1KJ",
-        base_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
-        flow_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
+        base_color = shifts[name].A,--{r = 255 / 255, g = 119 / 255, b = 0 / 255},
+        flow_color = shifts[name].B,--{r = 255 / 255, g = 119 / 255, b = 0 / 255},
         max_temperature = 100,
       },
       --Anode-sludge
@@ -162,8 +162,8 @@ for _, name in pairs({"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14
         subgroup = "fluids-refining",
         default_temperature = 25,
         heat_capacity = "1KJ",
-        base_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
-        flow_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
+        base_color = shifts[name].A,--{r = 255 / 255, g = 119 / 255, b = 0 / 255},
+        flow_color = shifts[name].B,--{r = 255 / 255, g = 119 / 255, b = 0 / 255},
         max_temperature = 100,
       },
       --Slime
@@ -175,8 +175,8 @@ for _, name in pairs({"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14
         subgroup = "fluids-refining",
         default_temperature = 25,
         heat_capacity = "1KJ",
-        base_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
-        flow_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
+        base_color = shifts[name].A,--{r = 255 / 255, g = 119 / 255, b = 0 / 255},
+        flow_color = shifts[name].B,--{r = 255 / 255, g = 119 / 255, b = 0 / 255},
         max_temperature = 100,
       },
     }
