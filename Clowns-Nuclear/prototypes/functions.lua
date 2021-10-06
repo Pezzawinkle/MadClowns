@@ -163,7 +163,6 @@ clowns.functions.remove_res = function(name, to_rem, kind)
       index=""
       if list then
         for i,ing in pairs(list) do
-          log(serpent.block(ing))
           if ing.name == to_rem or ing[1] == to_rem then
             --index=i
             if q=="reg" then 
