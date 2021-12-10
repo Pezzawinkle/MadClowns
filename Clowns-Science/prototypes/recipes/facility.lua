@@ -40,7 +40,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			category = "facility",
 			enabled = false,
 			energy_required = energy_param,
-			subgroup = "omni-pack",
+			subgroup = "omni-science-pack",
 			order = "b",
 			icons = {icons.omni,overlay},
 			ingredients =

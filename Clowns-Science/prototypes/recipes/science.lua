@@ -20,7 +20,7 @@ for time,name in pairs({"automation","logistic","military","chemical","productio
         subgroup = name.."-science-pack",
         icons = angelsmods.functions.add_number_icon_layer({icons[name]}, i+1 , clowns.icon_tint),
         ingredients = vals.ingredients,
-        results={{type="item", name = result, amount=vals.result_count}},
+        results={{type="item", name = result, amount=vals.result_count or 1}},
         order="a-b[alt-"..i.."]",
       })
       if not (name == "automation") then table.insert(clowns.tables.tech_unlock,{name,i}) end --don't add tech to non-existent tech
@@ -30,6 +30,7 @@ for time,name in pairs({"automation","logistic","military","chemical","productio
     end
   end
 end
+
 data:extend(recipe_list)
 
 

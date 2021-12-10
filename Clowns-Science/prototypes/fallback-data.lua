@@ -155,7 +155,7 @@ Ings refers to how many ingredients per pack in final step]]
   -- Utility     |  79835 |  21667 | 222.2 |  --   | 12(1102) | 7     | 2 (2,1,3->3)
   -- Space       | 168113 |  26000 |  1200 | 10500 | 14(2921) | 0.315 | 1 (1+3x1000->1000)
 
-  --==FullPy==-- | Plate | Fluids | Power | Fuel | Complex | Ings
+--==FullPy==--   | Plate | Fluids | Power | Fuel | Complex | Ings
   -- Automation  | Plate | Fluids | Power | Fuel | Complex | Ings
   -- Logistics   | Plate | Fluids | Power | Fuel | Complex | Ings
   -- Military    | Plate | Fluids | Power | Fuel | Complex | Ings
@@ -221,13 +221,13 @@ Ings refers to how many ingredients per pack in final step]]
         {"night-vision-equipment",1}
       }}, --22500 (42500 with steel)
     --chemical budget = 20000
-    ["chemical_1"]   = {theme="prod", result_amount = 2, ingredients = {
+    ["chemical_1"]   = {theme="prod", result_count = 2, ingredients = {
         {"electronic-circuit",3},
         {"battery",1},
         {"chemical-plant",1},
         {"steel-plate",10}
       }},
-    ["chemical_2"]   = {theme="fuel", result_amount = 2, ingredients = {
+    ["chemical_2"]   = {theme="fuel", result_count = 2, ingredients = {
         {"plastic-bar",2},
         {"solid-fuel",2},
         {"long-handed-inserter", 1},
@@ -239,7 +239,7 @@ Ings refers to how many ingredients per pack in final step]]
         {"oil-refinery",1},
         {"battery",2}
       }},
-    ["chemical_4"]   = {theme="oil", result_amount = 2, ingredients = {
+    ["chemical_4"]   = {theme="oil", result_count = 2, ingredients = {
         {"pumpjack",1},
         {"chemical-plant",1},
         {"underground-pipe",4},
@@ -251,7 +251,7 @@ Ings refers to how many ingredients per pack in final step]]
 --config updates
 if ctrig.bobplates then --bobplates --access to alloys and other fancy materials
   --stone pipe shows without logistics
-  clowns.tables.pack_costs["automation_1"].ingredients[1][2]={"stone-pipe", 5}
+  clowns.tables.pack_costs["automation_1"].ingredients[2]={"stone-pipe", 5}
   --also check logistics
   if mods["boblogistics"] then --fancy pipes, belts and inserters
     --check balance with and without belt overhaul
