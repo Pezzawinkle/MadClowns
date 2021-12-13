@@ -29,7 +29,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "clowns-ore-crushing",
-		icon_size = 128,
+		icon_size = 256,
 		icon = "__angelsrefining__/graphics/technology/mechanical-refining.png",
 		effects = crushing_eff,
 		prerequisites = {"ore-crushing"},
@@ -47,7 +47,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "clowns-ore-floatation",
-		icon_size = 128,
+		icon_size = 256,
 		icon = "__angelsrefining__/graphics/technology/hydro-refining.png",
 		effects = flotation_eff,
 		prerequisites = {"ore-floatation", "clowns-ore-crushing"},
@@ -86,7 +86,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "clowns-ore-refining",
-		icon_size = 128,
+		icon_size = 256,
 		icon = "__angelsrefining__/graphics/technology/thermal-refining.png",
 		effects = refining_eff,
 		prerequisites = {"ore-refining", "clowns-ore-leaching"},

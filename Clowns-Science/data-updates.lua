@@ -1,5 +1,4 @@
 for _,tech in pairs(clowns.tables.tech_unlock) do
-  log(serpent.block(tech))
   table.insert(data.raw["technology"][tech[1] .."-science-pack"].effects,{type = "unlock-recipe", recipe = tech[1].."-science-pack-alt"..tech[2]})
 end
 --[[angelsmods.functions.allow_productivity("facility-science-pack-1")

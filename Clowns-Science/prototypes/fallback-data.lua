@@ -1,15 +1,6 @@
 -- DECLARE PACK ICONS HERE INSTEAD OF OVERRIDING LATER
 local ctrig=clowns.triggers
---[[clowns.triggers = {
-  ["angels_tech"] = (mods["angelsindustries"] and angelsmods.industries.tech) and true or false,
-  ["pyanodons"] = mods["pycoalprocessing"] and true or false,
-  ["krastorio"] = mods["Krastorio2"] and true or false,
-  ["omnimatter"] = mods["omnimatter"] and true or false,
-  ["bobtech_colours"] = mods["bobtech"] and settings.startup["bobmods-tech-colorupdate"].value or false,
-  ["bobtech_default"] = mods["bobtech"] and true or false,
-  ["bobplates"] = mods["bobplates"] and true or false
-  --else vanilla(ish)
-}]]
+
 clowns.tables.science_icons = {
   ["automation"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-basic.png", size = 32} or
     ctrig.pyanodons and {icon = "__pycoalprocessinggraphics__/graphics/icons/science-pack-1.png", icon_size = 32} or
@@ -229,7 +220,7 @@ Ings refers to how many ingredients per pack in final step]]
       }},
     ["chemical_2"]   = {theme="fuel", result_count = 2, ingredients = {
         {"plastic-bar",2},
-        {"solid-fuel",2},
+        {"solid-fuel",6},
         {"long-handed-inserter", 1},
         {"concrete",10}
       }},
@@ -242,18 +233,113 @@ Ings refers to how many ingredients per pack in final step]]
     ["chemical_4"]   = {theme="oil", result_count = 2, ingredients = {
         {"pumpjack",1},
         {"chemical-plant",1},
-        {"underground-pipe",4},
+        {"pipe-to-ground",4},
         {"plastic-bar",2}
       }},
-
-
-}
+    --Production budget = 53333 (86666 with steel)
+    ["production_1"] = {theme="process", result_count = 1, ingredients = {
+        {"copper-cable",25},
+        {"chemical-plant",1},
+        {"steel-furnace",1}
+      }},
+    ["production_2"] = {theme="rails", result_count = 2, ingredients = {
+        {"iron-stick",20},
+        {"rail-signal",2},
+        {"accumulator",1},
+        {"oil-refinery",1}
+      }}, 
+    ["production_3"] = {theme="smelting", result_count = 12, ingredients = {
+        {"electric-furnace",2},
+        {"power-switch",3},
+        {"rocket-fuel",18},
+        {"refined-concrete",50}
+      }}, 
+    --Utility budget = 79835 (92500 with steel)
+    ["utility_1"] = {theme="module", result_count = 2, ingredients = {
+        {"plastic-bar",8},
+        {"battery",8},
+        {"copper-cable",8},
+        {"advanced-circuit",3},
+        {"productivity-module",2}
+        --94600
+      }},
+    ["utility_2"] = {theme="battery", result_count = 4, ingredients = {
+        {"processing-unit",2},
+        {"battery",10},
+        {"steel-plate",6},
+        {"accumulator",1}, 
+      }},
+    ["utility_3"] = {theme="energy", result_count = 80, ingredients = {
+        {"nuclear-reactor",1},
+        {"heat-pipe",30},
+      }}, --86250 (126250 with steel) 
+  }
 --config updates
-if ctrig.bobplates then --bobplates --access to alloys and other fancy materials
-  --stone pipe shows without logistics
-  clowns.tables.pack_costs["automation_1"].ingredients[2]={"stone-pipe", 5}
-  --also check logistics
-  if mods["boblogistics"] then --fancy pipes, belts and inserters
-    --check balance with and without belt overhaul
+--[[clowns.triggers = {
+  ["angels_tech"] = (mods["angelsindustries"] and angelsmods.industries.tech) and true or false,
+  ["pyanodons"] = mods["pycoalprocessing"] and true or false,
+  ["krastorio"] = mods["Krastorio2"] and true or false,
+  ["omnimatter"] = mods["omnimatter"] and true or false,
+  ["bobtech_colours"] = mods["bobtech"] and settings.startup["bobmods-tech-colorupdate"].value or false,
+  ["bobtech_default"] = mods["bobtech"] and true or false,
+  ["bobplates"] = mods["bobplates"] and true or false
+  --else vanilla(ish)
+}]]
+local function update_tab(name,pos,new_ing)
+  clowns.tables.pack_costs[name].ingredients[pos] = new_ing
+end
+--The order here is important, as the lower configs will "override" the higher ones if multiples are targetting the same item
+if mods["boblogistics"] then
+  update_tab("automation_1", 2, {"stone-pipe", 5})
+  if ctrig.bobplates then
+    update_tab("logistic_4", 1, {"bronze-pipe-to-ground", 1})
+    update_tab("chemical_4", 3, {"brass-pipe-to-ground", 1})
+    if settings.startup["bobmods-logistics-inserteroverhaul"] then
+      update_tab("logistic_2", 1, {"red-filter-inserter", 1}) --don't add blue teck items to green tech
+    end
   end
+end
+if ctrig.bobplates then
+  update_tab("automation_2", 1, {"lead-plate", 2})
+  update_tab("logistic_2", 2, {"repair-pack-2", 3})
+  update_tab("military_2", 2, {"gunmetal-alloy", 2})
+  update_tab("chemical_1", 1, {"invar-alloy", 2})
+  update_tab("chemical_2", 1, {"rubber",3})
+  update_tab("chemical_2", 4, {"cobalt-steel-alloy", 2})
+  update_tab("production_2", 2, {"cobalt-plate", 1})
+  update_tab("utility_1", 2, {"lithium-ion-battery", 2})
+  update_tab("utility_1", 1, {"quartz-glass", 4})
+  update_tab("utility_2", 2, {"silver-zinc-battery", 2})
+  update_tab("utility_2", 3, {"copper-tungsten-alloy", 3})
+  update_tab("utility_2", 4, {"cobalt-plate", 3})
+  --electronics:
+  if mods["bobelectronics"] then
+    update_tab("production_1", 1, {"insulated-cable", 4})
+    update_tab("utility_1", 3, {"gilded-copper-cable", 4})
+  end
+end
+if mods["bobelectronics"] then --regarless of plates
+  update_tab("utility_2", 1, {"advanced-processing-unit", 2})
+end
+if mods["angelspetrochem"] then
+  update_tab("chemical_2", 2, {"rocket-booster", 2})
+  update_tab("production_1", 2, {"steam-cracker", 1})
+  update_tab("production_2", 4, {"angels-flare-stack", 2})
+  update_tab("production_3", 3, {"rocket-booster", 5})
+end
+if mods["angelsrefining"] then
+  update_tab("production_3", 2, {"ore-crusher", 2})
+end
+if mods["angelsmelting"] then
+  update_tab("production_2", 1, {"angels-plate-manganese", 1})
+  update_tab("production_1", 3, {"blast-furnace", 1})
+  update_tab("production_3", 1, {"blast-furnace-2", 1})
+  update_tab("production_3", 4, {"reinforced-concrete-brick", 50})
+end
+if mods["Clowns-processing"] then
+  update_tab("production_2", 2, {"clowns-plate-osmium", 1})
+end
+if mods["bobwarfare"] and mods["bobplates"] then
+  update_tab("military_4", 1, {"radar-3",1})
+  update_tab("military_4", 2, {"heavy-armor-2",1})
 end

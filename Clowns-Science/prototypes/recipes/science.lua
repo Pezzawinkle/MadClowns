@@ -2,6 +2,7 @@ local icons = clowns.tables.science_icons
 local ctrig = clowns.triggers
 --dynamic recipe building
 local recipe_list={}
+local rec_names = {}
 clowns.tables.tech_unlock={}
 for time,name in pairs({"automation","logistic","military","chemical","production","utility"}) do
   for i=1,4 do
@@ -23,18 +24,21 @@ for time,name in pairs({"automation","logistic","military","chemical","productio
         results={{type="item", name = result, amount=vals.result_count or 1}},
         order="a-b[alt-"..i.."]",
       })
+      table.insert(rec_names,name.."-science-pack-alt"..i)
+      --look at fixing this so it accounts for bobs "steam" start
       if not (name == "automation") then table.insert(clowns.tables.tech_unlock,{name,i}) end --don't add tech to non-existent tech
-      angelsmods.functions.allow_productivity(name.."-science-pack-alt"..i)
     else
-      log("tech name:"..name.."-science-pack-alt"..i.." not listed")
+      --log("tech name:"..name.."-science-pack-alt"..i.." not listed")
     end
   end
 end
 
 data:extend(recipe_list)
-
-
-data:extend({
+--allow productivity.
+for _,name in pairs(rec_names) do
+  angelsmods.functions.allow_productivity(name)
+end
+--[[data:extend({
   --SCIENCE PACK 1 (Automation)
   --[[{
     type = "recipe",
@@ -194,7 +198,7 @@ data:extend({
   )
   end]]
   --SCIENCE PACK PRODUCTION
-  {
+  --[[{
     type = "recipe",
     name = "production-science-pack-alt1",
     enabled = false,
@@ -226,9 +230,9 @@ data:extend({
       {"accumulator", 1},
     },
     results = {{type="item", name=clowns.triggers.angels_tech and "datacore-processing-1" or "production-science-pack", amount=3}}
-  },
+  },]]
   --SCIENCE PACK UTILITY
-  {
+  --[[{
     type = "recipe",
     name = "utility-science-pack-alt1",
     enabled = false,
@@ -262,4 +266,4 @@ data:extend({
     results = {{type="item", name=clowns.triggers.angels_tech and "datacore-enhance-1" or "utility-science-pack", amount=4}}
   },
 }
-)
+)]]
