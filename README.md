@@ -48,10 +48,10 @@ This mod builds on the enrichment processes of the vanilla mod
  - Depleted uranium processing and weapons usage
  - Thermonuclear bomb for a larger damage and area
  - Enhanced nuclear fuel down 2 paths (Thermal and Propulsion) for various uses
- - Advanced nuclera fuel reprocessing to extract useful isotopes
+ - Advanced nuclear fuel reprocessing to extract useful isotopes
  - Compatible with Angelsindustries Nuclear overhaul and many of bobs configurations
  
 ## MadClown01's Science
 This mod focusses on adding alternative methods to produce science packs, if you want a change from the vanilla AB ingredients, have a go with this mod.
- - NOT CURRENTLY FUNCTIONAL WITH ANGELS TECH OVERHAUL!!!
+ - Partially functional with angels tech mode
  - Alternative recipes for bobs/vanilla science packs for variety
