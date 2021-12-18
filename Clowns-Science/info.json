@@ -8,7 +8,7 @@
   "homepage": "",
   "description": "Adds many science options to AngelBob games - research facility, particle accelerator and diverse alternative science pack recipes.",
   "dependencies": [
-    "? angelsrefining >= 0.12.0",
+    "? angelsrefining >= 0.12.1",
     "? angelspetrochem >= 0.9.20",
     "? angelssmelting >= 0.6.17",
     "? bobplates >= 0.18.0",

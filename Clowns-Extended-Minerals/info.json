@@ -8,7 +8,7 @@
   "homepage": "",
   "description": "Brings many new ores & minerals to games with Angel's Refining and Bob's Ores active.",
   "dependencies": [
-	"angelsrefining >= 0.12.0",
+	"angelsrefining >= 0.12.1",
 	"? bobores >= 0.18.0",
 	"? bobplates >= 0.18.0",
 	"Clowns-Processing >= 1.3.16",

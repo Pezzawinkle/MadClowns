@@ -13,7 +13,7 @@
   "(?) bobmodules >= 0.18.0",
   "(?) angelsindustries >= 0.4.14",
   "(?) bobplates >= 0.18.8",
-	"angelsrefining >= 0.12.0",
+	"angelsrefining >= 0.12.1",
 	"Clowns-Nuclear >= 1.3.16",
 	"Clowns-Processing >= 1.3.16"
 	]
