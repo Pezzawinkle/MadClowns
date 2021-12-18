@@ -1,12 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.29
-Date: 2021-08-##
+Date: 2021-12-19
   Changes:
+    - BE WARNED WILL BREAK EXISTING SAVES
     - Changed pack recipe names to be more consistent
     - Updated icons script to be more dynamic
     - looked at rebalancing recipes based on configuration
     - added more options for most packs
-    - currently does not work with extended burner phase systems
+    - currently does not work with extended burner phase systems (still work in progress)
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.28
 Date: 2021-05-27
