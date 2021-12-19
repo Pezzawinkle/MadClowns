@@ -52,6 +52,6 @@ This mod builds on the enrichment processes of the vanilla mod
  - Compatible with Angelsindustries Nuclear overhaul and many of bobs configurations
  
 ## MadClown01's Science
-This mod focusses on adding alternative methods to produce science packs, if you want a change from the vanilla AB ingredients, have a go with this mod.
+This mod focusses on adding alternative methods to produce science packs, if you want a change from the vanilla or AB ingredients, have a go with this mod.
  - Partially functional with angels tech mode
  - Alternative recipes for bobs/vanilla science packs for variety
