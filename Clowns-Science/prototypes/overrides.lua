@@ -1,54 +1,20 @@
 local gas_param = 100
-
+local icons = clowns.tables.science_icons
 --ICONS
-data.raw.recipe["automation-science-pack"].icons ={
-  {icon = "__base__/graphics/icons/automation-science-pack.png", icon_size=64},
-	{	icon = "__angelsrefining__/graphics/icons/num_1.png",
-		icon_size=32,
-		tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-		scale = 0.32,
-		shift = {-12, -12}}}
-data.raw.recipe["logistic-science-pack"].icons ={
-	{icon = "__base__/graphics/icons/logistic-science-pack.png", icon_size=64},
-	{	icon = "__angelsrefining__/graphics/icons/num_1.png",
-		icon_size=32,
-		tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-		scale = 0.32,
-		shift = {-12, -12}}}
-data.raw.recipe["chemical-science-pack"].icons ={
-	{	icon = "__base__/graphics/icons/chemical-science-pack.png", icon_size=64},
-	{	icon = "__angelsrefining__/graphics/icons/num_1.png",
-		icon_size=32,
-		tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-		scale = 0.32,
-		shift = {-12, -12}}}
-data.raw.recipe["military-science-pack"].icons ={
-	{	icon = "__base__/graphics/icons/military-science-pack.png", icon_size=64},
-	{	icon = "__angelsrefining__/graphics/icons/num_1.png",
-		icon_size=32,
-		tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-		scale = 0.32,
-		shift = {-12, -12}}}
-data.raw.recipe["production-science-pack"].icons ={
-	{	icon = "__base__/graphics/icons/production-science-pack.png", icon_size=64},
-	{	icon = "__angelsrefining__/graphics/icons/num_1.png",
-		icon_size=32,
-		tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-		scale = 0.32,
-		shift = {-12, -12}}}
-data.raw.recipe["utility-science-pack"].icons ={
-	{	icon = "__base__/graphics/icons/utility-science-pack.png", icon_size=64},
-	{	icon = "__angelsrefining__/graphics/icons/num_1.png",
-		icon_size=32,
-		tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-		scale = 0.32,
-		shift = {-12, -12}}}
-data.raw.recipe["automation-science-pack"].icon_size = 32
-data.raw.recipe["logistic-science-pack"].icon_size = 32
-data.raw.recipe["chemical-science-pack"].icon_size = 32
-data.raw.recipe["military-science-pack"].icon_size = 32
-data.raw.recipe["production-science-pack"].icon_size = 32
-data.raw.recipe["utility-science-pack"].icon_size = 32
+local icon_checker = function(recipe_name, tag, number)
+	data.raw.recipe[recipe_name].icons = data.raw.recipe[recipe_name].icons or {}
+	data.raw.recipe[recipe_name].icons = angelsmods.functions.add_number_icon_layer({icons[tag]}, number , clowns.icon_tint)
+end
+
+icon_checker("automation-science-pack","automation", 1)
+icon_checker("logistic-science-pack","logistic", 1)
+icon_checker("chemical-science-pack","chemical", 1)
+icon_checker("military-science-pack","military", 1)
+icon_checker("production-science-pack","production", 1)
+icon_checker("utility-science-pack","utility", 1)
+if data.raw.recipe["advanced-logistic-science-pack"] then
+	icon_checker("advanced-logistic-science-pack","advlog", 1)
+end
 
 data.raw["tool"]["automation-science-pack"].subgroup = "automation-science-pack"
 data.raw["tool"]["logistic-science-pack"].subgroup = "logistic-science-pack"
@@ -65,33 +31,17 @@ data.raw["tool"]["production-science-pack"].order = "k-a"
 data.raw["tool"]["utility-science-pack"].order = "m-a"
 
 if data.raw.recipe["advanced-logistic-science-pack"] then
-	data.raw.recipe["advanced-logistic-science-pack"].icons ={
-		{	icon = "__bobtech__/graphics/icons/logistic-science-pack.png", icon_size=32},
-		{	icon = "__angelsrefining__/graphics/icons/num_1.png",
-			icon_size=32,
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12}}}
-	data.raw.recipe["advanced-logistic-science-pack"].icon_size = 32
 	data.raw["tool"]["advanced-logistic-science-pack"].subgroup = "advanced-logistic-science-pack"
 	data.raw["tool"]["advanced-logistic-science-pack"].order = "o-a"
-	table.insert(data.raw["technology"]["advanced-logistic-science-pack"].effects, {type = "unlock-recipe", recipe = "alt1-logistic-science-pack"})
 
 	data:extend({{
 		type = "recipe",
-		name = "alt1-logistic-science-pack",
+		name = "advanced-logistic-science-pack-alt1",
 		enabled = false,
 		energy_required = 14,
 		subgroup = "advanced-logistic-science-pack",
 		order = "a-b",
-		icons ={
-      { icon = "__bobtech__/graphics/icons/logistic-science-pack.png"},
-			{	icon = "__angelsrefining__/graphics/icons/num_2.png",
-				icon_size=32,
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.32,
-				shift = {-12, -12}}},
-		icon_size = 32,
+		icons = angelsmods.functions.add_number_icon_layer(icons.advlog, 2 , clowns.icon_tint),
 		ingredients ={
 			{type="item", name="rail", amount=3},
 			{type="item", name="angels-plate-chrome", amount=1},
@@ -113,7 +63,7 @@ if data.raw.tool["token-bio"] then
 end
 
 if data.raw.recipe["omni-pack"] then
-	data.raw["tool"]["omni-pack"].subgroup = "omni-pack"
+	data.raw["tool"]["omni-pack"].subgroup = "omni-science-pack"
 	data.raw["tool"]["omni-pack"].order = "e-a"
 end
 
@@ -121,7 +71,7 @@ local new_ing = "gas-carbon-monoxide"
 if data.raw.fluid["liquid-mercury"] then
   new_ing = "liquid-mercury"
 end
-for i,rec in pairs({"facility-high-tech-science-pack","facility-logistic-science-pack","facility-production-science-pack"}) do
+for i,rec in pairs({"utility-science-pack-facility","advanced-logistic-science-pack-facility","production-science-pack-facility"}) do
   if data.raw.recipe[rec] then
     if data.raw.recipe[rec].ingredients then table.insert(data.raw.recipe[rec].ingredients,{type="fluid", name=new_ing, amount=gas_param}) end
     if data.raw.recipe[rec].normal and data.raw.recipe[rec].normal.ingredients then table.insert(data.raw.recipe[rec].normal.ingredients,{type="fluid", name=new_ing, amount=gas_param}) end
@@ -129,7 +79,7 @@ for i,rec in pairs({"facility-high-tech-science-pack","facility-logistic-science
   end
 end
 if data.raw.recipe["clowns-plate-osmium"] and not (mods["angelsindustries"] and angelsmods.industries.tech) then
-	data.raw["recipe"]["alt2-production-science-pack"].ingredients=
+	data.raw["recipe"]["production-science-pack-alt2"].ingredients=
 	{
 			{"angels-plate-manganese", 1},
 			{"clowns-plate-osmium", 1},
@@ -137,48 +87,33 @@ if data.raw.recipe["clowns-plate-osmium"] and not (mods["angelsindustries"] and 
 			{"accumulator", 1},
 		}
 end
---unlock facility regarless of angels industries
-table.insert(data.raw["technology"]["military-science-pack"].effects, {type = "unlock-recipe", recipe = "facility-military-science-pack"})
-table.insert(data.raw["technology"]["chemical-science-pack"].effects, {type = "unlock-recipe", recipe = "facility-science-pack-3"})
-table.insert(data.raw["technology"]["utility-science-pack"].effects, {type = "unlock-recipe", recipe = "facility-high-tech-science-pack"})
-table.insert(data.raw["technology"]["production-science-pack"].effects, {type = "unlock-recipe", recipe = "facility-production-science-pack"})
-if data.raw.recipe["advanced-logistic-science-pack"] then
-  table.insert(data.raw["technology"]["advanced-logistic-science-pack"].effects, {type = "unlock-recipe", recipe = "facility-logistic-science-pack"})
-end
-if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value == true then
-  table.insert(data.raw["technology"]["facility-1"].prerequisites,"automation-science-pack")
+--unlock facility regardless of angels industries
+if mods["angelspetrochem"] then
+	table.insert(data.raw["technology"]["military-science-pack"].effects, {type = "unlock-recipe", recipe = "military-science-pack-facility"})
+	table.insert(data.raw["technology"]["chemical-science-pack"].effects, {type = "unlock-recipe", recipe = "chemical-science-pack-facility"})
+	table.insert(data.raw["technology"]["utility-science-pack"].effects, {type = "unlock-recipe", recipe = "utility-science-pack-facility"})
+	table.insert(data.raw["technology"]["production-science-pack"].effects, {type = "unlock-recipe", recipe = "production-science-pack-facility"})
+	if data.raw.recipe["advanced-logistic-science-pack"] then
+		table.insert(data.raw["technology"]["advanced-logistic-science-pack"].effects, {type = "unlock-recipe", recipe = "advanced-logistic-science-pack-facility"})
+	end
+	if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value == true then
+		table.insert(data.raw["technology"]["facility-1"].prerequisites,"automation-science-pack")
+	end
 end
 if not (mods["angelsindustries"] and angelsmods.industries.tech) then
-  table.insert(data.raw["technology"]["logistic-science-pack"].effects, {type = "unlock-recipe", recipe = "alt1-science-pack-2"})
-
-  table.insert(data.raw["technology"]["military-science-pack"].effects, {type = "unlock-recipe", recipe = "alt1-military-science-pack"})
-  if data.raw.recipe["alt2-military-science-pack"] then
-    table.insert(data.raw["technology"]["military-science-pack"].effects, {type = "unlock-recipe", recipe = "alt2-military-science-pack"})
-  end
-  
-  table.insert(data.raw["technology"]["chemical-science-pack"].effects, {type = "unlock-recipe", recipe = "alt1-science-pack-3"})
-  table.insert(data.raw["technology"]["chemical-science-pack"].effects, {type = "unlock-recipe", recipe = "alt2-science-pack-3"})
-  
-  table.insert(data.raw["technology"]["utility-science-pack"].effects, {type = "unlock-recipe", recipe = "alt1-high-tech-science-pack"})
-  table.insert(data.raw["technology"]["utility-science-pack"].effects, {type = "unlock-recipe", recipe = "alt2-high-tech-science-pack"})
-  
-  table.insert(data.raw["technology"]["production-science-pack"].effects, {type = "unlock-recipe", recipe = "alt1-production-science-pack"})
-  table.insert(data.raw["technology"]["production-science-pack"].effects, {type = "unlock-recipe", recipe = "alt2-production-science-pack"})
-
   if mods["omnimatter_crystal"] then
-    omni.lib.add_recipe_ingredient("alt1-science-pack-3","basic-crystallonic")
-    omni.lib.add_recipe_ingredient("alt2-science-pack-3","basic-crystallonic")
-    omni.lib.add_recipe_ingredient("alt1-production-science-pack","basic-oscillo-crystallonic")
-    omni.lib.add_recipe_ingredient("alt2-production-science-pack","basic-oscillo-crystallonic")
-    omni.lib.add_recipe_ingredient("alt1-high-tech-science-pack","basic-oscillo-crystallonic")
-    omni.lib.add_recipe_ingredient("alt2-high-tech-science-pack","basic-oscillo-crystallonic")
-    omni.lib.add_recipe_ingredient("alt1-logistic-science-pack","basic-oscillo-crystallonic")
+    omni.lib.add_recipe_ingredient("chemical-science-pack-alt1","basic-crystallonic")
+    omni.lib.add_recipe_ingredient("chemical-science-pack-alt2","basic-crystallonic")
+    omni.lib.add_recipe_ingredient("production-science-pack-alt1","basic-oscillo-crystallonic")
+    omni.lib.add_recipe_ingredient("production-science-pack-alt2","basic-oscillo-crystallonic")
+    omni.lib.add_recipe_ingredient("utility-science-pack-alt1","basic-oscillo-crystallonic")
+    omni.lib.add_recipe_ingredient("utility-science-pack-alt2","basic-oscillo-crystallonic")
+    omni.lib.add_recipe_ingredient("logistic-science-pack-alt1","basic-oscillo-crystallonic")
+		omni.lib.add_recipe_ingredient("logistic-science-pack-alt2","basic-oscillo-crystallonic")
   end
   if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value == true then
-    data.raw.recipe["alt1-science-pack-1"].enabled=false
-    data.raw.recipe["alt2-science-pack-1"].enabled=false
-    table.insert(data.raw["technology"]["automation-science-pack"].effects, {type = "unlock-recipe", recipe = "alt1-science-pack-1"})
-    table.insert(data.raw["technology"]["automation-science-pack"].effects, {type = "unlock-recipe", recipe = "alt2-science-pack-1"})
+    data.raw.recipe["automation-science-pack-alt1"].enabled=false
+    data.raw.recipe["automation-science-pack-alt2"].enabled=false
   end
 end
 if mods["bobmodules"] and settings.startup["bobmods-modules-enablerawspeedmodules"].value then
@@ -193,6 +128,19 @@ end
 -----------------------------------------
 -- enable recipes from angels
 -----------------------------------------
-angelsmods.trigger.smelting_products["manganese"].plate = true
-angelsmods.trigger.smelting_products["manganese"].ingot = true
-angelsmods.trigger.ores["manganese"] = true
+if mods["angelsmelting"] then
+	angelsmods.trigger.smelting_products["manganese"].plate = true
+	angelsmods.trigger.smelting_products["manganese"].ingot = true
+	angelsmods.trigger.ores["manganese"] = true
+end
+--------------------------------------------------------------------------------------------------
+-- RECIPE ORDER CLEAN-UP
+--------------------------------------------------------------------------------------------------
+for _,pack in pairs({"automation","logistic","chemical","production","utility","military","advanced-logistic","omni"}) do
+	if data.raw.recipe[pack.."-science-pack"] then
+		data.raw.recipe[pack.."-science-pack"].order="a-a"
+		if data.raw.recipe[pack.."-science-pack-facility"] then
+			data.raw.recipe[pack.."-science-pack-facility"].order = "b"
+		end
+	end
+end

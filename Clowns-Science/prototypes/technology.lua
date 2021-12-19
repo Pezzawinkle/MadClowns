@@ -10,7 +10,7 @@ local prereqs =
 if data.raw.recipe["advanced-logistic-science-pack"] then
 	table.insert(prereqs, "logistics-3")
 end
-
+if mods["angelspetrochem"] then --i may also activate these with pyanodons
 data:extend(
 {
 	{
@@ -36,11 +36,11 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "facility-science-pack-1"
+				recipe = "automation-science-pack-facility"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "facility-science-pack-2"
+				recipe = "logistic-science-pack-facility"
 			}
 		}
 	},
@@ -97,8 +97,11 @@ data:extend(
 			},
 		}
 	},
-
-
+}
+)
+end
+data:extend(
+{
 	{
 		type = "technology",
 		name = "particle-accelerator-1",

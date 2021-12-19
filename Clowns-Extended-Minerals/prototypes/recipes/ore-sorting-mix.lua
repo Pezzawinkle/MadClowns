@@ -185,7 +185,7 @@ local create_adv_mixed_sorting = function(num)
           {type = "item", name = "clowns-ore"..num.."-crushed", amount = 6}
         },
         icon_size = 32,
-        order = "a"
+        order = "a["..num.."]"
       },
       {
         type = "recipe",
@@ -218,7 +218,7 @@ local create_adv_mixed_sorting = function(num)
           {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/crushed.png", scale = 0.5, shift = {-10, 10}}
         },
         icon_size = 32,
-        order = "b"
+        order = "b["..num.."]"
       },
       --Tier 1.5 (powder)
       {
@@ -239,7 +239,7 @@ local create_adv_mixed_sorting = function(num)
         },
         main_product = "clowns-ore"..num.."-powder",
         icon_size = 32,
-        order = "c"
+        order = "c["..num.."]"
       },
       {
         type = "recipe",
@@ -272,7 +272,7 @@ local create_adv_mixed_sorting = function(num)
           {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/powder.png", scale = 0.5, shift = {-10, 10}}
         },
         icon_size = 32,
-        order = "d"
+        order = "d["..num.."]"
       },
       --TIER 2.5 (Dust)
       {
@@ -295,7 +295,7 @@ local create_adv_mixed_sorting = function(num)
           {type = "fluid", name = "clowns-ore"..num.."-sludge", amount = 6}
         },
         icon_size = 32,
-        order = "e"
+        order = "e["..num.."]"
       },
       {
         type = "recipe",
@@ -316,7 +316,7 @@ local create_adv_mixed_sorting = function(num)
         main_product = "clowns-ore"..num.."-dust",
         icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/dust.png",
         icon_size = 32,
-        order = "f"
+        order = "f["..num.."]"
       },
       {
         type = "recipe",
@@ -349,7 +349,7 @@ local create_adv_mixed_sorting = function(num)
           {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/dust.png", scale = 0.5, shift = {-10, 10}}
         },
         icon_size = 32,
-        order = "g"
+        order = "g["..num.."]"
       },
       --Tier 3.5 (CRYSTAL)
       {
@@ -371,7 +371,7 @@ local create_adv_mixed_sorting = function(num)
           {type = "fluid", name = "clowns-ore"..num.."-solution", amount = 60}
         },
         icon_size = 32,
-        order = "h"
+        order = "h["..num.."]"
       },
       {
         type = "recipe",
@@ -397,7 +397,7 @@ local create_adv_mixed_sorting = function(num)
           { shifts["clowns-ore"..num]["A"], shifts["clowns-ore"..num]["B"], shifts["clowns-ore"..num]["B"], shifts["clowns-ore"..num]["D"]}
         ),
         icon_size = 32,
-        order = "i"
+        order = "i["..num.."]"
       },
       {
         type = "recipe",
@@ -418,7 +418,7 @@ local create_adv_mixed_sorting = function(num)
         },
         main_product = "clowns-ore"..num.."-anode-sludge",
         icon_size = 32,
-        order = "j"
+        order = "j["..num.."]"
       },
       {
         type = "recipe",
@@ -435,7 +435,7 @@ local create_adv_mixed_sorting = function(num)
           {type = "item", name = "clowns-ore"..num.."-crystal", amount = 6}
         },
         icon_size = 32,
-        order = "k"
+        order = "k["..num.."]"
       },
       {
         type = "recipe",
@@ -468,7 +468,7 @@ local create_adv_mixed_sorting = function(num)
           {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/crystal.png", scale = 0.5, shift = {-10, 10}}
         },
         icon_size = 32,
-        order = "l"
+        order = "l["..num.."]"
       },
     }
   )
