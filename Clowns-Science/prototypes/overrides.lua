@@ -50,7 +50,7 @@ if data.raw.recipe["advanced-logistic-science-pack"] then
 		},
 		results = {{type="item", name="advanced-logistic-science-pack", amount=3}}
   }})
-  if mods["angelsrefining"] angelsmods.trigger.ores then
+  if mods["angelsrefining"] and angelsmods.trigger.ores then
     angelsmods.trigger.ores["chrome"] = true
   end
   if mods["angelssmelting"] and angelsmods.trigger.smelting_products then
