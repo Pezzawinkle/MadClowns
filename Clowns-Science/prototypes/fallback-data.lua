@@ -42,7 +42,7 @@ clowns.tables.science_icons = {
     {icon = "__base__/graphics/icons/production-science-pack.png", icon_size = 64},
 
   -- alternative science packs
-  ["advanced-logostics"] = ctrig.bobtech_default and {icon = "__bobtech__/graphics/icons/logistic-science-pack.png", icon_size = 32},
+  ["advanced-logistics"] = mods["bobtech"] and {icon = "__bobtech__/graphics/icons/logistic-science-pack.png", icon_size = 32} or {icon = "__base__/graphics/icons/logistic-science-pack.png", icon_size = 64},
   ["omni"] = (mods["omnimatter_science"] and ctrig.krastorio) and {icon = "__omnimatter_science__/graphics/technology/omni-tech-card.png", icon_size = 128} or
     mods["omnimatter_science"] and {icon = "__base__/graphics/icons/production-science-pack.png", icon_size = 64},
   ["pypack"] = mods["pyalienlife"] and {icon = "__pyalienlifegraphics__/graphics/icons/py_science_pack.png",icon_size = 64},

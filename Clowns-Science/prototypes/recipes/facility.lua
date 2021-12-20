@@ -1,7 +1,7 @@
 local energy_param = 24
 local gas_param = 100
 local order = "b"
-local icons = clowns.tables.science_icons
+local new_icons = clowns.tables.science_icons
 local overlay = {
 	icon = "__Clowns-Science__/graphics/icons/facility.png",
 	icon_size = 32,
@@ -20,7 +20,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			energy_required = energy_param,
 			subgroup = "advanced-logistic-science-pack",
 			order = "b",
-			icons = {icons["advanced-logistic"],overlay},
+			icons = {new_icons["advanced-logistics"],overlay},
 			ingredients =
 			{
 				{type="fluid", name="liquid-nitric-acid", amount=gas_param},
@@ -42,7 +42,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			energy_required = energy_param,
 			subgroup = "omni-science-pack",
 			order = "b",
-			icons = {icons.omni,overlay},
+			icons = {new_icons.omni,overlay},
 			ingredients =
 			{
 				{type="fluid", name="omniston", amount=gas_param},
@@ -64,7 +64,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			energy_required = energy_param,
 			subgroup = "automation-science-pack",
 			order = "b",
-			icons = {icons.automation,overlay},
+			icons = {new_icons.automation,overlay},
 			ingredients =
 			{
 				{type="fluid", name="gas-oxygen", amount=gas_param},
@@ -81,7 +81,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			energy_required = energy_param,
 			subgroup = "logistic-science-pack",
 			order = "b",
-			icons = {icons.logistic,overlay},
+			icons = {new_icons.logistic,overlay},
 			ingredients =
 			{
 				{type="fluid", name="gas-chlorine", amount=gas_param},
@@ -97,7 +97,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			energy_required = energy_param*2,
 			subgroup = "chemical-science-pack",
 			order = "b",
-			icons = {icons.chemical,overlay},
+			icons = {new_icons.chemical,overlay},
 			ingredients =
 			{
 				{type="fluid", name="gas-ammonia", amount=gas_param},
@@ -113,7 +113,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			energy_required = energy_param,
 			subgroup = "military-science-pack",
 			order = "b",
-			icons = {icons.military,overlay},
+			icons = {new_icons.military,overlay},
 			ingredients =
 			{
 				{type="fluid", name="liquid-sulfuric-acid", amount=gas_param},
@@ -129,7 +129,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			energy_required = energy_param*2,
 			subgroup = "production-science-pack",
 			order = "b",
-			icons = {icons.production,overlay},
+			icons = {new_icons.production,overlay},
 			ingredients =
 			{
 				{type="fluid", name="gas-methanol", amount=gas_param},
@@ -144,7 +144,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			energy_required = energy_param*2,
 			subgroup = "utility-science-pack",
 			order = "b",
-			icons = {icons.utility,overlay},
+			icons = {new_icons.utility,overlay},
 			ingredients =
 			{
 				{type="fluid", name="liquid-hydrofluoric-acid", amount=gas_param},

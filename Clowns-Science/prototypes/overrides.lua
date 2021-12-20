@@ -13,9 +13,9 @@ icon_checker("military-science-pack","military", 1)
 icon_checker("production-science-pack","production", 1)
 icon_checker("utility-science-pack","utility", 1)
 if data.raw.recipe["advanced-logistic-science-pack"] then
-	icon_checker("advanced-logistic-science-pack","advlog", 1)
+	icon_checker("advanced-logistic-science-pack","advanced-logistics", 1)
 end
-
+log(serpent.block(data.raw.recipe["advanced-logistic-science-pack"].icons))
 data.raw["tool"]["automation-science-pack"].subgroup = "automation-science-pack"
 data.raw["tool"]["logistic-science-pack"].subgroup = "logistic-science-pack"
 data.raw["tool"]["chemical-science-pack"].subgroup = "chemical-science-pack"
@@ -41,7 +41,7 @@ if data.raw.recipe["advanced-logistic-science-pack"] then
 		energy_required = 14,
 		subgroup = "advanced-logistic-science-pack",
 		order = "a-b",
-		icons = angelsmods.functions.add_number_icon_layer(icons.advlog, 2 , clowns.icon_tint),
+		icons = angelsmods.functions.add_number_icon_layer(icons["advanced-logistics"], 2 , clowns.icon_tint),
 		ingredients ={
 			{type="item", name="rail", amount=3},
 			{type="item", name="angels-plate-chrome", amount=1},
@@ -78,7 +78,7 @@ for i,rec in pairs({"utility-science-pack-facility","advanced-logistic-science-p
     if data.raw.recipe[rec].expensive and data.raw.recipe[rec].expensive.ingredients then table.insert(data.raw.recipe[rec].expensive.ingredients,{type="fluid", name=new_ing, amount=gas_param}) end
   end
 end
-if data.raw.recipe["clowns-plate-osmium"] and not (mods["angelsindustries"] and angelsmods.industries.tech) then
+--[[if data.raw.recipe["clowns-plate-osmium"] and not (mods["angelsindustries"] and angelsmods.industries.tech) then
 	data.raw["recipe"]["production-science-pack-alt2"].ingredients=
 	{
 			{"angels-plate-manganese", 1},
@@ -86,7 +86,7 @@ if data.raw.recipe["clowns-plate-osmium"] and not (mods["angelsindustries"] and 
 			{"angels-flare-stack", 1},
 			{"accumulator", 1},
 		}
-end
+end]]
 --unlock facility regardless of angels industries
 if mods["angelspetrochem"] then
 	table.insert(data.raw["technology"]["military-science-pack"].effects, {type = "unlock-recipe", recipe = "military-science-pack-facility"})
