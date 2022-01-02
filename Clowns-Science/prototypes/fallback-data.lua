@@ -38,7 +38,7 @@ clowns.tables.science_icons = {
     (ctrig.pyanodons and mods["pyfusionenergy"]) and {icon = "__pyfusionenergygraphics__/graphics/icons/production-science-pack.png", icon_size = 32} or
     ctrig.krastorio and {icon = "__Krastorio2__/graphics/icons/cards/production-tech-card.png", icon_size = 64, icon_mipmaps = 4} or
     ctrig.omnimatter and {icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png", icon_size = 64} or
-    ctrig.bobtech_colours and {icon = "__base__/graphics/icons/logistic-science-pack.png", icon_size = 64} or
+    --ctrig.bobtech_colours and {icon = "__base__/graphics/icons/logistic-science-pack.png", icon_size = 64} or
     {icon = "__base__/graphics/icons/production-science-pack.png", icon_size = 64},
 
   -- alternative science packs

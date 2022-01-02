@@ -41,7 +41,7 @@ if data.raw.recipe["advanced-logistic-science-pack"] then
 		energy_required = 14,
 		subgroup = "advanced-logistic-science-pack",
 		order = "a-b",
-		icons = angelsmods.functions.add_number_icon_layer(icons["advanced-logistics"], 2 , clowns.icon_tint),
+		icons = angelsmods.functions.add_number_icon_layer({icons["advanced-logistics"]}, 2 , clowns.icon_tint),
 		ingredients ={
 			{type="item", name="rail", amount=3},
 			{type="item", name="angels-plate-chrome", amount=1},
