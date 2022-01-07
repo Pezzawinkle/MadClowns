@@ -15,7 +15,7 @@ icon_checker("utility-science-pack","utility", 1)
 if data.raw.recipe["advanced-logistic-science-pack"] then
 	icon_checker("advanced-logistic-science-pack","advanced-logistics", 1)
 end
-log(serpent.block(data.raw.recipe["advanced-logistic-science-pack"].icons))
+
 data.raw["tool"]["automation-science-pack"].subgroup = "automation-science-pack"
 data.raw["tool"]["logistic-science-pack"].subgroup = "logistic-science-pack"
 data.raw["tool"]["chemical-science-pack"].subgroup = "chemical-science-pack"

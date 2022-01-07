@@ -25,7 +25,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 		{
 			{"facility-mk1", 1},
 			{"advanced-circuit", 20},
-			{(ctrig.bobplates and mods["bobplates"]) and "brass-pipe" or "pipe", 20},
+			(ctrig.bobplates and mods["bobplates"]) and {"brass-pipe", 20} or {"pipe",50},
 			{"stone-brick", 100}
 		},
 		result = "facility-mk2"
@@ -39,8 +39,8 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 		ingredients =
 		{
 			{"facility-mk2", 1},
-			{"advanced-processing-unit", 20},
-			{(ctrig.bobplates and mods["bobplates"]) and "tungsten-pipe" or "pipe", 20},
+			(ctrig.bobplates and mods["bobelectronics"]) and {"advanced-processing-unit", 20} or {"processing-unit", 50},
+			(ctrig.bobplates and mods["bobplates"]) and {"tungsten-pipe", 20} or {"pipe",80},
 			{"stone-brick", 100}
 		},
 		result = "facility-mk3"
