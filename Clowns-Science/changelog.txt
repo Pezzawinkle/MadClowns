@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 2022-01-##
+  Bugfixes:
+    - Fixed an error the facility was calling for ingredients which were not available
+    - Fixed an graphical issue where the production science recipes were not done correctly
+---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 2021-12-20
   Bugfixes:
