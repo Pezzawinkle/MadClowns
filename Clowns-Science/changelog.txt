@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
-Date: 2022-01-##
+Date: 2022-01-20
   Bugfixes:
     - Fixed an error the facility was calling for ingredients which were not available
     - Fixed an graphical issue where the production science recipes were not done correctly
+    - Fixed a major list of issue with angels-industries tech mode
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 2021-12-20

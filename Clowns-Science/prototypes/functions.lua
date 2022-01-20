@@ -125,7 +125,7 @@ function clowns.functions.get_pack_name(name) -- map angels cores
       ["production"]="datacore-processing-1",
       ["utility"]="datacore-enhance-1"
     }
-    return core_match.name
+    return core_match[name]
   else
     return name.."-science-pack"
   end

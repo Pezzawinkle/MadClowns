@@ -2,39 +2,39 @@
 local ctrig=clowns.triggers
 
 clowns.tables.science_icons = {
-  ["automation"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-basic.png", size = 32} or
+  ["automation"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-basic.png", icon_size =  32} or
     ctrig.pyanodons and {icon = "__pycoalprocessinggraphics__/graphics/icons/science-pack-1.png", icon_size = 32} or
     ctrig.krastorio and {icon = "__Krastorio2__/graphics/icons/cards/automation-tech-card.png", icon_size = 64, icon_mipmaps = 4} or
     ctrig.omnimatter and {icon = "__base__/graphics/icons/automation-science-pack.png", icon_size = 64} or
     ctrig.bobtech_colours and {icon = "__base__/graphics/icons/utility-science-pack.png", icon_size = 64} or
     {icon = "__base__/graphics/icons/automation-science-pack.png", icon_size = 64},
 
-  ["logistic"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-logistic-1.png", size = 32} or
+  ["logistic"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-logistic-1.png", icon_size =  32} or
     ctrig.pyanodons and {icon = "__pycoalprocessinggraphics__/graphics/icons/science-pack-2.png", icon_size = 32} or
     ctrig.krastorio and {icon = "__Krastorio2__/graphics/icons/cards/logistic-tech-card.png", icon_size = 64, icon_mipmaps = 4} or
     ctrig.omnimatter and {icon = "__base__/graphics/icons/logistic-science-pack.png", icon_size = 64} or
     ctrig.bobtech_colours and {icon = "__base__/graphics/icons/automation-science-pack.png", icon_size = 64} or
     {icon = "__base__/graphics/icons/logistic-science-pack.png", icon_size = 64},  
     
-  ["chemical"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-energy-1.png", size = 32} or
+  ["chemical"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-energy-1.png", icon_size =  32} or
     ctrig.pyanodons and {icon = "__pycoalprocessinggraphics__/graphics/icons/science-pack-3.png", icon_size = 32} or
     ctrig.krastorio and {icon = "__Krastorio2__/graphics/icons/cards/chemical-tech-card.png", icon_size = 64, icon_mipmaps = 4} or
     --no difference for this one for the other configs
     {icon = "__base__/graphics/icons/chemical-science-pack.png", icon_size = 64},
 
-  ["military"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-war-1.png", size = 32} or
+  ["military"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-war-1.png", icon_size =  32} or
     ctrig.krastorio and {icon = "__Krastorio2__/graphics/icons/cards/military-tech-card.png", icon_size = 64, icon_mipmaps = 4} or
     --no difference for this one for the other configs
     {icon = "__base__/graphics/icons/military-science-pack.png", icon_size = 64},
 
-  ["utility"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-enhance-1.png", size = 32} or
+  ["utility"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-enhance-1.png", icon_size =  32} or
     (ctrig.pyanodons and mods["pyhightech"]) and {icon = "__pyhightechgraphics__/graphics/icons/high-tech-science-pack.png", icon_size = 32} or
     ctrig.krastorio and {icon = "__Krastorio2__/graphics/icons/cards/utility-tech-card.png", icon_size = 64, icon_mipmaps = 4} or
     ctrig.omnimatter and {icon = "__base__/graphics/icons/utility-science-pack.png", icon_size = 64} or
     ctrig.bobtech_colours and {icon = "__base__/graphics/icons/logistic-science-pack.png", icon_size = 64} or
     {icon = "__base__/graphics/icons/utility-science-pack.png", icon_size = 64},  
 
-  ["production"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-processing-1.png", size = 32} or
+  ["production"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-processing-1.png", icon_size =  32} or
     (ctrig.pyanodons and mods["pyfusionenergy"]) and {icon = "__pyfusionenergygraphics__/graphics/icons/production-science-pack.png", icon_size = 32} or
     ctrig.krastorio and {icon = "__Krastorio2__/graphics/icons/cards/production-tech-card.png", icon_size = 64, icon_mipmaps = 4} or
     ctrig.omnimatter and {icon = "__omnilib__/graphics/icons/science-pack/production-science-pack.png", icon_size = 64} or
@@ -45,7 +45,7 @@ clowns.tables.science_icons = {
   ["advanced-logistics"] = mods["bobtech"] and {icon = "__bobtech__/graphics/icons/logistic-science-pack.png", icon_size = 32} or {icon = "__base__/graphics/icons/logistic-science-pack.png", icon_size = 64},
   ["omni"] = (mods["omnimatter_science"] and ctrig.krastorio) and {icon = "__omnimatter_science__/graphics/technology/omni-tech-card.png", icon_size = 128} or
     mods["omnimatter_science"] and {icon = "__base__/graphics/icons/production-science-pack.png", icon_size = 64},
-  ["pypack"] = mods["pyalienlife"] and {icon = "__pyalienlifegraphics__/graphics/icons/py_science_pack.png",icon_size = 64},
+  ["pypack"] = mods["pyalienlife"] and {icon = "__pyalienlifegraphics__/graphics/icons/py_science_pack.png", icon_size = 64},
 }
 
 --BUILD RESULTS
