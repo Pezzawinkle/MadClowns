@@ -116,7 +116,7 @@ if not mods["angelsrefining"] then --use angels function if available, if not, u
 end
 --custom function
 function clowns.functions.get_pack_name(name) -- map angels cores
-  if clowns.triggers.angels_tech then
+  if clowns.trigger.angels_tech then
     local core_match = {
       ["automation"]="datacore-basic",
       ["logistic"]="datacore-logistic-1",

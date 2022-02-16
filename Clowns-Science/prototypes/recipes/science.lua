@@ -52,7 +52,7 @@ end
       mods["boblogistics"] and {"stone-pipe", 5} or {"pipe", 10},
       {"wooden-chest", 3}
     },
-    result = clowns.triggers.angels_tech and "datacore-basic" or "automation-science-pack",
+    result = clowns.trigger.angels_tech and "datacore-basic" or "automation-science-pack",
   },
   {
     type = "recipe",
@@ -66,7 +66,7 @@ end
       mods["angelsmelting"] and {"angels-plate-lead", 2} or {"copper-cable", 6},
       {"iron-stick", 3}
     },
-    result =  clowns.triggers.angels_tech and "datacore-basic" or "automation-science-pack",
+    result =  clowns.trigger.angels_tech and "datacore-basic" or "automation-science-pack",
   },
   --SCIENCE PACK 2 (Logistics)
   {
@@ -81,7 +81,7 @@ end
       {"small-lamp", 1},
       {"boiler", 1}
     },
-    result = clowns.triggers.angels_tech and "datacore-logistic-1" or "logistic-science-pack",
+    result = clowns.trigger.angels_tech and "datacore-logistic-1" or "logistic-science-pack",
   },
   {
     type = "recipe",
@@ -95,7 +95,7 @@ end
       {"offshore-pump", 1},
       {"electric-mining-drill", 1}
     },
-    result = clowns.triggers.angels_tech and "datacore-logistic-1" or "logistic-science-pack",
+    result = clowns.trigger.angels_tech and "datacore-logistic-1" or "logistic-science-pack",
   },]]
   --[[{
     type = "recipe",
@@ -109,7 +109,7 @@ end
       {"repair-pack", 1},
       {"solid-carbon", 3}
     },
-    result = clowns.triggers.angels_tech and "datacore-logistic-1" or "logistic-science-pack",
+    result = clowns.trigger.angels_tech and "datacore-logistic-1" or "logistic-science-pack",
   },]]
   --SCIENCE PACK 3 (Chemical)
   --[[{
@@ -126,7 +126,7 @@ end
       {"chemical-plant", 1},
       (mods["bobplates"] and data.raw.item["invar-alloy"]) and {"invar-alloy", 1} or {"steel-plate",10}
     },
-    results = {{type="item", name= clowns.triggers.angels_tech and "datacore-energy-1" or "chemical-science-pack", amount=2}},
+    results = {{type="item", name= clowns.trigger.angels_tech and "datacore-energy-1" or "chemical-science-pack", amount=2}},
   },
   {
     type = "recipe",
@@ -142,7 +142,7 @@ end
       {"long-handed-inserter", 1},
       (mods["bobplates"] and data.raw.item["cobalt-steel-alloy"]) and {"cobalt-steel-alloy", 2} or {"concrete",10}
     },
-    results = {{type="item", name= clowns.triggers.angels_tech and "datacore-energy-1" or "chemical-science-pack", amount=2}}
+    results = {{type="item", name= clowns.trigger.angels_tech and "datacore-energy-1" or "chemical-science-pack", amount=2}}
   },]]
   --SCIENCE PACK MILITARY
   --[[{
@@ -158,7 +158,7 @@ end
       {"shotgun-shell", 1},
       {"steel-plate", 3},
     },
-    results = {{type="item", name= clowns.triggers.angels_tech and "datacore-war-1" or "military-science-pack", amount=2}}
+    results = {{type="item", name= clowns.trigger.angels_tech and "datacore-war-1" or "military-science-pack", amount=2}}
   },
   {
     type = "recipe",
@@ -173,7 +173,7 @@ end
       {"explosives", 3},
       (mods["bobplates"] and data.raw.item["gunmetal-alloy"]) and {"gunmetal-alloy", 2} or {"shotgun", 3},
     },
-    results = {{type="item", name = clowns.triggers.angels_tech and "datacore-war-1" or "military-science-pack", amount=3}}
+    results = {{type="item", name = clowns.trigger.angels_tech and "datacore-war-1" or "military-science-pack", amount=3}}
   },]]
   --[[if mods["bobwarfare"] then
   data:extend(
@@ -210,7 +210,7 @@ end
       (mods["bobplates"] and mods["bobelectronics"] and data.raw.item["insulated-cable"]) and {"insulated-cable", 4} or {"copper-cable",20},
       mods["angelspetrochem"] and {"steam-cracker", 1} or {"chemical-plant",2}
     },
-    results = {{type="item", name=clowns.triggers.angels_tech and "datacore-processing-1" or "production-science-pack", amount=3}}
+    results = {{type="item", name=clowns.trigger.angels_tech and "datacore-processing-1" or "production-science-pack", amount=3}}
   },
 
   {
@@ -229,7 +229,7 @@ end
       mods["angelspetrochem"] and {"angels-flare-stack", 1} or {"oil-refinery",1},
       {"accumulator", 1},
     },
-    results = {{type="item", name=clowns.triggers.angels_tech and "datacore-processing-1" or "production-science-pack", amount=3}}
+    results = {{type="item", name=clowns.trigger.angels_tech and "datacore-processing-1" or "production-science-pack", amount=3}}
   },]]
   --SCIENCE PACK UTILITY
   --[[{
@@ -247,7 +247,7 @@ end
       (mods["bobplates"] and mods["bobelectronics"]) and {"gilded-copper-cable", 4} or {"copper-cable",8},
       mods["angelsmelting"] and {"angels-plate-glass", 4} or {"plastic-bar",8},
     },
-    results = {{type="item", name=clowns.triggers.angels_tech and "datacore-enhance-1" or "utility-science-pack", amount=4}}
+    results = {{type="item", name=clowns.trigger.angels_tech and "datacore-enhance-1" or "utility-science-pack", amount=4}}
   },
   {
     type = "recipe",
@@ -263,7 +263,7 @@ end
       mods["bobplates"] and {"copper-tungsten-alloy", 3} or {"steel-plate",6},
       mods["angelsmelting"] and {"angels-plate-cobalt", 1} or {"accumulator",1}, 
     },
-    results = {{type="item", name=clowns.triggers.angels_tech and "datacore-enhance-1" or "utility-science-pack", amount=4}}
+    results = {{type="item", name=clowns.trigger.angels_tech and "datacore-enhance-1" or "utility-science-pack", amount=4}}
   },
 }
 )]]

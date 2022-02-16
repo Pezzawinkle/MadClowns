@@ -1,5 +1,5 @@
 -- DECLARE PACK ICONS HERE INSTEAD OF OVERRIDING LATER
-local ctrig=clowns.triggers
+local ctrig = clowns.trigger
 
 clowns.tables.science_icons = {
   ["automation"] = ctrig.angels_tech and {icon = "__angelsindustries__/graphics/icons/datacore-basic.png", icon_size =  32} or

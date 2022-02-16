@@ -1,4 +1,4 @@
-local ctrig = clowns.triggers
+local ctrig = clowns.trigger
 if mods["angelspetrochem"] then --i may also activate these with pyanodons
 	data:extend(
 {

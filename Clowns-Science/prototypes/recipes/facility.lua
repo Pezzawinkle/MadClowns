@@ -25,7 +25,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			{
 				{type="fluid", name="liquid-nitric-acid", amount=gas_param},
 			},
-			result = clowns.triggers.angels_tech and "datacore-enhance-1" or "advanced-logistic-science-pack"
+			result = clowns.trigger.angels_tech and "datacore-enhance-1" or "advanced-logistic-science-pack"
 		}
 	}
 	)
@@ -70,7 +70,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 				{type="fluid", name="gas-oxygen", amount=gas_param},
 				{type="fluid", name="gas-carbon-dioxide", amount=gas_param}
 			},
-			result = clowns.triggers.angels_tech and "datacore-basic" or "automation-science-pack"
+			result = clowns.trigger.angels_tech and "datacore-basic" or "automation-science-pack"
 		},
 
 		{
@@ -87,7 +87,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 				{type="fluid", name="gas-chlorine", amount=gas_param},
 				{type="fluid", name="gas-carbon-dioxide", amount=gas_param}
 			},
-			result = clowns.triggers.angels_tech and "datacore-logistic-1" or "logistic-science-pack"
+			result = clowns.trigger.angels_tech and "datacore-logistic-1" or "logistic-science-pack"
 		},
 		{
 			type = "recipe",
@@ -103,7 +103,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 				{type="fluid", name="gas-ammonia", amount=gas_param},
 				{type="fluid", name="gas-carbon-monoxide", amount=gas_param}
 			},
-			result = clowns.triggers.angels_tech and "datacore-energy-1" or "chemical-science-pack"
+			result = clowns.trigger.angels_tech and "datacore-energy-1" or "chemical-science-pack"
 		},
 		{
 			type = "recipe",
@@ -119,7 +119,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 				{type="fluid", name="liquid-sulfuric-acid", amount=gas_param},
 				{type="fluid", name="gas-carbon-monoxide", amount=gas_param}
 			},
-			result = clowns.triggers.angels_tech and "datacore-war-1" or "military-science-pack"
+			result = clowns.trigger.angels_tech and "datacore-war-1" or "military-science-pack"
 		},
 		{
 			type = "recipe",
@@ -134,7 +134,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			{
 				{type="fluid", name="gas-methanol", amount=gas_param},
 			},
-			result = clowns.triggers.angels_tech and "datacore-processing-1" or "production-science-pack"
+			result = clowns.trigger.angels_tech and "datacore-processing-1" or "production-science-pack"
 		},
 		{
 			type = "recipe",
@@ -149,7 +149,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			{
 				{type="fluid", name="liquid-hydrofluoric-acid", amount=gas_param},
 			},
-			result = clowns.triggers.angels_tech and "datacore-enhance-1" or "utility-science-pack"
+			result = clowns.trigger.angels_tech and "datacore-enhance-1" or "utility-science-pack"
 		},
 	}
 	)
