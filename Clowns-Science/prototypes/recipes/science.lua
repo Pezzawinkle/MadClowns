@@ -16,6 +16,7 @@ for time,name in pairs({"automation","logistic","military","chemical","productio
       table.insert(recipe_list,{
         type = "recipe",
         name = name.."-science-pack-alt"..i,
+        category = "crafting",
         enabled = (name == "automation") and true or false,
         energy_required = (time+4) * (vals.result_count or 1),
         subgroup = name.."-science-pack",
