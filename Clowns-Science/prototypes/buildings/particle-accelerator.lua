@@ -3,17 +3,17 @@ if mods["Clowns-Processing"] and mods["Clowns-Extended-Minerals"] then
 	{
 		{"processing-unit", 100},
 		{"steel-plate", 100},
-		{"cobalt-plate", 100},
+		{mods["bobplates"] and "cobalt-plate" or (mods["angelsindustries"] and "angels-plate-cobalt" or "copper-plate"), 100},
 		{"pipe", 100},
 		{"stone-brick", 100}
 	}
 	recipe_2 =
 	{
 		{"particle-accelerator-mk1", 1},
-		{"advanced-processing-unit", 100},
+		{data.raw.item["advanced-processing-unit"] and "advanced-processing-unit" or "processing-unit", 100},
 		{"clowns-plate-osmium", 100},
-		{"titanium-bearing", 100},
-		{"titanium-pipe", 100},
+		{data.raw.item["titanium-bearing"] and "titanium-bearing" or "iron-stick", 100},
+		{data.raw.item["titanium-pipe"] and "titanium-pipe" or "iron-gear-wheel", 100},
 		{"stone-brick", 100}
 	}
 else

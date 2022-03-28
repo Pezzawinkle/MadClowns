@@ -130,3 +130,16 @@ function clowns.functions.get_pack_name(name) -- map angels cores
     return name.."-science-pack"
   end
 end
+function clowns.functions.recipe_unlocked(name)
+  local tech_unlocked = true
+  if data.raw.recipe[name.."-science-pack"] then
+    if data.raw.recipe[name.."-science-pack"].enabled then
+      log("regular"..data.raw.recipe[name.."-science-pack"].enabled)
+      tech_unlocked = data.raw.recipe[name.."-science-pack"].enabled --false
+    elseif data.raw.recipe[name.."-science-pack"].normal then
+      log(data.raw.recipe[name.."-science-pack"].normal.enabled)
+      tech_unlocked = data.raw.recipe[name.."-science-pack"].normal.enabled --false
+    end
+  end
+  return tech_unlocked
+end
