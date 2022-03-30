@@ -55,6 +55,8 @@ if data.raw.recipe["advanced-logistic-science-pack"] then
   end
   if mods["angelssmelting"] and angelsmods.trigger.smelting_products then
     angelsmods.trigger.smelting_products["chrome"].plate = true --in case it does not already trigger
+		angelsmods.trigger.smelting_products["cobalt"].plate = true
+		angelsmods.trigger.smelting_products["manganese"].plate = true
   end
 end
 if data.raw.tool["token-bio"] then
