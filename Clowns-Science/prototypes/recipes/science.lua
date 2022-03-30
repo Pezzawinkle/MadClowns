@@ -17,6 +17,7 @@ for time,name in pairs({"automation","logistic","military","chemical","productio
         type = "recipe",
         name = name.."-science-pack-alt"..i,
         enabled = tech_unlocked,
+        category = "crafting",
         energy_required = (time + 4) * (vals.result_count or 1),
         subgroup = name.."-science-pack",
         icons = angelsmods.functions.add_number_icon_layer({icons[name]}, i+1 , clowns.icon_tint),
