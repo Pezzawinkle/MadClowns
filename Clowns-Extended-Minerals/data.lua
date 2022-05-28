@@ -82,11 +82,11 @@ if mods["angelsinfiniteores"] and settings.startup["angels-enable-acids"].value 
 		data.raw["resource"]["infinite-clowns-ore1"].minable.fluid_amount = 10
 		data.raw["resource"]["infinite-clowns-ore1"].minable.required_fluid = ore1fluid
 	end
-	if settings.startup["enableinfiniteclownsore2"].value then
+	if settings.startup["enableinfiniteclownsore2"].value and not clowns.special_vanilla then
 		data.raw["resource"]["infinite-clowns-ore2"].minable.fluid_amount = 10
 		data.raw["resource"]["infinite-clowns-ore2"].minable.required_fluid = ore2fluid
 	end
-	if settings.startup["enableinfiniteclownsore3"].value then
+	if settings.startup["enableinfiniteclownsore3"].value and not clowns.special_vanilla then
 		data.raw["resource"]["infinite-clowns-ore3"].minable.fluid_amount = 10
 		data.raw["resource"]["infinite-clowns-ore3"].minable.required_fluid = ore3fluid
 	end
@@ -98,7 +98,7 @@ if mods["angelsinfiniteores"] and settings.startup["angels-enable-acids"].value 
 		data.raw["resource"]["infinite-clowns-ore5"].minable.fluid_amount = 10
 		data.raw["resource"]["infinite-clowns-ore5"].minable.required_fluid = ore5fluid
 	end
-	if settings.startup["enableinfiniteclownsore6"].value then
+	if settings.startup["enableinfiniteclownsore6"].value and not clowns.special_vanilla then
 		data.raw["resource"]["infinite-clowns-ore6"].minable.fluid_amount = 10
 		data.raw["resource"]["infinite-clowns-ore6"].minable.required_fluid = ore6fluid
 	end
@@ -106,11 +106,11 @@ if mods["angelsinfiniteores"] and settings.startup["angels-enable-acids"].value 
 		data.raw["resource"]["infinite-clowns-ore7"].minable.fluid_amount = 10
 		data.raw["resource"]["infinite-clowns-ore7"].minable.required_fluid = ore7fluid
   end
-  if settings.startup["enableinfiniteclownsore8"].value then
+  if settings.startup["enableinfiniteclownsore8"].value and not clowns.special_vanilla then
 		data.raw["resource"]["infinite-clowns-ore8"].minable.fluid_amount = 10
 		data.raw["resource"]["infinite-clowns-ore8"].minable.required_fluid = ore8fluid
   end
-  if settings.startup["enableinfiniteclownsore9"].value then
+  if settings.startup["enableinfiniteclownsore9"].value and not clowns.special_vanilla then
 		data.raw["resource"]["infinite-clowns-ore9"].minable.fluid_amount = 10
 		data.raw["resource"]["infinite-clowns-ore9"].minable.required_fluid = ore9fluid
 	end
