@@ -372,9 +372,21 @@ data:extend(
       flow_color = {r = 0.71, g = 0.816, b = 0},
       max_temperature = 100,
     },
-    --Osmium Bullets
+    
   }
 )
+
+local function getIndex(tab, val)
+    local index = nil
+    for i, v in ipairs (tab) do 
+        if (v.id == val) then
+          index = i 
+        end
+    end
+    return index
+end
+
+--Osmium Bullets
 osmiumbullet=table.deepcopy(data.raw.ammo["uranium-rounds-magazine"])
 osmiumbullet.name="osmium-rounds-magazine"
 if osmiumbullet.ammo_type.action and osmiumbullet.ammo_type.action.action_delivery then
@@ -384,7 +396,10 @@ else
   table.insert(osmiumbullet.ammo_type.action,{action_delivery={target_effects={{damage = {amount = 20, type = "physical"}},{type = "damage", damage = { amount = 6, type = "explosion"}}}}})
 end
 osmiumbullet.order = "a[basic-clips]-d[osmium-rounds-magazine]"
-osmiumbullet.icon = nil
+
+local idx = getIndex(osmiumbullet, icon) -- id = icon found at idx = __
+table.remove(osmiumbullet, idx) -- remove Table[__] and shift remaining entries
+
 osmiumbullet.icons = {
   {icon = "__Clowns-Processing__/graphics/icons/osmium-rounds-magazine.png", icon_size = 64, icon_mipmaps = 4--[[, tint = {95,56,75}]]}
 }
