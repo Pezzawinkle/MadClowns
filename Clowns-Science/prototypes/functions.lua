@@ -133,12 +133,18 @@ end
 function clowns.functions.recipe_unlocked(name)
   local tech_unlocked = true
   if data.raw.recipe[name.."-science-pack"] then
-    if data.raw.recipe[name.."-science-pack"].enabled then
-      log("regular"..(tostring(data.raw.recipe[name.."-science-pack"].enabled) or "true"))
-      tech_unlocked = data.raw.recipe[name.."-science-pack"].enabled --false
-    elseif data.raw.recipe[name.."-science-pack"].normal then
-      log(tostring(data.raw.recipe[name.."-science-pack"].normal.enabled))
-      tech_unlocked = data.raw.recipe[name.."-science-pack"].normal.enabled --false
+    local recipe = data.raw.recipe[name.."-science-pack"]
+    if recipe.enabled ~= nil then
+      --log("regular"..(tostring(recipe.enabled) or "true"))
+      tech_unlocked = recipe.enabled --false
+    end
+    if recipe.normal ~= nil then
+      --log("normal"..(tostring(recipe.normal.enabled) or "true"))
+      tech_unlocked = recipe.normal.enabled --false
+    end
+    if recipe.expensive ~= nil then
+      --log("expensive"..(tostring(recipe.expensive.enabled) or "true"))
+      tech_unlocked = recipe.expensive.enabled --false
     end
   end
   return tech_unlocked
