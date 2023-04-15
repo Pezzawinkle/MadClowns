@@ -270,7 +270,7 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
         {
           enabled = false,
           energy_required = 1.5,
-          ingredients = {{type = "item", name = ore.."-chunk", amount = 5}},
+          ingredients = {{type = "item", name = ore.."-chunk", amount = 6}},
           results= {{type = "item", name = "slag", amount = 1},}
         },
         expensive =
