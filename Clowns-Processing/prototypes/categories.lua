@@ -191,6 +191,12 @@ data:extend(
 	},
 	{
 		type = "item-subgroup",
+		name = "bio-processing-violet",
+		group = "bio-processing-nauvis",
+		order = "d-a", --should be after blue algae
+	},
+	{
+		type = "item-subgroup",
 		name = "clowns-depleted-uranium",
 		group = "angels-smelting",
 		order = "ea",--Just after angels-copper (e)
