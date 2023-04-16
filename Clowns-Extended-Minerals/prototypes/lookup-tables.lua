@@ -191,13 +191,13 @@ clowns.tables.ore_combos = { --these are hidden when spec-vanilla is on anyway
     --[[Ni]]{"angels-ore8","clowns-ore2","clowns-ore4","clowns-ore8"},
     --[[Zn]]{"clowns-ore4","clowns-ore3","clowns-ore8","angels-ore2"},
     --[[Al]]{"angels-ore2","clowns-ore2","angels-ore4","clowns-ore5"},
-    --[[Co]]{"clowns-ore7","angels-ore8","angels-ore6","angels-ore3"},
+    --[[Ag]]{"angels-ore2","clowns-ore3","clowns-ore6","angels-ore9"},
     --[[Nx]]{"clowns-ore4","clowns-resource2","angels-ore2","angels-ore1"}, --py nexelit
     --[[Ny]]{"clowns-ore4","clowns-resource1","clowns-resource2","clowns-ore7"}, --py niobium
     --[[RE]]{"angels-ore4","clowns-ore1","clowns-ore7","clowns-resource2"} --py rare-earth-dust
   },
   [3] = --[[crystal mix]]{
-    --[[Ag]]{"angels-ore2","angels-ore4","clowns-ore3","clowns-ore6","angels-ore9"},
+    --[[Co]]{"clowns-ore7","angels-ore4","angels-ore8","angels-ore6","angels-ore3"},
     --[[Au]]{"angels-ore9","clowns-ore4","angels-ore3","angels-ore5","angels-ore4"},
     --[[Ti]]{"angels-ore5","clowns-ore9","clowns-ore1","angels-ore1","angels-ore3"},
     --[[U]] {"clowns-ore5","angels-ore3","angels-ore1","angels-ore4","angels-ore6"},
@@ -381,13 +381,13 @@ clowns.tables.chunk_mix_processing = {
   (not special_vanilla) and {type = "item", name = "nickel-ore", amount = 8},
   (not special_vanilla) and {type = "item", name = "zinc-ore", amount = 8},
   (not special_vanilla) and {type = "item", name = "bauxite-ore", amount = 8},
-  (not special_vanilla) and {type = "item", name = "cobalt-ore", amount = 8},
+  (not special_vanilla) and {type = "item", name = "silver-ore", amount = 8},
   {type = "item", name = "niobium-ore", amount = 8}, --these are temp placeholders, the base ores are not declared until data-updates
   {type = "item", name = "nexelit-ore", amount = 8},
   {type = "item", name = "rare-earth-dust", amount = 8}
 }
 clowns.tables.crystal_mix_processing = {
-  (not special_vanilla) and {type = "item", name = "silver-ore", amount = 7},
+  (not special_vanilla) and {type = "item", name = "cobalt-ore", amount = 7},
   (not special_vanilla) and {type = "item", name = "gold-ore", amount = 7},
   (not special_vanilla) and {type = "item", name = "rutile-ore", amount = 7},
   (not special_vanilla) and {type = "item", name = "uranium-ore", amount = 7},

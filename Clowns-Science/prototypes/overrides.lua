@@ -134,6 +134,8 @@ if mods["angelsmelting"] then
 	angelsmods.trigger.smelting_products["manganese"].plate = true
 	angelsmods.trigger.smelting_products["manganese"].ingot = true
 	angelsmods.trigger.ores["manganese"] = true
+	angelsmods.trigger.smelting_products["cobalt"].plate = true
+	angelsmods.trigger.smelting_products["cobalt"].ingot = true
 end
 --------------------------------------------------------------------------------------------------
 -- RECIPE ORDER CLEAN-UP
