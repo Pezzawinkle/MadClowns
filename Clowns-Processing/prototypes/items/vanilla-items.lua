@@ -105,7 +105,7 @@ data:extend(
     {
       type = "fluid",
       name = "liquid-mercury",
-      icons = angelsmods.functions.create_viscous_liquid_fluid_icon({icon="__Clowns-Processing__/graphics/icons/numbers/Hg.png", icon_size=32, icon_mipmaps=2},
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon({icon="__Clowns-Processing__/graphics/icons/Numbers/Hg.png", icon_size=32, icon_mipmaps=2},
       { { 184, 184, 208 },{ 184, 184, 208 },{ 184, 184, 208 } }),--"__Clowns-Processing__/graphics/icons/liquid-mercury.png",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
