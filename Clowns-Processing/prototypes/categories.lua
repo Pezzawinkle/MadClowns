@@ -192,7 +192,7 @@ data:extend(
 	{
 		type = "item-subgroup",
 		name = "bio-processing-violet",
-		group = "bio-processing-nauvis",
+		group = mods["angelsbioprocessing"] and "bio-processing-nauvis" or "resource-refining",
 		order = "d-a", --should be after blue algae
 	},
 	{
