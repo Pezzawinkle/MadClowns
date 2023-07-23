@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.5
+Date: 2023-07-23
+  Bugfixes:
+    - Added updates to be compatible with SCT
+      - Graphics location updates
+      - Removed alt regular recipes due to being too cheap (let me know if this is an issue)
+---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 2023-04-16
   Bugfixes:
@@ -68,7 +75,7 @@ Version: 1.0.23
     - Enabled angels Chrome (if not already active) when played with angels and bobtech
       - NOTE that this may inadvertantly activate unused angels ores as a side-effect, ill look at fixing this in the future
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.21
+Version: 1.0.22
   Features:
     - Prepared for updates to angels industries
     - Updated the particle accelerator to angels data-analysers if angels tech is active
