@@ -151,22 +151,24 @@ end
 -----------------------------------------
 -- SCT recipe category fix
 -----------------------------------------
-local group = {
-	["automation"]="sciencepack-1",
-	["sct-bio"]="bio-science-pack",
-	["logistic"]="sciencepack-2",
-	["chemical"]="sciencepack-3",
-	["military"]="sciencepack-mil",
-	["production"]="sciencepack-prod",
-	["utility"]="sciencepack-hightech"
-}
-for pack, gp in pairs(group) do
-	if data.raw.recipe[pack.."-science-pack-facility"] then
-		data.raw.recipe[pack.."-science-pack-facility"].subgroup="sct-"..gp
-	end
-	for i = 1,4 do
-		if data.raw.recipe[pack.."-science-pack-alt"..i] then
-		 data.raw.recipe[pack.."-science-pack-alt"..i].subgroup="sct-"..gp
+if mods["ScienceCostTweakerM"] then
+	local group = {
+		["automation"]="sciencepack-1",
+		["sct-bio"]="bio-science-pack",
+		["logistic"]="sciencepack-2",
+		["chemical"]="sciencepack-3",
+		["military"]="sciencepack-mil",
+		["production"]="sciencepack-prod",
+		["utility"]="sciencepack-hightech"
+	}
+	for pack, gp in pairs(group) do
+		if data.raw.recipe[pack.."-science-pack-facility"] then
+			data.raw.recipe[pack.."-science-pack-facility"].subgroup="sct-"..gp
+		end
+		for i = 1,4 do
+			if data.raw.recipe[pack.."-science-pack-alt"..i] then
+			 data.raw.recipe[pack.."-science-pack-alt"..i].subgroup="sct-"..gp
+			end
 		end
 	end
 end
