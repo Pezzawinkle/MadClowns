@@ -130,7 +130,7 @@ end
 -----------------------------------------
 -- enable recipes from angels
 -----------------------------------------
-if mods["angelsmelting"] then
+if mods["angelssmelting"] then
 	angelsmods.trigger.smelting_products["manganese"].plate = true
 	angelsmods.trigger.smelting_products["manganese"].ingot = true
 	angelsmods.trigger.ores["manganese"] = true
