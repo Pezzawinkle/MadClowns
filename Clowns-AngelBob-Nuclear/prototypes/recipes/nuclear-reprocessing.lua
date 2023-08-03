@@ -73,10 +73,7 @@ data:extend(
 	},
 })
 if data.raw.item["thorium-fuel-cell"] or data.raw.item["angels-thorium-fuel-cell"] then
-	local ucell = "used-up-thorium-fuel-cell"
-	if angelsmods.industries and angelsmods.industries.overhaul then
-		ucell = "used-up-angels-thorium-fuel-cell"
-	end
+	local ucell = data.raw.item["thorium-fuel-cell"] and "used-up-thorium-fuel-cell" or data.raw.item["angels-thorium-fuel-cell"] and "used-up-angels-thorium-fuel-cell"
 data:extend(
 {
 	{
@@ -97,13 +94,13 @@ data:extend(
 		subgroup = "clowns-nuclear-cells",
 		order = "c-a-b",
 		results =
-    { -- A direct copy of bobs recipe, it is better balanced
-      {type="item", name="thorium-232", amount=3},
-      {type="item", name="plutonium-239", amount=1},
-      --{type="item", name="lead-plate", amount=5},
-      {type="item", name="thorium-232", amount=1, probability=0.05},
-      {type="item", name="plutonium-239", amount=1, probability=0.1},
-    },
+		{ -- A direct copy of bobs recipe, it is better balanced
+			{type="item", name="thorium-232", amount=3},
+			{type="item", name="plutonium-239", amount=1},
+			--{type="item", name="lead-plate", amount=5},
+			{type="item", name="thorium-232", amount=1, probability=0.05},
+			{type="item", name="plutonium-239", amount=1, probability=0.1},
+		},
 	},
 	{
 		type = "recipe",
@@ -113,7 +110,7 @@ data:extend(
 		category = "chemistry",
 		ingredients =
 		{
-			{type="item", name="used-up-thorium-fuel-cell", amount=5},
+			{type="item", name=ucell, amount=5},
 			{type="fluid", name="liquid-nitric-acid", amount=300}--20 (matching the waste liq)
 		},
 		icons= {{icon = "__Clowns-Nuclear__/graphics/icons/thorium-nuclear-fuel-reprocessing.png", icon_size = 32,}},
@@ -136,7 +133,7 @@ data:extend(
 		category = "chemistry",
 		ingredients =
 		{
-			{type="item", name="used-up-thorium-fuel-cell", amount=5},
+			{type="item", name=ucell, amount=5},
 			{type="fluid", name="liquid-nitric-acid", amount=150}--making this path lower than the other one, to give options, may need balance
 		},
 		icons= {{icon = "__Clowns-Nuclear__/graphics/icons/thorium-nuclear-fuel-reprocessing.png", icon_size = 32,}},
