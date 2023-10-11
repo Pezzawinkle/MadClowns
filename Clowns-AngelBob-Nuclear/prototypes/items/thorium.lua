@@ -1,6 +1,6 @@
 
 if angelsmods.trigger.ores["thorium"] == true then
-	if not (mods["bobores"] or mods["bobplates"] or mods["angels-industries"]) and data.raw.item["thorium-ore"] then
+	if not (mods["bobores"] or mods["bobplates"] or mods["angelsindustries"]) and data.raw.item["thorium-ore"] then
 		data:extend(
 		{ -- thorium fuel cell
 			{

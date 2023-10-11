@@ -3,7 +3,7 @@ local OV = angelsmods.functions.OV
 local n_plate="iron-plate"
 if mods["bobplates"] then
   n_plate="lead-plate"
-elseif mods["angels-industries"] and angelsmods.industries.overhaul then
+elseif mods["angelsindustries"] and angelsmods.industries.overhaul then
   n_plate="angels-plate-lead" --should only activate if not with bobs
 end
 --hide advanced uranium processing, as it is integrated into the normal cycle

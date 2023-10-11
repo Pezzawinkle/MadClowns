@@ -348,7 +348,7 @@ end
 if mods["angelsrefining"] then
   update_tab("production_3", 2, {"ore-crusher", 2})
 end
-if mods["angelsmelting"] then
+if mods["angelssmelting"] then
   update_tab("production_2", 1, {"angels-plate-manganese", 1})
   update_tab("production_1", 3, {"blast-furnace", 1})
   update_tab("production_3", 1, {"blast-furnace-2", 1})
