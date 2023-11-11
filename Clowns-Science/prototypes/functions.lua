@@ -1,6 +1,6 @@
 if not mods["angelsrefining"] then --use angels function if available, if not, use this version
-  angelsmods={}
-  angelsmods.functions={}
+  angelsmods = angelsmods or {}
+  angelsmods.functions = angelsmods.functions or {}
  --taken directly from angels refining library, tweaked to run independantly, original author of code is Lovely_santa
 
  local function unify_tint(tint)
