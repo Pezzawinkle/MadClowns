@@ -32,7 +32,7 @@ end
 if angelsmods.trigger.smelting_products["titanium"].plate then
   table.insert(unlock_lists,{"angels-titanium-smelting-2","sponge-magnesium-titanium-smelting"})
   table.insert(unlock_lists,{"angels-titanium-smelting-3","pellet-magnesium-titanium-smelting"})
-  OV.add_prereq("angels-titanium-smelting-2", "sodium-processing")
+  OV.add_prereq("angels-titanium-smelting-2", "sodium-processing-1")
 end
 if data.raw.recipe["molten-steel-smelting-c2"] then
   table.insert(unlock_lists,{"angels-steel-smelting-2","molten-steel-smelting-c2"})
