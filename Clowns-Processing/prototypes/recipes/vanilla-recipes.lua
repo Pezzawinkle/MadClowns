@@ -1,45 +1,57 @@
 local intermediatemulti = angelsmods.marathon.intermediatemulti
 
+if mods["angelsbioprocessing"] then
+  data:extend(
+  {
+    --------------
+    -- MILITARY --
+    --------------
+    --neurotixin-capsule
+    {
+      type = "recipe",
+      name = "neurotoxin-capsule",
+      category = "chemistry",
+      enabled = false,
+      energy_required = 4,
+      ingredients =
+      {
+        {type = "fluid", name = "liquid-dimethylmercury", amount = 100},
+        {type = "item", name = "steel-plate", amount = 2},
+        {type = "item", name = "plastic-bar", amount = 5},
+        {type = "item", name = "processing-unit", amount = 2},
+      },
+      results=
+      {
+        {type = "item", name = "neurotoxin-capsule", amount = 1},
+      },
+      icon_size = 32,
+    },
+  }
+  )
+end
+if angelsmods.trigger.smelting_products["lead"].plate == true then
+  data:extend(
+  {
+    --alternative basic ammo
+    {
+      type = "recipe",
+      name = "copper-nickel-firearm-magazine",
+      energy_required = 1,
+      ingredients = 
+      {
+        {type = "item", name = "copper-plate", amount = 3},
+        {type = "item", name = "angels-plate-lead", amount = 2}
+      },
+      results =
+      {
+        {type = "item", name = "firearm-magazine", amount =  1}
+      }
+    },
+  }
+  )
+end
 data:extend(
 {
-  --------------
-  -- MILITARY --
-  --------------
-  --neurotixin-capsule
-  {
-    type = "recipe",
-    name = "neurotoxin-capsule",
-    category = "chemistry",
-    enabled = false,
-    energy_required = 4,
-    ingredients =
-    {
-      {type = "fluid", name = "liquid-dimethylmercury", amount = 100},
-      {type = "item", name = "steel-plate", amount = 2},
-      {type = "item", name = "plastic-bar", amount = 5},
-      {type = "item", name = "processing-unit", amount = 2},
-    },
-    results=
-    {
-      {type = "item", name = "neurotoxin-capsule", amount = 1},
-    },
-    icon_size = 32,
-  },
-  --alternative basic ammo
-  {
-    type = "recipe",
-    name = "copper-nickel-firearm-magazine",
-    energy_required = 1,
-    ingredients = 
-    {
-      {type = "item", name = "copper-plate", amount = 3},
-      {type = "item", name = "angels-plate-lead", amount = 2}
-    },
-    results =
-    {
-      {type = "item", name = "firearm-magazine", amount =  1}
-    }
-  },
   ---------------------------------
   -- DEPLETED URANIUM PROCESSING --
   ---------------------------------
@@ -47,7 +59,7 @@ data:extend(
   {
     type = "recipe",
     name = "depleted-uranium-ore-processing",
-    category = "ore-processing",
+    category = "ore-processing-3",
     subgroup = "clowns-depleted-uranium",
     energy_required = 2,
     enabled = false,
@@ -65,7 +77,7 @@ data:extend(
   {
     type = "recipe",
     name = "depleted-uranium-processed-processing",
-    category = "pellet-pressing",
+    category = "pellet-pressing-2",
     subgroup = "clowns-depleted-uranium",
     energy_required = 2,
     enabled = false,
@@ -83,7 +95,7 @@ data:extend(
   {
     type = "recipe",
     name = "depleted-uranium-pellet-smelting",
-    category = "blast-smelting",
+    category = "blast-smelting-4",
     subgroup = "clowns-depleted-uranium",
     energy_required = 4,
     enabled = false,
@@ -101,7 +113,7 @@ data:extend(
   {
     type = "recipe",
     name = "casting-powder-depleted-uranium-1",
-    category = "powder-mixing",
+    category = "powder-mixing-3",
     subgroup = "clowns-depleted-uranium-casting",
     energy_required = 4,
     enabled = false,
@@ -120,7 +132,7 @@ data:extend(
   {
     type = "recipe",
     name = "casting-powder-depleted-uranium-2",
-    category = "powder-mixing",
+    category = "powder-mixing-4",
     subgroup = "clowns-depleted-uranium-casting",
     energy_required = 4,
     enabled = false,
@@ -139,7 +151,7 @@ data:extend(
   {
     type = "recipe",
     name = "casting-powder-depleted-uranium-3",
-    category = "powder-mixing",
+    category = "powder-mixing-4",
     subgroup = "clowns-depleted-uranium-casting",
     energy_required = 4,
     enabled = false,
@@ -158,7 +170,7 @@ data:extend(
   {
     type = "recipe",
     name = "casting-powder-depleted-uranium-4",
-    category = "powder-mixing",
+    category = "powder-mixing-4",
     subgroup = "clowns-depleted-uranium-casting",
     energy_required = 4,
     enabled = false,
@@ -179,7 +191,7 @@ data:extend(
   {
     type = "recipe",
     name = "clowns-plate-depleted-uranium",
-    category = "sintering",
+    category = "sintering-4",
     subgroup = "clowns-depleted-uranium-casting",
     normal =
     {
@@ -217,7 +229,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "magnesium-ore-processing",
-		category = "ore-processing",
+		category = "ore-processing-3",
 		subgroup = "clowns-magnesium",
 		energy_required = 2,
 		enabled = false,
@@ -235,7 +247,7 @@ data:extend(
   {
 		type = "recipe",
 		name = "magnesium-processed-processing",
-		category = "pellet-pressing",
+		category = "pellet-pressing-2",
 		subgroup = "clowns-magnesium",
 		energy_required = 2,
 		enabled = false,
@@ -253,7 +265,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "magnesium-pellet-smelting",
-		category = "blast-smelting",
+		category = "blast-smelting-4",
 		subgroup = "clowns-magnesium",
 		energy_required = 4,
 		enabled = false,
@@ -277,7 +289,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "molten-magnesium-smelting",
-		category = "induction-smelting",
+		category = "induction-smelting-4",
 		subgroup = "clowns-magnesium-casting",
 		energy_required = 4,
 		enabled = false,
@@ -296,7 +308,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "clowns-plate-magnesium",
-		category = "casting",
+		category = "casting-4",
 		subgroup = "clowns-magnesium-casting",
 		normal =
 		{
@@ -331,52 +343,62 @@ data:extend(
   -- MERCURY PROCESSING --
   -------------------------
   --Mercury from thermal
-	{
-		type = "recipe",
-		name = "thermal-filtering-mercury",
-		category = "water-treatment",
-		subgroup = "water-treatment",
-		enabled = false,
-		energy_required = 1,
-		ingredients =
-		{
-		  {type = "fluid", name = "thermal-water", amount = 100}
-		},
-		results =
-		{
-		  {type = "fluid", name = "liquid-mercury", amount = 40},
-		  {type = "fluid", name = "water-purified", amount = 60},
-		},
-		icons = angelsmods.functions.create_liquid_recipe_icon({
-			"water-purified",
-			"liquid-mercury",
-		}, {{238,113,22},{203,99,15},{167,78,13}}),
-		order = "h"
-	},
-	--dimethyl
-	{
-		type = "recipe",
-		name = "dimethylmercury-synthesis",
-		category = "chemistry",
-		subgroup = "petrochem-chlorine",
-		enabled = false,
-		energy_required = 10,
-		ingredients =
-		{
-			{type = "fluid", name = "liquid-mercury", amount = 10},
-			{type = "fluid", name = "gas-chlor-methane", amount = 20},
-			{type = "item", name = "solid-sodium", amount = 2},
-		},
-		results =
-		{
-			{type = "fluid", name = "liquid-dimethylmercury", amount = 10},
-			{type = "item", name = "solid-salt", amount = 2},
-		},
-		icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
-      {"solid-salt"},
-      {{ 118, 141, 138 },{ 94, 113, 110 },{ 94, 113, 110 }}),
-		order = "z"
+  {
+    type = "recipe",
+    name = "thermal-filtering-mercury",
+    category = "water-treatment",
+    subgroup = "water-treatment",
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {type = "fluid", name = "thermal-water", amount = 100}
+    },
+    results =
+    {
+      {type = "fluid", name = "liquid-mercury", amount = 40},
+      {type = "fluid", name = "water-purified", amount = 60},
+    },
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      "water-purified",
+      "liquid-mercury",
+    }, {{238,113,22},{203,99,15},{167,78,13}}),
+    order = "h"
   },
+}
+)
+if mods["angelsbioprocessing"] then
+  data:extend(
+  {
+    --dimethyl
+    {
+      type = "recipe",
+      name = "dimethylmercury-synthesis",
+      category = "chemistry",
+      subgroup = "petrochem-chlorine",
+      enabled = false,
+      energy_required = 10,
+      ingredients =
+      {
+        {type = "fluid", name = "liquid-mercury", amount = 10},
+        {type = "fluid", name = "gas-chlor-methane", amount = 20},
+        {type = "item", name = "solid-sodium", amount = 2},
+      },
+      results =
+      {
+        {type = "fluid", name = "liquid-dimethylmercury", amount = 10},
+        {type = "item", name = "solid-salt", amount = 2},
+      },
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+        {"solid-salt"},
+        {{ 118, 141, 138 },{ 94, 113, 110 },{ 94, 113, 110 }}),
+      order = "z"
+    },
+  }
+  )
+end
+data:extend(
+{
   -------------------------
   -- OSMIUM PROCESSING --
   -------------------------
@@ -458,7 +480,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "clowns-plate-osmium",
-		category = "sintering",
+		category = "sintering-4",
 		subgroup = "clowns-osmium-casting",
 		normal =
 		{
@@ -576,7 +598,7 @@ data:extend(
     name = "white-phosphorus-smelting-2",
     icon = "__Clowns-Processing__/graphics/icons/solid-white-phosphorus.png",
     icon_size = 32,
-    category = "chemical-smelting",
+    category = "chemical-smelting-2",
     subgroup = "clowns-phosphorus",
     order = "a",
     energy_required = 10,
@@ -711,7 +733,7 @@ data:extend(
 		name = "solid-uranium-oxide-1",
 		icon = "__Clowns-Processing__/graphics/icons/solid-uranium-oxide.png",
 		icon_size = 32,
-		category = "chemical-smelting",
+		category = "chemical-smelting-3",
 		subgroup = "clowns-uranium",
 		order = "c",
 		energy_required = 10,
@@ -735,7 +757,7 @@ data:extend(
 		name = "solid-uranium-oxide-2",
 		icon = "__Clowns-Processing__/graphics/icons/solid-uranium-oxide.png",
 		icon_size = 32,
-		category = "chemical-smelting",
+		category = "chemical-smelting-4",
 		subgroup = "clowns-uranium",
 		order = "d",
 		energy_required = 10,

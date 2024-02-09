@@ -29,7 +29,7 @@ if mods["angelsbioprocessing"] then
 	{
 		type = "recipe",
 		name = "algae-violet",
-		category = "bio-processing",
+		category = "bio-processing-4",
 		subgroup = "bio-processing-violet",
 		enabled = false,
 		energy_required = 20,

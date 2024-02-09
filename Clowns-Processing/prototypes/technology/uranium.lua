@@ -24,7 +24,7 @@ data:extend(
 				recipe = "solid-uranium-oxide-1"
 			},
 		},
-		prerequisites = {"nuclear-power", "angels-advanced-chemistry-4"},
+		prerequisites = {"nuclear-power", "angels-advanced-chemistry-4", "angels-metallurgy-4"},
 		unit =
 		{
 			ingredients =
@@ -32,7 +32,7 @@ data:extend(
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1},
-				{"utility-science-pack", 1}
+				{"production-science-pack", 1}
 			},
 			time = 30,
 			count = 100
@@ -60,7 +60,7 @@ data:extend(
 				recipe = "solid-uranyl-nitrate"
 			},
 		},
-		prerequisites = {"advanced-uranium-processing-1"},
+		prerequisites = {"advanced-uranium-processing-1", "angels-metallurgy-5"},
 		unit =
 		{
 			ingredients =
@@ -68,6 +68,7 @@ data:extend(
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1},
+        {"production-science-pack", 1},
 				{"utility-science-pack", 1}
 			},
 			time = 30,
