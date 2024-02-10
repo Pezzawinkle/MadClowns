@@ -412,12 +412,14 @@ data:extend(
 		enabled = false,
     ingredients =
     {
-      {type = "item", name = "osmium-ore", amount = 4}
+      {type = "item", name = "osmium-ore", amount = 4},
+      {type="item", name="solid-sodium-carbonate", amount=6},
     },
 		results =
 		{
 			{type = "item", name = "processed-osmium", amount = 2},
 		},
+    icons = angelsmods.functions.get_object_icons("processed-osmium"),
 		order = "a",
   },
   --pellet
@@ -430,7 +432,8 @@ data:extend(
 		enabled = false,
     ingredients =
     {
-      {type = "item", name = "processed-osmium", amount = 3}
+      {type = "item", name = "processed-osmium", amount = 3},
+      {type = "item", name = "solid-ammonium-perchlorate", amount = 6},
     },
 		results =
 		{
@@ -445,6 +448,7 @@ data:extend(
 		category = "blast-smelting",
 		subgroup = "clowns-osmium",
 		energy_required = 4,
+    localised_name = {"item-name.powder-osmium"},
 		enabled = false,
 		ingredients =
 		{
@@ -453,7 +457,9 @@ data:extend(
 		results =
 		{
 			{type = "item", name = "powder-osmium", amount = 24},
+			{type = "item", name = "solid-salt", amount = 6},
 		},
+    icons = angelsmods.functions.get_object_icons("powder-osmium"),
 		order = "d",
   },
 	--powder-mix
@@ -466,12 +472,13 @@ data:extend(
 		enabled = false,
 		ingredients =
 		{
-			{type = "item", name = "powder-osmium", amount = 12},
-			--{type="item", name="powder-platinum", amount=12},
+			{type = "item", name = "powder-osmium", amount = 8},
+      {type = "item", name = "solid-sodium-hydroxide", amount = 8},
 		},
 		results =
 		{
-			{type = "item", name = "casting-powder-osmium", amount = 12},
+			{type = "item", name = "casting-powder-osmium", amount = 16},
+      
 		},
 		icon_size = 32,
 		order = "a",

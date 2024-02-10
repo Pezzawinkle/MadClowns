@@ -2,14 +2,29 @@
 if not clowns then clowns={} end
 if not clowns.functions then clowns.functions={} end
 if not clowns.tables then clowns.tables ={} end
-angelsmods.trigger.smelting_products["aluminium"].powder = true
-angelsmods.trigger.ores["aluminium"] = true
-angelsmods.trigger.ores["gold"] = true
-angelsmods.trigger.ores["platinum"] = true
-angelsmods.trigger.ores["silver"] = true
-angelsmods.trigger.ores["titanium"] = true
-angelsmods.trigger.ores["tungsten"] = true
-angelsmods.trigger.refinery_products["rubyte"] = true
+--check vanilla settings
+clowns.special_vanilla = true --assume true, then find out if false 
+for ore_name, ore_enabled in pairs(angelsmods.trigger.ores or {}) do
+  if ore_enabled and ore_name ~= "iron" and ore_name ~= "copper" and ore_name ~= "uranium" then
+    clowns.special_vanilla = false
+  end
+end
+if mods["pyrawores"] then --force full mode
+  clowns.special_vanilla = false
+end
+if settings.startup["depleted-uranium"].value and not clowns.special_vanilla --[[=false]] then
+  angelsmods.trigger.smelting_products["enable-all"] = true -- to ensure we get the powder
+end
+if not clowns.special_vanilla--[[=false]] then
+  angelsmods.trigger.smelting_products["aluminium"].powder = true
+  angelsmods.trigger.ores["aluminium"] = true
+  angelsmods.trigger.ores["gold"] = true
+  angelsmods.trigger.ores["platinum"] = true
+  angelsmods.trigger.ores["silver"] = true
+  angelsmods.trigger.ores["titanium"] = true
+  angelsmods.trigger.ores["tungsten"] = true
+  --angelsmods.trigger.refinery_products["rubyte"] = true
+end
 angelsmods.trigger.sintering_tech = true
 angelsmods.trigger.early_chemical_furnace = true
 
