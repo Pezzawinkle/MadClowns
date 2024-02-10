@@ -10,7 +10,8 @@ if mods["angelsbioprocessing"] then
 				prerequisites =
 				{
 					"nuclear-power",
-					"gardens"
+					"gardens-3",
+          "utility-science-pack"
 				},
 				effects =
 				{
@@ -43,7 +44,12 @@ if mods["angelsbioprocessing"] then
 			},
 		}
 	)
-	local recipes={"desert-garden-generation","swamp-garden-generation","temperate-garden-generation"}
+	local recipes = {
+    "diammonium-phosphate-fertilizer",
+    "desert-garden-generation",
+    "swamp-garden-generation",
+    "temperate-garden-generation"
+  }
 	for _,rec in pairs(recipes) do
 		table.insert(data.raw["technology"]["bio-farm-2"].effects,{type = "unlock-recipe", recipe = rec})
 	end

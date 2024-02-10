@@ -28,7 +28,7 @@ data:extend(
 				recipe = "clowns-plate-magnesium"
 			},
 		},
-		prerequisites = {"powder-metallurgy-2", "ore-processing-2"},
+		prerequisites = {"ore-processing-3", "water-treatment-4"},
 		unit =
 		{
 			ingredients =
@@ -36,7 +36,7 @@ data:extend(
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1},
-				{"utility-science-pack", 1}
+				{"production-science-pack", 1}
 			},
 			time = 30,
 			count = 100

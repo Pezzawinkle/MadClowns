@@ -29,7 +29,7 @@ if settings.startup["depleted-uranium"].value then
 					recipe = "clowns-plate-depleted-uranium"
 				},
 			},
-			prerequisites = {"nuclear-power", "powder-metallurgy-1", "ore-processing-2"},
+			prerequisites = {"nuclear-power", "powder-metallurgy-4", "ore-processing-3"},
 			unit =
 			{
 				ingredients =
@@ -37,7 +37,7 @@ if settings.startup["depleted-uranium"].value then
 					{"automation-science-pack", 1},
 					{"logistic-science-pack", 1},
 					{"chemical-science-pack", 1},
-					{"utility-science-pack", 1}
+          {"production-science-pack", 1},
 				},
 				time = 30,
 				count = 100
@@ -64,7 +64,7 @@ if settings.startup["depleted-uranium"].value then
 					recipe = "casting-powder-depleted-uranium-4"
 				},
 			},
-			prerequisites = {"advanced-depleted-uranium-smelting-1", "advanced-osmium-smelting"},
+			prerequisites = {"advanced-depleted-uranium-smelting-1", "advanced-osmium-smelting", "powder-metallurgy-5", "angels-aluminium-smelting-2"},
 			unit =
 			{
 				ingredients =
@@ -72,6 +72,7 @@ if settings.startup["depleted-uranium"].value then
 					{"automation-science-pack", 1},
 					{"logistic-science-pack", 1},
 					{"chemical-science-pack", 1},
+          {"production-science-pack", 1},
 					{"utility-science-pack", 1}
 				},
 				time = 30,
