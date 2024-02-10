@@ -6,31 +6,39 @@ end]]--
 --REPLACE URANIUM-238 WITH DEPLETED URANIUM FOR MILITARY APPLICATIONS
 
 if settings.startup["depleted-uranium"].value then
-	if data.raw.recipe["shotgun-uranium-shell"] and data.raw.item["cordite"] then
-		data.raw.recipe["shotgun-uranium-shell"].ingredients =
+	angelsmods.functions.OV.patch_recipes({
 		{
-			{"shotgun-shell-casing", 1},
-			{"clowns-plate-depleted-uranium", 1},
-			{"cordite", 1}
-		}
-	end
-	if data.raw.recipe["uranium-bullet-projectile"] then
-		data.raw.recipe["uranium-bullet-projectile"].ingredients =
+			name = "uranium-rounds-magazine",
+			ingredients = {
+				{ name = "clowns-plate-depleted-uranium", amount = "uranium-238" },
+			},
+		},
 		{
-			{"copper-plate", 1},
-			{"clowns-plate-depleted-uranium", 1}
-		}
-	end
-	data.raw.recipe["uranium-cannon-shell"].ingredients =
-	{
-		{"cannon-shell", 1},
-		{"clowns-plate-depleted-uranium", 1}
-	}
-	data.raw.recipe["explosive-uranium-cannon-shell"].ingredients =
-	{
-		{"explosive-cannon-shell", 1},
-		{"clowns-plate-depleted-uranium", 1}
-	}
+			name = "uranium-bullet-projectile",
+			ingredients = {
+				{ name = "clowns-plate-depleted-uranium", amount = "uranium-238" },
+			},
+		},
+		{
+			name = "shotgun-uranium-shell",
+			ingredients = {
+				{ name = "clowns-plate-depleted-uranium", amount = "uranium-238" },
+			},
+		},
+		{
+			name = "uranium-cannon-shell",
+			ingredients = {
+				{ name = "clowns-plate-depleted-uranium", amount = "uranium-238" },
+			},
+		},
+		{
+			name = "explosive-uranium-cannon-shell",
+			ingredients = {
+				{ name = "clowns-plate-depleted-uranium", amount = "uranium-238" },
+			},
+		},
+
+	})
 end
 
 --OPTIONAL SPACEMOD CLEANUP
