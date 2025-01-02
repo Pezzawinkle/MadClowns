@@ -55,7 +55,7 @@ if data.raw.item["thorium-fuel-cell"] then
       ingredients =
       {
         {"iron-plate", 10},
-        {"55%-uranium", 1},
+        {"55pc-uranium", 1},
         {"thorium-232", 19},
       },
       result = "thorium-fuel-cell",

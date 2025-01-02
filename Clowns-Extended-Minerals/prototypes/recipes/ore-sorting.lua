@@ -71,9 +71,6 @@ end
 -- function to create localised descriptions for the regular sorting ores
 local create_basic_clowns_sorting_localisation = function(localised_base_name, sorting_tier_names, sorting_results, has_ore)
   -- extract the higher tier sorting results
-  --[[log(localised_base_name)
-  log(serpent.block(sorting_tier_names))
-  log(serpent.block(sorting_results))]]
   local higher_tiers_additional_results = {}
   local any_tier_results = {}
   local any_tier_results_present = {}
@@ -170,7 +167,6 @@ local create_basic_clowns_sorting_localisation = function(localised_base_name, s
         table.insert(refining, {"item-description.angels-ore-refining"}) --for raw ores, full refine title
       end
       for _, refining_localised_result in pairs(tier_localisation.refining) do
-        --log("2d")
         table.insert(refining, {"", {"item-description.loc-nl"}, localised_indentation}) --indent
         table.insert(refining, refining_localised_result)
       end

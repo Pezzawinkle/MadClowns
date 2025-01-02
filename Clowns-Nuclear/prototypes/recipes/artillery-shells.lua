@@ -8,8 +8,8 @@ if settings.startup["artillery-shells"].value == true then
 			energy_required = 50,
 			ingredients =
 			{
-				{"artillery-shell", 1},
-				{"atomic-bomb", 1}
+				{type="item",name="artillery-shell", amount=1},
+				{type="item",name="atomic-bomb",amount= 1}
 			},
 			result = "artillery-shell-nuclear"
 		},
@@ -21,8 +21,8 @@ if settings.startup["artillery-shells"].value == true then
 			energy_required = 50,
 			ingredients =
 			{
-				{"artillery-shell", 1},
-				{"thermonuclear-bomb", 1}
+				{type="item",name="artillery-shell", amount=1},
+				{type="item",name="thermonuclear-bomb",amount= 1}
 			},
 			result = "artillery-shell-thermonuclear"
 		},

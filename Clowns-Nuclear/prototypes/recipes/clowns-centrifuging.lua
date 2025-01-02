@@ -26,11 +26,11 @@ data:extend(
 	},
 	{
 		type = "recipe",
-		name = "clowns-centrifuging-80%",
+		name = "clowns-centrifuging-80pc",
 		energy_required = energy,
 		enabled = false,
 		category = "centrifuging",
-		ingredients = {{"75%-uranium", 5}},
+		ingredients = {{type="item",name="75pc-uranium", amount=5}},
 		icon = "__Clowns-Nuclear__/graphics/icons/8.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
@@ -40,18 +40,18 @@ data:extend(
 		results=
 		{
 			{type="item", name="uranium-235", amount=2},
-			{type="item", name="75%-uranium", amount=1},
+			{type="item", name="75pc-uranium", amount=1},
 			{type="item", name="uranium-238", amount=2}
 		},
 		allow_decomposition = false
 	},
 	{
 		type = "recipe",
-		name = "clowns-centrifuging-75%",
+		name = "clowns-centrifuging-75pc",
 		energy_required = energy,
 		enabled = false,
 		category = "centrifuging",
-		ingredients = {{"70%-uranium", 5}},
+		ingredients = {{type="item",name="70pc-uranium", amount=5}},
 		icon = "__Clowns-Nuclear__/graphics/icons/7.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
@@ -60,19 +60,19 @@ data:extend(
 		--main_product = "",
 		results=
 		{
-			{type="item", name="75%-uranium", amount=2},
-			{type="item", name="70%-uranium", amount=1},
+			{type="item", name="75pc-uranium", amount=2},
+			{type="item", name="70pc-uranium", amount=1},
 			{type="item", name="uranium-238", amount=2}
 		},
 		allow_decomposition = false
 	},
 	{
 		type = "recipe",
-		name = "clowns-centrifuging-70%",
+		name = "clowns-centrifuging-70pc",
 		energy_required = energy,
 		enabled = false,
 		category = "centrifuging",
-		ingredients = {{"65%-uranium", 5}},
+		ingredients = {{type="item",name="65pc-uranium", amount=5}},
 		icon = "__Clowns-Nuclear__/graphics/icons/6.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
@@ -81,19 +81,19 @@ data:extend(
 		--main_product = "",
 		results=
 		{
-			{type="item", name="70%-uranium", amount=2},
-			{type="item", name="65%-uranium", amount=1},
+			{type="item", name="70pc-uranium", amount=2},
+			{type="item", name="65pc-uranium", amount=1},
 			{type="item", name="uranium-238", amount=2}
 		},
 		allow_decomposition = false
 	},
 	{
 		type = "recipe",
-		name = "clowns-centrifuging-65%",
+		name = "clowns-centrifuging-65pc",
 		energy_required = energy,
 		enabled = false,
 		category = "centrifuging",
-		ingredients = {{"55%-uranium", 5}},
+		ingredients = {{type="item",name="55pc-uranium", amount=5}},
 		icon = "__Clowns-Nuclear__/graphics/icons/5.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
@@ -102,19 +102,19 @@ data:extend(
 		--main_product = "",
 		results=
 		{
-			{type="item", name="65%-uranium", amount=2},
-			{type="item", name="55%-uranium", amount=1},
+			{type="item", name="65pc-uranium", amount=2},
+			{type="item", name="55pc-uranium", amount=1},
 			{type="item", name="uranium-238", amount=2}
 		},
 		allow_decomposition = false
 	},
 	{
 		type = "recipe",
-		name = "clowns-centrifuging-55%",
+		name = "clowns-centrifuging-55pc",
 		energy_required = energy,
 		enabled = false,
 		category = "centrifuging",
-		ingredients = {{"45%-uranium", 5}},
+		ingredients = {{type="item",name="45pc-uranium", amount=5}},
 		icon = "__Clowns-Nuclear__/graphics/icons/4.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
@@ -123,19 +123,19 @@ data:extend(
 		--main_product = "",
 		results=
 		{
-			{type="item", name="55%-uranium", amount=2},
-			{type="item", name="45%-uranium", amount=1},
+			{type="item", name="55pc-uranium", amount=2},
+			{type="item", name="45pc-uranium", amount=1},
 			{type="item", name="uranium-238", amount=2}
 		},
 		allow_decomposition = false
 	},
 	{
 		type = "recipe",
-		name = "clowns-centrifuging-45%",
+		name = "clowns-centrifuging-45pc",
 		energy_required = energy,
 		enabled = false,
 		category = "centrifuging",
-		ingredients = {{"35%-uranium", 5}},
+		ingredients = {{type="item",name="35pc-uranium", amount=5}},
 		icon = "__Clowns-Nuclear__/graphics/icons/3.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
@@ -144,19 +144,19 @@ data:extend(
 		--main_product = "",
 		results=
 		{
-			{type="item", name="45%-uranium", amount=2},
-			{type="item", name="35%-uranium", amount=1},
+			{type="item", name="45pc-uranium", amount=2},
+			{type="item", name="35pc-uranium", amount=1},
 			{type="item", name="uranium-238", amount=2}
 		},
 		allow_decomposition = false
 	},
 	{
 		type = "recipe",
-		name = "clowns-centrifuging-35%",
+		name = "clowns-centrifuging-35pc",
 		energy_required = energy,
 		enabled = false,
 		category = "centrifuging",
-		ingredients = {{"20%-uranium", 5}},
+		ingredients = {{type="item",name="20pc-uranium", amount=5}},
 		icon = "__Clowns-Nuclear__/graphics/icons/2.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
@@ -165,42 +165,41 @@ data:extend(
 		--main_product = "",
 		results=
 		{
-			{type="item", name="35%-uranium", amount=2},
-			{type="item", name="20%-uranium", amount=1},
+			{type="item", name="35pc-uranium", amount=2},
+			{type="item", name="20pc-uranium", amount=1},
 			{type="item", name="uranium-238", amount=2}
 		},
 		allow_decomposition = false
 	},
 	{
 		type = "recipe",
-		name = "clowns-centrifuging-20%-ore",
+		name = "clowns-centrifuging-20pc-ore",
 		energy_required = energy,
 		enabled = false,
 		category = "centrifuging",
-		ingredients = {{"uranium-ore", 60}},
+		ingredients = {{type="item", name="uranium-ore", amount=60}},
 		icons =
 		{
 			{
 				icon = "__Clowns-Nuclear__/graphics/icons/1.png",
 				icon_size = 64,
 				icon_mipmaps = 4,
-				scale = 0.5,
 				shift = {0, 0},
 			},
 			{
 				icon = "__base__/graphics/icons/uranium-ore.png",
 				icon_size=64,
-				scale = 0.25,
-				shift = {-8, -8},
+				icon_mipmaps = 4,
+				scale = 0.3,
+				shift = {-10, -10},
 			},
 
 		},
-		icon_size = 32,
 		subgroup = "clowns-uranium-centrifuging",
 		order = "b",
 		results=
 		{
-			{type="item", name="20%-uranium", amount=2},
+			{type="item", name="20pc-uranium", amount=2},
 			{type="item", name="uranium-238", amount=4}
 		},
 		allow_decomposition = false

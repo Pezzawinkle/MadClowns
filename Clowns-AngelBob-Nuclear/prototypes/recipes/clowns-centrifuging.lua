@@ -36,7 +36,7 @@ data:extend(
 		main_product = "",
 		results=
 		{
-			{type="item", name="20%-uranium", amount=2},
+			{type="item", name="20pc-uranium", amount=2},
 			{type="item", name="uranium-238", amount=3}
 		},
 		allow_decomposition = false

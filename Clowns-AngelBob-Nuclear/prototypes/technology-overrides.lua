@@ -46,10 +46,10 @@ elseif mods["bobassembly"] and mods["bobassembly"] and settings.startup["bobmods
 end
 
 clowns.functions.add_unlock(centri_1,"depleted-uranium-reprocessing")
-clowns.functions.add_unlock(centri_1,"clowns-centrifuging-45%")
-clowns.functions.add_unlock(centri_1,"clowns-centrifuging-55%")
-clowns.functions.add_unlock(centri_2,"clowns-centrifuging-65%")
-clowns.functions.add_unlock(centri_2,"clowns-centrifuging-70%")
-clowns.functions.add_unlock(centri_2,"clowns-centrifuging-75%")
-clowns.functions.add_unlock(centri_2,"clowns-centrifuging-80%")
+clowns.functions.add_unlock(centri_1,"clowns-centrifuging-45pc")
+clowns.functions.add_unlock(centri_1,"clowns-centrifuging-55pc")
+clowns.functions.add_unlock(centri_2,"clowns-centrifuging-65pc")
+clowns.functions.add_unlock(centri_2,"clowns-centrifuging-70pc")
+clowns.functions.add_unlock(centri_2,"clowns-centrifuging-75pc")
+clowns.functions.add_unlock(centri_2,"clowns-centrifuging-80pc")
 clowns.functions.add_unlock("water-treatment-4","radioactive-waste-water-purification")

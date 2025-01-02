@@ -1,10 +1,10 @@
 clowns.functions.add_unlock("kovarex-enrichment-process","depleted-uranium-reprocessing")
-clowns.functions.add_unlock("kovarex-enrichment-process","clowns-centrifuging-80%")
-clowns.functions.add_unlock("kovarex-enrichment-process","clowns-centrifuging-75%")
-clowns.functions.add_unlock("kovarex-enrichment-process","clowns-centrifuging-70%")
-clowns.functions.add_unlock("kovarex-enrichment-process","clowns-centrifuging-65%")
-clowns.functions.add_unlock("kovarex-enrichment-process","clowns-centrifuging-55%")
-clowns.functions.add_unlock("kovarex-enrichment-process","clowns-centrifuging-45%")
+clowns.functions.add_unlock("kovarex-enrichment-process","clowns-centrifuging-80pc")
+clowns.functions.add_unlock("kovarex-enrichment-process","clowns-centrifuging-75pc")
+clowns.functions.add_unlock("kovarex-enrichment-process","clowns-centrifuging-70pc")
+clowns.functions.add_unlock("kovarex-enrichment-process","clowns-centrifuging-65pc")
+clowns.functions.add_unlock("kovarex-enrichment-process","clowns-centrifuging-55pc")
+clowns.functions.add_unlock("kovarex-enrichment-process","clowns-centrifuging-45pc")
 clowns.functions.add_unlock("kovarex-enrichment-process","nuclear-fuel")
 
 require("prototypes.overrides.ENP-overrides")
@@ -16,9 +16,9 @@ if data.raw.recipe["advanced-uranium-processing"] then
     for i,ing in pairs(data.raw["recipe"]["uranium-processing"].results) do
       res[i]=table.deepcopy(ing)
       if ing.name and ing.name == "uranium-235" then
-        res[i].name = "35%-uranium"
+        res[i].name = "35pc-uranium"
       elseif ing[1] and string.find(ing[1],"uranium-235") then
-        res[i][1] = "35%-uranium"
+        res[i][1] = "35pc-uranium"
       end
     end
     data.raw.recipe["advanced-uranium-processing"].results=res

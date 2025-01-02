@@ -10,37 +10,38 @@ data:extend(
 		stack_size = 50
 	},
 	{
-    type = "ammo",
-    name = "thermonuclear-bomb",
-    icon = "__Clowns-Nuclear__/graphics/icons/thermonuclear-bomb.png",
-    icon_size = 32,
-    ammo_type =
-    {
-      range_modifier = 5,
-      cooldown_modifier = 10,
-      target_type = "position",
-      category = "rocket",
-      action =
-      {
-        type = "direct",
-        action_delivery =
-        {
-          type = "projectile",
-          projectile = "thermonuclear-rocket",
-          starting_speed = 0.02,
-          source_effects =
-          {
-            type = "create-entity",
-            entity_name = "explosion-hit"
-          }
-        }
-      }
-    },
-    subgroup = "ammo",
-    order = "d[rocket-launcher]-c[thermonuclear-bomb]",
-    stack_size = 1,
-	},
-}
+		type = "ammo",
+		name = "thermonuclear-bomb",
+		icon = "__Clowns-Nuclear__/graphics/icons/thermonuclear-bomb.png",
+		icon_size = 32,
+		ammo_category="bullet",
+		ammo_type =
+		{
+			range_modifier = 5,
+			cooldown_modifier = 10,
+			target_type = "position",
+			category = "rocket",
+			action =
+			{
+				type = "direct",
+				action_delivery =
+				{
+				type = "projectile",
+				projectile = "thermonuclear-rocket",
+				starting_speed = 0.02,
+				source_effects =
+				{
+					type = "create-entity",
+					entity_name = "explosion-hit"
+				}
+				}
+			}
+		},
+		subgroup = "ammo",
+		order = "d[rocket-launcher]-c[thermonuclear-bomb]",
+		stack_size = 1,
+		},
+	}
 )
 
 if settings.startup["artillery-shells"].value == true then
@@ -49,6 +50,7 @@ if settings.startup["artillery-shells"].value == true then
 		{
 			type = "ammo",
 			name = "artillery-shell-nuclear",
+			ammo_category="bullet",
 			icons =
 			{
 				{

@@ -15,11 +15,11 @@ data.raw["recipe"]["thermonuclear-bomb"].ingredients = {{"rocket-control-unit", 
 if mods["bobmodules"] then
 	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"speed-module-6", 3})
 	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"productivity-module-6", 3})
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"effectivity-module-6", 3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"efficiency-module-6", 3})
 else
 	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"speed-module-3", 3})
 	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"productivity-module-3", 3})
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"effectivity-module-3", 3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"efficiency-module-3", 3})
 end
 --fusion cores
 if data.raw.item["fusion-reactor-equipment-2"] then
@@ -141,7 +141,7 @@ end
 data.raw.recipe["uranium-fuel-cell"].ingredients =
 {
   {type="item", name=n_plate, amount=10}, --enforce lead plate
-  {type="item", name="35%-uranium", amount=20},
+  {type="item", name="35pc-uranium", amount=20},
 }
 data.raw.recipe["mixed-oxide"].ingredients =
 {
