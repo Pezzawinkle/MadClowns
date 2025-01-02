@@ -34,7 +34,7 @@ else --include a magnesium sink for vanilla cases
   {
     type = "recipe",
     name = "molten-steel-smelting-c2",
-    category = "induction-smelting",
+    category = "induction-smelting-2",
     subgroup = "angels-steel-casting",
     energy_required = 4,
     enabled = false,
