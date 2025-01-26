@@ -45,3 +45,5 @@ end
 for _, tech in pairs(unlock_lists) do
   OV.add_unlock(tech[1],tech[2])
 end
+
+OV.add_prereq("angels-advanced-chemistry-3", "mercury-processing-1")
