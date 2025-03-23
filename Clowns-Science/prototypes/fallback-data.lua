@@ -326,7 +326,7 @@ if ctrig.bobplates then
   update_tab("chemical_2", 4, {"cobalt-steel-alloy", 2})
   update_tab("production_2", 2, {"cobalt-plate", 1})
   update_tab("utility_1", 2, {"lithium-ion-battery", 2})
-  update_tab("utility_1", 1, {"quartz-glass", 4})
+  update_tab("utility_1", 1, {"bob-glass", 4})
   update_tab("utility_2", 2, {"silver-zinc-battery", 2})
   update_tab("utility_2", 3, {"copper-tungsten-alloy", 3})
   update_tab("utility_2", 4, {"cobalt-plate", 3})

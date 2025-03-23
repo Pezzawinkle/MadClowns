@@ -14,7 +14,7 @@ data:extend(
 		name = "thermonuclear-bomb",
 		icon = "__Clowns-Nuclear__/graphics/icons/thermonuclear-bomb.png",
 		icon_size = 32,
-		ammo_category="bullet",
+		ammo_category="rocket",
 		ammo_type =
 		{
 			range_modifier = 5,
@@ -50,7 +50,7 @@ if settings.startup["artillery-shells"].value == true then
 		{
 			type = "ammo",
 			name = "artillery-shell-nuclear",
-			ammo_category="bullet",
+			ammo_category="rocket",
 			icons =
 			{
 				{
@@ -94,6 +94,7 @@ if settings.startup["artillery-shells"].value == true then
 		{
 			type = "ammo",
 			name = "artillery-shell-thermonuclear",
+			ammo_category="rocket",
 			icons =
 			{
 				{

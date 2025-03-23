@@ -11,7 +11,7 @@ if settings.startup["artillery-shells"].value == true then
 				{type="item",name="artillery-shell", amount=1},
 				{type="item",name="atomic-bomb",amount= 1}
 			},
-			result = "artillery-shell-nuclear"
+			results = {{type="item",name="artillery-shell-nuclear", amount=1}}
 		},
 
 		{
@@ -24,7 +24,7 @@ if settings.startup["artillery-shells"].value == true then
 				{type="item",name="artillery-shell", amount=1},
 				{type="item",name="thermonuclear-bomb",amount= 1}
 			},
-			result = "artillery-shell-thermonuclear"
+			results = {{type="item",name="artillery-shell-thermonuclear", amount=1}}
 		},
 	}
 	)

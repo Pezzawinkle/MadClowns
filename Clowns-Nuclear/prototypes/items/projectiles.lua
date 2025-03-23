@@ -13,7 +13,9 @@ data:extend(
     acceleration = 0.002,
     action = clowns_actions_thermonuke,
     light = {intensity = 1, size = 90, color = {r=1.0, g=1.0, b=1.0}},--{intensity = 0.8, size = 15},
-    animation = table.deepcopy(data.raw["artillery-projectile"]["artillery-projectile"].animation)
+    animation = table.deepcopy(data.raw["projectile"]["atomic-rocket"].animation),
+	shadow = table.deepcopy(data.raw["projectile"]["atomic-rocket"].shadow),
+	smoke = table.deepcopy(data.raw["projectile"]["atomic-rocket"].smoke),
 	}
 }
 )
@@ -29,15 +31,27 @@ end
 local thermonuke_artillery_projectile = util.table.deepcopy(data.raw["artillery-projectile"]["artillery-projectile"])
 thermonuke_artillery_projectile.name = "artillery-projectile-thermonuclear"
 thermonuke_artillery_projectile.action = clowns_actions_thermonuke
+--ARTILLERY SHELL AMMO
+
+local nuke_artillery_shell = util.table.deepcopy(data.raw["ammo"]["artillery-shell"])
+nuke_artillery_shell.name = "artillery-shell-nuclear"
+nuke_artillery_shell.ammo_type.action.action_delivery.projectile="artillery-projectile-nuclear"
+
+local thermonuke_artillery_shell = util.table.deepcopy(data.raw["ammo"]["artillery-shell"])
+thermonuke_artillery_shell.name= "artillery-shell-thermonuclear"
+thermonuke_artillery_shell.ammo_type.action.action_delivery.projectile="artillery-projectile-thermonuclear"
 
 if settings.startup["artillery-shells"].value == true then
 	data:extend(
 	{
 		nuke_artillery_projectile,
 		thermonuke_artillery_projectile,
-		{
+		nuke_artillery_shell,
+		thermonuke_artillery_shell,
+		--[[{
 			type = "ammo",
 			name = "artillery-shell-nuclear",
+			ammo_category = "artillery-shell",
 			icons =
 			{
 				{
@@ -80,6 +94,7 @@ if settings.startup["artillery-shells"].value == true then
 
 		{
 			type = "ammo",
+			ammo_category = "artillery-shell",
 			name = "artillery-shell-thermonuclear",
 			icons =
 			{
@@ -119,7 +134,7 @@ if settings.startup["artillery-shells"].value == true then
 			subgroup = "ammo",
 			order = "d[explosive-cannon-shell]-d[artillery]2",
 			stack_size = 1
-		},
+		},]]
 	}
 	)
 end
