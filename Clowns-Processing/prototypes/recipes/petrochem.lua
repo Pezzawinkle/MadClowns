@@ -141,7 +141,7 @@ data:extend(
 		ingredients =
 		{
 			{type = "item", name = "catalyst-metal-carrier", amount = 10},
-			{type = "item", name = "platinum-ore", amount = 1},
+			{type = "item", name = clowns.special_vanilla and "solid-sodium" or "platinum-ore", amount = 1},
 			{type = "fluid", name = "liquid-mercury", amount = 10},
 		},
 		results =

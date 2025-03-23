@@ -32,7 +32,7 @@ data:extend(
 				recipe = "osmium-rounds-magazine"
 			},
 		},
-		prerequisites = {"powder-metallurgy-1", "ore-processing-2", "military-4"},
+		prerequisites = {"powder-metallurgy-4", "ore-processing-3", "military-3"},
 		unit =
 		{
 			ingredients =
@@ -40,7 +40,7 @@ data:extend(
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1},
-				{"utility-science-pack", 1}
+				{"production-science-pack", 1}
 			},
 			time = 30,
 			count = 100
