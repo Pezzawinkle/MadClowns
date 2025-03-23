@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local rawmulti = angelsmods.marathon.rawmulti
 local special_vanilla = clowns.special_vanilla
 local ore_table = clowns.tables.ores
 -------------------------------------------

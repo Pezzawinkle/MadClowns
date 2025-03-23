@@ -136,7 +136,7 @@ add_crystal=function(metal,name,recipe, techlvl)
 			icons = ic,
 			icon_size=32,
 			default_temperature = 25,
-			heat_capacity = "0.1KJ",
+			heat_capacity = "0.1kJ",
 			base_color = {r = 1, g = 1, b = 1},
 			flow_color = {r = 1, g = 1, b = 1},
 			max_temperature = 100,

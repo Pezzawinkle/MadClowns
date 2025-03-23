@@ -46,7 +46,7 @@ if settings.startup["MCP_enable_centrifuges"].value then
   centrifuge_2.localised_name = {"centrifuge","MK2"}
   local centrifuge_2r = util.table.deepcopy(data.raw.recipe["centrifuge"])
   centrifuge_2r.name = "centrifuge-mk2"
-  centrifuge_2r.result = "centrifuge-mk2"
+  centrifuge_2r.results = {{type="item",name="centrifuge-mk2",amount=1}}
   centrifuge_2r.energy_required = 4
   local ings_2 =
   {
@@ -74,7 +74,7 @@ if settings.startup["MCP_enable_centrifuges"].value then
   centrifuge_3.localised_name={"centrifuge","MK3"}
   local centrifuge_3r = util.table.deepcopy(data.raw.recipe["centrifuge"])
   centrifuge_3r.name = "centrifuge-mk3"
-  centrifuge_3r.result = "centrifuge-mk3"
+  centrifuge_3r.results = {{type="item",name="centrifuge-mk3",amount=1}}
   centrifuge_3r.energy_required = 4
   local ings_3 =
   {
@@ -85,9 +85,9 @@ if settings.startup["MCP_enable_centrifuges"].value then
   else
     ings_3[#ings_3+1] = {type = "item", name = "processing-unit", amount = 200}
   end
-  if data.raw.item["copper-tungsten-alloy"] and data.raw.item["tungsten-gear-wheel"] then
-    ings_3[#ings_3+1] = {type = "item", name = "copper-tungsten-alloy", amount = 50}
-    ings_3[#ings_3+1] = {type = "item", name = "tungsten-gear-wheel", amount = 100}
+  if data.raw.item["bob-copper-tungsten-alloy"] and data.raw.item["bob-tungsten-gear-wheel"] then
+    ings_3[#ings_3+1] = {type = "item", name = "bob-copper-tungsten-alloy", amount = 50}
+    ings_3[#ings_3+1] = {type = "item", name = "bob-tungsten-gear-wheel", amount = 100}
   elseif data.raw.item["angels-tungsten-plate"] then
     ings_3[#ings_3+1] = {type = "item", name = "angels-tungsten-plate", amount = 200}
     ings_3[#ings_3+1] = {type = "item", name = "concrete-brick", amount = 300}

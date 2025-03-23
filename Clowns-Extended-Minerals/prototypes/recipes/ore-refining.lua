@@ -1,4 +1,3 @@
-local rawmulti = angelsmods.marathon.rawmulti
 --build basic table
 local ore_table = clowns.tables.ores
 local ore_material = {

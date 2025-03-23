@@ -1,4 +1,3 @@
-local rawmulti = angelsmods.marathon.rawmulti
 if not clowns.special_vanilla then
 data:extend(
 {

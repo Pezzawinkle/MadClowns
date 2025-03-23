@@ -11,7 +11,7 @@ data:extend(
 			{"iron-gear-wheel", 20},
 			{"stone-brick", 10},
 		},
-		result = "sluicer",
+		results ={{type="item", name="sluicer", amount = 1}},
 		energy_required = 10,
 	},
 
@@ -108,16 +108,17 @@ data:extend(
 		{
 			{
 				production_type = "input",
+				pipe_picture = assembler2pipepictures(),
 				pipe_covers = pipecoverspictures(),
-				base_area = 10,
-				base_level = -1,
-				pipe_connections = {{ type="input", position = {0, -2} }}
+				volume = 200,
+				pipe_connections = {{ flow_direction ="input", direction = defines.direction.north, position = {0, -1} }}
 			},
 			{
 				production_type = "output",
+				pipe_picture = assembler2pipepictures(),
 				pipe_covers = pipecoverspictures(),
-				base_level = 1,
-				pipe_connections = {{ position = {0, 2} }}
+				volume = 100,
+				pipe_connections = {{ flow_direction ="output", direction = defines.direction.south, position = {0, 1} }}
 			}
 		}
 	}
@@ -137,7 +138,7 @@ data:extend(
 			{"iron-gear-wheel", 20},
 			{"concrete", 20},
 		},
-		result = "sluicer-2",
+		results = {{type="item",name="sluicer-2",amount=1}},
 		energy_required = 10,
 	},
 
@@ -234,16 +235,17 @@ data:extend(
 		{
 			{
 				production_type = "input",
+				pipe_picture = assembler2pipepictures(),
 				pipe_covers = pipecoverspictures(),
-				base_area = 10,
-				base_level = -1,
-				pipe_connections = {{ type="input", position = {0, -2} }}
+				volume = 300,
+				pipe_connections = {{ flow_direction ="output", direction = defines.direction.north, position = {0, -1} }}
 			},
 			{
 				production_type = "output",
+				pipe_picture = assembler2pipepictures(),
 				pipe_covers = pipecoverspictures(),
-				base_level = 1,
-				pipe_connections = {{ position = {0, 2} }}
+				volume = 200,
+				pipe_connections = {{ flow_direction ="output", direction = defines.direction.south, position = {0, 1} }}
 			}
 		}
 	}

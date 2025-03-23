@@ -1,5 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
-
 if mods["angelsbioprocessing"] then
   data:extend(
   {
@@ -193,31 +191,15 @@ data:extend(
     name = "clowns-plate-depleted-uranium",
     category = "sintering-4",
     subgroup = "clowns-depleted-uranium-casting",
-    normal =
+    enabled = false,
+    energy_required = 4,
+    ingredients =
     {
-      enabled = false,
-      energy_required = 4,
-      ingredients =
-      {
-        {type = "item", name = "casting-powder-depleted-uranium", amount = 12}
-      },
-      results =
-      {
-        {type = "item", name = "clowns-plate-depleted-uranium", amount = 12}
-      },
+      {type = "item", name = "casting-powder-depleted-uranium", amount = 12}
     },
-    expensive =
+    results =
     {
-      enabled = false,
-      energy_required = 4,
-      ingredients =
-      {
-        {type = "item", name = "casting-powder-depleted-uranium", amount = 15 * intermediatemulti}
-      },
-      results=
-      {
-        {type = "item", name = "clowns-plate-depleted-uranium", amount = 12}
-      },
+      {type = "item", name = "clowns-plate-depleted-uranium", amount = 12}
     },
     icon_size = 32,
     order = "f",
@@ -310,32 +292,16 @@ data:extend(
 		name = "clowns-plate-magnesium",
 		category = "casting-4",
 		subgroup = "clowns-magnesium-casting",
-		normal =
-		{
-			enabled = false,
-			energy_required = 4,
-      ingredients =
-      {
-        {type = "fluid", name = "liquid-molten-magnesium", amount = 40}
-      },
-      results =
-      {
-        {type = "item", name = "clowns-plate-magnesium", amount = 4}
-      },
-		},
-		expensive =
-		{
-			enabled = false,
-			energy_required = 4,
-      ingredients =
-      {
-        {type = "fluid", name = "liquid-molten-magnesium", amount = 50 * intermediatemulti}
-      },
-      results =
-      {
-        {type = "item", name = "clowns-plate-magnesium", amount = 4}
-      },
-		},
+    enabled = false,
+    energy_required = 4,
+    ingredients =
+    {
+      {type = "fluid", name = "liquid-molten-magnesium", amount = 40}
+    },
+    results =
+    {
+      {type = "item", name = "clowns-plate-magnesium", amount = 4}
+    },
 		icon_size = 32,
 		order = "j",
   },
@@ -489,32 +455,16 @@ data:extend(
 		name = "clowns-plate-osmium",
 		category = "sintering-4",
 		subgroup = "clowns-osmium-casting",
-		normal =
-		{
-			enabled = false,
-			energy_required = 4,
-      ingredients =
-      {
-        {type = "item", name = "casting-powder-osmium", amount = 12}
-      },
-      results =
-      {
-        {type = "item", name = "clowns-plate-osmium", amount = 12}
-      },
-		},
-		expensive =
-		{
-			enabled = false,
-			energy_required = 4,
-      ingredients =
-      {
-        {type = "item", name = "casting-powder-osmium", amount = 15 * intermediatemulti}
-      },
-      results =
-      {
-        {type = "item", name = "clowns-plate-osmium", amount = 12}
-      },
-		},
+    enabled = false,
+    energy_required = 4,
+    ingredients =
+    {
+      {type = "item", name = "casting-powder-osmium", amount = 12}
+    },
+    results =
+    {
+      {type = "item", name = "clowns-plate-osmium", amount = 12}
+    },
 		icon_size = 32,
 		order = "b",
   },
@@ -840,7 +790,7 @@ data:extend(
       {"piercing-rounds-magazine",1},
       {"clowns-plate-osmium",1}
     },
-    result = "osmium-rounds-magazine",
+    results = {{type="item",name="osmium-rounds-magazine",amount=1}},
     order = "a[basic-clips]-d[osmium-rounds-magazine]"
   }
 }

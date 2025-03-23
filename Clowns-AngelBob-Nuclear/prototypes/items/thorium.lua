@@ -44,7 +44,7 @@ if angelsmods.trigger.ores["thorium"] == true then
 				name = "thorium-solution",
 				icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {r = 0.8, g = 0.2, b = 0.2, a = 0.6}, nil, {r = 0.8, g = 0.2, b = 0.2, a = 0.6} }),
 				default_temperature = 550,
-				heat_capacity = "0.1KJ",
+				heat_capacity = "0.1kJ",
 				base_color = {r = 0.92, g = 0.72, b = 0.09},
 				flow_color = {r = 0, g = 1, b = 0.5},
 				max_temperature = 1200,

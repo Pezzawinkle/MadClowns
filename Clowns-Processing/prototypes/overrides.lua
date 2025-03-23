@@ -128,9 +128,9 @@ if settings.startup["equipment-group"].value then
 		data.raw.item["solar-panel-equipment-3"].subgroup = "power"
 		data.raw.item["solar-panel-equipment-4"].subgroup = "power"
 
-		data.raw.item["fusion-reactor-equipment-2"].subgroup = "power"
-		data.raw.item["fusion-reactor-equipment-3"].subgroup = "power"
-		data.raw.item["fusion-reactor-equipment-4"].subgroup = "power"
+--		data.raw.item["bob-fusion-reactor-equipment-2"].subgroup = "power"
+--		data.raw.item["bob-fusion-reactor-equipment-3"].subgroup = "power"
+--		data.raw.item["bob-fusion-reactor-equipment-4"].subgroup = "power"
 
 		data.raw.item["night-vision-equipment-2"].subgroup = "misc1"
 		data.raw.item["night-vision-equipment-3"].subgroup = "misc1"
@@ -146,7 +146,7 @@ if settings.startup["equipment-group"].value then
 
 	end
 
-	if mods["bobvehicleequipment"] then
+--[[	if mods["bobvehicleequipment"] then
 		data.raw.item["vehicle-battery-1"].subgroup = "vehicle-batteries"
 		data.raw.item["vehicle-battery-2"].subgroup = "vehicle-batteries"
 		data.raw.item["vehicle-battery-3"].subgroup = "vehicle-batteries"
@@ -201,7 +201,7 @@ if settings.startup["equipment-group"].value then
 		data.raw.item["vehicle-roboport-2"].subgroup = "vehicle-misc1"
 		data.raw.item["vehicle-motor"].subgroup = "vehicle-misc1"
 		data.raw.item["vehicle-engine"].subgroup = "vehicle-misc1"
-	end
+	end]]
 else
 	--move armours back out to combat
 	data.raw["item-subgroup"]["armor"].group = "combat"

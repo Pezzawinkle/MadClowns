@@ -1,4 +1,3 @@
-local rawmulti = angelsmods.marathon.rawmulti
 local time_parameter = 3
 
 data:extend(

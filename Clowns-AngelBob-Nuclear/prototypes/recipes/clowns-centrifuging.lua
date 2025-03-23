@@ -4,7 +4,7 @@ data:extend(
 {
 	{
 		type = "recipe",
-		name = "clowns-centrifuging-20%-hexafluoride",
+		name = "clowns-centrifuging-20pc-hexafluoride",
 		energy_required = energy,
 		enabled = false,
 		category = "centrifuging",

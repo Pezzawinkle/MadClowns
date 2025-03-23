@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local rawmulti = angelsmods.marathon.rawmulti
 local special_vanilla = clowns.special_vanilla
 local ore_table = clowns.tables.ores
 local ore_combos = clowns.tables.ore_combos
@@ -61,7 +60,7 @@ local create_mixed_sorting = function(num,tier)
       nme=is_adv(ings[i],style)
     end
     table.insert(ing_norm,{type = "item", name = nme, amount = math.ceil((4.5-tier)*2/9*(5.5-i))})
-    table.insert(ing_exp,{type = "item", name = nme, amount = math.ceil(((4.5-tier)*2/9*(5.5-i))*rawmulti)})
+    --table.insert(ing_exp,{type = "item", name = nme, amount = math.ceil(((4.5-tier)*2/9*(5.5-i))*rawmulti)})
     out=out+(4.5-tier)*2/9*(5.5-i)
     i=i+1
   until(i > count)
@@ -70,7 +69,7 @@ local create_mixed_sorting = function(num,tier)
   elseif cat == acid then --(add acid from a lookup table) --pretty sure this is done in that other script anyway
   else --add catalyser
     table.insert(ing_norm, {type = "item", name = "catalysator-"..cat, amount = 1})
-    table.insert(ing_exp, {type = "item", name = "catalysator-"..cat, amount = 1})
+    --table.insert(ing_exp, {type = "item", name = "catalysator-"..cat, amount = 1})
   end
   --create recipe
   --order setting
@@ -96,14 +95,8 @@ local create_mixed_sorting = function(num,tier)
         energy_required = 1,
         enabled = false,
         allow_decomposition = false,
-        normal = {
-          ingredients = ing_norm,
-          results = {{type = "item", name = "angels-void", amount = 1}}
-        },
-        expensive = {
-          ingredients = ing_exp,
-          results = {{type = "item", name = "angels-void", amount = out}}
-        },
+        ingredients = ing_norm,
+        results = {{type = "item", name = "angels-void", amount = 1}},
         icons =
         {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
@@ -195,23 +188,12 @@ local create_adv_mixed_sorting = function(num)
         subgroup = "clowns-ore-sorting-1",
         energy_required = 1,
         allow_decomposition = false,
-        normal = {
-          enabled = false,
-          ingredients = {
-            {type = "item", name = "clowns-ore"..num.."-crushed", amount = 4}
-          },
-          results = {
-            {type = "item", name = "angels-void", amount = 1}
-          }
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "clowns-ore"..num.."-crushed", amount = 4}
         },
-        expensive = {
-          enabled = false,
-          ingredients = {
-            {type = "item", name = "clowns-ore"..num.."-crushed", amount = 6 * rawmulti}
-          },
-          results = {
-            {type = "item", name = "angels-void", amount = 1}
-          }
+        results = {
+          {type = "item", name = "angels-void", amount = 1}
         },
         icons = {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
@@ -249,23 +231,12 @@ local create_adv_mixed_sorting = function(num)
         subgroup = "clowns-ore-sorting-2",
         energy_required = 1,
         allow_decomposition = false,
-        normal = {
-          enabled = false,
-          ingredients = {
-            {type = "item", name = "clowns-ore"..num.."-powder", amount = 6}
-          },
-          results = {
-            {type = "item", name = "angels-void", amount = 1}
-          }
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "clowns-ore"..num.."-powder", amount = 6}
         },
-        expensive = {
-          enabled = false,
-          ingredients = {
-            {type = "item", name = "clowns-ore"..num.."-powder", amount = 8 * rawmulti}
-          },
-          results = {
-            {type = "item", name = "angels-void", amount = 1}
-          }
+        results = {
+          {type = "item", name = "angels-void", amount = 1}
         },
         icons = {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
@@ -326,23 +297,12 @@ local create_adv_mixed_sorting = function(num)
         subgroup = "clowns-ore-sorting-3",
         energy_required = 1.5,
         allow_decomposition = false,
-        normal = {
-          enabled = false,
-          ingredients = {
-            {type = "item", name = "clowns-ore"..num.."-dust", amount = 8}
-          },
-          results = {
-            {type = "item", name = "angels-void", amount = 1}
-          }
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "clowns-ore"..num.."-dust", amount = 8}
         },
-        expensive = {
-          enabled = false,
-          ingredients = {
-            {type = "item", name = "clowns-ore"..num.."-dust", amount = 9 * rawmulti}
-          },
-          results = {
-            {type = "item", name = "angels-void", amount = 1}
-          }
+        results = {
+          {type = "item", name = "angels-void", amount = 1}
         },
         icons = {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
@@ -445,23 +405,12 @@ local create_adv_mixed_sorting = function(num)
         subgroup = "clowns-ore-sorting-4",
         energy_required = 1.5,
         allow_decomposition = false,
-        normal = {
-          enabled = false,
-          ingredients = {
-            {type = "item", name = "clowns-ore"..num.."-crystal", amount = 9}
-          },
-          results = {
-            {type = "item", name = "angels-void", amount = 1}
-          }
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "clowns-ore"..num.."-crystal", amount = 9}
         },
-        expensive = {
-          enabled = false,
-          ingredients = {
-            {type = "item", name = "clowns-ore"..num.."-crystal", amount = 10 * rawmulti}
-          },
-          results = {
-            {type = "item", name = "angels-void", amount = 1}
-          }
+        results = {
+          {type = "item", name = "angels-void", amount = 1}
         },
         icons = {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},

@@ -26,7 +26,7 @@ data:extend(
 	},
 	{
 		type = "recipe",
-		name = "advanced-nuclear-fuel-reprocessing|b",
+		name = "advanced-nuclear-fuel-reprocessing-b",
 		energy_required = 50,
 		enabled = false,
 		category = "chemistry",
@@ -127,7 +127,7 @@ data:extend(
 	},
 	{
 		type = "recipe",
-		name = "advanced-thorium-nuclear-fuel-reprocessing|b",
+		name = "advanced-thorium-nuclear-fuel-reprocessing-b",
 		energy_required = 50,
 		enabled = false,
 		category = "chemistry",

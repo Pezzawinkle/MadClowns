@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local rawmulti = angelsmods.marathon.rawmulti
 local special_vanilla = clowns.special_vanilla
 local ore_table = clowns.tables.ores
 -- lookup table to convert ore name to trigger name
@@ -232,20 +231,10 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
         category = "ore-sorting",
         subgroup = "clowns-ore-sorting-t1",
         allow_decomposition = false,
-        normal =
-        {
-          enabled = false,
-          energy_required = 1,
-          ingredients = {{type = "item", name = ore.."-crushed", amount = 4}},
-          results = {{type = "item", name = "slag", amount = 1}}
-        },
-        expensive =
-        {
-          enabled = false,
-          energy_required = 1,
-          ingredients ={{type= "item", name = ore.."-crushed", amount = 6 * rawmulti}},
-          results = {{type = "item", name = "slag", amount = 1}}
-        },
+        enabled = false,
+        energy_required = 1,
+        ingredients = {{type = "item", name = ore.."-crushed", amount = 4}},
+        results = {{type = "item", name = "slag", amount = 1}},
         icons =
         {
           {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png"},
@@ -262,20 +251,10 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
         category = "ore-sorting-2",
         subgroup = "clowns-ore-sorting-t2",
         allow_decomposition = false,
-        normal =
-        {
-          enabled = false,
-          energy_required = 1.5,
-          ingredients = {{type = "item", name = ore.."-chunk", amount = 6}},
-          results= {{type = "item", name = "slag", amount = 1},}
-        },
-        expensive =
-        {
-          enabled = false,
-          energy_required = 1.5,
-          ingredients = {{type = "item", name = ore.."-chunk", amount = 9 * rawmulti}},
-          results = {{type = "item", name = "slag", amount = 1},},
-        },
+        enabled = false,
+        energy_required = 1.5,
+        ingredients = {{type = "item", name = ore.."-chunk", amount = 6}},
+        results= {{type = "item", name = "slag", amount = 1},},
         icons =
         {
           {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png"},
@@ -292,21 +271,10 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
         category = "ore-sorting-3",
         subgroup = "clowns-ore-sorting-t3",
         allow_decomposition = false,
-        normal =
-        {
-          enabled = false,
-          energy_required = 2,
-          ingredients = {{type = "item", name = ore.."-crystal", amount = 8}},
-          results = {{type = "item", name = "slag", amount = 1},},
-        },
-        expensive =
-        {
-          enabled = false,
-          energy_required = 2,
-          ingredients = {{type = "item", name = ore.."-crystal", amount = 10 * rawmulti}},
-          results =
-          {{type="item", name="slag", amount=1},},
-        },
+        enabled = false,
+        energy_required = 2,
+        ingredients = {{type = "item", name = ore.."-crystal", amount = 8}},
+        results = {{type = "item", name = "slag", amount = 1},},
         icons =
         {
           {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png"},
@@ -323,20 +291,10 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
         category = "ore-sorting-4",
         subgroup = "clowns-ore-sorting-t4",
         allow_decomposition = false,
-        normal =
-        {
-          enabled = false,
-          energy_required = 2,
-          ingredients = {{type = "item", name = ore.."-pure", amount = 9}},
-          results = {{type = "item", name = "angels-void", amount = 1}},
-        },
-        expensive =
-        {
-          enabled = false,
-          energy_required = 2,
-          ingredients = {{type = "item", name = ore.."-pure", amount = 13 * rawmulti}},
-          results = {{type = "item", name = "angels-void", amount = 1}},
-        },
+        enabled = false,
+        energy_required = 2,
+        ingredients = {{type = "item", name = ore.."-pure", amount = 9}},
+        results = {{type = "item", name = "angels-void", amount = 1}},
         icons =
         {
           {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png"},
@@ -398,7 +356,7 @@ local create_sorting_recipes = function(refinery_product, recipe_base_name, sort
     angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "anode-sludge-filtering"))
     angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "anode-sludge"))
   end
-
+local loc_base_name
   if string.find(recipe_base_name,"clowns-ore",1) then
     loc_base_name=string.format("clownsore%s", string.sub(recipe_base_name, -4, -3) .. "%s")
   else
