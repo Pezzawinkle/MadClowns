@@ -60,7 +60,7 @@ data:extend(
 	},
 	{
 		type = "item-subgroup",
-		name = "advanced-logistic-science-pack",
+		name = "bob-advanced-logistic-science-pack",
 		group = "intermediate-products",
 		order = "m-f",
 	},

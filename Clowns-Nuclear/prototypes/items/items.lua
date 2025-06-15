@@ -12,8 +12,14 @@ data:extend(
 	{
 		type = "ammo",
 		name = "thermonuclear-bomb",
-		icon = "__Clowns-Nuclear__/graphics/icons/thermonuclear-bomb.png",
-		icon_size = 32,
+		icons =
+		{
+			{
+				icon = "__Clowns-Nuclear__/graphics/icons/thermonuclear-bomb.png",
+				shift = {-10, -10},
+				icon_size=32
+			},
+		},
 		ammo_category="rocket",
 		ammo_type =
 		{
@@ -50,7 +56,7 @@ if settings.startup["artillery-shells"].value == true then
 		{
 			type = "ammo",
 			name = "artillery-shell-nuclear",
-			ammo_category="rocket",
+			ammo_category="artillery-shell",
 			icons =
 			{
 				{
@@ -59,8 +65,9 @@ if settings.startup["artillery-shells"].value == true then
 				},
 				{
 					icon = "__base__/graphics/icons/atomic-bomb.png",
-					scale = 0.4,
-					shift = {-10, -10},
+					scale = 0.5*0.4,
+					shift = {-10, -10},-- -10's
+					icon_size=64,
 				},
 			},
 			icon_size = 32,
@@ -87,14 +94,14 @@ if settings.startup["artillery-shells"].value == true then
 				}
 			},
 			subgroup = "ammo",
-			order = "d[explosive-cannon-shell]-d[artillery]2",
+			order = "e[artillery-shell]-b[nuclear]",
 			stack_size = 3
 		},
 
 		{
 			type = "ammo",
 			name = "artillery-shell-thermonuclear",
-			ammo_category="rocket",
+			ammo_category="artillery-shell",
 			icons =
 			{
 				{
@@ -105,9 +112,10 @@ if settings.startup["artillery-shells"].value == true then
 					icon = "__Clowns-Nuclear__/graphics/icons/thermonuclear-bomb.png",
 					scale = 0.4,
 					shift = {-10, -10},
+					icon_size=32,
 				},
 			},
-			icon_size = 32,
+			icon_size=32,
 			ammo_type =
 			{
 				category = "artillery-shell",
@@ -131,7 +139,7 @@ if settings.startup["artillery-shells"].value == true then
 				}
 			},
 			subgroup = "ammo",
-			order = "d[explosive-cannon-shell]-d[artillery]2",
+			order = "e[artillery-shell]-b[thermonuclear]",
 			stack_size = 1
 		},
 	}

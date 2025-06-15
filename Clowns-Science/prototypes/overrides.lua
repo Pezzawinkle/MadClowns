@@ -12,8 +12,8 @@ icon_checker("chemical-science-pack","chemical", 1)
 icon_checker("military-science-pack","military", 1)
 icon_checker("production-science-pack","production", 1)
 icon_checker("utility-science-pack","utility", 1)
-if data.raw.recipe["advanced-logistic-science-pack"] then
-	icon_checker("advanced-logistic-science-pack","advanced-logistics", 1)
+if data.raw.recipe["bob-advanced-logistic-science-pack"] then
+	icon_checker("bob-advanced-logistic-science-pack","advanced-logistics", 1)
 end
 
 data.raw["tool"]["automation-science-pack"].subgroup = "automation-science-pack"
@@ -30,16 +30,16 @@ data.raw["tool"]["military-science-pack"].order = "i-a"
 data.raw["tool"]["production-science-pack"].order = "k-a"
 data.raw["tool"]["utility-science-pack"].order = "m-a"
 
-if data.raw.recipe["advanced-logistic-science-pack"] then
-	data.raw["tool"]["advanced-logistic-science-pack"].subgroup = "advanced-logistic-science-pack"
-	data.raw["tool"]["advanced-logistic-science-pack"].order = "o-a"
+if data.raw.recipe["bob-advanced-logistic-science-pack"] then
+	data.raw["tool"]["bob-advanced-logistic-science-pack"].subgroup = "bob-advanced-logistic-science-pack"
+	data.raw["tool"]["bob-advanced-logistic-science-pack"].order = "o-a"
 
 	data:extend({{
 		type = "recipe",
 		name = "advanced-logistic-science-pack-alt1",
 		enabled = false,
 		energy_required = 14,
-		subgroup = "advanced-logistic-science-pack",
+		subgroup = "bob-advanced-logistic-science-pack",
 		order = "a-b",
 		icons = angelsmods.functions.add_number_icon_layer({icons["advanced-logistics"]}, 2 , clowns.icon_tint),
 		ingredients ={
@@ -48,7 +48,7 @@ if data.raw.recipe["advanced-logistic-science-pack"] then
 			{type="item", name="substation", amount=1},
 			{type="item", name="filter-inserter", amount=1}
 		},
-		results = {{type="item", name="advanced-logistic-science-pack", amount=3}}
+		results = {{type="item", name="bob-advanced-logistic-science-pack", amount=3}}
   }})
   if mods["angelsrefining"] and angelsmods.trigger.ores then
     angelsmods.trigger.ores["chrome"] = true
@@ -95,8 +95,8 @@ if mods["angelspetrochem"] then
 	table.insert(data.raw["technology"]["chemical-science-pack"].effects, {type = "unlock-recipe", recipe = "chemical-science-pack-facility"})
 	table.insert(data.raw["technology"]["utility-science-pack"].effects, {type = "unlock-recipe", recipe = "utility-science-pack-facility"})
 	table.insert(data.raw["technology"]["production-science-pack"].effects, {type = "unlock-recipe", recipe = "production-science-pack-facility"})
-	if data.raw.recipe["advanced-logistic-science-pack"] then
-		table.insert(data.raw["technology"]["advanced-logistic-science-pack"].effects, {type = "unlock-recipe", recipe = "advanced-logistic-science-pack-facility"})
+	if data.raw.recipe["bob-advanced-logistic-science-pack"] then
+		table.insert(data.raw["technology"]["bob-advanced-logistic-science-pack"].effects, {type = "unlock-recipe", recipe = "advanced-logistic-science-pack-facility"})
 	end
 	if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value == true then
 		table.insert(data.raw["technology"]["facility-1"].prerequisites,"automation-science-pack")

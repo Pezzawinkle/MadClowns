@@ -9,7 +9,7 @@ local overlay = {
 	shift = {-12, -12}
 	}
 if mods["angelspetrochem"] then --i may also activate these with pyanodons
-	if data.raw.recipe["advanced-logistic-science-pack"] then
+	if data.raw.recipe["bob-advanced-logistic-science-pack"] then
 	data:extend(
 	{
 		{
@@ -18,14 +18,14 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			category = "facility",
 			enabled = false,
 			energy_required = energy_param,
-			subgroup = "advanced-logistic-science-pack",
+			subgroup = "bob-advanced-logistic-science-pack",
 			order = "b",
 			icons = {new_icons["advanced-logistics"],overlay},
 			ingredients =
 			{
 				{type="fluid", name="liquid-nitric-acid", amount=gas_param},
 			},
-			result = clowns.triggers.angels_tech and "datacore-enhance-1" or "advanced-logistic-science-pack"
+			result = clowns.triggers.angels_tech and "datacore-enhance-1" or "bob-advanced-logistic-science-pack"
 		}
 	}
 	)

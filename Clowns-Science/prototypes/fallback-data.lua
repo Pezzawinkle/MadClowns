@@ -102,8 +102,8 @@ else
   table.insert(results_3, {type="item", name="chemical-science-pack", amount=amount_param, probability=0.2})
   table.insert(results_3, {type="item", name="military-science-pack", amount=amount_param, probability=0.2})
   table.insert(results_3, {type="item", name="production-science-pack", amount=amount_param, probability=0.2})
-  if data.raw.recipe["advanced-logistic-science-pack"] then
-    table.insert(results_3, {type="item", name="advanced-logistic-science-pack", amount=amount_param, probability=0.2})
+  if data.raw.recipe["bob-advanced-logistic-science-pack"] then
+    table.insert(results_3, {type="item", name="bob-advanced-logistic-science-pack", amount=amount_param, probability=0.2})
   end
   table.insert(results_3, {type="item", name="utility-science-pack", amount=amount_param, probability=0.2})
 end
@@ -123,8 +123,8 @@ else
   table.insert(results_4, {type="item", name="chemical-science-pack", amount=amount_param, probability=0.1})
   table.insert(results_4, {type="item", name="military-science-pack", amount=amount_param, probability=0.1})
   table.insert(results_4, {type="item", name="production-science-pack", amount=amount_param, probability=0.1})
-  if data.raw.recipe["advanced-logistic-science-pack"] then
-    table.insert(results_4, {type="item", name="advanced-logistic-science-pack", amount=amount_param, probability=0.1})
+  if data.raw.recipe["bob-advanced-logistic-science-pack"] then
+    table.insert(results_4, {type="item", name="bob-advanced-logistic-science-pack", amount=amount_param, probability=0.1})
   end
   table.insert(results_4, {type="item", name="utility-science-pack", amount=amount_param, probability=0.1})
   table.insert(results_4, {type="item", name="space-science-pack", amount=amount_param, probability=0.1})
@@ -322,7 +322,7 @@ if ctrig.bobplates then
   update_tab("logistic_2", 2, {"repair-pack-2", 3})
   update_tab("military_2", 2, {"gunmetal-alloy", 2})
   update_tab("chemical_1", 1, {"invar-alloy", 2})
-  update_tab("chemical_2", 1, {"rubber",3})
+  update_tab("chemical_2", 1, {"bob-rubber",3})
   update_tab("chemical_2", 4, {"cobalt-steel-alloy", 2})
   update_tab("production_2", 2, {"cobalt-plate", 1})
   update_tab("utility_1", 2, {"lithium-ion-battery", 2})
@@ -332,8 +332,8 @@ if ctrig.bobplates then
   update_tab("utility_2", 4, {"cobalt-plate", 3})
   --electronics:
   if mods["bobelectronics"] then
-    update_tab("production_1", 1, {"insulated-cable", 4})
-    update_tab("utility_1", 3, {"gilded-copper-cable", 4})
+    update_tab("production_1", 1, {"bob-insulated-cable", 4})
+    update_tab("utility_1", 3, {"bob-gilded-copper-cable", 4})
   end
 end
 if mods["bobelectronics"] then --regarless of plates

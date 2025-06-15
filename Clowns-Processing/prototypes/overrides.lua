@@ -95,7 +95,8 @@ if settings.startup["equipment-group"].value then
 
 	data.raw.item["solar-panel-equipment"].subgroup = "power"
 
-	data.raw.item["fusion-reactor-equipment"].subgroup = "power"
+	data.raw.item["fission-reactor-equipment"].subgroup = "power"
+	--data.raw.item["fusion-reactor-equipment"].subgroup = "power"
 
 	data.raw.item["night-vision-equipment"].subgroup = "misc1"
 
@@ -114,35 +115,35 @@ if settings.startup["equipment-group"].value then
 	data.raw.item["belt-immunity-equipment"].subgroup = "shields"
 
 	if mods["bobequipment"] then
-		data.raw.item["battery-mk3-equipment"].subgroup = "batteries"
-		data.raw.item["battery-mk4-equipment"].subgroup = "batteries"
-		data.raw.item["battery-mk5-equipment"].subgroup = "batteries"
-		data.raw.item["battery-mk6-equipment"].subgroup = "batteries"
+		data.raw.item["bob-battery-mk3-equipment"].subgroup = "batteries"
+		data.raw.item["bob-battery-mk4-equipment"].subgroup = "batteries"
+		data.raw.item["bob-battery-mk5-equipment"].subgroup = "batteries"
+		data.raw.item["bob-battery-mk6-equipment"].subgroup = "batteries"
 
-		data.raw.item["energy-shield-mk3-equipment"].subgroup = "shields"
-		data.raw.item["energy-shield-mk4-equipment"].subgroup = "shields"
-		data.raw.item["energy-shield-mk5-equipment"].subgroup = "shields"
-		data.raw.item["energy-shield-mk6-equipment"].subgroup = "shields"
+		data.raw.item["bob-energy-shield-mk3-equipment"].subgroup = "shields"
+		data.raw.item["bob-energy-shield-mk4-equipment"].subgroup = "shields"
+		data.raw.item["bob-energy-shield-mk5-equipment"].subgroup = "shields"
+		data.raw.item["bob-energy-shield-mk6-equipment"].subgroup = "shields"
 
-		data.raw.item["solar-panel-equipment-2"].subgroup = "power"
-		data.raw.item["solar-panel-equipment-3"].subgroup = "power"
-		data.raw.item["solar-panel-equipment-4"].subgroup = "power"
+		data.raw.item["bob-solar-panel-equipment-2"].subgroup = "power"
+		data.raw.item["bob-solar-panel-equipment-3"].subgroup = "power"
+		data.raw.item["bob-solar-panel-equipment-4"].subgroup = "power"
 
 --		data.raw.item["bob-fusion-reactor-equipment-2"].subgroup = "power"
 --		data.raw.item["bob-fusion-reactor-equipment-3"].subgroup = "power"
 --		data.raw.item["bob-fusion-reactor-equipment-4"].subgroup = "power"
 
-		data.raw.item["night-vision-equipment-2"].subgroup = "misc1"
-		data.raw.item["night-vision-equipment-3"].subgroup = "misc1"
+		data.raw.item["bob-night-vision-equipment-2"].subgroup = "misc1"
+		data.raw.item["bob-night-vision-equipment-3"].subgroup = "misc1"
 
-		data.raw.item["exoskeleton-equipment-2"].subgroup = "misc1"
-		data.raw.item["exoskeleton-equipment-3"].subgroup = "misc1"
+		data.raw.item["bob-exoskeleton-equipment-2"].subgroup = "misc1"
+		data.raw.item["bob-exoskeleton-equipment-3"].subgroup = "misc1"
 
-		data.raw.item["personal-laser-defense-equipment-2"].subgroup = "personal-laser-defences"
-		data.raw.item["personal-laser-defense-equipment-3"].subgroup = "personal-laser-defences"
-		data.raw.item["personal-laser-defense-equipment-4"].subgroup = "personal-laser-defences"
-		data.raw.item["personal-laser-defense-equipment-5"].subgroup = "personal-laser-defences"
-		data.raw.item["personal-laser-defense-equipment-6"].subgroup = "personal-laser-defences"
+		data.raw.item["bob-personal-laser-defense-equipment-2"].subgroup = "personal-laser-defences"
+		data.raw.item["bob-personal-laser-defense-equipment-3"].subgroup = "personal-laser-defences"
+		data.raw.item["bob-personal-laser-defense-equipment-4"].subgroup = "personal-laser-defences"
+		data.raw.item["bob-personal-laser-defense-equipment-5"].subgroup = "personal-laser-defences"
+		data.raw.item["bob-personal-laser-defense-equipment-6"].subgroup = "personal-laser-defences"
 
 	end
 

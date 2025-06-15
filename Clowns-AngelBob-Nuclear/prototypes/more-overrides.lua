@@ -13,9 +13,9 @@ data.raw.recipe["advanced-uranium-processing"].hidden=true
 data.raw["recipe"]["thermonuclear-bomb"].ingredients = {{"rocket-control-unit", 200}}
 --modules
 if mods["bobmodules"] then
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"speed-module-6", 3})
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"productivity-module-6", 3})
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"efficiency-module-6", 3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"speed-module-5", 3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"productivity-module-5", 3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"efficiency-module-5", 3})
 else
 	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"speed-module-3", 3})
 	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"productivity-module-3", 3})
@@ -25,7 +25,7 @@ end
 if data.raw.item["fusion-reactor-equipment-2"] then
 	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"fusion-reactor-equipment-2", 1})
 else
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"fusion-reactor-equipment", 1})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"fission-reactor-equipment", 1})
 end
 ---------------------------------------
 -- ANGELS INDUSTRIES NUCLEAR UPDATES --
@@ -122,14 +122,14 @@ if mods["angelsindustries"] then
 
   --set ingedient limit higher...
   data.raw["assembling-machine"]["centrifuge"].ingredient_count=5
-  if mods["bobassembly"] and settings.startup["bobmods-assembly-centrifuge"].value then
-    data.raw["assembling-machine"]["centrifuge-2"].ingredient_count=5
-    data.raw["assembling-machine"]["centrifuge-3"].ingredient_count=5
+  --[[if mods["bobassembly"] and settings.startup["bobmods-assembly-centrifuge"].value then
+    data.raw["assembling-machine"]["bob-centrifuge-2"].ingredient_count=5
+    data.raw["assembling-machine"]["bob-centrifuge-3"].ingredient_count=5
   end
   if settings.startup["MCP_enable_centrifuges"].value then
-    data.raw["assembling-machine"]["centrifuge-mk2"].ingredient_count=5
-    data.raw["assembling-machine"]["centrifuge-mk3"].ingredient_count=5
-  end
+    data.raw["assembling-machine"]["bob-centrifuge-mk2"].ingredient_count=5
+    data.raw["assembling-machine"]["bob-centrifuge-mk3"].ingredient_count=5
+  end]]
   --thermal/train fuel updates
   data.raw["item-subgroup"]["clowns-nuclear-fuels"].group = "angels-power"
   data.raw["item-subgroup"]["clowns-nuclear-fuels"].order = "d[clowns]-ac[centrifuging]"

@@ -7,7 +7,7 @@ local prereqs =
 	"advanced-material-processing-2",
 }
 
-if data.raw.recipe["advanced-logistic-science-pack"] then
+if data.raw.recipe["bob-advanced-logistic-science-pack"] then
 	table.insert(prereqs, "logistics-3")
 end
 if mods["angelspetrochem"] then --i may also activate these with pyanodons
