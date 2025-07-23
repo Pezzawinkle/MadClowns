@@ -4,7 +4,7 @@ if mods["angelsbioprocessing"] then
 			{
 				type = "technology",
 				name = "garden-mutation",
-				icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
+				icon = "__angelsbioprocessinggraphics__/graphics/technology/seed-extractor-tech.png",
 				icon_size = 128,
 				order = "c",
 				prerequisites =

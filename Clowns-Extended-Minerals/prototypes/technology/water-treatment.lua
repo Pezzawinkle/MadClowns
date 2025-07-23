@@ -5,7 +5,7 @@ if not clowns.special_vanilla then
       type = "technology",
       name = "water-washing-3",
       icon_size = 128,
-      icon = "__angelsrefining__/graphics/technology/washing-plant-tech.png",
+      icon = "__angelsrefininggraphics__/graphics/technology/washing-plant-tech.png",
       effects =
       {
         {
