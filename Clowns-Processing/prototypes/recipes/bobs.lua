@@ -30,7 +30,7 @@ end
       name = "sand-sluicing",
       category = "sluicing",
       enabled = false,
-      icon = "__angelsrefining__/graphics/icons/solid-sand.png",
+      icon = "__angelsrefininggraphics__/graphics/icons/solid-sand.png",
       icon_size = 32,
       ingredients = 
       {

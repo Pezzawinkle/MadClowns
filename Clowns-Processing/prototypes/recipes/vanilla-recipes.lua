@@ -478,10 +478,12 @@ data:extend(
     icons =
     {
       {
-        icon = "__Clowns-Processing__/graphics/icons/sorting.png"
+        icon = "__Clowns-Processing__/graphics/icons/sorting.png",
+        icon_size = 32,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/stone-crushed.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/stone-crushed.png",
+				icon_size = 32, 
         scale = 0.5,
         shift = {8, 8},
       },

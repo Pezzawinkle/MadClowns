@@ -73,7 +73,7 @@ if mods["angelsbioprocessing"] then
 	{
 		type = "recipe",
 		name = "swamp-garden-generation",
-		icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+		icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
     	icon_size = 32,
     	category = "swamp-farming",
     	subgroup = "farming-swamp-seed",
@@ -110,7 +110,7 @@ if mods["angelsbioprocessing"] then
 		{
 			{type = "item", name = "temperate-garden", amount = 1}
 		},
-		icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+		icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
 		icon_size = 32,
 		order = "g[temperate-garden-generation]-c",
   },
@@ -132,7 +132,7 @@ if mods["angelsbioprocessing"] then
 		{
 			{type = "item", name = "desert-garden", amount = 1}
 		},
-		icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+		icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
 		icon_size = 32,
 		order = "g[temperate-garden-generation]-c",
   },
@@ -154,7 +154,7 @@ if mods["angelsbioprocessing"] then
 		{
 			{type = "item", name = "temperate-garden", amount = 1}
 		},
-		icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+		icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
 		icon_size = 32,
 		order = "mc",
   },
@@ -176,7 +176,7 @@ if mods["angelsbioprocessing"] then
 		{
 			{type = "item", name = "desert-garden", amount = 1}
 		},
-		icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+		icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
 		icon_size = 32,
 		order = "mc",
   },
@@ -198,7 +198,7 @@ if mods["angelsbioprocessing"] then
 		{
 			{type = "item", name = "swamp-garden", amount = 1}
 		},
-		icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+		icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
 		icon_size = 32,
 		order = "mc",
   },
@@ -208,7 +208,7 @@ if mods["angelsbioprocessing"] then
 		name = "diammonium-phosphate-fertilizer",
 		icons = {
 			{
-				icon = "__angelsbioprocessing__/graphics/icons/solid-fertilizer.png",
+				icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-fertilizer.png",
 				icon_size = 32, icon_mipmaps = 1
 			},
 			{

@@ -129,7 +129,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         {type="fluid", name="liquid-molten-brass", amount=360},
       },
       icons = angelsmods.functions.add_number_icon_layer(
-        {{icon = "__angelssmelting__/graphics/icons/molten-brass.png",icon_size = 64, icon_mipmaps = 4, scale = 32/64}},
+        {{icon = "__angelssmeltinggraphics__/graphics/icons/molten-brass.png", icon_size = 64, icon_mipmaps = 4, scale = 32/64}},
         4, angelsmods.smelting.number_tint),
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-brass"),
       order = "b[brass]-a[liquid-molten-brass]-d",
