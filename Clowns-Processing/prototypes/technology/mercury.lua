@@ -12,7 +12,7 @@ data:extend(
 				recipe = "thermal-filtering-mercury"
 			},
 		},
-		prerequisites = {"thermal-water-extraction-2"},
+		prerequisites = {"angels-thermal-water-extraction-2"},
 		unit =
 		{
 			ingredients =
@@ -56,7 +56,7 @@ if mods["angelsbioprocessing"] then
           recipe = "neurotoxin-capsule"
         },
       },
-      prerequisites = {"mercury-processing-1", "bio-processing-blue", "military-3"},
+      prerequisites = {"mercury-processing-1", "angels-bio-processing-blue", "military-3"},
       unit =
       {
         ingredients =

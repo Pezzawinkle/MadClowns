@@ -54,14 +54,14 @@ if settings.startup["MCP_enable_centrifuges"].value then
     {type = "item", name = "processing-unit", amount = 100}
   }
   if data.raw.item["titanium-plate"] then
-    ings_2[#ings_2+1] = {type = "item", name = "titanium-plate", amount = 50}
+    ings_2[#ings_2+1] = {type = "item", name = "bob-titanium-plate", amount = 50}
   else --vanilla materials
     ings_2[#ings_2+1] = {type = "item", name = "steel-plate", amount = 200}
   end
   if data.raw.item["titanium-gear-wheel"] then
-    ings_2[#ings_2+1] = {type = "item", name = "titanium-gear-wheel", amount = 100}
+    ings_2[#ings_2+1] = {type = "item", name = "bob-titanium-gear-wheel", amount = 100}
   else --vanilla materials
-    ings_2[#ings_2+1] = {type = "item", name = "concrete-brick", amount = 200}
+    ings_2[#ings_2+1] = {type = "item", name = "angels-concrete-brick", amount = 200}
   end
   centrifuge_2r.ingredients = ings_2
 
@@ -80,8 +80,8 @@ if settings.startup["MCP_enable_centrifuges"].value then
   {
     {type = "item", name = "centrifuge-mk2", amount = 1}
   }
-  if data.raw.item["advanced-processing-unit"] then
-    ings_3[#ings_3+1]= {type="item", name="advanced-processing-unit", amount=100}
+  if data.raw.item["bobadvanced-processing-unit"] then
+    ings_3[#ings_3+1]= {type="item", name="bob-advanced-processing-unit", amount=100}
   else
     ings_3[#ings_3+1] = {type = "item", name = "processing-unit", amount = 200}
   end
@@ -90,7 +90,7 @@ if settings.startup["MCP_enable_centrifuges"].value then
     ings_3[#ings_3+1] = {type = "item", name = "bob-tungsten-gear-wheel", amount = 100}
   elseif data.raw.item["angels-tungsten-plate"] then
     ings_3[#ings_3+1] = {type = "item", name = "angels-tungsten-plate", amount = 200}
-    ings_3[#ings_3+1] = {type = "item", name = "concrete-brick", amount = 300}
+    ings_3[#ings_3+1] = {type = "item", name = "angels-concrete-brick", amount = 300}
   else --vanilla materials
     ings_3[#ings_3+1] = {type = "item", name = "steel-plate", amount = 300}
     ings_3[#ings_3+1] = {type = "item", name = "concrete", amount = 300}

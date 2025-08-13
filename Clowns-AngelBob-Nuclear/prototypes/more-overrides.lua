@@ -2,7 +2,7 @@ local OV = angelsmods.functions.OV
 --set nuclear cell plate
 local n_plate="iron-plate"
 if mods["bobplates"] then
-  n_plate="lead-plate"
+  n_plate="bob-lead-plate"
 elseif mods["angelsindustries"] and angelsmods.industries.overhaul then
   n_plate="angels-plate-lead" --should only activate if not with bobs
 end
@@ -10,12 +10,12 @@ end
 data.raw.recipe["advanced-uranium-processing"].hidden=true
 
 --Add ingredients to thermonuclear bomb
-data.raw["recipe"]["thermonuclear-bomb"].ingredients = {{"rocket-control-unit", 200}}
+--data.raw["recipe"]["thermonuclear-bomb"].ingredients = {{"rocket-control-unit", 200}}
 --modules
 if mods["bobmodules"] then
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"speed-module-5", 3})
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"productivity-module-5", 3})
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"efficiency-module-5", 3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"bob-speed-module-5", 3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"bob-productivity-module-5", 3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"bob-efficiency-module-5", 3})
 else
 	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"speed-module-3", 3})
 	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"productivity-module-3", 3})
@@ -51,11 +51,11 @@ if mods["angelsindustries"] and angelsmods.industries.overhaul then
 end
 
 --updates to the plutonium bomb
-if data.raw.item["electronic-logic-board"] then 
-  clowns.functions.replace_ing("plutonium-atomic-bomb","electronic-logic-board","rocket-control-unit","ing")
-elseif data.raw.item["processing-unit"] then
-  clowns.functions.replace_ing("plutonium-atomic-bomb","processing-unit","rocket-control-unit","ing")
-end
+--if data.raw.item["electronic-logic-board"] then 
+--  clowns.functions.replace_ing("plutonium-atomic-bomb","electronic-logic-board","rocket-control-unit","ing")
+--elseif data.raw.item["processing-unit"] then
+-- clowns.functions.replace_ing("plutonium-atomic-bomb","processing-unit","rocket-control-unit","ing")
+--end
 --assuming bobs reprocessing recipe is well balanced (may be clobbered by angels)
 data.raw.recipe["nuclear-fuel-reprocessing"].results=
 {
@@ -93,7 +93,7 @@ if settings.startup["reprocessing-overhaul"].value and data.raw.item["lead-oxide
     clowns.functions.remove_res("thorium-fuel-reprocessing",n_plate,"res")
     if data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing"] then
       clowns.functions.add_to_table("advanced-thorium-nuclear-fuel-reprocessing",{type="item",name="lead-oxide",amount= 2,probability=rec_chance},"res")
-      clowns.functions.add_to_table("advanced-thorium-nuclear-fuel-reprocessing|b",{type="item",name="lead-oxide",amount= 2,probability=rec_chance},"res")
+      clowns.functions.add_to_table("advanced-thorium-nuclear-fuel-reprocessing-b",{type="item",name="lead-oxide",amount= 2,probability=rec_chance},"res")
       --table.insert(data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
       --table.insert(data.raw.recipe["advanced-thorium-nuclear-fuel-reprocessing|b"].results,{type="item",name="lead-oxide",amount= 2,probability=rec_chance})
     end

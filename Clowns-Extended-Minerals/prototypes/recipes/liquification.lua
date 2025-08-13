@@ -3,8 +3,8 @@ data:extend(
 	{
 		type = "recipe",
 		name = "clowns-resource2-liquification",
-		category = "liquifying",
-		subgroup = "petrochem-carbon-oil-feed",
+		category = "angels-liquifying",
+		subgroup = "angels-petrochem-carbon-oil-feed",
 		enabled = false,
 		energy_required = 2,
 		ingredients =
@@ -14,7 +14,7 @@ data:extend(
 		},
 		results=
 		{
-			{type="item", name="solid-oil-residual", amount=1},
+			{type="item", name="angels-solid-oil-residual", amount=1},
 			{type="fluid", name="crude-oil", amount=10}
 		},
 		icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-resource2.png",

@@ -45,7 +45,7 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "advanced-thorium-nuclear-fuel-reprocessing|b"
+				recipe = "advanced-thorium-nuclear-fuel-reprocessing-b"
 			},
 			{
 				type = "unlock-recipe",

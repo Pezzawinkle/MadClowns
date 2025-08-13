@@ -68,16 +68,16 @@ local create_mixed_sorting = function(num,tier)
   elseif cat == drum then --add milling drum and spent drum --pretty sure this is done in that other script anyway
   elseif cat == acid then --(add acid from a lookup table) --pretty sure this is done in that other script anyway
   else --add catalyser
-    table.insert(ing_norm, {type = "item", name = "catalysator-"..cat, amount = 1})
+    table.insert(ing_norm, {type = "item", name = "angels-catalysator-"..cat, amount = 1})
     --table.insert(ing_exp, {type = "item", name = "catalysator-"..cat, amount = 1})
   end
   --create recipe
   --order setting
   local n_order="d"
-  local cat= "ore-sorting-"..tier
+  local cat= "angels-ore-sorting-"..tier
   if style=="crushed" then
     n_order="a"
-    cat="ore-sorting"
+    cat="angels-ore-sorting"
   elseif style=="chunk" then
     n_order="b"
   elseif style=="crystal" then
@@ -99,7 +99,7 @@ local create_mixed_sorting = function(num,tier)
         results = {{type = "item", name = "angels-void", amount = 1}},
         icons =
         {
-          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          {icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
         },
         icon_size = 32,
         order = n_order.."[clowns-" .. style .. "-mix".. num .."-processing]",
@@ -124,25 +124,25 @@ data:extend(
     {
       type = "item-subgroup",
       name = "clowns-ore-sorting-1",
-      group = "resource-refining",
+      group = "angels-resource-refining",
       order = "l",
     },
     {
       type = "item-subgroup",
       name = "clowns-ore-sorting-2",
-      group = "resource-refining",
+      group = "angels-resource-refining",
       order = "m",
     },
     {
       type = "item-subgroup",
       name = "clowns-ore-sorting-3",
-      group = "resource-refining",
+      group = "angels-resource-refining",
       order = "n",
     },
     {
       type = "item-subgroup",
       name = "clowns-ore-sorting-4",
-      group = "resource-refining",
+      group = "angels-resource-refining",
       order = "o",
     }
   }
@@ -156,7 +156,7 @@ local create_adv_mixed_sorting = function(num)
       {
         type = "item-subgroup",
         name = "clowns-ore".. num .. "-refining",
-        group = "resource-refining",
+        group = "angels-resource-refining",
         order = "k-"..num-10,
       },
 
@@ -165,7 +165,7 @@ local create_adv_mixed_sorting = function(num)
         type = "recipe",
         name = "clownsore"..num.."-crushed",
         localised_name = {"recipe-name.clowns-mix","Crushed",{"entity-name.clowns-ore"..num}},
-        category = "ore-refining-t1",
+        category = "angels-ore-refining-t1",
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 1,
         enabled = false,
@@ -184,7 +184,7 @@ local create_adv_mixed_sorting = function(num)
         type = "recipe",
         name = "clownsore"..num.."-crushed-processing",
         localised_name = {"recipe-name.clowns-proc","Crushed",{"entity-name.clowns-ore"..num}},
-        category = "ore-sorting",
+        category = "angels-ore-sorting",
         subgroup = "clowns-ore-sorting-1",
         energy_required = 1,
         allow_decomposition = false,
@@ -196,8 +196,8 @@ local create_adv_mixed_sorting = function(num)
           {type = "item", name = "angels-void", amount = 1}
         },
         icons = {
-          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/crushed.png", scale = 0.5, shift = {-10, 10}}
+          {icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/crushed.png", icon_size = 32, scale = 0.5, shift = {-10, 10}}
         },
         icon_size = 32,
         order = "b["..num.."]"
@@ -207,17 +207,17 @@ local create_adv_mixed_sorting = function(num)
         type = "recipe",
         name = "clownsore"..num.."-powder",
         localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Powder"},
-        category = "ore-refining-t1-5",--t-1-5
+        category = "angels-ore-refining-t1-5",--t-1-5
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 2,
         enabled = false,
         ingredients = {
           {type = "item", name = "clowns-ore"..num.."-crushed", amount = 3},
-          {type = "item", name = "milling-drum", amount = 1}
+          {type = "item", name = "angels-milling-drum-lubricated", amount = 1}
         },
         results = {
           {type = "item", name = "clowns-ore"..num.."-powder", amount = 3},
-          {type = "item", name = "milling-drum-used", amount = 1}
+          {type = "item", name = "angels-milling-drum", amount = 1}
         },
         main_product = "clowns-ore"..num.."-powder",
         icon_size = 32,
@@ -227,7 +227,7 @@ local create_adv_mixed_sorting = function(num)
         type = "recipe",
         name = "clownsore"..num.."-powder-processing",
         localised_name = {"recipe-name.clowns-proc",{"entity-name.clowns-ore"..num},"Powder"},
-        category = "ore-sorting",
+        category = "angels-ore-sorting",
         subgroup = "clowns-ore-sorting-2",
         energy_required = 1,
         allow_decomposition = false,
@@ -239,8 +239,8 @@ local create_adv_mixed_sorting = function(num)
           {type = "item", name = "angels-void", amount = 1}
         },
         icons = {
-          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/powder.png", scale = 0.5, shift = {-10, 10}}
+          {icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/powder.png", icon_size = 32, scale = 0.5, shift = {-10, 10}}
         },
         icon_size = 32,
         order = "d["..num.."]"
@@ -259,7 +259,7 @@ local create_adv_mixed_sorting = function(num)
           {type = "item", name = blends[num][1].."-chunk", amount = 1},
           {type = "item", name = blends[num][2].."-chunk", amount = 1},
           {type = "item", name = blends[num][3].."-chunk", amount = 1},
-          {type = "fluid", name = "thermal-water", amount = 20},
+          {type = "fluid", name = "angels-thermal-water", amount = 20},
           {type = "fluid", name = "sulfuric-acid", amount = 20}
         },
         results = {
@@ -272,17 +272,17 @@ local create_adv_mixed_sorting = function(num)
         type = "recipe",
         name = "clownsore"..num.."-dust",
         localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Dust"},
-        category = "ore-refining-t2",--t2
+        category = "angels-ore-refining-t2",--t2
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 4,
         enabled = false,
         ingredients = {
           {type = "fluid", name = "clowns-ore"..num.."-sludge", amount = 4},
-          {type="item", name="solid-sodium-hydroxide", amount=2}
+          {type="item", name="angels-solid-sodium-hydroxide", amount=2}
         },
         results = {
           {type = "item", name = "clowns-ore"..num.."-dust", amount = 4},
-          {type = "fluid", name = "water-yellow-waste", amount = 20}
+          {type = "fluid", name = "angels-water-yellow-waste", amount = 20}
         },
         main_product = "clowns-ore"..num.."-dust",
         icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/dust.png",
@@ -293,7 +293,7 @@ local create_adv_mixed_sorting = function(num)
         type = "recipe",
         name = "clownsore"..num.."-dust-processing",
         localised_name = {"recipe-name.clowns-proc",{"entity-name.clowns-ore"..num},"Dust"},
-        category = "ore-sorting-3",
+        category = "angels-ore-sorting-3",
         subgroup = "clowns-ore-sorting-3",
         energy_required = 1.5,
         allow_decomposition = false,
@@ -305,8 +305,8 @@ local create_adv_mixed_sorting = function(num)
           {type = "item", name = "angels-void", amount = 1}
         },
         icons = {
-          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/dust.png", scale = 0.5, shift = {-10, 10}}
+          {icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/dust.png", icon_size = 32, scale = 0.5, shift = {-10, 10}}
         },
         icon_size = 32,
         order = "g["..num.."]"
@@ -316,7 +316,7 @@ local create_adv_mixed_sorting = function(num)
         type = "recipe",
         name = "clownsore"..num.."-solution",
         localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Solution"},
-        category = "ore-refining-t3",--t3
+        category = "angels-ore-refining-t3",--t3
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 2,
         enabled = false,
@@ -337,19 +337,19 @@ local create_adv_mixed_sorting = function(num)
         type = "recipe",
         name = "clownsore"..num.."-anode-sludge-filtering",
         localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Filtering"},
-        category = "filtering-2",
+        category = "angels-filtering-2",
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 2,
         enabled = false,
         ingredients = {
           {type = "fluid", name = "clowns-ore"..num.."-solution", amount = 60},
-          {type = "fluid", name = "water-purified", amount = 50},
-          {type = "item", name = "filter-ceramic", amount = 1}
+          {type = "fluid", name = "angels-water-purified", amount = 50},
+          {type = "item", name = "angels-filter-ceramic", amount = 1}
         },
         results = {
           {type = "fluid", name = "clowns-ore"..num.."-slime", amount = 60},
-          {type = "fluid", name = "water-yellow-waste", amount = 10},
-          {type = "item", name = "filter-ceramic-used", amount = 1}
+          {type = "fluid", name = "angels-water-yellow-waste", amount = 10},
+          {type = "item", name = "angels-filter-ceramic-used", amount = 1}
         },
         main_product = "clowns-ore"..num.."-slime",
         icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
@@ -363,18 +363,18 @@ local create_adv_mixed_sorting = function(num)
         type = "recipe",
         name = "clownsore"..num.."-anode-sludge",
         localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Sludge"},
-        category = "ore-refining-t3-5",--t3-5
+        category = "angels-ore-refining-t3-5",--t3-5
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 2,
         enabled = false,
         ingredients = {
           {type = "fluid", name = "clowns-ore"..num.."-slime", amount = 60},
-          {type="fluid", name="liquid-ferric-chloride-solution", amount=2} --change a few of them to HCl later?
+          {type="fluid", name="angels-liquid-ferric-chloride-solution", amount=2} --change a few of them to HCl later?
         },
         results = {
           {type = "fluid", name = "clowns-ore"..num.."-anode-sludge", amount = 60},
-          {type = "fluid", name = "water-yellow-waste", amount = 20},
-          {type = "item", name = "slag", amount = 1}
+          {type = "fluid", name = "angels-water-yellow-waste", amount = 20},
+          {type = "item", name = "angels-slag", amount = 1}
         },
         main_product = "clowns-ore"..num.."-anode-sludge",
         icon_size = 32,
@@ -384,7 +384,7 @@ local create_adv_mixed_sorting = function(num)
         type = "recipe",
         name = "clownsore"..num.."-crystal",
         localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Crystal"},
-        category = "crystallizing",
+        category = "angels-crystallizing",
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 2,
         enabled = false,
@@ -401,7 +401,7 @@ local create_adv_mixed_sorting = function(num)
         type = "recipe",
         name = "clownsore"..num.."-crystal-processing",
         localised_name = {"recipe-name.clowns-proc",{"entity-name.clowns-ore"..num},"Crystal"},
-        category = "ore-sorting-4",
+        category = "angels-ore-sorting-4",
         subgroup = "clowns-ore-sorting-4",
         energy_required = 1.5,
         allow_decomposition = false,
@@ -413,8 +413,8 @@ local create_adv_mixed_sorting = function(num)
           {type = "item", name = "angels-void", amount = 1}
         },
         icons = {
-          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/crystal.png", scale = 0.5, shift = {-10, 10}}
+          {icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/crystal.png", icon_size = 32, scale = 0.5, shift = {-10, 10}}
         },
         icon_size = 32,
         order = "l["..num.."]"

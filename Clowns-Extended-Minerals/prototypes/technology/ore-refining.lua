@@ -30,9 +30,9 @@ data:extend(
 		type = "technology",
 		name = "clowns-ore-crushing",
 		icon_size = 256,
-		icon = "__angelsrefining__/graphics/technology/mechanical-refining.png",
+		icon = "__angelsrefininggraphics__/graphics/technology/mechanical-refining.png",
 		effects = crushing_eff,
-		prerequisites = {"ore-crushing"},
+		prerequisites = {"angels-ore-crushing"},
 		unit =
 		{
 			ingredients =
@@ -48,9 +48,9 @@ data:extend(
 		type = "technology",
 		name = "clowns-ore-floatation",
 		icon_size = 256,
-		icon = "__angelsrefining__/graphics/technology/hydro-refining.png",
+		icon = "__angelsrefininggraphics__/graphics/technology/hydro-refining.png",
 		effects = flotation_eff,
-		prerequisites = {"ore-floatation", "clowns-ore-crushing"},
+		prerequisites = {"angels-ore-floatation", "clowns-ore-crushing"},
 		unit =
 		{
 			ingredients =
@@ -67,9 +67,9 @@ data:extend(
 		type = "technology",
 		name = "clowns-ore-leaching",
 		icon_size = 128,
-		icon = "__angelsrefining__/graphics/technology/chemical-refining.png",
+		icon = "__angelsrefininggraphics__/graphics/technology/chemical-refining.png",
 		effects = leeching_eff,
-		prerequisites = {"ore-leaching", "clowns-ore-floatation"},
+		prerequisites = {"angels-ore-leaching", "clowns-ore-floatation"},
 		unit =
 		{
 			ingredients =
@@ -87,9 +87,9 @@ data:extend(
 		type = "technology",
 		name = "clowns-ore-refining",
 		icon_size = 256,
-		icon = "__angelsrefining__/graphics/technology/thermal-refining.png",
+		icon = "__angelsrefininggraphics__/graphics/technology/thermal-refining.png",
 		effects = refining_eff,
-		prerequisites = {"ore-refining", "clowns-ore-leaching"},
+		prerequisites = {"angels-ore-refining", "clowns-ore-leaching"},
 		unit =
 		{
 			ingredients =
@@ -119,18 +119,18 @@ end
 --add in advanced ore stuffs
 if not clowns.special_vanilla then
   for i=11,15,1 do
-    table.insert(data.raw.technology["ore-advanced-crushing"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crushed"})
-    table.insert(data.raw.technology["ore-advanced-crushing"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crushed-processing"})
-    table.insert(data.raw.technology["ore-powderizer"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-powder"})
-    table.insert(data.raw.technology["ore-powderizer"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-powder-processing"})
-    table.insert(data.raw.technology["ore-advanced-floatation"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-sludge"})
-    table.insert(data.raw.technology["ore-advanced-floatation"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-dust"})
-    table.insert(data.raw.technology["ore-advanced-floatation"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-dust-processing"})
-    table.insert(data.raw.technology["ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-solution"})
-    table.insert(data.raw.technology["ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-anode-sludge-filtering"})
-    table.insert(data.raw.technology["ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-anode-sludge"})
-    table.insert(data.raw.technology["ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crystal"})
-    table.insert(data.raw.technology["ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crystal-processing"})
+    table.insert(data.raw.technology["angels-ore-advanced-crushing"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crushed"})
+    table.insert(data.raw.technology["angels-ore-advanced-crushing"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crushed-processing"})
+    table.insert(data.raw.technology["angels-ore-powderizer"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-powder"})
+    table.insert(data.raw.technology["angels-ore-powderizer"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-powder-processing"})
+    table.insert(data.raw.technology["angels-ore-advanced-floatation"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-sludge"})
+    table.insert(data.raw.technology["angels-ore-advanced-floatation"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-dust"})
+    table.insert(data.raw.technology["angels-ore-advanced-floatation"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-dust-processing"})
+    table.insert(data.raw.technology["angels-ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-solution"})
+    table.insert(data.raw.technology["angels-ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-anode-sludge-filtering"})
+    table.insert(data.raw.technology["angels-ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-anode-sludge"})
+    table.insert(data.raw.technology["angels-ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crystal"})
+    table.insert(data.raw.technology["angels-ore-electro-whinning-cell"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crystal-processing"})
   end
 else --special vanilla case
   --table.insert(data.raw.technology["ore-advanced-crushing"].effects,{type = "unlock-recipe",recipe = "clownsore"..i.."-crushed"})

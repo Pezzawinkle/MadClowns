@@ -20,7 +20,7 @@ data:extend(
         recipe = "phosphoric-acid-1"
       },
     },
-    prerequisites = {"basic-chemistry-2", "angels-metallurgy-2", "angels-sulfur-processing-1", "ore-crushing"},
+    prerequisites = {"angels-basic-chemistry-2", "angels-metallurgy-2", "angels-sulfur-processing-1", "angels-ore-crushing"},
     unit =
     {
       ingredients =

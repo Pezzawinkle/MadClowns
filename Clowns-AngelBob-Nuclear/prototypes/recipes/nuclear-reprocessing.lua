@@ -8,8 +8,8 @@ data:extend(
 		category = "chemistry",
 		ingredients =
 		{
-			{type="item", name="used-up-uranium-fuel-cell", amount=5},
-			{type="fluid", name="liquid-nitric-acid", amount=300}--20
+			{type="item", name="depleted-uranium-fuel-cell", amount=5},
+			{type="fluid", name="angels-liquid-nitric-acid", amount=300}--20
 		},
 		icons = {{icon = "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-reprocessing.png", icon_size = 32,}},
 		icon_size=32,
@@ -32,8 +32,8 @@ data:extend(
 		category = "chemistry",
 		ingredients =
 		{
-			{type="item", name="used-up-uranium-fuel-cell", amount=5},
-			{type="fluid", name="liquid-nitric-acid", amount=350}--20
+			{type="item", name="depleted-uranium-fuel-cell", amount=5},
+			{type="fluid", name="angels-liquid-nitric-acid", amount=350}--20
 		},
 		icons = {{icon = "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-reprocessing.png", icon_size = 32,}},
 		icon_size=32,
@@ -56,8 +56,8 @@ data:extend(
 		category = "chemistry",
 		ingredients =
 		{
-			{type="item", name="used-up-uranium-fuel-cell", amount=5},
-			{type="fluid", name="liquid-nitric-acid", amount=300}--20
+			{type="item", name="depleted-uranium-fuel-cell", amount=5},
+			{type="fluid", name="angels-liquid-nitric-acid", amount=300}--20
 		},
 		icons = {{icon = "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-reprocessing.png",icon_size=32}},
 		icon_size=32,
@@ -72,8 +72,8 @@ data:extend(
 		},
 	},
 })
-if data.raw.item["thorium-fuel-cell"] or data.raw.item["angels-thorium-fuel-cell"] then
-	local ucell = data.raw.item["thorium-fuel-cell"] and "used-up-thorium-fuel-cell" or data.raw.item["angels-thorium-fuel-cell"] and "used-up-angels-thorium-fuel-cell"
+if data.raw.item["bob-thorium-fuel-cell"] or data.raw.item["angels-thorium-fuel-cell"] then
+	local ucell = data.raw.item["bob-thorium-fuel-cell"] and "bob-depleted-thorium-fuel-cell" or data.raw.item["angels-thorium-fuel-cell"] and "angels-depleted-thorium-fuel-cell"
 data:extend(
 {
 	{
@@ -111,7 +111,7 @@ data:extend(
 		ingredients =
 		{
 			{type="item", name=ucell, amount=5},
-			{type="fluid", name="liquid-nitric-acid", amount=300}--20 (matching the waste liq)
+			{type="fluid", name="angels-liquid-nitric-acid", amount=300}--20 (matching the waste liq)
 		},
 		icons= {{icon = "__Clowns-Nuclear__/graphics/icons/thorium-nuclear-fuel-reprocessing.png", icon_size = 32,}},
 		icon_size=32,
@@ -134,7 +134,7 @@ data:extend(
 		ingredients =
 		{
 			{type="item", name=ucell, amount=5},
-			{type="fluid", name="liquid-nitric-acid", amount=150}--making this path lower than the other one, to give options, may need balance
+			{type="fluid", name="angels-liquid-nitric-acid", amount=150}--making this path lower than the other one, to give options, may need balance
 		},
 		icons= {{icon = "__Clowns-Nuclear__/graphics/icons/thorium-nuclear-fuel-reprocessing.png", icon_size = 32,}},
 		icon_size=32,
@@ -190,7 +190,7 @@ end
 		order = "c-b-b",
 		results =
 		{
-			{type="item", name="used-up-uranium-fuel-cell", amount=1}
+			{type="item", name="depleted-uranium-fuel-cell", amount=1}
 		},
 	},
 }
@@ -232,7 +232,7 @@ if mods["angelsindustries"] and angelsmods.industries.overhaul then
 		order = "c-b-b",
 		results =
 		{
-			{type="item", name="used-up-uranium-fuel-cell", amount=1}
+			{type="item", name="depleted-uranium-fuel-cell", amount=1}
 		},
 	}
 })

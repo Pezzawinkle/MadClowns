@@ -3,8 +3,8 @@ data:extend(
 	{
 		type = "recipe",
 		name = "radioactive-waste-water-purification",
-		category = "water-treatment",
-		subgroup = "water-cleaning",
+		category = "angels-water-treatment",
+		subgroup = "angels-water-cleaning",
 		energy_required = 10,
 		enabled = false,
 		ingredients =
@@ -13,10 +13,10 @@ data:extend(
 		},
 		results=
 		{
-			{type="fluid", name="water-red-waste", amount=100},
+			{type="fluid", name="angels-water-red-waste", amount=100},
 			{type="item", name="polonium-210", amount=1},
 		},
-		icons = angelsmods.functions.create_liquid_recipe_icon({"polonium-210","water-red-waste"}, "WsCCl"),
+		icons = angelsmods.functions.create_liquid_recipe_icon({"polonium-210","angels-water-red-waste"}, "WsCCl"),
 		order = "k",
 	},
 }
