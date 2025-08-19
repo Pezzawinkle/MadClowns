@@ -17,9 +17,9 @@ end
 angelsmods.functions.remove_flag("platinum-ore","hidden")
 --ADD RESOURCE PROCESSING RECIPES TO THE APPROPRIATE TECHNOLOGIES
 
-table.insert(data.raw["technology"]["oil-gas-extraction"].effects, {type = "unlock-recipe", recipe = "clowns-resource2-liquification"})
+table.insert(data.raw["technology"]["angels-oil-gas-extraction"].effects, {type = "unlock-recipe", recipe = "clowns-resource2-liquification"})
 if not clowns.special_vanilla then
-  table.insert(data.raw["technology"]["water-washing-2"].effects, {type = "unlock-recipe", recipe = "clowns-resource1-sluicing"}) --is this not a processing item?
+  table.insert(data.raw["technology"]["angels-water-washing-2"].effects, {type = "unlock-recipe", recipe = "clowns-resource1-sluicing"}) --is this not a processing item?
 end
 
 --pyanodon updates
