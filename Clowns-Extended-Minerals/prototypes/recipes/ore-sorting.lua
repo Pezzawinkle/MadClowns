@@ -228,13 +228,13 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
         type = "recipe",
         name = ore.."-crushed-processing",
         localised_name = {"recipe-name.clowns-refining","Crushed",{"entity-name."..ore}},
-        category = "ore-sorting",
+        category = "angels-ore-sorting",
         subgroup = "clowns-ore-sorting-t1",
         allow_decomposition = false,
         enabled = false,
         energy_required = 1,
         ingredients = {{type = "item", name = ore.."-crushed", amount = 4}},
-        results = {{type = "item", name = "slag", amount = 1}},
+        results = {{type = "item", name = "angels-slag", amount = 1}},
         icons =
         {
           {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png"},
@@ -248,13 +248,13 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
         type = "recipe",
         name = ore.."-chunk-processing",
         localised_name = {"recipe-name.clowns-refining",{"entity-name."..ore},"Chunk"},
-        category = "ore-sorting-2",
+        category = "angels-ore-sorting-2",
         subgroup = "clowns-ore-sorting-t2",
         allow_decomposition = false,
         enabled = false,
         energy_required = 1.5,
         ingredients = {{type = "item", name = ore.."-chunk", amount = 6}},
-        results= {{type = "item", name = "slag", amount = 1},},
+        results= {{type = "item", name = "angels-slag", amount = 1},},
         icons =
         {
           {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png"},
@@ -268,13 +268,13 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
         type = "recipe",
         name = ore.."-crystal-processing",
         localised_name = {"recipe-name.clowns-refining",{"entity-name."..ore},"Crystal"},
-        category = "ore-sorting-3",
+        category = "angels-ore-sorting-3",
         subgroup = "clowns-ore-sorting-t3",
         allow_decomposition = false,
         enabled = false,
         energy_required = 2,
         ingredients = {{type = "item", name = ore.."-crystal", amount = 8}},
-        results = {{type = "item", name = "slag", amount = 1},},
+        results = {{type = "item", name = "angels-slag", amount = 1},},
         icons =
         {
           {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png"},
@@ -288,7 +288,7 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
         type = "recipe",
         name = ore.."-pure-processing",
         localised_name = {"recipe-name.clowns-refining","Purified",{"entity-name."..ore}},
-        category = "ore-sorting-4",
+        category = "angels-ore-sorting-4",
         subgroup = "clowns-ore-sorting-t4",
         allow_decomposition = false,
         enabled = false,
@@ -390,7 +390,7 @@ local create_sorting_mix_recipe = function(recipe_base_name, ore_result_products
         if type(icon_name) == "table" then
           recipe.icons = icon_name -- maybe improve this?
         else
-          recipe.icon = string.format("__angelsrefining__/graphics/icons/%s", icon_name)
+          recipe.icon = string.format("__angelsrefininggraphics__/graphics/icons/%s", icon_name)
         end
       end
       local ingredients_override = (ingredients_overrides or {})[recipe_index]

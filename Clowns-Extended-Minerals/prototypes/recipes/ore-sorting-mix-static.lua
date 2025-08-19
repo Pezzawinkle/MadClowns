@@ -4,8 +4,8 @@ if not clowns.special_vanilla then
 		{
 			type = "recipe",
 			name = "manganese-pure-processing",
-			category = "ore-sorting-2",
-			subgroup = "ore-sorting-advanced",
+			category = "angels-ore-sorting-2",
+			subgroup = "angels-ore-sorting-advanced",
 
 			allow_decomposition = false,
 			enabled = false,
@@ -14,11 +14,11 @@ if not clowns.special_vanilla then
 			{
 				{type="item", name="clowns-ore6-crushed", amount=2},
 				{type="item", name="angels-ore2-crushed", amount=2},
-				{type="item", name="catalysator-brown", amount=1},
+				{type="item", name="angels-catalysator-brown", amount=1},
 			},
 			results =
 			{
-				{type="item", name="manganese-ore", amount=4},
+				{type="item", name="angels-manganese-ore", amount=4},
 			},
 			icons =
 			{
@@ -26,7 +26,7 @@ if not clowns.special_vanilla then
 					icon = "__Clowns-Processing__/graphics/icons/sorting.png"
 				},
 				{
-					icon = "__angelssmelting__/graphics/icons/ore-manganese.png",
+					icon = "__angelssmeltinggraphics__/graphics/icons/ore-manganese.png",
 					scale = 0.5,
 					shift = {8, 8},
 				},
@@ -38,8 +38,8 @@ if not clowns.special_vanilla then
 		{
 			type = "recipe",
 			name = "phosphorus-pure-processing",
-			category = "ore-sorting",
-			subgroup = "ore-sorting-advanced",
+			category = "angels-ore-sorting",
+			subgroup = "angels-ore-sorting-advanced",
 			allow_decomposition = false,
 			enabled = false,
 			energy_required = 1,
@@ -47,7 +47,7 @@ if not clowns.special_vanilla then
 			{
 				{type="item", name="clowns-ore5-crushed", amount=2},
 				{type="item", name="angels-ore6-crushed", amount=2},
-				{type="item", name="catalysator-brown", amount=1},
+				{type="item", name="angels-catalysator-brown", amount=1},
 			},
 			results =
 			{
@@ -71,8 +71,8 @@ if not clowns.special_vanilla then
 		{
 			type = "recipe",
 			name = "chrome-pure-processing",
-			category = "ore-sorting-3",
-			subgroup = "ore-sorting-advanced",
+			category = "angels-ore-sorting-3",
+			subgroup = "angels-ore-sorting-advanced",
 			allow_decomposition = false,
 			enabled = false,
 			energy_required = 1.5,
@@ -80,11 +80,11 @@ if not clowns.special_vanilla then
 			{
 				{type="item", name="clowns-ore7-crystal", amount=2},
 				{type="item", name="angels-ore1-crystal", amount=2},
-				{type="item", name="catalysator-orange", amount=1},
+				{type="item", name="angels-catalysator-orange", amount=1},
 			},
 			results =
 			{
-				{type="item", name="chrome-ore", amount=4},
+				{type="item", name="angels-chrome-ore", amount=4},
 			},
 			icons =
 			{
@@ -92,7 +92,7 @@ if not clowns.special_vanilla then
 					icon = "__Clowns-Processing__/graphics/icons/sorting.png"
 				},
 				{
-					icon = "__angelssmelting__/graphics/icons/ore-chrome.png",
+					icon = "__angelssmeltinggraphics__/graphics/icons/ore-chrome.png",
 					scale = 0.5,
 					shift = {8, 8},
 				},
@@ -104,8 +104,8 @@ if not clowns.special_vanilla then
 		{
 			type = "recipe",
 			name = "magnesium-pure-processing",
-			category = "ore-sorting-2",
-			subgroup = "ore-sorting-advanced",
+			category = "angels-ore-sorting-2",
+			subgroup = "angels-ore-sorting-advanced",
 			allow_decomposition = false,
 			enabled = false,
 			energy_required = 1,
@@ -115,7 +115,7 @@ if not clowns.special_vanilla then
 				{type="item", name="clowns-resource1", amount=20},
 				{type="item",name="angels-ore3-chunk",amount=2},
 				{type="item",name="angels-ore4-chunk",amount=2},
-				{type="item", name="catalysator-green", amount=1},
+				{type="item", name="angels-catalysator-green", amount=1},
 			},
 			results =
 			{
@@ -139,8 +139,8 @@ if not clowns.special_vanilla then
 		{
 			type = "recipe",
 			name = "platinum-pure-processing",
-			category = "ore-sorting-4",
-			subgroup = "ore-sorting-advanced",
+			category = "angels-ore-sorting-4",
+			subgroup = "angels-ore-sorting-advanced",
 			allow_decomposition = false,
 			enabled = false,
 			energy_required = 1.5,
@@ -149,11 +149,11 @@ if not clowns.special_vanilla then
 				{type="item", name="clowns-ore2-pure", amount=2},
 				{type="item", name="angels-ore4-pure", amount=2},
 				{type="item", name="angels-ore5-pure", amount=2},
-				{type="item", name="catalysator-orange", amount=1},
+				{type="item", name="angels-catalysator-orange", amount=1},
 			},
 			results =
 			{
-				{type="item", name="platinum-ore", amount=6},
+				{type="item", name="angels-platinum-ore", amount=6},
 			},
 			icons =
 			{
@@ -161,7 +161,7 @@ if not clowns.special_vanilla then
 					icon = "__Clowns-Processing__/graphics/icons/sorting.png"
 				},
 				{
-					icon = "__angelssmelting__/graphics/icons/ore-platinum.png",
+					icon = "__angelssmeltinggraphics__/graphics/icons/ore-platinum.png",
 					scale = 0.5,
 					shift = {8, 8},
 				},
@@ -173,8 +173,8 @@ if not clowns.special_vanilla then
 		{
 			type = "recipe",
 			name = "osmium-pure-processing",
-			category = "ore-sorting-4",
-			subgroup = "ore-sorting-advanced",
+			category = "angels-ore-sorting-4",
+			subgroup = "angels-ore-sorting-advanced",
 			allow_decomposition = false,
 			enabled = false,
 			energy_required = 1.5,
@@ -183,7 +183,7 @@ if not clowns.special_vanilla then
 				{type="item", name="clowns-ore1-pure", amount=2},
 				{type="item", name="angels-ore1-pure", amount=2},
 				{type="item", name="angels-ore4-pure", amount=2},
-				{type="item", name="catalysator-orange", amount=1},
+				{type="item", name="angels-catalysator-orange", amount=1},
 			},
 			results =
 			{
@@ -214,8 +214,8 @@ if mods["Clowns-AngelBob-Nuclear"] then
 		{
 			type = "recipe",
 			name = "thorium-pure-processing",
-			category = "ore-sorting-4",
-			subgroup = "ore-sorting-advanced",
+			category = "angels-ore-sorting-4",
+			subgroup = "angels-ore-sorting-advanced",
 			allow_decomposition = false,
 			enabled = false,
 			energy_required = 1.5,
@@ -224,7 +224,7 @@ if mods["Clowns-AngelBob-Nuclear"] then
 				{type="item", name="clowns-ore3-crystal", amount=2},
 				{type="item", name="angels-ore2-crystal", amount=2},
 				{type="item", name="angels-ore5-crystal", amount=2},
-				{type="item", name="catalysator-orange", amount=1}
+				{type="item", name="angels-catalysator-orange", amount=1}
 			},
 			results =
 			{
