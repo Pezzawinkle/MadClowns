@@ -2,7 +2,7 @@ data:extend(
 {
 	--[[{
 		type = "fluid",
-		name = "water-phosphoric-waste",
+		name = "angels-water-phosphoric-waste",
 		icon = "__Clowns-Processing__/graphics/icons/water-radioactive-waste.png",
 		icon_size = 32,
 		default_temperature = 25,
@@ -15,7 +15,7 @@ data:extend(
 	},
 	{
 		type = "fluid",
-		name = "water-uranyl-waste",
+		name = "angels-water-uranyl-waste",
 		icon = "__Clowns-Processing__/graphics/icons/water-radioactive-waste.png",
 		icon_size = 32,
 		default_temperature = 25,
@@ -28,7 +28,7 @@ data:extend(
 	},
 	{
 		type = "fluid",
-		name = "water-thoric-waste",
+		name = "angels-water-thoric-waste",
 		icon = "__Clowns-Processing__/graphics/icons/water-radioactive-waste.png",
 		icon_size = 32,
 		default_temperature = 25,
@@ -41,7 +41,7 @@ data:extend(
 	},]]
 	{
 		type = "fluid",
-		name = "water-radioactive-waste",
+		name = "angels-water-radioactive-waste",
 		icon = "__Clowns-AngelBob-Nuclear__/graphics/icons/water-radioactive-waste.png",
 		icon_size = 32,
 		default_temperature = 25,
@@ -51,7 +51,7 @@ data:extend(
 		max_temperature = 100,
 		pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
-    subgroup = "water-treatment-fluid",
+    subgroup = "angels-water-treatment-fluid",
     order = "k",
 	},
 }

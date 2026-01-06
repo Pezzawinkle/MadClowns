@@ -8,7 +8,7 @@ data:extend(
 		energy_required = energy,
 		enabled = false,
 		category = "centrifuging",
-		ingredients = {{"solid-uranium-hexafluoride", 48}},--decent saving yo
+		ingredients = {{"angels-solid-uranium-hexafluoride", 48}},--decent saving yo
 		icons =
 		{
 			{

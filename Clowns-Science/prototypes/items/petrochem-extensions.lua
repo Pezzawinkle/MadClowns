@@ -2,7 +2,7 @@ data:extend(
 {
 	{
 		type = "item",
-		name = "catalyst-metal-white",
+		name = "angels-catalyst-metal-white",
 		icon = "__angelspetrochem__/graphics/icons/catalyst-metal-blue.png",
 		icon_size = 32,
 		subgroup = "petrochem-raw",
@@ -12,7 +12,7 @@ data:extend(
 
 	{
 		type = "item",
-		name = "catalyst-metal-black",
+		name = "angels-catalyst-metal-black",
 		icon = "__angelspetrochem__/graphics/icons/catalyst-metal-blue.png",
 		icon_size = 32,
 		subgroup = "petrochem-raw",

@@ -9,7 +9,7 @@ data:extend(
 		ingredients =
 		{
 			{type="item", name="used-up-uranium-fuel-cell", amount=5},
-			{type="fluid", name="liquid-nitric-acid", amount=300}--20
+			{type="fluid", name="angels-liquid-nitric-acid", amount=300}--20
 		},
 		icons = {{icon = "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-reprocessing.png", icon_size = 32,}},
 		icon_size=32,
@@ -21,7 +21,7 @@ data:extend(
 			{type="item", name="plutonium-239", amount=2},
 			{type="item", name="strontium-90", amount=1},--1
 			{type="item", name="caesium-137", amount=3},--1
-			{type="fluid", name="water-radioactive-waste", amount=300}--100 (matching the waste liq)
+			{type="fluid", name="angels-water-radioactive-waste", amount=300}--100 (matching the waste liq)
 		},
 	},
 	{
@@ -33,7 +33,7 @@ data:extend(
 		ingredients =
 		{
 			{type="item", name="used-up-uranium-fuel-cell", amount=5},
-			{type="fluid", name="liquid-nitric-acid", amount=350}--20
+			{type="fluid", name="angels-liquid-nitric-acid", amount=350}--20
 		},
 		icons = {{icon = "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-reprocessing.png", icon_size = 32,}},
 		icon_size=32,
@@ -45,7 +45,7 @@ data:extend(
 			{type="item", name="plutonium-239", amount=2},
 			{type="item", name="strontium-90", amount=1},--1
 			{type="item", name="caesium-137", amount=5},--1
-			{type="fluid", name="water-radioactive-waste", amount=350}--100 (matching the waste liq)
+			{type="fluid", name="angels-water-radioactive-waste", amount=350}--100 (matching the waste liq)
 		},
 	},
 	{
@@ -57,7 +57,7 @@ data:extend(
 		ingredients =
 		{
 			{type="item", name="used-up-uranium-fuel-cell", amount=5},
-			{type="fluid", name="liquid-nitric-acid", amount=300}--20
+			{type="fluid", name="angels-liquid-nitric-acid", amount=300}--20
 		},
 		icons = {{icon = "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-reprocessing.png",icon_size=32}},
 		icon_size=32,
@@ -68,7 +68,7 @@ data:extend(
 			{type="item", name="uranium-238", amount=1}, --slight nerf because of lack of thorium
 			{type="item", name="plutonium-239", amount=1}, --slight nerf because of lack of thorium
 			{type="item", name="protactinium-231", amount=4},--1--3 --slight nerf because of lack of thorium
-			{type="fluid", name="water-radioactive-waste", amount=300}--100 (matching the waste liq)
+			{type="fluid", name="angels-water-radioactive-waste", amount=300}--100 (matching the waste liq)
 		},
 	},
 })
@@ -111,7 +111,7 @@ data:extend(
 		ingredients =
 		{
 			{type="item", name=ucell, amount=5},
-			{type="fluid", name="liquid-nitric-acid", amount=300}--20 (matching the waste liq)
+			{type="fluid", name="angels-liquid-nitric-acid", amount=300}--20 (matching the waste liq)
 		},
 		icons= {{icon = "__Clowns-Nuclear__/graphics/icons/thorium-nuclear-fuel-reprocessing.png", icon_size = 32,}},
 		icon_size=32,
@@ -122,7 +122,7 @@ data:extend(
 			{type="item", name="thorium-232", amount=3},--3 (needs to be less than 19/10)
 			{type="item", name="plutonium-239", amount=3},--1
 			{type="item", name="protactinium-231", amount=15},--1--3
-			{type="fluid", name="water-radioactive-waste", amount=300}--20--60
+			{type="fluid", name="angels-water-radioactive-waste", amount=300}--20--60
 		},
 	},
 	{
@@ -134,7 +134,7 @@ data:extend(
 		ingredients =
 		{
 			{type="item", name=ucell, amount=5},
-			{type="fluid", name="liquid-nitric-acid", amount=150}--making this path lower than the other one, to give options, may need balance
+			{type="fluid", name="angels-liquid-nitric-acid", amount=150}--making this path lower than the other one, to give options, may need balance
 		},
 		icons= {{icon = "__Clowns-Nuclear__/graphics/icons/thorium-nuclear-fuel-reprocessing.png", icon_size = 32,}},
 		icon_size=32,
@@ -145,7 +145,7 @@ data:extend(
 			{type="item", name="thorium-232", amount=1},
 			{type="item", name="plutonium-239", amount=6},--8
 			{type="item", name="strontium-90", amount=9},
-			{type="fluid", name="water-radioactive-waste", amount=150}
+			{type="fluid", name="angels-water-radioactive-waste", amount=150}
 		},
 	},
 }

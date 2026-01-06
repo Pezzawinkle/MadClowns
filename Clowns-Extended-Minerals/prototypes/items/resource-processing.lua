@@ -20,7 +20,7 @@ data:extend(
 	},
 	--[[{--zombrine??
 		type = "fluid",
-		name = "liquid-clowns-resource4",
+		name = "angels-liquid-clowns-resource4",
 		icon = "__Clowns-Processing__/graphics/icons/liquid-clowns-resource4.png",
 		icon_size = 32,
 		default_temperature = 25,

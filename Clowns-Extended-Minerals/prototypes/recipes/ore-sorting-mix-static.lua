@@ -23,7 +23,7 @@ if not clowns.special_vanilla then
 			icons =
 			{
 				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png"
+					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
 				},
 				{
 					icon = "__angelssmeltinggraphics__/graphics/icons/ore-manganese.png",
@@ -56,7 +56,7 @@ if not clowns.special_vanilla then
 			icons =
 			{
 				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png"
+					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
 				},
 				{
 					icon = "__Clowns-Processing__/graphics/icons/phosphorus-ore.png",
@@ -89,7 +89,7 @@ if not clowns.special_vanilla then
 			icons =
 			{
 				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png"
+					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
 				},
 				{
 					icon = "__angelssmeltinggraphics__/graphics/icons/ore-chrome.png",
@@ -124,7 +124,7 @@ if not clowns.special_vanilla then
 			icons =
 			{
 				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png"
+					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
 				},
 				{
 					icon = "__Clowns-Processing__/graphics/icons/magnesium-ore.png",
@@ -138,7 +138,7 @@ if not clowns.special_vanilla then
 		},
 		{
 			type = "recipe",
-			name = "platinum-pure-processing",
+			name = "angels-platinum-pure-processing",
 			category = "angels-ore-sorting-4",
 			subgroup = "angels-ore-sorting-advanced",
 			allow_decomposition = false,
@@ -158,7 +158,7 @@ if not clowns.special_vanilla then
 			icons =
 			{
 				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png"
+					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
 				},
 				{
 					icon = "__angelssmeltinggraphics__/graphics/icons/ore-platinum.png",
@@ -192,7 +192,7 @@ if not clowns.special_vanilla then
 			icons =
 			{
 				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png"
+					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
 				},
 				{
 					icon = "__Clowns-Processing__/graphics/icons/osmium-ore.png",
@@ -233,7 +233,7 @@ if mods["Clowns-AngelBob-Nuclear"] then
 			icons =
 			{
 				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png"
+					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
 				},
 				{
 					icon = "__Clowns-Nuclear__/graphics/icons/ore-5.png",

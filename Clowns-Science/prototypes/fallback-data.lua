@@ -216,7 +216,7 @@ Ings refers to how many ingredients per pack in final step]]
     ["military_2"]   = {theme="aoe", result_count = 4, ingredients = {
         {"explosives",1}, 
         {"shotgun",2}, 
-        {"stone-wall",3}
+        {"angels-stone-wall",3}
       }},--24375
     ["military_3"]   = {theme="wall", result_count = 9, ingredients = {
         {"gun-turret",1}, 
@@ -237,7 +237,7 @@ Ings refers to how many ingredients per pack in final step]]
       }},
     ["chemical_2"]   = {theme="fuel", result_count = 2, ingredients = {
         {"plastic-bar",2},
-        {"solid-fuel",6},
+        {"angels-solid-fuel",6},
         {"long-handed-inserter", 1},
         {"concrete",10}
       }},
@@ -308,7 +308,7 @@ local function update_tab(name,pos,new_ing)
 end
 --The order here is important, as the lower configs will "override" the higher ones if multiples are targetting the same item
 if mods["boblogistics"] then
-  update_tab("automation_1", 2, {"stone-pipe", 5})
+  update_tab("automation_1", 2, {"angels-stone-pipe", 5})
   if ctrig.bobplates then
     update_tab("logistic_4", 1, {"bronze-pipe-to-ground", 1})
     update_tab("chemical_4", 3, {"brass-pipe-to-ground", 1})
@@ -346,13 +346,13 @@ if mods["angelspetrochem"] then
   update_tab("production_3", 3, {"rocket-booster", 5})
 end
 if mods["angelsrefining"] then
-  update_tab("production_3", 2, {"ore-crusher", 2})
+  update_tab("production_3", 2, {"angels-ore-crusher", 2})
 end
 if mods["angelssmelting"] then
   update_tab("production_2", 1, {"angels-plate-manganese", 1})
-  update_tab("production_1", 3, {"blast-furnace", 1})
-  update_tab("production_3", 1, {"blast-furnace-2", 1})
-  update_tab("production_3", 4, {"reinforced-concrete-brick", 50})
+  update_tab("production_1", 3, {"angels-blast-furnace", 1})
+  update_tab("production_3", 1, {"angels-blast-furnace-2", 1})
+  update_tab("production_3", 4, {"angels-reinforced-concrete-brick", 50})
 end
 if mods["Clowns-processing"] then
   update_tab("production_2", 2, {"clowns-plate-osmium", 1})

@@ -13,8 +13,8 @@ data:extend(
 	ingredients = {},
 	results =
 	{
-	{type="item", name="solid-limestone", amount=1},
-	{type="item", name="slag", amount=2},
+	{type="item", name="angels-solid-limestone", amount=1},
+	{type="item", name="angels-slag", amount=2},
 	},
 	energy_required = 1.5 * time_parameter, --CONFIRM 1.5?
 	subgroup = "raw-resource",
@@ -22,7 +22,7 @@ data:extend(
 	},
 	{
 	type = "recipe",
-	name = "stone-mining",
+	name = "angels-stone-mining",
 	category = "shaft-mining",
 	hidden = false,
 	icon = "__base__/graphics/icons/stone.png",
@@ -47,7 +47,7 @@ data:extend(
 	results =
 	{
 	{type="item", name="coal", amount=1},
-	{type="item", name="slag", amount=1},
+	{type="item", name="angels-slag", amount=1},
 	},
 	energy_required = 4 * time_parameter, --CONFIRM?
 	subgroup = "raw-resource",
@@ -65,7 +65,7 @@ data:extend(
 	results =
 	{
 	{type="item", name="angels-ore1", amount=1},
-	{type="item", name="slag", amount=2},
+	{type="item", name="angels-slag", amount=2},
 	},
 	energy_required = 1.5 * time_parameter,
 	subgroup = "raw-resource",
@@ -83,7 +83,7 @@ data:extend(
 	results =
 	{
 	{type="item", name="angels-ore2", amount=1},
-	{type="item", name="slag", amount=2},
+	{type="item", name="angels-slag", amount=2},
 	},
 	energy_required = 2 * time_parameter,
 	subgroup = "raw-resource",
@@ -101,7 +101,7 @@ data:extend(
 	results =
 	{
 	{type="item", name="angels-ore3", amount=1},
-	{type="item", name="slag", amount=2},
+	{type="item", name="angels-slag", amount=2},
 	},
 	energy_required = 2 * time_parameter,
 	subgroup = "raw-resource",
@@ -119,7 +119,7 @@ data:extend(
 	results =
 	{
 	{type="item", name="angels-ore4", amount=1},
-	{type="item", name="slag", amount=2},
+	{type="item", name="angels-slag", amount=2},
 	},
 	energy_required = 2 * time_parameter,
 	subgroup = "raw-resource",
@@ -137,7 +137,7 @@ data:extend(
 	results =
 	{
 	{type="item", name="angels-ore5", amount=1},
-	{type="item", name="slag", amount=2},
+	{type="item", name="angels-slag", amount=2},
 	},
 	energy_required = 2.5 * time_parameter,
 	subgroup = "raw-resource",
@@ -155,7 +155,7 @@ data:extend(
 	results =
 	{
 	{type="item", name="angels-ore6", amount=1},
-	{type="item", name="slag", amount=2},
+	{type="item", name="angels-slag", amount=2},
 	},
 	energy_required = 2.5 * time_parameter,
 	subgroup = "raw-resource",
@@ -173,7 +173,7 @@ data:extend(
 	results =
 	{
 	{type="item", name="clowns-ore1", amount=1},
-	{type="item", name="slag", amount=2},
+	{type="item", name="angels-slag", amount=2},
 	},
 	energy_required = 1 * time_parameter,
 	subgroup = "raw-resource",
@@ -190,7 +190,7 @@ data:extend(
 	results =
 	{
 	{type="item", name="clowns-ore6", amount=1},
-	{type="item", name="slag", amount=2},
+	{type="item", name="angels-slag", amount=2},
 	},
 	energy_required = 1 * time_parameter,
 	subgroup = "raw-resource",
@@ -207,7 +207,7 @@ data:extend(
 	results =
 	{
 	{type="item", name="clowns-ore3", amount=1},
-	{type="item", name="slag", amount=2},
+	{type="item", name="angels-slag", amount=2},
 	},
 	energy_required = 1 * time_parameter,
 	subgroup = "raw-resource",
@@ -224,7 +224,7 @@ data:extend(
 	results =
 	{
 	{type="item", name="clowns-ore4", amount=1},
-	{type="item", name="slag", amount=2},
+	{type="item", name="angels-slag", amount=2},
 	},
 	energy_required = 1 * time_parameter,
 	subgroup = "raw-resource",
@@ -241,7 +241,7 @@ data:extend(
 	results =
 	{
 	{type="item", name="clowns-ore5", amount=1},
-	{type="item", name="slag", amount=2},
+	{type="item", name="angels-slag", amount=2},
 	},
 	energy_required = 1 * time_parameter,
 	subgroup = "raw-resource",

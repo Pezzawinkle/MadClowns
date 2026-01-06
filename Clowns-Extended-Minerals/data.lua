@@ -59,7 +59,7 @@ else
   ore8fluid = "angels-liquid-sulfuric-acid"
   ore9fluid = "angels-liquid-sulfuric-acid"
 end
-res1fluid = "liquid-phosphoric-acid"
+res1fluid = "angels-liquid-phosphoric-acid"
 res2fluid = "steam"
 
 if mods["omnimatter"] then

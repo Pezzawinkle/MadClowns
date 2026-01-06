@@ -14,8 +14,8 @@ if mods["angelsbioprocessing"] then
 		energy_required = 20,
 		ingredients =
 		{
-		  {type="fluid", name="water-mineralized", amount=100},
-		  {type="fluid", name="gas-carbon-dioxide", amount=100}
+		  {type="fluid", name="angels-water-mineralized", amount=100},
+		  {type="fluid", name="angels-gas-carbon-dioxide", amount=100}
 		},
 		results=
 		{
@@ -35,8 +35,8 @@ if mods["angelsbioprocessing"] then
 		energy_required = 20,
 		ingredients =
 		{
-		  {type="fluid", name="water-mineralized", amount=100},
-		  {type="fluid", name="gas-carbon-dioxide", amount=100}
+		  {type="fluid", name="angels-water-mineralized", amount=100},
+		  {type="fluid", name="angels-gas-carbon-dioxide", amount=100}
 		},
 		results=
 		{
@@ -57,7 +57,7 @@ if mods["angelsbioprocessing"] then
 		},
 		results=
 		{
-		  {type="fluid", name="liquid-dimethylmercury", amount=2},
+		  {type="fluid", name="angels-liquid-dimethylmercury", amount=2},
 		},
 		icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
 		nil,
@@ -82,9 +82,9 @@ if mods["angelsbioprocessing"] then
 		enabled = false,
 		ingredients =
 		{
-			{type = "item", name = "solid-soil", amount = 1000},
-			{type = "fluid", name = "water-viscous-mud", amount = 1000},
-			{type = "item", name = "solid-fertilizer", amount = 200}
+			{type = "item", name = "angels-solid-soil", amount = 1000},
+			{type = "fluid", name = "angels-water-viscous-mud", amount = 1000},
+			{type = "item", name = "angels-solid-fertilizer", amount = 200}
 		},
 		results =
 		{
@@ -102,9 +102,9 @@ if mods["angelsbioprocessing"] then
 		energy_required = 1000,
 		ingredients =
 		{
-			{type = "item", name = "solid-compost", amount = 500},
+			{type = "item", name = "angels-solid-compost", amount = 500},
 			{type = "fluid", name = "water", amount = 1000},
-			{type = "item", name = "solid-fertilizer", amount = 500}
+			{type = "item", name = "angels-solid-fertilizer", amount = 500}
 		},
 		results=
 		{
@@ -124,9 +124,9 @@ if mods["angelsbioprocessing"] then
 		energy_required = 1000,
 		ingredients =
 		{
-			{type = "item", name = "solid-sand", amount = 500},
-			{type = "fluid", name = "water-saline", amount = 1000},
-			{type = "item", name = "solid-fertilizer", amount = 500}
+			{type = "item", name = "angels-solid-sand", amount = 500},
+			{type = "fluid", name = "angels-water-saline", amount = 1000},
+			{type = "item", name = "angels-solid-fertilizer", amount = 500}
 		},
 		results=
 		{
@@ -224,12 +224,12 @@ if mods["angelsbioprocessing"] then
 		allow_decomposition = false,
 		ingredients =
 		{
-			{type="fluid", name="liquid-phosphoric-acid", amount=10},
-			{type="fluid", name="gas-ammonia", amount=10},
+			{type="fluid", name="angels-liquid-phosphoric-acid", amount=10},
+			{type="fluid", name="angels-gas-ammonia", amount=10},
 		},
 		results =
 		{
-			{type="item", name="solid-fertilizer", amount=1}
+			{type="item", name="angels-solid-fertilizer", amount=1}
 		},
 	},
 })

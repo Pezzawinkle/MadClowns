@@ -9,10 +9,10 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "thermal-filtering-mercury"
+				recipe = "angels-thermal-filtering-mercury"
 			},
 		},
-		prerequisites = {"thermal-water-extraction-2"},
+		prerequisites = {"angels-thermal-water-extraction-2"},
 		unit =
 		{
 			ingredients =

@@ -13,15 +13,15 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "solid-uranium-hexafluoride"
+				recipe = "angels-solid-uranium-hexafluoride"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "solid-uranium-tetrafluoride"
+				recipe = "angels-solid-uranium-tetrafluoride"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "solid-uranium-oxide-1"
+				recipe = "angels-solid-uranium-oxide-1"
 			},
 		},
 		prerequisites = {"nuclear-power", "angels-advanced-chemistry-4", "angels-metallurgy-4"},
@@ -49,15 +49,15 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "solid-uranium-oxide-2"
+				recipe = "angels-solid-uranium-oxide-2"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "solid-ammonium-diuranate"
+				recipe = "angels-solid-ammonium-diuranate"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "solid-uranyl-nitrate"
+				recipe = "angels-solid-uranyl-nitrate"
 			},
 		},
 		prerequisites = {"advanced-uranium-processing-1", "angels-metallurgy-5"},

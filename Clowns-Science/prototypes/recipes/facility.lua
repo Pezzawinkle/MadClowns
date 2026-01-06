@@ -23,7 +23,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			icons = {new_icons["advanced-logistics"],overlay},
 			ingredients =
 			{
-				{type="fluid", name="liquid-nitric-acid", amount=gas_param},
+				{type="fluid", name="angels-liquid-nitric-acid", amount=gas_param},
 			},
 			result = clowns.triggers.angels_tech and "datacore-enhance-1" or "bob-advanced-logistic-science-pack"
 		}
@@ -46,7 +46,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			ingredients =
 			{
 				{type="fluid", name="omniston", amount=gas_param},
-				{type="fluid", name="gas-carbon-dioxide", amount=gas_param}
+				{type="fluid", name="angels-gas-carbon-dioxide", amount=gas_param}
 			},
 			result = "omni-pack"
 		}
@@ -67,8 +67,8 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			icons = {new_icons.automation,overlay},
 			ingredients =
 			{
-				{type="fluid", name="gas-oxygen", amount=gas_param},
-				{type="fluid", name="gas-carbon-dioxide", amount=gas_param}
+				{type="fluid", name="angels-gas-oxygen", amount=gas_param},
+				{type="fluid", name="angels-gas-carbon-dioxide", amount=gas_param}
 			},
 			result = clowns.triggers.angels_tech and "datacore-basic" or "automation-science-pack"
 		},
@@ -84,8 +84,8 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			icons = {new_icons.logistic,overlay},
 			ingredients =
 			{
-				{type="fluid", name="gas-chlorine", amount=gas_param},
-				{type="fluid", name="gas-carbon-dioxide", amount=gas_param}
+				{type="fluid", name="angels-gas-chlorine", amount=gas_param},
+				{type="fluid", name="angels-gas-carbon-dioxide", amount=gas_param}
 			},
 			result = clowns.triggers.angels_tech and "datacore-logistic-1" or "logistic-science-pack"
 		},
@@ -100,8 +100,8 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			icons = {new_icons.chemical,overlay},
 			ingredients =
 			{
-				{type="fluid", name="gas-ammonia", amount=gas_param},
-				{type="fluid", name="gas-carbon-monoxide", amount=gas_param}
+				{type="fluid", name="angels-gas-ammonia", amount=gas_param},
+				{type="fluid", name="angels-gas-carbon-monoxide", amount=gas_param}
 			},
 			result = clowns.triggers.angels_tech and "datacore-energy-1" or "chemical-science-pack"
 		},
@@ -116,8 +116,8 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			icons = {new_icons.military,overlay},
 			ingredients =
 			{
-				{type="fluid", name="liquid-sulfuric-acid", amount=gas_param},
-				{type="fluid", name="gas-carbon-monoxide", amount=gas_param}
+				{type="fluid", name="angels-liquid-sulfuric-acid", amount=gas_param},
+				{type="fluid", name="angels-gas-carbon-monoxide", amount=gas_param}
 			},
 			result = clowns.triggers.angels_tech and "datacore-war-1" or "military-science-pack"
 		},
@@ -132,7 +132,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			icons = {new_icons.production,overlay},
 			ingredients =
 			{
-				{type="fluid", name="gas-methanol", amount=gas_param},
+				{type="fluid", name="angels-gas-methanol", amount=gas_param},
 			},
 			result = clowns.triggers.angels_tech and "datacore-processing-1" or "production-science-pack"
 		},
@@ -147,7 +147,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			icons = {new_icons.utility,overlay},
 			ingredients =
 			{
-				{type="fluid", name="liquid-hydrofluoric-acid", amount=gas_param},
+				{type="fluid", name="angels-liquid-hydrofluoric-acid", amount=gas_param},
 			},
 			result = clowns.triggers.angels_tech and "datacore-enhance-1" or "utility-science-pack"
 		},

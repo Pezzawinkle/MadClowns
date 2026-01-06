@@ -17,7 +17,7 @@ ingrediences_solvation=function(recipe)
 	local ing = {}
 	ing[#ing+1]={type = "fluid", name = "hydromnic-acid", amount = 120}
 	for _, i in pairs(recipe.normal.ingredients) do
-		if i.name ~= "catalysator-brown" and i.name ~= "angels-void" and i.name ~= "catalysator-green" and i.name ~= "catalysator-orange" and i.name ~= "slag" then
+		if i.name ~= "catalysator-brown" and i.name ~= "angels-void" and i.name ~= "catalysator-green" and i.name ~= "catalysator-orange" and i.name ~= "angels-slag" then
 			ing[#ing+1]=i
 		end
 	end
@@ -28,7 +28,7 @@ results_solvation=function(recipe)
   local ing = {}
 	--ing[#ing+1]={type = "fluid", name = "hydromnic-acid", amount = 120}
 	for _, i in pairs(recipe.normal.results) do
-		if i.name ~= "slag" and not string.find(i.name,"void") then
+		if i.name ~= "angels-slag" and not string.find(i.name,"void") then
 			ing[#ing+1]={type = "item", name=i.name.."-omnide-salt", amount = i.amount}
 		end
   end

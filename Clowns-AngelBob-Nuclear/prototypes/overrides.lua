@@ -14,7 +14,7 @@ else
 	angelsmods.functions.OV.add_unlock("nuclear-fuel-reprocessing-2","advanced-nuclear-fuel-reprocessing-2")
   angelsmods.functions.OV.add_unlock("nuclear-fuel-reprocessing-2","advanced-nuclear-fuel-reprocessing|b")
 end
-angelsmods.functions.make_void("water-radioactive-waste", "water")
+angelsmods.functions.make_void("angels-water-radioactive-waste", "water")
 if mods["angelsindustries"] then
   --update nuclear cells
   clowns.functions.replace_ing("angels-advanced-mixed-oxide-reprocessing","uranium-235","35pc-uranium","res")

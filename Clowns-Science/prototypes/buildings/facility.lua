@@ -9,7 +9,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 		energy_required = 2,
 		ingredients =
 		{
-			mods["bobelectronics"] and {"basic-circuit-board", 20} or {"electronic-circuit",30},
+			mods["bobelectronics"] and {"angels-basic-circuit-board", 20} or {"electronic-circuit",30},
 			{"pipe", 20},
 			{"stone-brick", 100}
 		},

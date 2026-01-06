@@ -210,17 +210,17 @@ else
 end
 --update aluminium
 if angelsmods.trigger.smelting_products["aluminium"].plate then
-	data.raw.recipe["molten-aluminium-smelting-3"].order = "i[liquid-molten-aluminium]-d"
-	data.raw.recipe["molten-aluminium-smelting-3"].icons = angelsmods.functions.add_number_icon_layer(
-		angelsmods.functions.get_object_icons("liquid-molten-aluminium"),
+	data.raw.recipe["angels-liquid-molten-aluminium-3"].order = "i[liquid-molten-aluminium]-d"
+	data.raw.recipe["angels-liquid-molten-aluminium-3"].icons = angelsmods.functions.add_number_icon_layer(
+		angelsmods.functions.get_object_icons("angels-liquid-molten-aluminium"),
 		4, angelsmods.smelting.number_tint)
 end
 --update titanium sponge
 if angelsmods.trigger.smelting_products["titanium"].plate then
-	data.raw.recipe["liquid-titanium-tetrachloride-smelting"].icons = angelsmods.functions.add_number_icon_layer(
-		{{icon = "__angelssmelting__/graphics/icons/sponge-titanium.png",	icon_size = 32}},
+	data.raw.recipe["angels-sponge-titanium"].icons = angelsmods.functions.add_number_icon_layer(
+		{{icon = "__angelssmeltinggraphics__/graphics/icons/sponge-titanium.png",	icon_size = 32}},
 		1, angelsmods.smelting.number_tint)
-	data.raw.recipe["sponge-magnesium-titanium-smelting"].icons = angelsmods.functions.add_number_icon_layer(
-		{{icon = "__angelssmelting__/graphics/icons/sponge-titanium.png",	icon_size = 32}},
+	data.raw.recipe["angels-sponge-magnesium-titanium-smelting"].icons = angelsmods.functions.add_number_icon_layer(
+		{{icon = "__angelssmeltinggraphics__/graphics/icons/sponge-titanium.png",	icon_size = 32}},
 		2, angelsmods.smelting.number_tint)
 end

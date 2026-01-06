@@ -65,17 +65,17 @@ if data.raw.item["thorium-fuel-cell"] then
     {
       type = "recipe",
       name = "thorium-ore-processing",
-      category = "ore-refining-t3-5",
+      category = "angels-ore-refining-t3-5",
       energy_required = 30,
       enabled = false,
       ingredients = {
         {"thorium-ore",10},
-        {type="fluid",name="liquid-hydrofluoric-acid",amount=100}
+        {type="fluid",name="angels-liquid-hydrofluoric-acid",amount=100}
       },
       results = {
         {type="fluid",name="thorium-solution",amount=13},
         {type="fluid",name="steam", amount=90, temperature=650},
-        {"slag",2}
+        {"angels-slag",2}
       },
       main_product = "thorium-solution",
     },
@@ -87,11 +87,11 @@ if data.raw.item["thorium-fuel-cell"] then
       enabled = false,
       ingredients = {
         {type="fluid",name="thorium-solution",amount=26},
-        {type="fluid",name="water-purified",amount=180}
+        {type="fluid",name="angels-water-purified",amount=180}
       },
       results = {
         {"thorium-salt",20},
-        {type="fluid",name="water-greenyellow-waste", amount=200},
+        {type="fluid",name="angels-water-greenyellow-waste", amount=200},
       },
       main_product="thorium-salt",
     },
@@ -103,12 +103,12 @@ if data.raw.item["thorium-fuel-cell"] then
       enabled = false,
       ingredients = {
         {"thorium-salt",13},
-        {type="fluid",name="liquid-naphtha",amount=200}
+        {type="fluid",name="angels-liquid-naphtha",amount=200}
       },
       results = {
         {"thorium-232",9},
-        {type="fluid",name="liquid-naphtha",amount=200},
-        {"slag",4}
+        {type="fluid",name="angels-liquid-naphtha",amount=200},
+        {"angels-slag",4}
       },
       main_product = "thorium-232",
     }

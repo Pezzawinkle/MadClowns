@@ -57,7 +57,7 @@ data:extend(
 			animation_speed = 0.8,
 			shift = {1,-0.5}
 		},
-		crafting_categories = {"shaft-mining", "ore-sorting"},
+		crafting_categories = {"shaft-mining", "angels-ore-sorting"},
 		crafting_speed = 1, --* settings.startup["shaft-mine-crafting-speed"].value,
 		module_specification =
 		{

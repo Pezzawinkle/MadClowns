@@ -1,3 +1,4 @@
+-- Everything related to the buildings: Items, Recipes, Entities(Assember)
 data:extend(
 {
 	{
@@ -26,7 +27,7 @@ data:extend(
 				}
 			},
 			1, angelsmods.refining.number_tint),
-		subgroup = "washing-building",
+		subgroup = "angels-washing-building",
 		order = "c-a",
 		place_result = "sluicer",
 		stack_size = 20,
@@ -153,7 +154,7 @@ data:extend(
 				}
 			},
 			2, angelsmods.refining.number_tint),
-		subgroup = "washing-building",
+		subgroup = "angels-washing-building",
 		order = "c-a",
 		place_result = "sluicer-2",
 		stack_size = 20,

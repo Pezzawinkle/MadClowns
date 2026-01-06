@@ -6,13 +6,13 @@ local unlock_lists = {
   {"angels-advanced-chemistry-3","catalytic-air-separation-nitrogen"},
   {"angels-advanced-chemistry-3","catalytic-water-separation-oxygen"},
   {"angels-advanced-chemistry-3","catalytic-water-separation-hydrogen"},
-  {"angels-advanced-chemistry-3","catalyst-metal-violet"},
-  {"water-washing-1","sluicer"},
-  {"water-treatment-4","intermediate-salination"},
+  {"angels-advanced-chemistry-3","angels-catalyst-metal-violet"},
+  {"angels-water-washing-1","sluicer"},
+  {"angels-water-treatment-4","intermediate-salination"},
 }
 if data.raw.recipe["sand-sluicing"] then
-  table.insert(unlock_lists,{"water-washing-1","sand-sluicing"})
-  table.insert(unlock_lists,{"water-washing-2","sluicer-2"})
+  table.insert(unlock_lists,{"angels-water-washing-1","sand-sluicing"})
+  table.insert(unlock_lists,{"angels-water-washing-2","sluicer-2"})
 end
 if data.raw.recipe["nickel-piercing-rounds-magazine"] then
   table.insert(unlock_lists,{"military-2","nickel-piercing-rounds-magazine"})
@@ -30,12 +30,12 @@ if data.raw.recipe["angels-brass-smelting-4"] then
   table.insert(unlock_lists,{"angels-brass-smelting-3","angels-brass-smelting-4"})
 end
 if angelsmods.trigger.smelting_products["titanium"].plate then
-  table.insert(unlock_lists,{"angels-titanium-smelting-2","sponge-magnesium-titanium-smelting"})
-  table.insert(unlock_lists,{"angels-titanium-smelting-3","pellet-magnesium-titanium-smelting"})
-  if data.raw.technology["sodium-processing"] then
-    OV.add_prereq("angels-titanium-smelting-2", "sodium-processing")
+  table.insert(unlock_lists,{"angels-titanium-smelting-2","angels-sponge-magnesium-titanium-smelting"})
+  table.insert(unlock_lists,{"angels-titanium-smelting-3","angels-pellet-magnesium-titanium-smelting"})
+  if data.raw.technology["angels-sodium-processing"] then
+    OV.add_prereq("angels-titanium-smelting-2", "angels-sodium-processing")
   else
-    OV.add_prereq("angels-titanium-smelting-2", "sodium-processing-1")
+    OV.add_prereq("angels-titanium-smelting-2", "angels-sodium-processing-1")
   end
 end
 if data.raw.recipe["molten-steel-smelting-c2"] then

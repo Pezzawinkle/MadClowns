@@ -61,7 +61,7 @@ if settings.startup["MCP_enable_centrifuges"].value then
   if data.raw.item["titanium-gear-wheel"] then
     ings_2[#ings_2+1] = {type = "item", name = "titanium-gear-wheel", amount = 100}
   else --vanilla materials
-    ings_2[#ings_2+1] = {type = "item", name = "concrete-brick", amount = 200}
+    ings_2[#ings_2+1] = {type = "item", name = "angels-concrete-brick", amount = 200}
   end
   centrifuge_2r.ingredients = ings_2
 
@@ -90,7 +90,7 @@ if settings.startup["MCP_enable_centrifuges"].value then
     ings_3[#ings_3+1] = {type = "item", name = "bob-tungsten-gear-wheel", amount = 100}
   elseif data.raw.item["angels-tungsten-plate"] then
     ings_3[#ings_3+1] = {type = "item", name = "angels-tungsten-plate", amount = 200}
-    ings_3[#ings_3+1] = {type = "item", name = "concrete-brick", amount = 300}
+    ings_3[#ings_3+1] = {type = "item", name = "angels-concrete-brick", amount = 300}
   else --vanilla materials
     ings_3[#ings_3+1] = {type = "item", name = "steel-plate", amount = 300}
     ings_3[#ings_3+1] = {type = "item", name = "concrete", amount = 300}

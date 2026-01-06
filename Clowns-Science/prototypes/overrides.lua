@@ -69,9 +69,9 @@ if data.raw.recipe["omni-pack"] then
 	data.raw["tool"]["omni-pack"].order = "e-a"
 end
 
-local new_ing = "gas-carbon-monoxide"
-if data.raw.fluid["liquid-mercury"] then
-  new_ing = "liquid-mercury"
+local new_ing = "angels-gas-carbon-monoxide"
+if data.raw.fluid["angels-liquid-mercury"] then
+  new_ing = "angels-liquid-mercury"
 end
 for i,rec in pairs({"utility-science-pack-facility","advanced-logistic-science-pack-facility","production-science-pack-facility"}) do
   if data.raw.recipe[rec] then
@@ -104,14 +104,14 @@ if mods["angelspetrochem"] then
 end
 if not (mods["angelsindustries"] and angelsmods.industries.tech) then
   if mods["omnimatter_crystal"] then
-    omni.lib.add_recipe_ingredient("chemical-science-pack-alt1","basic-crystallonic")
-    omni.lib.add_recipe_ingredient("chemical-science-pack-alt2","basic-crystallonic")
-    omni.lib.add_recipe_ingredient("production-science-pack-alt1","basic-oscillo-crystallonic")
-    omni.lib.add_recipe_ingredient("production-science-pack-alt2","basic-oscillo-crystallonic")
-    omni.lib.add_recipe_ingredient("utility-science-pack-alt1","basic-oscillo-crystallonic")
-    omni.lib.add_recipe_ingredient("utility-science-pack-alt2","basic-oscillo-crystallonic")
-    omni.lib.add_recipe_ingredient("logistic-science-pack-alt1","basic-oscillo-crystallonic")
-		omni.lib.add_recipe_ingredient("logistic-science-pack-alt2","basic-oscillo-crystallonic")
+    omni.lib.add_recipe_ingredient("chemical-science-pack-alt1","angels-basic-crystallonic")
+    omni.lib.add_recipe_ingredient("chemical-science-pack-alt2","angels-basic-crystallonic")
+    omni.lib.add_recipe_ingredient("production-science-pack-alt1","angels-basic-oscillo-crystallonic")
+    omni.lib.add_recipe_ingredient("production-science-pack-alt2","angels-basic-oscillo-crystallonic")
+    omni.lib.add_recipe_ingredient("utility-science-pack-alt1","angels-basic-oscillo-crystallonic")
+    omni.lib.add_recipe_ingredient("utility-science-pack-alt2","angels-basic-oscillo-crystallonic")
+    omni.lib.add_recipe_ingredient("logistic-science-pack-alt1","angels-basic-oscillo-crystallonic")
+		omni.lib.add_recipe_ingredient("logistic-science-pack-alt2","angels-basic-oscillo-crystallonic")
   end
   if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value == true then
     data.raw.recipe["automation-science-pack-alt1"].enabled=false

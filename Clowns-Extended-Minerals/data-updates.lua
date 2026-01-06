@@ -14,7 +14,7 @@ for i=1,15 do --allow for many options, particularly for the second step (minimu
     end
   end
 end
-angelsmods.functions.remove_flag("platinum-ore","hidden")
+angelsmods.functions.remove_flag("angels-platinum-ore","hidden")
 --ADD RESOURCE PROCESSING RECIPES TO THE APPROPRIATE TECHNOLOGIES
 
 table.insert(data.raw["technology"]["angels-oil-gas-extraction"].effects, {type = "unlock-recipe", recipe = "clowns-resource2-liquification"})

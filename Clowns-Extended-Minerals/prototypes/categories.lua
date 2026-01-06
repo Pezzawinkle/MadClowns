@@ -61,7 +61,7 @@ data:extend(
   },
   {
 		type = "item-subgroup",
-		name = "ore-sorting-advanced-2",
+		name = "angels-ore-sorting-advanced-2",
 		group = "angels-resource-refining",
 		order = "j-e",
 	},

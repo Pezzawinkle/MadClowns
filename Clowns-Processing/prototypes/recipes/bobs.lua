@@ -22,7 +22,7 @@ if data.raw.item["bronze-alloy"] and data.raw.item["angels-plate-nickel"] then
   )
 end
 --may want to look at adding a non-bobs/angels variant
---data.raw.item["platinum-ore"] and data.raw.item["gold-ore"] then
+--data.raw.item["angels-platinum-ore"] and data.raw.item["angels-gold-ore"] then
   data:extend(
   {
     {
@@ -30,25 +30,25 @@ end
       name = "sand-sluicing",
       category = "sluicing",
       enabled = false,
-      icon = "__angelsrefining__/graphics/icons/solid-sand.png",
+      icon = "__angelsrefininggraphics__/graphics/icons/solid-sand.png",
       icon_size = 32,
       ingredients = 
       {
-        {type = "item", name = "solid-sand", amount = 10},
+        {type = "item", name = "angels-solid-sand", amount = 10},
         {type = "fluid", name = "water", amount = 10}
       },
       results =
       {
-        {type = "fluid", name = "water-thin-mud", amount = 10},
+        {type = "fluid", name = "angels-water-thin-mud", amount = 10},
         {type = "item", name = "iron-ore", amount = 1, probability = 0.2},
         {type = "item", name = "copper-ore", amount = 1, probability = 0.1},
-        {type = "item", name = "crystal-dust", amount = 1, probability = 0.1},
-        angelsmods.trigger.ores["gold"] and {type = "item", name = "gold-ore", amount = 1, probability = 0.05} or {type = "item", name = "uranium-ore", amount = 1, probability = 0.001},
+        {type = "item", name = "angels-crystal-dust", amount = 1, probability = 0.1},
+        angelsmods.trigger.ores["gold"] and {type = "item", name = "angels-gold-ore", amount = 1, probability = 0.05} or {type = "item", name = "uranium-ore", amount = 1, probability = 0.001},
         {type = "item", name = "osmium-ore", amount = 1, probability = 0.01},
-        angelsmods.trigger.ores["platinum"] and {type = "item", name = "platinum-ore", amount = 1, probability = 0.01} or nil,
+        angelsmods.trigger.ores["platinum"] and {type = "item", name = "angels-platinum-ore", amount = 1, probability = 0.01} or nil,
       },
       energy_required = 5,
-      subgroup = "water-washing",
+      subgroup = "angels-water-washing",
       order = "k-a",
     },
   }

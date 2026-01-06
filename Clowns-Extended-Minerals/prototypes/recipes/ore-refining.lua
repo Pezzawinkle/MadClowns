@@ -17,7 +17,7 @@ local acid_wastewater = {
   ["angels-liquid-nitric-acid"] = "angels-water-red-waste",
   ["angels-liquid-hydrochloric-acid"] = "angels-water-green-waste",
   ["angels-liquid-boric-acid"] = "", --currently no wastewater
-  ["liquid-phosphoric-acid"] = "angels-water-yellow-waste", --currently no wastewater
+  ["angels-liquid-phosphoric-acid"] = "angels-water-yellow-waste", --currently no wastewater
 }
 --check if angels setting is active and modify acids
 if mods["angelspetrochem"] and settings.startup["angels-enable-acids"].value then
@@ -27,7 +27,7 @@ if mods["angelspetrochem"] and settings.startup["angels-enable-acids"].value the
   ore_material["clowns-ore5"].acid = "angels-liquid-nitric-acid"
   ore_material["clowns-ore7"].acid = "angels-liquid-hydrofluoric-acid"
   ore_material["clowns-ore8"].acid = "angels-liquid-hydrochloric-acid"
-  ore_material["clowns-ore9"].acid = "liquid-phosphoric-acid"
+  ore_material["clowns-ore9"].acid = "angels-liquid-phosphoric-acid"
 end
 for _, ore in pairs(ore_table) do
   data:extend(

@@ -1,10 +1,10 @@
 if mods["omnimatter_crystal"] then
-  add_crystal("solid-lithium", "Lithium Chloride")
-  add_crystal("solid-calcium-sulfate", "Calcium Sulfate")
+  add_crystal("angels-solid-lithium", "Lithium Chloride")
+  add_crystal("angels-solid-calcium-sulfate", "Calcium Sulfate")
   add_crystal("thorium-ore", "Thorium")
   add_crystal("phosphorus-ore", "Phosphorus")
-  add_crystal("solid-limestone", "Limestone")
-  add_crystal("solid-sodium-carbonate", "Sodium Carbonate")
+  add_crystal("angels-solid-limestone", "Limestone")
+  add_crystal("angels-solid-sodium-carbonate", "Sodium Carbonate")
   add_crystal("osmium-ore", "Osmium")
   add_crystal("magnesium-ore","Magnesium")
   if mods["pycoalprocessing"] then
@@ -14,7 +14,7 @@ if mods["omnimatter_crystal"] then
     add_crystal("rare-earth-dust", "Rare Earth Dust")
     add_crystal("molybdenum-ore", "Molybdenum")
     if mods["PyCoalTBaA"] then
-      add_crystal("sodium-carbonate", "Sodium Carbonate")
+      add_crystal("angels-sodium-carbonate", "Sodium Carbonate")
     end
   end
 
@@ -190,7 +190,7 @@ if mods["omnimatter_crystal"] then
           for i, rec in pairs(data.raw.recipe) do
             if rec.category == "omniplant" and string.find(rec.name,"salting") then
               omni.lib.replace_recipe_ingredient(rec.name, "hydromnic-acid",{type = "item", name = "omni-catalyst", amount=1})
-              rec.category = "ore-sorting"
+              rec.category = "angels-ore-sorting"
             end
           end
         end

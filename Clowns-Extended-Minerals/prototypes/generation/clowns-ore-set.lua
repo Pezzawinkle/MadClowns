@@ -103,7 +103,7 @@ if mods["angelsinfiniteores"] then
         minimum = angelsmods.ores.yield,
         normal = 1500,
         maximum = 6000,
-        acid_to_mine = "liquid-sulfuric-acid",
+        acid_to_mine = "angels-liquid-sulfuric-acid",
         output_name = base_ore,
         output_min = 1,
         output_max = 1,
