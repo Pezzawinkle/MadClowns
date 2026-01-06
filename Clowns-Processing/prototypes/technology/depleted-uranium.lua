@@ -29,7 +29,7 @@ if settings.startup["depleted-uranium"].value then
 					recipe = "clowns-plate-depleted-uranium"
 				},
 			},
-			prerequisites = {"nuclear-power", "powder-metallurgy-4", "ore-processing-3"},
+			prerequisites = {"nuclear-power", "angels-powder-metallurgy-4", "angels-ore-processing-3"},
 			unit =
 			{
 				ingredients =
@@ -64,7 +64,7 @@ if settings.startup["depleted-uranium"].value then
 					recipe = "casting-powder-depleted-uranium-4"
 				},
 			},
-			prerequisites = {"advanced-depleted-uranium-smelting-1", "advanced-osmium-smelting", "powder-metallurgy-5", "angels-aluminium-smelting-2"},
+			prerequisites = {"advanced-depleted-uranium-smelting-1", "advanced-osmium-smelting", "angels-powder-metallurgy-5", "angels-aluminium-smelting-2"},
 			unit =
 			{
 				ingredients =

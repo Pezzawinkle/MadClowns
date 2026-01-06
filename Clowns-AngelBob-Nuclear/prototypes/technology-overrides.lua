@@ -6,7 +6,7 @@ data.raw.technology["advanced-uranium-processing-1"].effects =
 	{type = "unlock-recipe", recipe = "solid-uranium-hexafluoride"},
 	{type = "unlock-recipe", recipe = "solid-uranium-tetrafluoride"},
 	{type = "unlock-recipe", recipe = "solid-uranium-oxide-1"},
-	{type = "unlock-recipe", recipe = "clowns-centrifuging-20%-hexafluoride"},
+	{type = "unlock-recipe", recipe = "clowns-centrifuging-20pc-hexafluoride"},
 }
 --clobber vanilla and angels nuclear fuel recipes
 if data.raw.technology["angels-nuclear-fuel"] then
@@ -52,4 +52,4 @@ clowns.functions.add_unlock(centri_2,"clowns-centrifuging-65pc")
 clowns.functions.add_unlock(centri_2,"clowns-centrifuging-70pc")
 clowns.functions.add_unlock(centri_2,"clowns-centrifuging-75pc")
 clowns.functions.add_unlock(centri_2,"clowns-centrifuging-80pc")
-clowns.functions.add_unlock("water-treatment-4","radioactive-waste-water-purification")
+clowns.functions.add_unlock("angels-water-treatment-4","radioactive-waste-water-purification")

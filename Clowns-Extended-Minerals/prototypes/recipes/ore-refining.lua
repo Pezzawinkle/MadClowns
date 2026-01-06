@@ -16,7 +16,7 @@ local acid_wastewater = {
   ["angels-liquid-hydrofluoric-acid"] = "angels-water-greenyellow-waste",
   ["angels-liquid-nitric-acid"] = "angels-water-red-waste",
   ["angels-liquid-hydrochloric-acid"] = "angels-water-green-waste",
-  ["angels-liquid-boric-acid"] = "", --currently no wastewater
+  ["liquid-boric-acid"] = "", --currently no wastewater
   ["liquid-phosphoric-acid"] = "angels-water-yellow-waste", --currently no wastewater
 }
 --check if angels setting is active and modify acids

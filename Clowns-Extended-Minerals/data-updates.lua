@@ -14,6 +14,7 @@ for i=1,15 do --allow for many options, particularly for the second step (minimu
     end
   end
 end
+angelsmods.trigger.ores["platinum"] = true
 angelsmods.functions.remove_flag("platinum-ore","hidden")
 --ADD RESOURCE PROCESSING RECIPES TO THE APPROPRIATE TECHNOLOGIES
 
