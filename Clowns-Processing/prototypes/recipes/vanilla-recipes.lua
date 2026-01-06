@@ -341,7 +341,7 @@ if mods["angelsbioprocessing"] then
       type = "recipe",
       name = "dimethylmercury-synthesis",
       category = "chemistry",
-      subgroup = "petrochem-chlorine",
+      subgroup = "angels-petrochem-chlorine",
       enabled = false,
       energy_required = 10,
       ingredients =

@@ -41,6 +41,12 @@ clowns.tables.get_trigger_name = {
   --[[A]]["angels-solid-sand"] = "angels-solid-sand",
   --[[A]]["angels-solid-sodium-carbonate"] = "angels-solid-sodium-carbonate",
   --[[A]]["fluorite-ore"] = "angels-fluorite", -- byproduct
+  --[[A]]["angels-solid-limestone"] = "limestone",
+  --[[A]]["angels-solid-calcium-sulfate"] = "calcium-sulfate",
+  --[[A]]["angels-solid-lithium"] = "angels-solid-lithium",
+  --[[A]]["angels-solid-sand"] = "sand",
+  --[[A]]["angels-solid-sodium-carbonate"] = "sodium-carbonate",
+  --[[A]]["angels-fluorite-ore"] = "fluorite", -- byproduct
 
   --[[P]]["raw-borax"] = "borax", --pycoal
   --[[P]]["nexelit-ore"] = "nexelit", --pycoal
@@ -132,11 +138,11 @@ clowns.tables.icon_lookup_table = {
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/zinc-ore.png"} or
     icon_lookup_table_fallback,
 
-  ["phosphorus-ore"] = {icon = "__Clowns-Processing__/graphics/icons/phosphorus-ore.png"},
+  ["phosphorus-ore"] = {icon = "__Clowns-Processing__/graphics/icons/phosphorus-ore.png", icon_size = 32},
 
   ["osmium-ore"] = {icon = "__Clowns-Processing__/graphics/icons/osmium-ore.png"},
   ["manganese-ore"] = {icon = "__angelssmeltinggraphics__/graphics/icons/ore-manganese.png"},
-  ["magnesium-ore"] = {icon = "__Clowns-Processing__/graphics/icons/magnesium-ore.png"},
+  ["magnesium-ore"] = {icon = "__Clowns-Processing__/graphics/icons/magnesium-ore.png", icon_size = 32},
   ["chrome-ore"] = {icon = "__angelssmeltinggraphics__/graphics/icons/ore-chrome.png"},
 
   ["raw-borax"] = {icon = "__pycoalprocessinggraphics__/graphics/icons/mip/raw-borax.png", icon_size = 64} or
@@ -222,10 +228,10 @@ clowns.tables.adamantite =       {
   ["angels-iron-nugget"] = special_vanilla and {1, 1, 4, 2},
   ["angels-iron-pebbles"] = special_vanilla and {2, 3, 1, 2},
   ["angels-iron-slag"] = special_vanilla and {0, 0, 1, 4},
-  ["tin-ore"] = (not special_vanilla) and {1, 1, 1, 2},
-  ["fluorite-ore"] = {0, 1, 1, 1}, -- forced on all the time from processing
-  ["chrome-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-  ["rutile-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["bob-tin-ore"] = (not special_vanilla) and {1, 1, 1, 2},
+  ["angels-fluorite-ore"] = {0, 1, 1, 1}, -- forced on all the time from processing
+  ["angels-chrome-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["bob-rutile-ore"] = (not special_vanilla) and {0, 0, 1, 1},
   ["osmium-ore"] = {0, 0, 0, 1}
 }
 clowns.tables.antitate = {
@@ -267,8 +273,8 @@ clowns.tables.phosphorite = {
   ["phosphorus-ore"] = {2, 2, 3, 3},
   ["angels-solid-limestone"] = {1, 1, 1, 2}, --always active with processing/petrochem
   ["uranium-ore"] = {0, 0, 1, 1},
-  ["lead-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-  ["thorium-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+  ["bob-lead-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["angels-thorium-ore"] = (not special_vanilla) and {0, 0, 0, 1}
 }
 clowns.tables.sanguinate = {
   ["!!"] = (not special_vanilla) and {false, false, false, true},
@@ -277,7 +283,7 @@ clowns.tables.sanguinate = {
   ["angels-solid-calcium-sulfate"] = (not special_vanilla) and {0, 1, 1, 1}, --always active with processing/petrochem
   ["fluorite-ore"] = (not special_vanilla) and {0, 1, 1, 1}, --always active with processing/petrochem
   ["phosphorus-ore"] = (not special_vanilla) and {0, 0, 1, 1},
-  ["rutile-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+  ["bob-rutile-ore"] = (not special_vanilla) and {0, 0, 0, 1}
 }
 clowns.tables.elionagate = {
   ["!!"] = {special_vanilla, special_vanilla, special_vanilla, true},
@@ -295,10 +301,10 @@ clowns.tables.metagarnierite = {
   ["!!"] = (not special_vanilla) and {false, false, false, true},
   ["magnesium-ore"] = (not special_vanilla) and {2, 2, 3, 3},
   ["iron-ore"] = (not special_vanilla) and {1, 1, 1, 2},
-  ["nickel-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-  ["manganese-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-  ["bauxite-ore"] = (not special_vanilla) and {0, 0, 1, 1},
-  ["zinc-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+  ["bob-nickel-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["angels-manganese-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["bob-bauxite-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["bob-zinc-ore"] = (not special_vanilla) and {0, 0, 0, 1}
 }
 clowns.tables.novaleucoxene = {
   ["!!"] = (not special_vanilla) and {false, false, false, true},
@@ -327,7 +333,7 @@ clowns.tables.plumbic = {
 }
 clowns.tables.manganic = {
   ["!!"] = (not special_vanilla) and {true, true, true, true},
-  ["manganese-ore"] = (not special_vanilla) and {2, 3, 4, 4},
+  ["angels-manganese-ore"] = (not special_vanilla) and {2, 3, 4, 4},
   ["magnesium-ore"] = (not special_vanilla) and {2, 2, 2, 2},
   ["bauxite-ore"] = (not special_vanilla) and {0, 1, 1, 1},
   ["angels-solid-sodium-carbonate"] = (not special_vanilla) and {0, 0, 1, 1},
@@ -336,10 +342,10 @@ clowns.tables.manganic = {
 clowns.tables.titanic = {
   ["!!"] = (not special_vanilla) and {true, true, true, true},
   ["iron-ore"] = (not special_vanilla) and {2, 3, 4, 4},
-  ["nickel-ore"] = (not special_vanilla) and {2, 2, 2, 2},
-  ["rutile-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-  ["cobalt-ore"] = (not special_vanilla) and {0, 0, 1, 1},
-  ["tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+  ["bob-nickel-ore"] = (not special_vanilla) and {2, 2, 2, 2},
+  ["bob-rutile-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+  ["bob-cobalt-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+  ["bob-tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1}
 }
 clowns.tables.phosphic = {
   ["!!"] = (not special_vanilla) and {true, true, true, true},
@@ -354,7 +360,7 @@ clowns.functions.get_icon_table = function(table)
   for i,icon in pairs(table) do
     if type(icon) =="table" then
       list[i]={
-        {icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png"},
+        {icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
         clowns.tables.tweaked_icon_lookup(table[i].name, 0.5, {10, 10}), 
         {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png"}
       }
@@ -368,19 +374,19 @@ end
 clowns.tables.crushed_mix_processing = {
   special_vanilla and {type = "item", name = "phosphorus-ore", amount = 4} or {type = "item", name = "iron-ore", amount = 9},
   (not special_vanilla) and {type = "item", name = "copper-ore", amount = 9},
-  (not special_vanilla) and {type = "item", name = "tin-ore", amount = 9},
-  (not special_vanilla) and {type = "item", name = "lead-ore", amount = 9},
-  (not special_vanilla) and {type = "item", name = "manganese-ore", amount = 9},
+  (not special_vanilla) and {type = "item", name = "bob-tin-ore", amount = 9},
+  (not special_vanilla) and {type = "item", name = "bob-lead-ore", amount = 9},
+  (not special_vanilla) and {type = "item", name = "angels-manganese-ore", amount = 9},
   (not special_vanilla) and {type = "item", name = "phosphorus-ore", amount = 9},
   {type = "item", name = "raw-borax", amount = special_vanilla and 6 or 9},
 }
 clowns.tables.chunk_mix_processing = {
-  {type = "item", name = "fluorite-ore", amount = special_vanilla and 3 or 8},
-  (not special_vanilla) and {type = "item", name = "quartz", amount = 8},
-  (not special_vanilla) and {type = "item", name = "nickel-ore", amount = 8},
-  (not special_vanilla) and {type = "item", name = "zinc-ore", amount = 8},
-  (not special_vanilla) and {type = "item", name = "bauxite-ore", amount = 8},
-  (not special_vanilla) and {type = "item", name = "silver-ore", amount = 8},
+  {type = "item", name = "angels-fluorite-ore", amount = special_vanilla and 3 or 8},
+  (not special_vanilla) and {type = "item", name = "bob-quartz", amount = 8},
+  (not special_vanilla) and {type = "item", name = "bob-nickel-ore", amount = 8},
+  (not special_vanilla) and {type = "item", name = "bob-zinc-ore", amount = 8},
+  (not special_vanilla) and {type = "item", name = "bob-bauxite-ore", amount = 8},
+  (not special_vanilla) and {type = "item", name = "bob-silver-ore", amount = 8},
   {type = "item", name = "niobium-ore", amount = 8}, --these are temp placeholders, the base ores are not declared until data-updates
   {type = "item", name = "nexelit-ore", amount = 8},
   {type = "item", name = "rare-earth-dust", amount = 8}

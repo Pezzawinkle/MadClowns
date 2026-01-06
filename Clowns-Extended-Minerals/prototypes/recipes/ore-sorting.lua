@@ -237,8 +237,8 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
         results = {{type = "item", name = "angels-slag", amount = 1}},
         icons =
         {
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png"},
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/crushed.png", scale = 0.5, shift = {-8, 8},}
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png", icon_size = 32},
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/crushed.png", icon_size = 32, scale = 0.5, shift = {-8, 8},}
         },
         icon_size = 32,
         order = "a["..ore.."]",
@@ -257,8 +257,8 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
         results= {{type = "item", name = "angels-slag", amount = 1},},
         icons =
         {
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png"},
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/chunk.png", scale = 0.5, shift = {-8, 8},}
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png", icon_size = 32},
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/chunk.png", icon_size = 32, scale = 0.5, shift = {-8, 8},}
         },
         icon_size = 32,
         order = "a["..ore.."]",
@@ -277,8 +277,8 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
         results = {{type = "item", name = "angels-slag", amount = 1},},
         icons =
         {
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png"},
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/crystal.png", scale = 0.5, shift = {-8, 8},}
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png", icon_size = 32},
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/crystal.png", icon_size = 32, scale = 0.5, shift = {-8, 8},}
         },
         icon_size = 32,
         order = "a["..ore.."]",
@@ -297,8 +297,8 @@ local create_basic_recipe = function(refinery_product, recipe_base_name, adv)
         results = {{type = "item", name = "angels-void", amount = 1}},
         icons =
         {
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png"},
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/pure.png", scale = 0.5, shift = {-8, 8},}
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/sorting-icon.png", icon_size = 32},
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/pure.png", icon_size = 32, scale = 0.5, shift = {-8, 8},}
         },
         icon_size = 32,
         order = "a["..ore.."]",

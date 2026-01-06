@@ -72,8 +72,8 @@ data:extend(
 		},
 	},
 })
-if data.raw.item["thorium-fuel-cell"] or data.raw.item["angels-thorium-fuel-cell"] then
-	local ucell = data.raw.item["thorium-fuel-cell"] and "used-up-thorium-fuel-cell" or data.raw.item["angels-thorium-fuel-cell"] and "used-up-angels-thorium-fuel-cell"
+if data.raw.item["bob-thorium-fuel-cell"] or data.raw.item["angels-thorium-fuel-cell"] then
+	local ucell = data.raw.item["bob-thorium-fuel-cell"] and "bob-depleted-thorium-fuel-cell" or data.raw.item["angels-thorium-fuel-cell"] and "angels-depleted-thorium-fuel-cell"
 data:extend(
 {
 	{
@@ -190,7 +190,7 @@ end
 		order = "c-b-b",
 		results =
 		{
-			{type="item", name="used-up-uranium-fuel-cell", amount=1}
+			{type="item", name="depleted-uranium-fuel-cell", amount=1}
 		},
 	},
 }
@@ -232,7 +232,7 @@ if mods["angelsindustries"] and angelsmods.industries.overhaul then
 		order = "c-b-b",
 		results =
 		{
-			{type="item", name="used-up-uranium-fuel-cell", amount=1}
+			{type="item", name="depleted-uranium-fuel-cell", amount=1}
 		},
 	}
 })

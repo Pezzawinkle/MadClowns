@@ -62,6 +62,7 @@ if not clowns.special_vanilla then
 					icon = "__Clowns-Processing__/graphics/icons/phosphorus-ore.png",
 					scale = 0.5,
 					shift = {8, 8},
+					icon_size = 32,
 				},
 
 			},
@@ -95,6 +96,7 @@ if not clowns.special_vanilla then
 					icon = "__angelssmeltinggraphics__/graphics/icons/ore-chrome.png",
 					scale = 0.5,
 					shift = {8, 8},
+					icon_size = 32,
 				},
 
 			},
@@ -129,6 +131,7 @@ if not clowns.special_vanilla then
 				{
 					icon = "__Clowns-Processing__/graphics/icons/magnesium-ore.png",
 					scale = 0.5,
+					icon_size = 32,
 					shift = {8, 8},
 				},
 
@@ -228,7 +231,7 @@ if mods["Clowns-AngelBob-Nuclear"] then
 			},
 			results =
 			{
-				{type="item", name="thorium-ore", amount=3}
+				{type="item", name="angels-thorium-ore", amount=3}
 			},
 			icons =
 			{

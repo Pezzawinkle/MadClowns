@@ -4,13 +4,13 @@ if mods["angelsbioprocessing"] then
 			{
 				type = "technology",
 				name = "garden-mutation",
-				icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
+				icon = "__angelsbioprocessinggraphics__/graphics/technology/seed-extractor-tech.png",
 				icon_size = 128,
 				order = "c",
 				prerequisites =
 				{
 					"nuclear-power",
-					"gardens-3",
+					"angels-gardens-3",
           "utility-science-pack"
 				},
 				effects =
@@ -37,7 +37,7 @@ if mods["angelsbioprocessing"] then
 						{"logistic-science-pack", 4},
 						{"chemical-science-pack", 4},
 						{"utility-science-pack", 4},
-						{"token-bio", 1}
+						{"angels-token-bio", 1}
 					},
 					time = 30
 				},
@@ -51,7 +51,7 @@ if mods["angelsbioprocessing"] then
     "temperate-garden-generation"
   }
 	for _,rec in pairs(recipes) do
-		table.insert(data.raw["technology"]["bio-farm-2"].effects,{type = "unlock-recipe", recipe = rec})
+		table.insert(data.raw["technology"]["angels-bio-farm-2"].effects,{type = "unlock-recipe", recipe = rec})
 	end
-	table.insert(data.raw["technology"]["bio-farm-2"].prerequisites,"phosphorus-processing-1")
+	table.insert(data.raw["technology"]["angels-bio-farm-2"].prerequisites,"phosphorus-processing-1")
 end

@@ -56,7 +56,7 @@ if mods["angelsbioprocessing"] then
           recipe = "neurotoxin-capsule"
         },
       },
-      prerequisites = {"mercury-processing-1", "bio-processing-blue", "military-3"},
+      prerequisites = {"mercury-processing-1", "angels-bio-processing-blue", "military-3"},
       unit =
       {
         ingredients =
