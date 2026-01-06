@@ -12,7 +12,7 @@ local ap_dat={
 	["infinite-clowns-resource1"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 }
 local resource_dat = {
-  ["clowns-resource1"] = {--[[stage="clowns-resource1",]]ore_sheet = "__Clowns-Extended-Minerals__/graphics/entity/alluvium",	order = "c-k",	mining_time = 1*0.2,	tint = {r = 0.9, g = 0.7, b = 0.7}, frame_c = 4, var_c= 8, acid = "angels-liquid-phosphoric-acid"},
+  ["clowns-resource1"] = {--[[stage="clowns-resource1",]]ore_sheet = "__Clowns-Extended-Minerals__/graphics/entity/alluvium",	order = "c-k",	mining_time = 1*0.2,	tint = {r = 0.9, g = 0.7, b = 0.7}, frame_c = 4, var_c= 8, acid = "clowns-liquid-phosphoric-acid"},
   ["clowns-resource2"] = {--[[stage="clowns-resource2",]]ore_sheet = "__Clowns-Extended-Minerals__/graphics/entity/oil-sands",	order = "c-l",	mining_time = 1*0.5,	tint = {r = 0.2, g = 0.25, b = 0.25}, frame_c = 4, var_c = 8, acid = "steam"},
 }
 ---------------------------------------------

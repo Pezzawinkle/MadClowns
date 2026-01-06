@@ -11,7 +11,7 @@ if mods["angelsbioprocessing"] then
 				{
 					"nuclear-power",
 					"angels-gardens-3",
-          "utility-science-pack"
+         			"utility-science-pack"
 				},
 				effects =
 				{
@@ -45,7 +45,7 @@ if mods["angelsbioprocessing"] then
 		}
 	)
 	local recipes = {
-    "diammonium-phosphate-fertilizer",
+    "clowns-diammonium-phosphate-fertilizer",
     "desert-garden-generation",
     "swamp-garden-generation",
     "temperate-garden-generation"

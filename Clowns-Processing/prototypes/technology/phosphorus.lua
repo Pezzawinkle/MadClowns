@@ -13,11 +13,11 @@ data:extend(
       },
       {
         type = "unlock-recipe",
-        recipe = "white-phosphorus-smelting"
+        recipe = "clowns-white-phosphorus-smelting"
       },
       {
         type = "unlock-recipe",
-        recipe = "phosphoric-acid-1"
+        recipe = "clowns-phosphoric-acid-1"
       },
     },
     prerequisites = {"angels-basic-chemistry-2", "angels-metallurgy-2", "angels-sulfur-processing-1", "angels-ore-crushing"},
@@ -42,7 +42,7 @@ data:extend(
 			{
 				{
 					type = "unlock-recipe",
-					recipe = "white-phosphorus-smelting-2"
+					recipe = "clowns-white-phosphorus-smelting-2"
 				},
 			},
 			prerequisites = {"phosphorus-processing-1", "angels-metallurgy-3"},

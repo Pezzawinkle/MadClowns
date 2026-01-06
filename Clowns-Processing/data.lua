@@ -12,11 +12,9 @@ end
 if mods["pyrawores"] then --force full mode
   clowns.special_vanilla = false
 end
-if settings.startup["depleted-uranium"].value and not clowns.special_vanilla --[[=false]] then
-  angelsmods.trigger.smelting_products["enable-all"] = true -- to ensure we get the powder
-end
+
 if not clowns.special_vanilla--[[=false]] then
-  angelsmods.trigger.smelting_products["aluminium"].powder = true
+  angelsmods.trigger.smelting_products["enable-all"] = true -- to ensure we get all the powders
   angelsmods.trigger.ores["aluminium"] = true
   angelsmods.trigger.ores["gold"] = true
   angelsmods.trigger.ores["platinum"] = true

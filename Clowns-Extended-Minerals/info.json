@@ -8,12 +8,10 @@
   "homepage": "",
   "description": "Brings many new ores & minerals to games with Angel's Refining and Bob's Ores active.",
   "dependencies": [
-	"angelsrefining >= 0.12.1",
 	"? bobores >= 0.18.0",
 	"? bobplates >= 0.18.0",
 	"Clowns-Processing >= 1.3.16",
   "(?) angelsinfiniteores >= 0.9.0",
-  "(?) angelspetrochem >= 0.9.0",
   "(?) omnimatter >= 4.1.8",
   "? omnimatter_crystal >= 3.18.0",
   "! angelsaddons-refiningthorium >= 0.0.1"

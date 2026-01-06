@@ -47,7 +47,7 @@ if mods["angelspetrochem"] and settings.startup["angels-enable-acids"].value the
 	ore6fluid = "angels-liquid-sulfuric-acid"
   ore7fluid = "angels-liquid-hydrofluoric-acid"
   ore8fluid = "angels-liquid-hydrochloric-acid"
-  ore9fluid = "angels-liquid-phosphoric-acid"
+  ore9fluid = "clowns-liquid-phosphoric-acid"
 else
 	ore1fluid = "angels-liquid-sulfuric-acid"
 	ore2fluid = "angels-liquid-sulfuric-acid"
@@ -59,7 +59,7 @@ else
   ore8fluid = "angels-liquid-sulfuric-acid"
   ore9fluid = "angels-liquid-sulfuric-acid"
 end
-res1fluid = "angels-liquid-phosphoric-acid"
+res1fluid = "clowns-liquid-phosphoric-acid"
 res2fluid = "steam"
 
 if mods["omnimatter"] then

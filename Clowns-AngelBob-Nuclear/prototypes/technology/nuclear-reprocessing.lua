@@ -28,10 +28,6 @@ data:extend(
 		},
 		order = "e-p-b-c"
 	},
-})
-if data.raw.item["thorium-fuel-cell"] or data.raw.item["angels-thorium-fuel-cell"] and angelsmods.industries.overhaul then
-data:extend(
-{
 	{
 		type = "technology",
 		name = "thorium-nuclear-fuel-reprocessing-2",
@@ -69,4 +65,3 @@ data:extend(
 	}
 }
 )
-end

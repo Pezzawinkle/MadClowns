@@ -3,10 +3,10 @@ local OV = angelsmods.functions.OV
 --REPLACE URANIUM HEXAFLUORIDE CENTRIFUGING RECIPE
 data.raw.technology["advanced-uranium-processing-1"].effects =
 {
-	{type = "unlock-recipe", recipe = "angels-solid-uranium-hexafluoride"},
-	{type = "unlock-recipe", recipe = "angels-solid-uranium-tetrafluoride"},
-	{type = "unlock-recipe", recipe = "angels-solid-uranium-oxide-1"},
-	{type = "unlock-recipe", recipe = "clowns-centrifuging-20%-hexafluoride"},
+	{type = "unlock-recipe", recipe = "clowns-solid-uranium-hexafluoride"},
+	{type = "unlock-recipe", recipe = "clowns-solid-uranium-tetrafluoride"},
+	{type = "unlock-recipe", recipe = "clowns-solid-uranium-oxide-1"},
+	{type = "unlock-recipe", recipe = "clowns-centrifuging-20pc-hexafluoride"},
 }
 --clobber vanilla and angels nuclear fuel recipes
 if data.raw.technology["angels-nuclear-fuel"] then

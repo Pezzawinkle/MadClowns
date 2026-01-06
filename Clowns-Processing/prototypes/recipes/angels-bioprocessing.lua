@@ -40,24 +40,24 @@ if mods["angelsbioprocessing"] then
 		},
 		results=
 		{
-		  {type="item", name="algae-violet", amount=40},
+		  {type="item", name="clowns-algae-violet", amount=40},
 		},
 		order = "b",
   },
   --Mercury from Violet
 	{
 		type = "recipe",
-		name = "methylmercury-algae",
+		name = "clowns-methylmercury-algae",
 		category = "angels-liquifying",
 		subgroup = "bio-processing-violet",
 		enabled = false,
 		energy_required = 3,
 		ingredients ={
-		{type="item", name="algae-violet", amount=10},
+		{type="item", name="clowns-algae-violet", amount=10},
 		},
 		results=
 		{
-		  {type="fluid", name="angels-liquid-dimethylmercury", amount=2},
+		  {type="fluid", name="clowns-liquid-dimethylmercury", amount=2},
 		},
 		icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
 		nil,
@@ -224,7 +224,7 @@ if mods["angelsbioprocessing"] then
 		allow_decomposition = false,
 		ingredients =
 		{
-			{type="fluid", name="angels-liquid-phosphoric-acid", amount=10},
+			{type="fluid", name="clowns-liquid-phosphoric-acid", amount=10},
 			{type="fluid", name="angels-gas-ammonia", amount=10},
 		},
 		results =

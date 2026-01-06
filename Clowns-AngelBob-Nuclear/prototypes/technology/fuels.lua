@@ -38,7 +38,7 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "hypernuclear-fuel"
+				recipe = "clowns-hypernuclear-fuel"
 			},
 		},
 		prerequisites = {"nuclear-fuel-1"},
@@ -64,7 +64,7 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "turbonuclear-fuel"
+				recipe = "clowns-turbonuclear-fuel"
 			},
 		},
 		prerequisites = {"nuclear-fuel-2"},
@@ -90,7 +90,7 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "radiothermal-fuel"
+				recipe = "clowns-radiothermal-fuel"
 			},
 		},
 		prerequisites = {"nuclear-power"},
@@ -116,7 +116,7 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "superradiothermal-fuel"
+				recipe = "clowns-superradiothermal-fuel"
 			},
 		},
 		prerequisites = {"radiothermal-fuel-1"},
@@ -142,7 +142,7 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "ultraradiothermal-fuel"
+				recipe = "clowns-ultraradiothermal-fuel"
 			},
 		},
 		prerequisites = {"radiothermal-fuel-2"},

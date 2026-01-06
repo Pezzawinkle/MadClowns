@@ -15,31 +15,26 @@ clowns.tables.get_trigger_name = {
   --[[V]]["angels-copper-pebbles"] = special_vanilla and "copper" or "unused", -- special vanilla only
   --[[V]]["angels-copper-slag"] = special_vanilla and "copper" or "unused", -- special vanilla only
 
-  --[[A/B]]["lead-ore"] = "angels-lead",
-  --[[A/B]]["quartz"] = "angels-silicon",
-  --[[A/B]]["nickel-ore"] = "angels-nickel",
-  --[[A/B]]["manganese-ore"] = "angels-manganese",
-  --[[A/B]]["zinc-ore"] = "angels-zinc",
-  --[[A/B]]["bauxite-ore"] = "angels-aluminium",
+  --[[A/B]]["angels-lead-ore"] = "angels-lead",
+  --[[A/B]]["angels-quartz"] = "angels-silicon",
+  --[[A/B]]["angels-nickel-ore"] = "angels-nickel",
+  --[[A/B]]["angels-manganese-ore"] = "angels-manganese",
+  --[[A/B]]["angels-zinc-ore"] = "angels-zinc",
+  --[[A/B]]["angels-bauxite-ore"] = "angels-aluminium",
   --[[A/B]]["cobalt-ore"] = "angels-cobalt",
-  --[[A/B]]["silver-ore"] = "angels-silver",
+  --[[A/B]]["angels-silver-ore"] = "angels-silver",
   --[[A/B]]["angels-gold-ore"] = "angels-gold",
-  --[[A/B]]["rutile-ore"] = "angels-titanium",
+  --[[A/B]]["angels-rutile-ore"] = "angels-titanium",
   --[[A/B]]["uranium-ore"] = "uranium",
-  --[[A/B]]["tungsten-ore"] = "angels-tungsten",
-  --[[A/B]]["thorium-ore"] = "angels-thorium",
-  --[[A/B]]["chrome-ore"] = "angels-chrome",
+  --[[A/B]]["angels-tungsten-ore"] = "angels-tungsten",
+  --[[A/B]]["angels-thorium-ore"] = "angels-thorium",
+  --[[A/B]]["angels-chrome-ore"] = "angels-chrome",
   --[[A/B]]["angels-platinum-ore"] = "angels-platinum",
 
   --[[C]]["phosphorus-ore"] = "phosphorus",
   --[[C]]["magnesium-ore"] = "magnesium",
   --[[C]]["osmium-ore"] = "osmium",
 
-  --[[A]]["angels-solid-limestone"] = "angels-solid-limestone",
-  --[[A]]["angels-solid-calcium-sulfate"] = "angels-solid-calcium-sulfate",
-  --[[A]]["angels-solid-lithium"] = "angels-solid-lithium",
-  --[[A]]["angels-solid-sand"] = "angels-solid-sand",
-  --[[A]]["angels-solid-sodium-carbonate"] = "angels-solid-sodium-carbonate",
   --[[A]]["fluorite-ore"] = "angels-fluorite", -- byproduct
   --[[A]]["angels-solid-limestone"] = "limestone",
   --[[A]]["angels-solid-calcium-sulfate"] = "calcium-sulfate",
@@ -117,8 +112,8 @@ clowns.tables.icon_lookup_table = {
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/silver-ore.png"} or
     icon_lookup_table_fallback,
 
-  ["thorium-ore"] = mods["angelsindustries"] and angelsmods.industries.overhaul and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-thorium.png", icon_size = 64} or
-    mods["bobplates"] and {icon = "__boblibrary__/graphics/icons/ore-5.png", tint = {b = 0.25, g = 1, r = 1}} or
+  ["thorium-ore"] = {icon = "__angelssmeltinggraphics__/graphics/icons/ore-thorium.png", icon_size = 64} --[[or
+    mods["bobplates"] and {icon = "__boblibrary__/graphics/icons/ore-5.png", tint = {b = 0.25, g = 1, r = 1}}]] or
     icon_lookup_table_fallback,
 
   ["tin-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-tin.png"} or
@@ -396,7 +391,7 @@ clowns.tables.crystal_mix_processing = {
   (not special_vanilla) and {type = "item", name = "angels-gold-ore", amount = 7},
   (not special_vanilla) and {type = "item", name = "rutile-ore", amount = 7},
   (not special_vanilla) and {type = "item", name = "uranium-ore", amount = 7},
-  {type = "item", name = "magnesium-ore", amount = special_vanlla and 4 or 7},
+  {type = "item", name = "magnesium-ore", amount = special_vanilla and 4 or 7},
   {type = "item", name = "molybdenum-ore", amount = 8}, --these are temp placeholders, the base ores are not declared until data-updates
   {type = "item", name = "regolite-rock", amount = 8}
 
@@ -406,6 +401,6 @@ clowns.tables.pure_mix_processing = {
   (not special_vanilla) and {type = "item", name = "thorium-ore", amount = 5},
   (not special_vanilla) and {type = "item", name = "chrome-ore", amount = 5},
   (not special_vanilla) and {type = "item", name = "angels-platinum-ore", amount = 5},
-  {type = "item", name = "osmium-ore", amount = special_vanlla and 6 or 5},
+  {type = "item", name = "osmium-ore", amount = special_vanilla and 6 or 5},
   {type = "item", name = "kimberlite-rock", amount = 8} --these are temp placeholders, the base ores are not declared until data-updates
 }

@@ -11,7 +11,7 @@ data:extend(
 		ingredients =
 		{
 			{type = "fluid", name = "angels-water-purified", amount = 1000},
-			{type = "item", name = "angels-catalyst-metal-violet", amount = 1}
+			{type = "item", name = "clowns-catalyst-metal-violet", amount = 1}
 		},
 		results=
 		{
@@ -37,7 +37,7 @@ data:extend(
 		ingredients =
 		{
 			{type = "fluid", name = "angels-water-purified", amount = 1000},
-			{type = "item", name = "angels-catalyst-metal-violet", amount = 1}
+			{type = "item", name = "clowns-catalyst-metal-violet", amount = 1}
 		},
 		results =
 		{
@@ -64,7 +64,7 @@ data:extend(
 		ingredients =
 		{
 			{type = "fluid", name = "angels-gas-compressed-air", amount = 1000},
-			{type = "item", name = "angels-catalyst-metal-violet", amount = 1}
+			{type = "item", name = "clowns-catalyst-metal-violet", amount = 1}
 		},
 		results =
 		{
@@ -84,7 +84,7 @@ data:extend(
 		ingredients =
 		{
 			{type = "fluid", name = "angels-gas-compressed-air", amount = 1000},
-			{type = "item", name = "angels-catalyst-metal-violet", amount = 1}
+			{type = "item", name = "clowns-catalyst-metal-violet", amount = 1}
 		},
 		results =
 		{
@@ -126,14 +126,14 @@ data:extend(
 		},
 		results =
 		{
-			{type = "fluid", name = "angels-gas-fluorine", amount = 40},
+			{type = "fluid", name = "clowns-gas-fluorine", amount = 40},
 			{type = "fluid", name = "angels-gas-hydrogen", amount = 60}
 		},
-		icons = angelsmods.functions.create_gas_recipe_icon({"angels-gas-fluorine","angels-gas-hydrogen"}, "FHH",{"angels-liquid-hydrofluoric-acid"}),
+		icons = angelsmods.functions.create_gas_recipe_icon({"clowns-gas-fluorine","angels-gas-hydrogen"}, "FHH",{"angels-liquid-hydrofluoric-acid"}),
 	},
 	{
 		type = "recipe",
-		name = "angels-catalyst-metal-violet",
+		name = "clowns-catalyst-metal-violet",
 		category = "crafting-with-fluid",
 		subgroup = "angels-petrochem-catalysts",
 		energy_required = 2,
@@ -142,11 +142,11 @@ data:extend(
 		{
 			{type = "item", name = "angels-catalyst-metal-carrier", amount = 10},
 			{type = "item", name = clowns.special_vanilla and "angels-solid-sodium" or "angels-platinum-ore", amount = 1},
-			{type = "fluid", name = "angels-liquid-mercury", amount = 10},
+			{type = "fluid", name = "clowns-liquid-mercury", amount = 10},
 		},
 		results =
 		{
-			{type = "item", name = "angels-catalyst-metal-violet", amount = 10},
+			{type = "item", name = "clowns-catalyst-metal-violet", amount = 10},
 		},
 		icon = "__Clowns-Processing__/graphics/icons/catalyst-metal-violet.png",
 		icon_size = 32,

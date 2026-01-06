@@ -9,19 +9,19 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "osmium-ore-processing"
+				recipe = "clowns-osmium-ore-processing"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "osmium-processed-processing"
+				recipe = "clowns-osmium-processed-processing"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "osmium-pellet-smelting"
+				recipe = "clowns-osmium-pellet-smelting"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "casting-powder-osmium"
+				recipe = "clowns-casting-powder-osmium"
 			},
 			{
 				type = "unlock-recipe",
@@ -29,7 +29,7 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "osmium-rounds-magazine"
+				recipe = "clowns-osmium-rounds-magazine"
 			},
 		},
 		prerequisites = {"angels-powder-metallurgy-4", "angels-ore-processing-3", "military-3"},

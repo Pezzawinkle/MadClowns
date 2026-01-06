@@ -9,14 +9,14 @@ data:extend(
 		enabled = false,
 		ingredients =
 		{
-			{type="fluid", name="angels-water-radioactive-waste", amount=100}
+			{type="fluid", name="clowns-water-radioactive-waste", amount=100}
 		},
 		results=
 		{
 			{type="fluid", name="angels-water-red-waste", amount=100},
-			{type="item", name="polonium-210", amount=1},
+			{type="item", name="clowns-polonium-210", amount=1},
 		},
-		icons = angelsmods.functions.create_liquid_recipe_icon({"polonium-210","angels-water-red-waste"}, "WsCCl"),
+		icons = angelsmods.functions.create_liquid_recipe_icon({"clowns-polonium-210","angels-water-red-waste"}, "WsCCl"),
 		order = "k",
 	},
 }

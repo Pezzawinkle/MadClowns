@@ -1,23 +1,8 @@
-if angelsmods.trigger.ores["thorium"] == true then
-	data:extend(
-{
-	{
-		type = "item",
-		name = "thorium-232",
-		icon = mods["angelsindustries"] and "__angelsindustries__/graphics/icons/thorium-232.png" or "__Clowns-AngelBob-Nuclear__/graphics/icons/thorium-232.png",
-		icon_size = mods["angelsindustries"] and 64 or 32,
-		subgroup = "clowns-thorium",
-		order = "b",
-		stack_size = 100
-	}})
-end
-	
-	
 data:extend(
 {
 	{
 		type = "item",
-		name = "polonium-210",
+		name = "clowns-polonium-210",
 		icon = "__Clowns-AngelBob-Nuclear__/graphics/icons/polonium-210.png",
 		icon_size = 32,
 		subgroup = "clowns-nuclear-isotopes",
@@ -26,7 +11,7 @@ data:extend(
 	},
 	{
 		type = "item",
-		name = "caesium-137",
+		name = "clowns-caesium-137",
 		icon = "__Clowns-AngelBob-Nuclear__/graphics/icons/caesium-137.png",
 		icon_size = 32,
 		subgroup = "clowns-nuclear-isotopes",
@@ -35,7 +20,7 @@ data:extend(
 	},
 	{
 		type = "item",
-		name = "strontium-90",
+		name = "clowns-strontium-90",
 		icon = "__Clowns-AngelBob-Nuclear__/graphics/icons/strontium-90.png",
 		icon_size = 32,
 		subgroup = "clowns-nuclear-isotopes",
@@ -44,7 +29,7 @@ data:extend(
 	},
 	{
 		type = "item",
-		name = "protactinium-231",
+		name = "clowns-protactinium-231",
 		icon = "__Clowns-AngelBob-Nuclear__/graphics/icons/protactinium-231.png",
 		icon_size = 32,
 		subgroup = "clowns-nuclear-isotopes",
@@ -53,7 +38,7 @@ data:extend(
 	},
 	{
 		type = "item",
-		name = "zinc-65",
+		name = "clowns-zinc-65",
 		icon = "__Clowns-AngelBob-Nuclear__/graphics/icons/zinc-65.png",
 		icon_size = 32,
 		subgroup = "clowns-nuclear-isotopes",
@@ -62,7 +47,7 @@ data:extend(
 	},
 	{
 		type = "item",
-		name = "cobalt-60",
+		name = "clowns-cobalt-60",
 		icon = "__Clowns-AngelBob-Nuclear__/graphics/icons/cobalt-60.png",
 		icon_size = 32,
 		subgroup = "clowns-nuclear-isotopes",

@@ -2,7 +2,6 @@ local recipe={}
 --set required triggers
 angelsmods.trigger.smelting_products["iron"].plate = true
 angelsmods.trigger.smelting_products["iron"].ingot = true
-if mods["bobplates"] or (mods["angelsindustries"] and angelsmods.industries.overhaul) then
   angelsmods.trigger.smelting_products["manganese"].ingot = true
   --iron ingot recipes
   recipe[#recipe+1]=
@@ -11,12 +10,13 @@ if mods["bobplates"] or (mods["angelsindustries"] and angelsmods.industries.over
     name = "molten-iron-smelting-6",
     category = "angels-induction-smelting",
     subgroup = "angels-iron-casting",
+    localised_name = {"fluid-name.angels-liquid-molten-iron"},
     energy_required = 4,
     enabled = false,
     ingredients =
     {
       {type="item", name="angels-ingot-iron", amount=12},
-      {type="item", name="angels-ingot-magnesium", amount=12},
+      {type="item", name="clowns-ingot-magnesium", amount=12},
       {type="item", name="angels-ingot-manganese", amount=12},
     },
     results=
@@ -29,20 +29,21 @@ if mods["bobplates"] or (mods["angelsindustries"] and angelsmods.industries.over
     order = "i[liquid-molten-iron]-f",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-iron"),
   }
-else --include a magnesium sink for vanilla cases
+ --include a magnesium sink for vanilla cases
   recipe[#recipe+1]=
   {
     type = "recipe",
     name = "molten-steel-smelting-c2",
     category = "angels-induction-smelting-2",
     subgroup = "angels-steel-casting",
+    localised_name = {"fluid-name.angels-liquid-molten-steel"},
     energy_required = 4,
     enabled = false,
     ingredients =
     {
       {type="item", name="angels-ingot-steel", amount=12},
-      {type="item", name="angels-ingot-magnesium", amount=12},
-      {type="item", name="angels-solid-white-phosphorus", amount=12},
+      {type="item", name="clowns-ingot-magnesium", amount=12},
+      {type="item", name="clowns-solid-white-phosphorus", amount=12},
     },
     results=
     {
@@ -54,8 +55,6 @@ else --include a magnesium sink for vanilla cases
     order = "i[liquid-molten-iron]-b",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-steel"),
   }
-
-end
 --aluminium ingot recipes
 if angelsmods.trigger.smelting_products["aluminium"].plate then
   recipe[#recipe+1]=
@@ -64,12 +63,13 @@ if angelsmods.trigger.smelting_products["aluminium"].plate then
     name = "molten-aluminium-smelting-4",
     category = "angels-induction-smelting",
     subgroup = "angels-aluminium-casting",
+    localised_name = {"fluid-name.angels-liquid-molten-aluminium"},
     energy_required = 4,
     enabled = false,
     ingredients =
     {
       {type="item", name="angels-ingot-aluminium", amount=12},
-      {type="item", name="angels-ingot-magnesium", amount=12}
+      {type="item", name="clowns-ingot-magnesium", amount=12}
     },
     results=
     {
@@ -88,12 +88,13 @@ if angelsmods.trigger.smelting_products["aluminium"].plate then
       name = "molten-aluminium-smelting-5",
       category = "angels-induction-smelting",
       subgroup = "angels-aluminium-casting",
+      localised_name = {"fluid-name.angels-liquid-molten-aluminium"},
       energy_required = 4,
       enabled = false,
       ingredients =
       {
         {type="item", name="angels-ingot-aluminium", amount=12},
-        {type="item", name="angels-ingot-magnesium", amount=12},
+        {type="item", name="clowns-ingot-magnesium", amount=12},
         {type="item", name="angels-ingot-zinc", amount=12},
       },
       results=
@@ -116,13 +117,14 @@ if angelsmods.trigger.smelting_products["brass"].plate then
       name = "angels-brass-smelting-4",
       category = "angels-induction-smelting",
       subgroup = "angels-alloys-casting",
+      localised_name = {"fluid-name.angels-liquid-molten-brass"},
       energy_required = 4,
       enabled = false,
       ingredients =
       {
         {type="item", name="angels-ingot-copper", amount=18},
         {type="item", name="angels-ingot-zinc", amount=12},
-        {type="item", name="angels-solid-white-phosphorus", amount=6},
+        {type="item", name="clowns-solid-white-phosphorus", amount=6},
       },
       results=
       {
@@ -143,6 +145,7 @@ if angelsmods.trigger.smelting_products["titanium"].plate then
 		name = "angels-sponge-magnesium-titanium-smelting",
 		category = "angels-chemical-smelting",
 		subgroup = "angels-titanium",
+    localised_name = {"item-name.angels-sponge-titanium"},
 		energy_required = 6,
 		enabled = false,
 		ingredients =
@@ -165,17 +168,18 @@ if angelsmods.trigger.smelting_products["titanium"].plate then
 		name = "angels-pellet-magnesium-titanium-smelting",
 		category = "angels-chemical-smelting",
 		subgroup = "angels-titanium",
+    localised_name = {"item-name.angels-ingot-titanium"},
 		energy_required = 6,
 		enabled = false,
 		ingredients =
 		{
 			{type="item", name="angels-pellet-titanium", amount=8},
-			{type="item", name="angels-ingot-magnesium", amount=6},
+			{type="item", name="clowns-ingot-magnesium", amount=6},
 		},
 		results=
 		{
 			{type="item", name="angels-ingot-titanium", amount=24},
-			{type="item", name="magnesium-ore", amount=6}
+			{type="item", name="clowns-magnesium-ore", amount=6}
 		},
     main_product= "angels-ingot-titanium",
     icons = angelsmods.functions.add_number_icon_layer(

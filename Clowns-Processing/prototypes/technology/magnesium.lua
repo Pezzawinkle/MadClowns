@@ -9,19 +9,19 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "magnesium-ore-processing"
+				recipe = "clowns-magnesium-ore-processing"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "magnesium-processed-processing"
+				recipe = "clowns-magnesium-processed-processing"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "magnesium-pellet-smelting"
+				recipe = "clowns-magnesium-pellet-smelting"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "molten-magnesium-smelting"
+				recipe = "clowns-molten-magnesium-smelting"
 			},
 			{
 				type = "unlock-recipe",

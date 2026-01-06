@@ -6,13 +6,13 @@ local unlock_lists = {
   {"angels-advanced-chemistry-3","catalytic-air-separation-nitrogen"},
   {"angels-advanced-chemistry-3","catalytic-water-separation-oxygen"},
   {"angels-advanced-chemistry-3","catalytic-water-separation-hydrogen"},
-  {"angels-advanced-chemistry-3","angels-catalyst-metal-violet"},
-  {"angels-water-washing-1","sluicer"},
+  {"angels-advanced-chemistry-3","clowns-catalyst-metal-violet"},
+  {"angels-water-washing-1","clowns-sluicer"},
   {"angels-water-treatment-4","intermediate-salination"},
 }
 if data.raw.recipe["sand-sluicing"] then
   table.insert(unlock_lists,{"angels-water-washing-1","sand-sluicing"})
-  table.insert(unlock_lists,{"angels-water-washing-2","sluicer-2"})
+  table.insert(unlock_lists,{"angels-water-washing-2","clowns-sluicer-2"})
 end
 if data.raw.recipe["nickel-piercing-rounds-magazine"] then
   table.insert(unlock_lists,{"military-2","nickel-piercing-rounds-magazine"})

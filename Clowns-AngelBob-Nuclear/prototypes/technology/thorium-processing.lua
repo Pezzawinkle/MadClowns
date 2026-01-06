@@ -41,5 +41,5 @@ if data.raw.item["thorium-fuel-cell"] then
 
 }
 )
-clowns.functions.add_prereq("mixed-oxide-fuel","thorium-ore-processing")
+clowns.functions.add_prereq("angels-mixed-oxide-fuel","angels-thorium-ore-processing")
 end

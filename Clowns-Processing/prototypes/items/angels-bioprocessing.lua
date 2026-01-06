@@ -12,7 +12,7 @@ if mods["angelsbioprocessing"] then --this path is currently incomplete.
 	},]]
 	{
 		type = "item",
-		name = "algae-violet",
+		name = "clowns-algae-violet",
 		icons = {{icon="__angelsbioprocessinggraphics__/graphics/icons/algae-brown.png",tint={127,0,255}, icon_size = 32}},
 		subgroup = "bio-processing-violet",
 		order = "a",

@@ -1,5 +1,4 @@
 if settings.startup["MCP_enable_centrifuges"].value then
-  data.raw.item["centrifuge"].icon = nil
   data.raw.item["centrifuge"].icons = angelsmods.functions.add_number_icon_layer(
     {
       {
