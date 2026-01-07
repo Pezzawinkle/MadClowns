@@ -4,7 +4,6 @@ local ore_table = clowns.tables.ores
 -------------------------------------------
 ------------BEGIN LOOKUP TABLES------------
 -------------------------------------------
-
 clowns.tables.get_trigger_name = {
   --[[V]]["iron-ore"] = "iron",
   --[[V]]["angels-iron-nugget"] = special_vanilla and "iron" or "unused", -- special vanilla only
@@ -15,21 +14,22 @@ clowns.tables.get_trigger_name = {
   --[[V]]["angels-copper-pebbles"] = special_vanilla and "copper" or "unused", -- special vanilla only
   --[[V]]["angels-copper-slag"] = special_vanilla and "copper" or "unused", -- special vanilla only
 
-  --[[A/B]]["angels-lead-ore"] = "angels-lead",
-  --[[A/B]]["angels-quartz"] = "angels-silicon",
-  --[[A/B]]["angels-nickel-ore"] = "angels-nickel",
-  --[[A/B]]["angels-manganese-ore"] = "angels-manganese",
-  --[[A/B]]["angels-zinc-ore"] = "angels-zinc",
-  --[[A/B]]["angels-bauxite-ore"] = "angels-aluminium",
-  --[[A/B]]["angels-cobalt-ore"] = "angels-cobalt",
-  --[[A/B]]["angels-silver-ore"] = "angels-silver",
-  --[[A/B]]["angels-gold-ore"] = "angels-gold",
-  --[[A/B]]["angels-rutile-ore"] = "angels-titanium",
+  --[[A/B]]["angels-lead-ore"] = "lead",
+  --[[A/B]]["angels-tin-ore"] = "tin",
+  --[[A/B]]["angels-quartz"] = "silicon",
+  --[[A/B]]["angels-nickel-ore"] = "nickel",
+  --[[A/B]]["angels-manganese-ore"] = "manganese",
+  --[[A/B]]["angels-zinc-ore"] = "zinc",
+  --[[A/B]]["angels-bauxite-ore"] = "aluminium",
+  --[[A/B]]["angels-cobalt-ore"] = "cobalt",
+  --[[A/B]]["angels-silver-ore"] = "silver",
+  --[[A/B]]["angels-gold-ore"] = "gold",
+  --[[A/B]]["angels-rutile-ore"] = "titanium",
   --[[A/B]]["uranium-ore"] = "uranium",
-  --[[A/B]]["angels-tungsten-ore"] = "angels-tungsten",
-  --[[A/B]]["angels-thorium-ore"] = "angels-thorium",
-  --[[A/B]]["angels-chrome-ore"] = "angels-chrome",
-  --[[A/B]]["angels-platinum-ore"] = "angels-platinum",
+  --[[A/B]]["angels-tungsten-ore"] = "tungsten",
+  --[[A/B]]["angels-thorium-ore"] = "thorium",
+  --[[A/B]]["angels-chrome-ore"] = "chrome",
+  --[[A/B]]["angels-platinum-ore"] = "platinum",
 
   --[[C]]["clowns-phosphorus-ore"] = "phosphorus",
   --[[C]]["clowns-magnesium-ore"] = "magnesium",
@@ -37,10 +37,10 @@ clowns.tables.get_trigger_name = {
 
   --[[A]]["angels-solid-limestone"] = "limestone",
   --[[A]]["angels-solid-calcium-sulfate"] = "calcium-sulfate",
-  --[[A]]["angels-solid-lithium"] = "angels-solid-lithium",
+  --[[A]]["angels-solid-lithium"] = "solid-lithium",
   --[[A]]["angels-solid-sand"] = "sand",
   --[[A]]["angels-solid-sodium-carbonate"] = "sodium-carbonate",
-  --[[A]]["angels-fluorite-ore"] = "angels-fluorite", -- byproduct
+  --[[A]]["angels-fluorite-ore"] = "fluorite", -- byproduct
 
   --[[P]]["raw-borax"] = "borax", --pycoal
   --[[P]]["nexelit-ore"] = "nexelit", --pycoal
@@ -52,43 +52,43 @@ clowns.tables.get_trigger_name = {
 }
 local icon_lookup_table_fallback = {icon = "__angelsrefininggraphics__/graphics/icons/void.png"}
 clowns.tables.icon_lookup_table = {
-  ["bauxite-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-bauxite.png"} or
+  ["angels-bauxite-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-bauxite.png"} or
     mods["bobores"] and {icon = "__bobores__/graphics/icons/bauxite-ore.png"} or
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/bauxite-ore.png"} or
     icon_lookup_table_fallback,
 
-  ["cobalt-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-cobalt.png"} or
+  ["angels-cobalt-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-cobalt.png"} or
     mods["bobores"] and {icon = "__bobores__/graphics/icons/cobalt-ore.png"} or
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/cobalt-ore.png"} or
     icon_lookup_table_fallback,
 
-  ["copper-nugget"] = {icon = "__angelsrefininggraphics__/graphics/icons/copper-nugget.png"},
+  ["angels-copper-nugget"] = {icon = "__angelsrefininggraphics__/graphics/icons/copper-nugget.png"},
 
   ["copper-ore"] = {icon = "__base__/graphics/icons/copper-ore.png", icon_size = 64},
 
-  ["copper-slag"] = {icon = "__angelsrefininggraphics__/graphics/icons/copper-slag.png"},
+  ["angels-copper-slag"] = {icon = "__angelsrefininggraphics__/graphics/icons/copper-slag.png"},
 
-  ["fluorite-ore"] = {icon = "__angelsrefininggraphics__/graphics/icons/ore-fluorite.png"},
+  ["angels-fluorite-ore"] = {icon = "__angelsrefininggraphics__/graphics/icons/ore-fluorite.png"},
 
   ["angels-gold-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-gold.png"} or
     mods["bobores"] and {icon = "__bobores__/graphics/icons/gold-ore.png"} or
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/gold-ore.png"} or
     icon_lookup_table_fallback,
 
-  ["iron-nugget"] = {icon = "__angelsrefininggraphics__/graphics/icons/iron-nugget.png"},
+  ["angels-iron-nugget"] = {icon = "__angelsrefininggraphics__/graphics/icons/iron-nugget.png"},
 
   ["iron-ore"] = {icon = "__base__/graphics/icons/iron-ore.png", icon_size = 64},
 
-  ["iron-slag"] = {icon = "__angelsrefininggraphics__/graphics/icons/iron-slag.png"},
+  ["angels-iron-slag"] = {icon = "__angelsrefininggraphics__/graphics/icons/iron-slag.png"},
 
   ["angels-solid-lithium"] = {icon = "__angelsrefininggraphics__/graphics/icons/solid-lithium.png"},
   
-  ["lead-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-lead.png"} or
+  ["angels-lead-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-lead.png"} or
     mods["bobores"] and {icon = "__bobores__/graphics/icons/lead-ore.png"} or
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/lead-ore.png"} or
     icon_lookup_table_fallback,
 
-  ["nickel-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-nickel.png"} or
+  ["angels-nickel-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-nickel.png"} or
     mods["bobores"] and {icon = "__bobores__/graphics/icons/nickel-ore.png"} or
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/nickel-ore.png"} or
     icon_lookup_table_fallback,
@@ -96,38 +96,38 @@ clowns.tables.icon_lookup_table = {
   ["angels-platinum-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-platinum.png"} or
     icon_lookup_table_fallback,
 
-  ["rutile-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-rutile.png"} or
+  ["angels-rutile-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-rutile.png"} or
     mods["bobores"] and {icon = "__bobores__/graphics/icons/rutile-ore.png"} or
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/rutile-ore.png"} or
     icon_lookup_table_fallback,
 
-  ["quartz"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-silica.png"} or
+  ["angels-quartz"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-silica.png"} or
     mods["bobores"] and {icon = "__bobores__/graphics/icons/quartz.png"} or
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/quartz.png"} or
     icon_lookup_table_fallback,
 
-  ["silver-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-silver.png"} or
+  ["angels-silver-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-silver.png"} or
     mods["bobores"] and {icon = "__bobores__/graphics/icons/silver-ore.png"} or
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/silver-ore.png"} or
     icon_lookup_table_fallback,
 
-  ["thorium-ore"] = {icon = "__angelssmeltinggraphics__/graphics/icons/ore-thorium.png", icon_size = 64} --[[or
+  ["angels-thorium-ore"] = {icon = "__angelspetrochemgraphics__/graphics/icons/ore-thorium.png", icon_size = 64} --[[or
     mods["bobplates"] and {icon = "__boblibrary__/graphics/icons/ore-5.png", tint = {b = 0.25, g = 1, r = 1}}]] or
     icon_lookup_table_fallback,
 
-  ["tin-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-tin.png"} or
+  ["angels-tin-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-tin.png"} or
     mods["bobores"] and {icon = "__bobores__/graphics/icons/tin-ore.png"} or
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/tin-ore.png"} or
     icon_lookup_table_fallback,
 
-  ["tungsten-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-tungsten.png"} or
+  ["angels-tungsten-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-tungsten.png"} or
     mods["bobores"] and {icon = "__bobores__/graphics/icons/tungsten-ore.png"} or
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/tungsten-ore.png"} or
     icon_lookup_table_fallback,
 
   ["uranium-ore"] = {icon = "__base__/graphics/icons/uranium-ore.png", icon_size = 64},
 
-  ["zinc-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-zinc.png"} or
+  ["angels-zinc-ore"] = mods["angelssmelting"] and {icon = "__angelssmeltinggraphics__/graphics/icons/ore-zinc.png"} or
     mods["bobores"] and {icon = "__bobores__/graphics/icons/zinc-ore.png"} or
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/zinc-ore.png"} or
     icon_lookup_table_fallback,
@@ -135,7 +135,7 @@ clowns.tables.icon_lookup_table = {
   ["clowns-phosphorus-ore"] = {icon = "__Clowns-Processing__/graphics/icons/phosphorus-ore.png", icon_size = 32},
 
   ["clowns-osmium-ore"] = {icon = "__Clowns-Processing__/graphics/icons/osmium-ore.png"},
-  ["manganese-ore"] = {icon = "__angelssmeltinggraphics__/graphics/icons/ore-manganese.png"},
+  ["angels-manganese-ore"] = {icon = "__angelssmeltinggraphics__/graphics/icons/ore-manganese.png"},
   ["clowns-magnesium-ore"] = {icon = "__Clowns-Processing__/graphics/icons/magnesium-ore.png", icon_size = 32},
   ["chrome-ore"] = {icon = "__angelssmeltinggraphics__/graphics/icons/ore-chrome.png"},
 
@@ -230,7 +230,7 @@ clowns.tables.adamantite =       {
 }
 clowns.tables.antitate = {
   ["!!"] = (not special_vanilla) and {false, false, false, true},
-  ["tin-ore"] = (not special_vanilla) and {2, 2, 3, 3},
+  ["angels-tin-ore"] = (not special_vanilla) and {2, 2, 3, 3},
   ["angels-solid-lithium"] = (not special_vanilla) and {1, 1, 1, 2},
   ["angels-nickel-ore"] = (not special_vanilla) and {0, 1, 1, 1},
   ["angels-bauxite-ore"] = (not special_vanilla) and {0, 1, 1, 1},

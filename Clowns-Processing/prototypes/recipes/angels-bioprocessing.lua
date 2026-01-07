@@ -28,7 +28,7 @@ if mods["angelsbioprocessing"] then
   --Violet
 	{
 		type = "recipe",
-		name = "algae-violet",
+		name = "clowns-algae-violet",
 		category = "angels-bio-processing-4",
 		subgroup = "bio-processing-violet",
 		enabled = false,
@@ -62,7 +62,7 @@ if mods["angelsbioprocessing"] then
 		icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
 		nil,
 		{{ 118, 141, 138 },{ 94, 113, 110 },{ 94, 113, 110 }},
-		{"algae-violet"}
+		{"clowns-algae-violet"}
 		),
 	order = "c [cellulose-fiber-algae]",
   },
@@ -88,8 +88,9 @@ if mods["angelsbioprocessing"] then
 		},
 		results =
 		{
-		{type = "item", name = "angels-swamp-garden", amount = 1}
+			{type = "item", name = "angels-swamp-garden", amount = 1}
 		},
+		main_product = "angels-swamp-garden",
 	},
 
 	--temperate from soil
@@ -110,6 +111,7 @@ if mods["angelsbioprocessing"] then
 		{
 			{type = "item", name = "angels-temperate-garden", amount = 1}
 		},
+		main_product = "angels-temperate-garden",
 		icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
 		icon_size = 32,
 		order = "g[temperate-garden-generation]-c",
@@ -132,6 +134,7 @@ if mods["angelsbioprocessing"] then
 		{
 			{type = "item", name = "angels-desert-garden", amount = 1}
 		},
+		main_product = "angels-desert-garden",
 		icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
 		icon_size = 32,
 		order = "g[temperate-garden-generation]-c",
@@ -205,7 +208,7 @@ if mods["angelsbioprocessing"] then
   --alternative fertilizer
 	{
 		type = "recipe",
-		name = "diammonium-phosphate-fertilizer",
+		name = "clowns-diammonium-phosphate-fertilizer",
 		icons = {
 			{
 				icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-fertilizer.png",

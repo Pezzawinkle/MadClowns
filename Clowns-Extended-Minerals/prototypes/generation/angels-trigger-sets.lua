@@ -1,7 +1,7 @@
 local temp_triggers = {}
-local trigger_tab = {"phosphorus","osmium","magnesium","limestone","sand","calcium-sulfate","angels-sodium-carbonate","uranium","fluorite","platinum"} 
+local trigger_tab = {"phosphorus","osmium","magnesium","limestone","sand","calcium-sulfate","sodium-carbonate","uranium","fluorite","platinum"} 
 if not special_vanilla then 
-  table.insert(trigger_tab,"angels-solid-lithium")
+  table.insert(trigger_tab,"solid-lithium")
 end
 if mods["pycoalprocessing"] then
   table.insert(trigger_tab,"raw-borax")

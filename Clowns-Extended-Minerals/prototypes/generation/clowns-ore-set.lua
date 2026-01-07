@@ -71,6 +71,7 @@ local build_tab =  {
     output_min = 1,
     output_max = 1,
     icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore_name.."/ore.png",
+    icon_size = 64,
     autoplace = {
       starting_area = ap_dat[ore_name].starting_area,
       base_density = ap_dat[ore_name].base_density,
