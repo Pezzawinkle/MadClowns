@@ -32,12 +32,13 @@ data:extend(
 			tertiary = {r = 0, g = 1, b = 0},
 		},
 		subgroup = "clowns-uranium-centrifuging",
-		order = "c",
+		order = "a[uranium]-c",
 		main_product = "",
 		results=
 		{
 			{type="item", name="20pc-uranium", amount=2},
-			{type="item", name="uranium-238", amount=3}
+			{type="item", name="uranium-238", amount=3},
+			{type = "item", name = "angels-uranium-234", amount = 1, probability = 0.000055}
 		},
 		allow_decomposition = false
 	},

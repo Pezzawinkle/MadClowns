@@ -20,19 +20,25 @@ if data.raw.technology["advanced-centrifuging-2"] then
   data.raw["technology"]["atomic-bomb"].prerequisites = {"advanced-centrifuging-2"}
 end
 --if thorium ore add thorium mox fuel cell recipe, or move advanced uranium to nuclear 2 to allow all fuels
-if data.raw.item["thorium-fuel-cell"] --[[or data.raw.item["angels-thorium-fuel-cell"]] then
-  --table.insert(data.raw["technology"]["mixed-oxide-fuel"].effects, {type = "unlock-recipe", recipe = "thorium-mixed-oxide"})
+if data.raw.item["angels-thorium-fuel-cell"] --[[or data.raw.item["angels-thorium-fuel-cell"]] then
+  --table.insert(data.raw["technology"]["mixed-oxide-fuel"].effects, {type = "unlock-recipe", recipe = "clowns-thorium-mixed-oxide"})
 	OV.disable_recipe("angels-thorium-processing")
-	OV.add_prereq("angels-thorium-power","thorium-ore-processing")
 else
 	clowns.functions.add_unlock("nuclear-fuel-reprocessing-2","advanced-nuclear-fuel-reprocessing-2")
 end
 --remove kovarex and remove it from bobingabout prereq
 data.raw.technology["kovarex-enrichment-process"].enabled = false
 clowns.functions.pre_req_repl("atomic-bomb","kovarex-enrichment-process","nuclear-power")
+
 if data.raw.technology["bobingabout-enrichment-process"] then
   OV.remove_prereq("bobingabout-enrichment-process", "kovarex-enrichment-process")
   clowns.functions.pre_req_repl("thorium-nuclear-fuel-reprocessing-2", "nuclear-fuel-reprocessing-2", "bobingabout-enrichment-process")
+  clowns.functions.add_unlock("mixed-oxide-fuel", "angels-advanced-uranium-reprocessing") --take from kovarex
+  clowns.functions.add_unlock("mixed-oxide-fuel","angels-plutonium-synthesis") --take from kovarex
+  clowns.functions.add_unlock("mixed-oxide-fuel","angels-americium-regeneration") --take from kovarex
+  clowns.functions.add_unlock("mixed-oxide-fuel","angels-mixed-oxide-cell") --take from kovarex
+  clowns.functions.add_unlock("mixed-oxide-fuel","angels-mixed-oxide-reprocessing") --take from kovarex
+clowns.functions.add_unlock("mixed-oxide-fuel","nuclear-fuel-reprocessing") --take from kovarex
 end
 --set-up default tech names for centrifuge tech update
 local centri_1="nuclear-power"

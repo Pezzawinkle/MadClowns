@@ -8,9 +8,10 @@ clowns.functions.add_unlock("kovarex-enrichment-process","clowns-centrifuging-45
 clowns.functions.add_unlock("kovarex-enrichment-process","nuclear-fuel")
 
 require("prototypes.overrides.ENP-overrides")
-
-if data.raw.recipe["advanced-uranium-processing"] then 
-  --roll through each ingredient and replace the uranium 235 with the 35%
+clowns.functions.replace_ing("uranium-fuel-cell","uranium-235","35pc-uranium","ing")
+--if data.raw.recipe["uranium-processing"] then
+  --clowns.functions.replace_ing("uranium-processing","uranium-235","35pc-uranium","res")
+  --[[roll through each ingredient and replace the uranium 235 with the 35%
   local res={}
   if data.raw["recipe"]["uranium-processing"].results then
     for i,ing in pairs(data.raw["recipe"]["uranium-processing"].results) do
@@ -22,5 +23,5 @@ if data.raw.recipe["advanced-uranium-processing"] then
       end
     end
     data.raw.recipe["advanced-uranium-processing"].results=res
-  end
-end
+  end]]
+--end

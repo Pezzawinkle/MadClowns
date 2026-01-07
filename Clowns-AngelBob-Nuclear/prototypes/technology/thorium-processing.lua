@@ -23,6 +23,7 @@ if data.raw.item["thorium-fuel-cell"] then
 		},
 		prerequisites = {
 			"advanced-uranium-processing-2",
+			"angels-mixed-oxide-fuel"
 	},
 		unit =
 		{
@@ -41,5 +42,4 @@ if data.raw.item["thorium-fuel-cell"] then
 
 }
 )
-clowns.functions.add_prereq("angels-mixed-oxide-fuel","angels-thorium-ore-processing")
 end

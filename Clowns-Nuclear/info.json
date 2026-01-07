@@ -10,6 +10,7 @@
   "dependencies": [
 	"? Early_Nuclear_Power >= 0.4.0",
   "? angelsrefining >= 0.12.1",
-  "? IndustrialRevolution3 >= 3.0.1"
+  "? IndustrialRevolution3 >= 3.0.1",
+  "(?) RealisticReactorsReborn >= 2.0.27"
 	]
 }

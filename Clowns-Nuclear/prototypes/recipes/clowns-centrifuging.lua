@@ -16,8 +16,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "clowns-uranium-centrifuging",
-		order = "a",
-		--main_product = "",
+		order = "a[uranium]-a",
 		results=
 		{
 			{type="item", name="uranium-ore", amount=10},
@@ -35,8 +34,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "clowns-uranium-centrifuging",
-		order = "j",
-		--main_product = "",
+		order = "a[uranium]-j",
 		results=
 		{
 			{type="item", name="uranium-235", amount=2},
@@ -56,8 +54,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "clowns-uranium-centrifuging",
-		order = "i",
-		--main_product = "",
+		order = "a[uranium]-i",
 		results=
 		{
 			{type="item", name="75pc-uranium", amount=2},
@@ -77,8 +74,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "clowns-uranium-centrifuging",
-		order = "h",
-		--main_product = "",
+		order = "a[uranium]-h",
 		results=
 		{
 			{type="item", name="70pc-uranium", amount=2},
@@ -98,8 +94,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "clowns-uranium-centrifuging",
-		order = "g",
-		--main_product = "",
+		order = "a[uranium]-g",
 		results=
 		{
 			{type="item", name="65pc-uranium", amount=2},
@@ -119,8 +114,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "clowns-uranium-centrifuging",
-		order = "f",
-		--main_product = "",
+		order = "a[uranium]-f",
 		results=
 		{
 			{type="item", name="55pc-uranium", amount=2},
@@ -140,8 +134,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "clowns-uranium-centrifuging",
-		order = "e",
-		--main_product = "",
+		order = "a[uranium]-e",
 		results=
 		{
 			{type="item", name="45pc-uranium", amount=2},
@@ -161,8 +154,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "clowns-uranium-centrifuging",
-		order = "d",
-		--main_product = "",
+		order = "a[uranium]-d",
 		results=
 		{
 			{type="item", name="35pc-uranium", amount=2},
@@ -171,6 +163,7 @@ data:extend(
 		},
 		allow_decomposition = false
 	},
+	--c is for AB hexafluoride variant
 	{
 		type = "recipe",
 		name = "clowns-centrifuging-20pc-ore",
@@ -196,7 +189,7 @@ data:extend(
 
 		},
 		subgroup = "clowns-uranium-centrifuging",
-		order = "b",
+		order = "a[uranium]-b",
 		results=
 		{
 			{type="item", name="20pc-uranium", amount=2},

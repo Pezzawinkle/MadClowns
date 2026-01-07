@@ -23,6 +23,8 @@ CF.replace_ing("nuclear-fuel-reprocessing","uranium-238",{type="item", name = "u
 data.raw.recipe["nuclear-fuel-reprocessing"].icons = {{icon= "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-reprocessing.png",icon_size = 32}}
 data.raw.recipe["nuclear-fuel-reprocessing"].icon_size = 32
 data.raw.recipe["nuclear-fuel-reprocessing"].icon = nil
+data.raw.recipe["nuclear-fuel-reprocessing"].subgroup = "clowns-nuclear-reprocessing"
+data.raw.recipe["nuclear-fuel-reprocessing"].order = "a[uranium]-a"
 
 --REBUILD NUCLEAR POWER TECHNOLOGY
 CF.add_unlock("nuclear-power","nuclear-reactor")

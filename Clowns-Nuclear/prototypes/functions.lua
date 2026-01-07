@@ -1,33 +1,42 @@
 local OV = mods["angelsrefining"] and angelsmods.functions.OV or clowns.functions
 
 local function fl_or_s(name)
-  local out=""
+  local type_tag=""
   if data.raw.item[name] then
-    out= "item"
+    type_tag = "item"
   elseif data.raw.fluid[name] then
-    out= "fluid"
+    type_tag = "fluid"
   else
-    out= "research-progress"
+    type_tag = "research-progress"
   end
-  return out
+  return type_tag
 end
+
 clowns.functions.replace_ing = function(name,old,new,kind)
+  --name, old and kind must be strings
+  --new can be a string to do a like for like, or a subtable to replace the whole line
   --check if correct, fail otherwise
   local continue = true
-  local new_name=""
+  local new_name=new
   local new_amount=0
+  local new_type
+  local str_tab
   if not data.raw.recipe[name] or not (kind == "res" or kind == "ing") or not type(name) == "string" or not type(new_name) == "string" or not type(old) == "string" then
     continue = false
     return --failed
-  end  
-  if type(new)=="table" then
-    new_name = new.name or new[1]
-    new_amount = new.amount or new[2]
-    new_type = fl_or_s(new_name)
-  elseif type(new)=="string" then
-    new_name=new
   end
---Check if ingredient or result
+  -- check if new is plain text or subtable
+  if type(new)=="table" then
+    new_name = new.name
+    new_amount = new.amount
+    new_type = fl_or_s(new_name)
+    str_tab = "tab"
+  elseif type(new)=="string" then
+    str_tab = "str"
+    --new_name=new -- already set
+  end
+  -- Check for and fetch Ing or Res
+  local list
   if data.raw.recipe[name] then
     if kind == "res" then
       list = data.raw.recipe[name].results
@@ -35,18 +44,24 @@ clowns.functions.replace_ing = function(name,old,new,kind)
       list = data.raw.recipe[name].ingredients
     end
   end
-
+  -- find set in list
   if continue == true  and list then
     for i, item in pairs(list) do
-      local block={type=item.type,name=item.name,amount=item.amount}
+      local block = {type = item.type , name = item.name , amount = item.amount}
       if item.name and item.name == old then
-        block.name = new_name
-        block.amount = new_amount ~=0 and new_amount or block.amount
-        block.type = new_type
+        if str_tab == "str" then
+          -- only replace the name
+          item.name = new_name
+        elseif str_tab == "tab" then
+          -- replace whole subtable
+          list[i]= new
+        else
+          --error
+          log("replacement does not work for" .. item.name .. " in recipe ".. name)
+        end
       end
     end
   end
-  return list
 end
 
 clowns.functions.add_to_table = function(name,new,kind)
@@ -57,39 +72,17 @@ clowns.functions.add_to_table = function(name,new,kind)
     continue = false
     return
   end
-  if new[1] and new[2] and not new[type] then --note, format was only available for items
-  log{"beep"}
-    local newname=new[1]
-    local newamount=new[2]
-    new={type="item",name=newname,amount=newamount}
-  end
-  
+  local list
   if data.raw.recipe[name] then
     if kind == "res" then
       list = data.raw.recipe[name].results
-      --[[if not list then
-        list = data.raw.recipe[name].normal.results
-        if data.raw.recipe[name].expensive.results then
-          expensive=data.raw.recipe[name].expensive.results
-        end
-      end]]
     elseif kind == "ing" then
       list = data.raw.recipe[name].ingredients
-      --[[if not list then
-        list = data.raw.recipe[name].normal.ingredients
-        if data.raw.recipe[name].expensive.ingredients then
-          expensive=data.raw.recipe[name].expensive.ingredients
-        end
-      end]]
     end
   end
   if continue == true  and list then
     list = table.insert(list,new)
   end
-  --[[if continue == true and expensive then
-    expensive = table.insert(expensive,new)
-  end]]
-  --return
 end
 
 clowns.functions.remove_unlock = function(techname, recipe)
@@ -163,12 +156,6 @@ clowns.functions.remove_res = function(name, to_rem, kind)
     if temp[kind] then
       keys["reg"] = temp[kind]
     end
-    --[[if temp.normal and temp.normal[kind] then
-      keys["normal"] = temp.normal[kind]
-    end
-    if temp.expensive and temp.expensive[kind] then
-      keys["expensive"] = temp.expensive[kind]
-    end]]
     for q,list in pairs(keys) do
       index=""
       if list then

@@ -31,7 +31,7 @@
       enabled = false,
       ingredients =
       {
-        {type="item", name="iron-plate", amount=2},
+        {type="item", name="angels-plate-lead", amount=2},
         {type="item", name="angels-plutonium-239", amount=2},
         {type="item", name="angels-thorium-232", amount=2}
       },
@@ -52,7 +52,7 @@
       enabled = false,
       ingredients =
       {
-        {type="item", name="iron-plate", amount= 10},
+        {type="item", name="angels-plate-lead", amount= 10},
         {type="item", name="55pc-uranium", amount= 1},
         {type="item", name="angels-thorium-232", amount= 19},
       },
