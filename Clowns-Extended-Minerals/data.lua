@@ -37,30 +37,17 @@ require("prototypes.technology.ore-refining")
 require("prototypes.omnicrystals.omnicrystal_functions")
 --CONFIGURE RESOURCES WITH OMNIMATTER FUNCTIONS, INPUTS ARE {NAME, TIER??, LOCALE, NAME OF MOD}
 local ore1fluid,ore2fluid,ore3fluid,ore4fluid,ore5fluid,ore6fluid,ore7fluid,ore8fluid,ore9fluid
-
-if mods["angelspetrochem"] and settings.startup["angels-enable-acids"].value then
 	ore1fluid = "angels-liquid-hydrofluoric-acid"
 	ore2fluid = "angels-liquid-sulfuric-acid"
 	ore3fluid = "angels-liquid-nitric-acid"
 	ore4fluid = "angels-liquid-hydrochloric-acid"
 	ore5fluid = "angels-liquid-nitric-acid"
 	ore6fluid = "angels-liquid-sulfuric-acid"
-  ore7fluid = "angels-liquid-hydrofluoric-acid"
-  ore8fluid = "angels-liquid-hydrochloric-acid"
-  ore9fluid = "clowns-liquid-phosphoric-acid"
-else
-	ore1fluid = "angels-liquid-sulfuric-acid"
-	ore2fluid = "angels-liquid-sulfuric-acid"
-	ore3fluid = "angels-liquid-sulfuric-acid"
-	ore4fluid = "angels-liquid-sulfuric-acid"
-	ore5fluid = "angels-liquid-sulfuric-acid"
-	ore6fluid = "angels-liquid-sulfuric-acid"
-  ore7fluid = "angels-liquid-sulfuric-acid"
-  ore8fluid = "angels-liquid-sulfuric-acid"
-  ore9fluid = "angels-liquid-sulfuric-acid"
-end
-res1fluid = "clowns-liquid-phosphoric-acid"
-res2fluid = "steam"
+	ore7fluid = "angels-liquid-hydrofluoric-acid"
+	ore8fluid = "angels-liquid-hydrochloric-acid"
+	ore9fluid = "clowns-liquid-phosphoric-acid"
+	res1fluid = "clowns-liquid-phosphoric-acid"
+	res2fluid = "steam"
 
 if mods["omnimatter"] then
 	omni.matter.add_resource("clowns-ore1",3,"Adamantite","Clowns-Extended-Minerals")
@@ -77,7 +64,7 @@ if mods["omnimatter"] then
 end
 
 --APPLY THE EFFECTS OF SETTINGS THAT ARE RELEVANT TO ANGEL'S INFINITE ORES
-if mods["angelsinfiniteores"] and settings.startup["angels-enable-acids"].value then
+if mods["angelsinfiniteores"] then
 	if settings.startup["enableinfiniteclownsore1"].value then
 		data.raw["resource"]["infinite-clowns-ore1"].minable.fluid_amount = 10
 		data.raw["resource"]["infinite-clowns-ore1"].minable.required_fluid = ore1fluid

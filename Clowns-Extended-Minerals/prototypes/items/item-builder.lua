@@ -11,8 +11,9 @@ data:extend(
       type = "item",
       name = ""..name.."-crushed",
       localised_name = {"item-name.clown-mat","Crushed",{"entity-name."..name}},
-      icon = "__Clowns-Extended-Minerals__/graphics/icons/"..name.."/crushed.png", 
-      icon_size = 32,
+      icons={
+        {icon = "__Clowns-Extended-Minerals__/graphics/icons/"..name.."/crushed.png", icon_size = 64}
+      },
       subgroup = "clowns-ore-processing-a",
       order = "a["..name.."]",
       stack_size = 200
@@ -22,8 +23,9 @@ data:extend(
       type = "item",
       name = ""..name.."-chunk",
       localised_name = {"item-name.clown-mat",{"entity-name."..name},"Chunk"},
-      icon = "__Clowns-Extended-Minerals__/graphics/icons/"..name.."/chunk.png",
-      icon_size = 32,
+      icons={
+        {icon = "__Clowns-Extended-Minerals__/graphics/icons/"..name.."/chunk.png", icon_size = 64}
+      },
       subgroup = "clowns-ore-processing-b",
       order = "a["..name.."]",
       stack_size = 200
@@ -34,7 +36,7 @@ data:extend(
       name = ""..name.."-crystal",
       localised_name = {"item-name.clown-mat",{"entity-name."..name},"Crystal"},
       icon = "__Clowns-Extended-Minerals__/graphics/icons/"..name.."/crystal.png",
-      icon_size = 32,
+      icon_size = 64,
       subgroup = "clowns-ore-processing-c",
       order = "a["..name.."]",
       stack_size = 200
@@ -45,7 +47,7 @@ data:extend(
       name = ""..name.."-pure",
       localised_name = {"item-name.clown-mat","Purified",{"entity-name."..name}},
       icon = "__Clowns-Extended-Minerals__/graphics/icons/"..name.."/pure.png",
-      icon_size = 32,
+      icon_size = 64,
       subgroup = "clowns-ore-processing-d",
       order = "a["..name.."]",
       stack_size = 200
@@ -56,7 +58,7 @@ data:extend(
       name = name,
       localised_name = {"item-name.clown-mat",{"entity-name."..name},"Ore"},
       icon = "__Clowns-Extended-Minerals__/graphics/icons/"..name.."/ore.png",
-      icon_size = 32,
+      icon_size = 64,
       subgroup = "angels-ores",
       order = "a["..name.."]",
       stack_size = 200
@@ -89,7 +91,7 @@ for _, name in pairs({"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14
         name = ""..name.."-crushed",
         localised_name = {"item-name.clown-mat","Crushed",{"entity-name."..name}},
         icon = "__Clowns-Extended-Minerals__/graphics/icons/"..name.."/crushed.png", 
-        icon_size = 32,
+        icon_size = 64,
         subgroup = "mixed-ore-".. name,
         order = "a["..name.."]",
         stack_size = 200
@@ -100,7 +102,7 @@ for _, name in pairs({"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14
         name = ""..name.."-powder",
         localised_name = {"item-name.clown-mat",{"entity-name."..name},"Powder"},
         icon = "__Clowns-Extended-Minerals__/graphics/icons/"..name.."/powder.png", 
-        icon_size = 32,
+        icon_size = 64,
         subgroup = "mixed-ore-".. name,
         order = "b["..name.."]",
         stack_size = 200
@@ -111,7 +113,7 @@ for _, name in pairs({"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14
         name = ""..name.."-dust",
         localised_name = {"item-name.clown-mat",{"entity-name."..name},"Dust"},
         icon = "__Clowns-Extended-Minerals__/graphics/icons/"..name.."/dust.png",
-        icon_size = 32,
+        icon_size = 64,
         subgroup = "mixed-ore-".. name,
         order = "d["..name.."]",
         stack_size = 200
@@ -122,7 +124,7 @@ for _, name in pairs({"clowns-ore11","clowns-ore12","clowns-ore13","clowns-ore14
         name = ""..name.."-crystal",
         localised_name = {"item-name.clown-mat",{"entity-name."..name},"Crystal"},
         icon = "__Clowns-Extended-Minerals__/graphics/icons/"..name.."/crystal.png",
-        icon_size = 32,
+        icon_size = 64,
         subgroup = "mixed-ore-".. name,
         order = "h["..name.."]",
         stack_size = 200

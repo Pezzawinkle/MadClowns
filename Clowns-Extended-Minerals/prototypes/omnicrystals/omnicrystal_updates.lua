@@ -1,12 +1,12 @@
 if mods["omnimatter_crystal"] then
   add_crystal("angels-solid-lithium", "Lithium Chloride")
   add_crystal("angels-solid-calcium-sulfate", "Calcium Sulfate")
-  add_crystal("thorium-ore", "Thorium")
-  add_crystal("phosphorus-ore", "Phosphorus")
+  add_crystal("angels-thorium-ore", "Thorium")
+  add_crystal("clowns-phosphorus-ore", "Phosphorus")
   add_crystal("angels-solid-limestone", "Limestone")
   add_crystal("angels-solid-sodium-carbonate", "Sodium Carbonate")
-  add_crystal("osmium-ore", "Osmium")
-  add_crystal("magnesium-ore","Magnesium")
+  add_crystal("clowns-osmium-ore", "Osmium")
+  add_crystal("clowns-magnesium-ore","Magnesium")
   if mods["pycoalprocessing"] then
     --add_crystal("raw-borax", "Raw Borax")
     --add_crystal("nexelit-ore", "Nexelit")

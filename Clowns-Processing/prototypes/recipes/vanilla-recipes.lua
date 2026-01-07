@@ -480,9 +480,7 @@ data:extend(
     name = "crushed-stone-sorting",
     icons =
     {
-      {
-        icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
-      },
+      { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32, },
       {
         icon = "__angelsrefininggraphics__/graphics/icons/stone-crushed.png",
         scale = 0.5,

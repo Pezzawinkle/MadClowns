@@ -11,7 +11,7 @@ if mods["pycoalprocessing"] then
         results = {{"!!"},{type = "item", name = "raw-borax", amount = special_vanilla and 6 or 9}},
         icons = {{icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
           clowns.tables.tweaked_icon_lookup("raw-borax", 0.5, {10, 10}),
-          {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png"}},
+          {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png",icon_size=32}},
         ingredients = special_vanilla and {
           {"!!"},
           {type = "item", name = "clowns-ore7-crushed", amount = 2},
@@ -26,7 +26,7 @@ if mods["pycoalprocessing"] then
         results = {{"!!"},{type = "item", name = "nexelit-ore", amount = 8}},
         icons = {{icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
           clowns.tables.tweaked_icon_lookup("nexelit-ore", 0.5, {10, 10}),
-          {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png"}},
+          {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png",icon_size=32}},
         ingredients = special_vanilla and {
           {"!!"},
           {type = "item", name = "clowns-ore4-chunk", amount = 2},
@@ -42,7 +42,7 @@ if mods["pycoalprocessing"] then
         results = {{"!!"},{type = "item", name = "niobium-ore", amount = 8}},
         icons = {{icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
           clowns.tables.tweaked_icon_lookup("niobium-ore", 0.5, {10, 10}),
-          {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png"}},
+          {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png",icon_size=32}},
         ingredients = special_vanilla and {
           {"!!"},
           {type = "item", name = "clowns-ore4-chunk", amount = 2},
@@ -58,7 +58,7 @@ if mods["pycoalprocessing"] then
         results = {{"!!"},{type = "item", name = "rare-earth-dust", amount = 8}},
         icons = {{icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
           clowns.tables.tweaked_icon_lookup("rare-earth-dust", 0.5, {10, 10}),
-          {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png"}},
+          {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png",icon_size=32}},
         ingredients = special_vanilla and {
           {"!!"},
           {type = "item", name = "angels-ore4-chunk", amount = 2},
@@ -115,7 +115,7 @@ if mods["pycoalprocessing"] then
             results = {{"!!"},{type = "item", name = "molybdenum-ore", amount = special_vanilla and 4 or 5}},
             icons = {{icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
               clowns.tables.tweaked_icon_lookup("molybdenum-ore", 0.5, {10, 10}),
-              {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png"}},
+              {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png",icon_size=32}},
             ingredients = special_vanilla and {
               {"!!"},
               {type = "item", name = "angels-ore1-crystal", amount = 2},
@@ -129,7 +129,7 @@ if mods["pycoalprocessing"] then
             results = {{"!!"},{type = "item", name = "regolite-rock", amount = special_vanilla and 4 or 5}},
             icons = {{icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
               clowns.tables.tweaked_icon_lookup("regolite-rock", 0.5, {10, 10}),
-              {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png"}},
+              {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png",icon_size=32}},
             ingredients = special_vanilla and {
               {"!!"},
               {type = "item", name = "clowns-ore1-crystal", amount = 2},
@@ -143,7 +143,7 @@ if mods["pycoalprocessing"] then
             results = {{"!!"},{type = "item", name = "kimberlite-rock", amount = 5}},
             icons = {{icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
               clowns.tables.tweaked_icon_lookup("kimberlite-rock", 0.5, {10, 10}),
-              {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png"}},
+              {icon = "__Clowns-Processing__/graphics/icons/advsorting-overlay.png",icon_size=32}},
             ingredients = special_vanilla and {
               {"!!"},
               {type = "item", name = "angels-ore4-pure", amount = 1},

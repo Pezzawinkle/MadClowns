@@ -17,7 +17,7 @@ data:extend(
 		{
 			{type="fluid", name="angels-water-saline", amount=10},
 			{type="item", name="iron-ore", amount=1, probability = 0.2,},
-			{type="item", name="bob-tin-ore", amount=1, probability = 0.1,},
+			{type="item", name="angels-tin-ore", amount=1, probability = 0.1,},
 			{type="item", name="angels-crystal-dust", amount=1, probability = 0.1,},
 			{type="item", name="angels-gold-ore", amount=1, probability = 0.05,},
 		  {type="item", name="angels-chrome-ore", amount=1, probability = 0.01,},
@@ -44,9 +44,9 @@ data:extend(
 		results =
 		{
 			{type="fluid", name="angels-water-saline", amount=10},
-			{type="item", name="bob-gold-ore", amount=1, probability = 0.1,},
+			{type="item", name="angels-gold-ore", amount=1, probability = 0.1,},
 		  {type="item", name="angels-chrome-ore", amount=1, probability = 0.03,},
-			{type="item", name="bob-rutile-ore", amount=1, probability = 0.03,},
+			{type="item", name="angels-rutile-ore", amount=1, probability = 0.03,},
 			{type="item", name="angels-platinum-ore", amount=1, probability = 0.03,},
 			{type="item", name="uranium-ore", amount=1, probability = 0.01,},
 			{type="item", name="angels-thorium-ore", amount=1, probability = 0.01,},

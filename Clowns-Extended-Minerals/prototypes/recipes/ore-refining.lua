@@ -1,15 +1,15 @@
 --build basic table
 local ore_table = clowns.tables.ores
 local ore_material = {
-  ["clowns-ore1"] = {order = "a", acid = "angels-liquid-sulfuric-acid", geode="purple"},
+  ["clowns-ore1"] = {order = "a", acid = "angels-liquid-hydrofluoric-acid", geode="purple"},
   ["clowns-ore2"] = {order = "b", acid = "angels-liquid-sulfuric-acid", geode="lightgreen"},
-  ["clowns-ore3"] = {order = "c", acid = "angels-liquid-sulfuric-acid", geode="red"},
-  ["clowns-ore4"] = {order = "d", acid = "angels-liquid-sulfuric-acid", geode="lightgreen"},
-  ["clowns-ore5"] = {order = "e", acid = "angels-liquid-sulfuric-acid", geode="yellow"},
+  ["clowns-ore3"] = {order = "c", acid = "angels-liquid-nitric-acid", geode="red"},
+  ["clowns-ore4"] = {order = "d", acid = "angels-liquid-hydrochloric-acid", geode="lightgreen"},
+  ["clowns-ore5"] = {order = "e", acid = "angels-liquid-nitric-acid", geode="yellow"},
   ["clowns-ore6"] = {order = "f", acid = "angels-liquid-sulfuric-acid", geode="cyan"},
-  ["clowns-ore7"] = {order = "g", acid = "angels-liquid-sulfuric-acid", geode="blue"},
-  ["clowns-ore8"] = {order = "h", acid = "angels-liquid-sulfuric-acid", geode="lightgreen"},
-  ["clowns-ore9"] = {order = "i", acid = "angels-liquid-sulfuric-acid", geode="cyan"},
+  ["clowns-ore7"] = {order = "g", acid = "angels-liquid-hydrofluoric-acid", geode="blue"},
+  ["clowns-ore8"] = {order = "h", acid = "angels-liquid-hydrochloric-acid", geode="lightgreen"},
+  ["clowns-ore9"] = {order = "i", acid = "clowns-liquid-phosphoric-acid", geode="cyan"},
 }
 local acid_wastewater = {
   ["angels-liquid-sulfuric-acid"] = "angels-water-yellow-waste",
@@ -19,16 +19,6 @@ local acid_wastewater = {
   ["angels-liquid-boric-acid"] = "", --currently no wastewater
   ["clowns-liquid-phosphoric-acid"] = "angels-water-yellow-waste", --currently no wastewater
 }
---check if angels setting is active and modify acids
-if mods["angelspetrochem"] and settings.startup["angels-enable-acids"].value then
-  ore_material["clowns-ore1"].acid = "angels-liquid-hydrofluoric-acid"
-  ore_material["clowns-ore3"].acid = "angels-liquid-nitric-acid"
-  ore_material["clowns-ore4"].acid = "angels-liquid-hydrochloric-acid"
-  ore_material["clowns-ore5"].acid = "angels-liquid-nitric-acid"
-  ore_material["clowns-ore7"].acid = "angels-liquid-hydrofluoric-acid"
-  ore_material["clowns-ore8"].acid = "angels-liquid-hydrochloric-acid"
-  ore_material["clowns-ore9"].acid = "clowns-liquid-phosphoric-acid"
-end
 for _, ore in pairs(ore_table) do
   data:extend(
     {
@@ -48,8 +38,9 @@ for _, ore in pairs(ore_table) do
           {type = "item", name = ore.."-crushed", amount = 2},
           {type = "item", name = "angels-stone-crushed", amount = 1}
         },
-        icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/crushed.png",
-        icon_size = 32,
+        icons={
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/crushed.png", icon_size = 64}
+        },
         order = ore_material[ore].order or "a"
       },
       --TIER 2
@@ -73,7 +64,7 @@ for _, ore in pairs(ore_table) do
           {type = "item", name = "angels-geode-"..ore_material[ore].geode, amount = 1, probability = 0.5},
         },
         icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/chunk.png",
-        icon_size = 32,
+        icon_size = 64,
         order = ore_material[ore].order or "a"
       },
 	    --TIER 3
@@ -94,7 +85,7 @@ for _, ore in pairs(ore_table) do
           {type = "item", name = ore.."-crystal", amount = 2},
         },
         icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/crystal.png",
-        icon_size = 32,
+        icon_size = 64,
         order = ore_material[ore].order or "a"
       },
 	    --TIER 4
@@ -114,7 +105,7 @@ for _, ore in pairs(ore_table) do
           {type = "item", name = ore.."-pure", amount = 4},
         },
         icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/pure.png",
-        icon_size = 32,
+        icon_size = 64,
         order = ore_material[ore].order or "a"
       },
     }   

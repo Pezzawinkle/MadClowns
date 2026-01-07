@@ -177,7 +177,6 @@ local create_adv_mixed_sorting = function(num)
         results = {
           {type = "item", name = "clowns-ore"..num.."-crushed", amount = 6}
         },
-        icon_size = 32,
         order = "a["..num.."]"
       },
       {
@@ -197,7 +196,7 @@ local create_adv_mixed_sorting = function(num)
         },
         icons = {
           {icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/crushed.png", icon_size = 32, scale = 0.5, shift = {-10, 10}}
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/crushed.png", icon_size = 64, scale = 0.25, shift = {-10, 10}}
         },
         icon_size = 32,
         order = "b["..num.."]"
@@ -207,7 +206,7 @@ local create_adv_mixed_sorting = function(num)
         type = "recipe",
         name = "clownsore"..num.."-powder",
         localised_name = {"recipe-name.clowns-mix",{"entity-name.clowns-ore"..num},"Powder"},
-        category = "angels-ore-refining-t1-5",--t-1-5
+        category = "angels-powderizing-1",--t-1-5
         subgroup = "clowns-ore".. num .. "-refining",
         energy_required = 2,
         enabled = false,
@@ -220,7 +219,6 @@ local create_adv_mixed_sorting = function(num)
           {type = "item", name = "angels-milling-drum", amount = 1}
         },
         main_product = "clowns-ore"..num.."-powder",
-        icon_size = 32,
         order = "c["..num.."]"
       },
       {
@@ -240,9 +238,8 @@ local create_adv_mixed_sorting = function(num)
         },
         icons = {
           {icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/powder.png", icon_size = 32, scale = 0.5, shift = {-10, 10}}
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/powder.png", icon_size = 64, scale = 0.25, shift = {-10, 10}}
         },
-        icon_size = 32,
         order = "d["..num.."]"
       },
       --TIER 2.5 (Dust)
@@ -265,7 +262,6 @@ local create_adv_mixed_sorting = function(num)
         results = {
           {type = "fluid", name = "clowns-ore"..num.."-sludge", amount = 6}
         },
-        icon_size = 32,
         order = "e["..num.."]"
       },
       {
@@ -286,7 +282,7 @@ local create_adv_mixed_sorting = function(num)
         },
         main_product = "clowns-ore"..num.."-dust",
         icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/dust.png",
-        icon_size = 32,
+        icon_size = 64,
         order = "f["..num.."]"
       },
       {
@@ -306,9 +302,8 @@ local create_adv_mixed_sorting = function(num)
         },
         icons = {
           {icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/dust.png", icon_size = 32, scale = 0.5, shift = {-10, 10}}
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/dust.png", icon_size = 64, scale = 0.25, shift = {-10, 10}}
         },
-        icon_size = 32,
         order = "g["..num.."]"
       },
       --Tier 3.5 (CRYSTAL)
@@ -330,7 +325,6 @@ local create_adv_mixed_sorting = function(num)
         results = {
           {type = "fluid", name = "clowns-ore"..num.."-solution", amount = 60}
         },
-        icon_size = 32,
         order = "h["..num.."]"
       },
       {
@@ -356,7 +350,6 @@ local create_adv_mixed_sorting = function(num)
           "ceramic",
           { shifts["clowns-ore"..num]["A"], shifts["clowns-ore"..num]["B"], shifts["clowns-ore"..num]["B"], shifts["clowns-ore"..num]["D"]}
         ),
-        icon_size = 32,
         order = "i["..num.."]"
       },
       {
@@ -377,7 +370,6 @@ local create_adv_mixed_sorting = function(num)
           {type = "item", name = "angels-slag", amount = 1}
         },
         main_product = "clowns-ore"..num.."-anode-sludge",
-        icon_size = 32,
         order = "j["..num.."]"
       },
       {
@@ -394,7 +386,6 @@ local create_adv_mixed_sorting = function(num)
         results = {
           {type = "item", name = "clowns-ore"..num.."-crystal", amount = 6}
         },
-        icon_size = 32,
         order = "k["..num.."]"
       },
       {
@@ -414,9 +405,8 @@ local create_adv_mixed_sorting = function(num)
         },
         icons = {
           {icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
-          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/crystal.png", icon_size = 32, scale = 0.5, shift = {-10, 10}}
+          {icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore"..num.."/crystal.png", icon_size = 64, scale = 0.25, shift = {-10, 10}}
         },
-        icon_size = 32,
         order = "l["..num.."]"
       },
     }

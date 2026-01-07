@@ -22,11 +22,10 @@ if not clowns.special_vanilla then
 			},
 			icons =
 			{
-				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
-				},
+				{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32, },
 				{
 					icon = "__angelssmeltinggraphics__/graphics/icons/ore-manganese.png",
+					icon_size = 32,
 					scale = 0.5,
 					shift = {8, 8},
 				},
@@ -51,13 +50,11 @@ if not clowns.special_vanilla then
 			},
 			results =
 			{
-				{type="item", name="phosphorus-ore", amount=4},
+				{type="item", name="clowns-phosphorus-ore", amount=4},
 			},
 			icons =
 			{
-				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
-				},
+				{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32, },
 				{
 					icon = "__Clowns-Processing__/graphics/icons/phosphorus-ore.png",
 					scale = 0.5,
@@ -89,9 +86,7 @@ if not clowns.special_vanilla then
 			},
 			icons =
 			{
-				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
-				},
+				{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32, },
 				{
 					icon = "__angelssmeltinggraphics__/graphics/icons/ore-chrome.png",
 					scale = 0.5,
@@ -121,13 +116,11 @@ if not clowns.special_vanilla then
 			},
 			results =
 			{
-				{type="item", name="magnesium-ore", amount=6},
+				{type="item", name="clowns-magnesium-ore", amount=6},
 			},
 			icons =
 			{
-				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
-				},
+				{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32, },
 				{
 					icon = "__Clowns-Processing__/graphics/icons/magnesium-ore.png",
 					scale = 0.5,
@@ -160,17 +153,14 @@ if not clowns.special_vanilla then
 			},
 			icons =
 			{
-				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
-				},
+				{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
 				{
 					icon = "__angelssmeltinggraphics__/graphics/icons/ore-platinum.png",
-					scale = 0.5,
+          icon_size = 32,
+          scale = 0.5,
 					shift = {8, 8},
 				},
-
 			},
-			icon_size = 32,
 			order = "o-a"--Just after Uranium
 		},
 		{
@@ -190,21 +180,18 @@ if not clowns.special_vanilla then
 			},
 			results =
 			{
-				{type="item", name="osmium-ore", amount=6},
+				{type="item", name="clowns-osmium-ore", amount=6},
 			},
 			icons =
 			{
-				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
-				},
+				{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32, },
 				{
 					icon = "__Clowns-Processing__/graphics/icons/osmium-ore.png",
+					icon_size = 32,
 					scale = 0.5,
 					shift = {8, 8},
 				},
-
 			},
-			icon_size = 32,
 			order = "o-a"--Just after Uranium
 		},
 	}
@@ -235,18 +222,15 @@ if mods["Clowns-AngelBob-Nuclear"] then
 			},
 			icons =
 			{
-				{
-					icon = "__Clowns-Processing__/graphics/icons/sorting.png", icon_size = 32
-				},
+				{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32, },
 				{
 					icon = "__Clowns-Nuclear__/graphics/icons/ore-5.png",
+					icon_size = 32,
 					scale = 0.5,
 					shift = {8, 8},
 					tint = {r = 1, g = 1, b = 0.25}
 				},
-
 			},
-			icon_size = 32,
 			order = "o-a"--Just after Uranium
 		}
 	}
