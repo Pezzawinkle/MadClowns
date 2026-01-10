@@ -135,7 +135,7 @@ clowns.tables.icon_lookup_table = {
   ["clowns-phosphorus-ore"] = {icon = "__Clowns-Processing__/graphics/icons/phosphorus-ore.png", icon_size = 32},
 
   ["clowns-osmium-ore"] = {icon = "__Clowns-Processing__/graphics/icons/osmium-ore.png"},
-  ["angels-manganese-ore"] = {icon = "__angelssmeltinggraphics__/graphics/icons/ore-manganese.png"},
+  ["angels-manganese-ore"] = {icon = "__angelssmeltinggraphics__/graphics/icons/ore-manganese.png", icon_size = 32},
   ["clowns-magnesium-ore"] = {icon = "__Clowns-Processing__/graphics/icons/magnesium-ore.png", icon_size = 32},
   ["chrome-ore"] = {icon = "__angelssmeltinggraphics__/graphics/icons/ore-chrome.png", icon_size = 32},
 

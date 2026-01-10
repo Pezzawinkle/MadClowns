@@ -2,7 +2,7 @@ local oresGrade = { "crushed", "chunk", "crystal", "pure" }
 
 function get_grade_set(recipe)
 	if recipe then
-		local firstIng = recipe.normal.ingredients[2]
+		local firstIng = recipe.ingredients[2]
 		for _,oreGrade in pairs(oresGrade) do
 			if firstIng.name:find(oreGrade) then
 				return oreGrade
@@ -10,13 +10,23 @@ function get_grade_set(recipe)
 		end
 	end
 end
+function get_ore_ic_size(metal_ore)
+	local ic_sz=64
+	if data.raw.item[metal_ore].icon_size then
+		ic_sz=data.raw.item[metal_ore].icon_size
+	elseif data.raw.item[metal_ore].icons and data.raw.item[metal_ore].icons[1].icon_size then
+		ic_sz=data.raw.item[metal_ore].icons[1].icon_size
+	end
+	return ic_sz
+end
 
+--add_recipe = omni.crystal.add_recipe(recipe,name)
 -- ALL FUNCTIONS PAST HERE ADAPTED FROM OMNICRYSTAL
-
+--[[
 ingrediences_solvation=function(recipe)
 	local ing = {}
 	ing[#ing+1]={type = "fluid", name = "hydromnic-acid", amount = 120}
-	for _, i in pairs(recipe.normal.ingredients) do
+	for _, i in pairs(recipe.ingredients) do
 		if i.name ~= "catalysator-brown" and i.name ~= "angels-void" and i.name ~= "catalysator-green" and i.name ~= "catalysator-orange" and i.name ~= "angels-slag" then
 			ing[#ing+1]=i
 		end
@@ -27,7 +37,7 @@ end
 results_solvation=function(recipe)
   local ing = {}
 	--ing[#ing+1]={type = "fluid", name = "hydromnic-acid", amount = 120}
-	for _, i in pairs(recipe.normal.results) do
+	for _, i in pairs(recipe.results) do
 		if i.name ~= "angels-slag" and not string.find(i.name,"void") then
 			ing[#ing+1]={type = "item", name=i.name.."-omnide-salt", amount = i.amount}
 		end
@@ -35,15 +45,7 @@ results_solvation=function(recipe)
 	return ing
 end
 
-get_ore_ic_size=function(metal_ore)
-	local ic_sz=32
-	if data.raw.item[metal_ore].icon_size then
-		ic_sz=data.raw.item[metal_ore].icon_size
-	elseif data.raw.item[metal_ore].icons and data.raw.item[metal_ore].icons[1].icon_size then
-		ic_sz=data.raw.item[metal_ore].icons[1].icon_size
-	end
-	return ic_sz
-end
+
 
 salt_omnide_icon = function(metal)
 	local nr = 5
@@ -232,3 +234,4 @@ add_crystal=function(metal,name,recipe, techlvl)
 		end
 	end
 end
+]]

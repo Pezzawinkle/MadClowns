@@ -1,23 +1,23 @@
 if mods["omnimatter_crystal"] then
-  add_crystal("angels-solid-lithium", "Lithium Chloride")
-  add_crystal("angels-solid-calcium-sulfate", "Calcium Sulfate")
-  add_crystal("angels-thorium-ore", "Thorium")
-  add_crystal("clowns-phosphorus-ore", "Phosphorus")
-  add_crystal("angels-solid-limestone", "Limestone")
-  add_crystal("angels-solid-sodium-carbonate", "Sodium Carbonate")
-  add_crystal("clowns-osmium-ore", "Osmium")
-  add_crystal("clowns-magnesium-ore","Magnesium")
+  require("__omnimatter_crystal__.prototypes.crystal-making")
+  omni.crystal.add_crystal("angels-solid-lithium", "Lithium Chloride")
+  omni.crystal.add_crystal("angels-solid-calcium-sulfate", "Calcium Sulfate")
+  omni.crystal.add_crystal("angels-thorium-ore", "Thorium")
+  omni.crystal.add_crystal("clowns-phosphorus-ore", "Phosphorus")
+  omni.crystal.add_crystal("angels-solid-limestone", "Limestone")
+  omni.crystal.add_crystal("angels-solid-sodium-carbonate", "Sodium Carbonate")
+  omni.crystal.add_crystal("clowns-osmium-ore", "Osmium")
+  omni.crystal.add_crystal("clowns-magnesium-ore","Magnesium")
   if mods["pycoalprocessing"] then
     --add_crystal("raw-borax", "Raw Borax")
     --add_crystal("nexelit-ore", "Nexelit")
     --add_crystal("niobium-ore", "Niobium")
-    add_crystal("rare-earth-dust", "Rare Earth Dust")
-    add_crystal("molybdenum-ore", "Molybdenum")
+    omni.crystal.add_crystal("rare-earth-dust", "Rare Earth Dust")
+    omni.crystal.add_crystal("molybdenum-ore", "Molybdenum")
     if mods["PyCoalTBaA"] then
-      add_crystal("angels-sodium-carbonate", "Sodium Carbonate")
+      omni.crystal.add_crystal("angels-sodium-carbonate", "Sodium Carbonate")
     end
   end
-
   local oresList = {
     { ore = "clowns-ore1", name = "Adamantite" },
     { ore = "clowns-ore4", name = "Orichalcite"},
@@ -31,12 +31,67 @@ if mods["omnimatter_crystal"] then
     table.insert(oresList,{ ore = "clowns-ore8", name = "Meta-Garnierite"})
     table.insert(oresList,{ ore = "clowns-ore9", name = "Nova-Leucoxene"})
   end
+ -- icon updates
+ local icon_fixes={
+  ["angels-solid-sodium-carbonate"]="solid-sodium-carbonate-crystal",
+  ["angels-solid-calcium-sulfate"]="solid-calcium-sulfate-crystal",
+  ["angels-solid-limestone"]="solid-limestone-crystal",
+  ["angels-solid-lithium"]="solid-lithium-crystal",
+  ["clowns-phosphorus-ore"]="phosphorus-ore-crystal",
+  ["clowns-osmium-ore"]="osmium-ore-crystal",
+  ["clowns-magnesium-ore"]="magnesium-ore-crystal",
+}
+for i,k in pairs(icon_fixes) do
+  data.raw.item[i.."-crystal"].icons={{icon = "__Clowns-Extended-Minerals__/graphics/icons/omnicrystals/"..k..".png",icon_size = 32,}}
+  data.raw.recipe[i.."-crystal"].icons={{icon = "__Clowns-Extended-Minerals__/graphics/icons/omnicrystals/"..k..".png",icon_size = 32,}}
+end
+--duplicate local functions as needed
+local function ingrediences_solvation(recipe)
+  local ing = {}
+  ing[#ing+1]={type = "fluid", name = "hydromnic-acid", amount = 120}
+  for _, i in pairs(recipe.ingredients) do
+      if i.name ~= "catalysator-brown" then
+          ing[#ing+1]=i
+      end
+  end
+  return ing
+end
 
+local function results_solvation(recipe)
+  local ing = {}
+  --ing[#ing+1]={type = "fluid", name = "hydromnic-acid", amount = 120}
+  for _, i in pairs(recipe.results) do
+      --log(recipe..":"..i.name)
+      if i.name ~= "slag" then
+          ing[#ing+1]={type = "item", name=i.name.."-omnide-salt", amount = 5*i.amount}
+      end
+  end
+  return ing
+end
+local function salt_omnide_icon(metal)
+	local nr = 5
+	--Build the icons table
+	local icons = {}
+  local icon_2 = "__omnimatter_crystal__/graphics/icons/omnide-salt.png" --if some error occurs
+	if data.raw.item[metal] and data.raw.item[metal].icon then
+		icon_2=data.raw.item[metal].icon
+	elseif data.raw.item[metal].icons and data.raw.item[metal].icons[1].icon then
+		icon_2=data.raw.item[metal].icons[1].icon
+	end
+	icons[#icons+1] = {icon = "__omnimatter_crystal__/graphics/icons/omnide-salt.png",icon_size=32}
+	icons[#icons+1] = {
+		icon = icon_2,
+		icon_size=get_ore_ic_size(metal),
+		scale=0.4*32/get_ore_ic_size(metal),
+		shift={-10,10}
+	}
+	return icons
+end
   --convert these two tables to be more flexible, so i can deal with regular/advanced lists
-  local oresGrade = { "crushed", "chunk", "crystal", "pure" }
+  --[[
 
-  local toAdd = {}
-  local toTech = {}
+
+
   for _,oreSet in pairs(oresList) do
     for _,gradeSet in pairs(oresGrade) do
       local baseName = oreSet.ore.."-"..gradeSet.."-processing"
@@ -79,14 +134,22 @@ if mods["omnimatter_crystal"] then
         toTech[#toTech+1] = {"omnitech-crystallology-4", oreSet.ore.."-"..gradeSet.."-salting"}
       end
     end
-  end
+  end]]
   --old additions list, where rec name is [ore.."-pure-processing"]
-  local pureOresList = {"chrome", "osmium", "phosphorus", "platinum", "thorium", "manganese", "magnesium"}
+  
+  local toAdd = {}
+  local toTech = {}
+  local oresGrade = { "crushed", "chunk", "crystal", "pure" }
+  local pureOresList = {"angels-chrome", "clowns-osmium", "clowns-phosphorus", "angels-platinum", "angels-thorium", "angels-manganese", "clowns-magnesium"}
 
   if not clowns.special_vanilla then
     for _,ore in pairs(pureOresList) do
-      if not data.raw.item[ore .."-ore-omnide-salt"] then add_crystal(ore .."-ore",ore:gsub("^%l", string.upper)) end
+      --log(serpent.block(data.raw.item[ore .."-ore-omnide-salt"]))
+      if not data.raw.item[ore .."-ore-omnide-salt"] then
+        omni.crystal.add_crystal(ore .."-ore",ore:gsub("^%l", string.upper))
+      end
       local rec = data.raw.recipe[ore.."-pure-processing"]
+      --log(serpent.block(rec))
       if rec then
         local gradeSet = get_grade_set(rec)
         if not data.raw["item-subgroup"][rec.subgroup.."-omnide"] then
@@ -112,7 +175,6 @@ if mods["omnimatter_crystal"] then
           ingredients = ing,
           order = "b[clownsore1-crushed]",
           icons = ic,
-          icon_size=32,
           results = res,
           energy_required = 5,
         }
@@ -128,14 +190,15 @@ if mods["omnimatter_crystal"] then
           toTech[#toTech+1] = {"omnitech-crystallology-3", ore.."-pure-salting"}
         end
       end
-      data:extend(toAdd)
     end
+    --log(serpent.block(toAdd))
+    data:extend(toAdd)
     --new additions list where name is clowns-tier-mix#-processing
     toAdd={} --nil it out
     for i,tier in pairs(oresGrade) do --grade
       for j=1,12,1 do --number
         local rec = data.raw.recipe["clowns-"..tier.."-mix"..j.."-processing"]
-        if rec and rec.normal.results[1].name ~= "angels-void" then
+        if rec and rec.results[1].name ~= "angels-void" then
           local gradeSet = tier
           if not data.raw["item-subgroup"][rec.subgroup.."-omnide"] then
             local cat = {
@@ -156,6 +219,7 @@ if mods["omnimatter_crystal"] then
             lookup=string.sub(lookup,1,-5)
           end
           local ic = salt_omnide_icon(ore)
+          log(serpent.block(ic))
 
           toAdd[#toAdd+1] = {
             type = "recipe",
@@ -168,10 +232,10 @@ if mods["omnimatter_crystal"] then
             ingredients = ing,
             order = "b[clownsore1-crushed]",
             icons = ic,
-            icon_size=32,
             results = res,
             energy_required = 5,
           }
+          --log(serpent.block(toAdd[#toAdd]))
           if tier=="crushed" then
             toTech[#toTech+1] = {"omnitech-crystallology-1", "clowns-"..tier.."-mix"..j.."-pure-salting"}
           elseif tier=="chunk" then
