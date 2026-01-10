@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.3.24
-Date: ???
+Version: 2.0.01
+Date: 2026-01-10
+  Features:
+    - now works with 2.0
   Bugfixes:
     - Only create recipe alternate Firearms magazine recipe if lead plate is enabled
     - Made sure ores are enabled for all catalyst types
