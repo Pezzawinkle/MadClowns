@@ -370,19 +370,20 @@ end
 local create_sorting_mix_recipe = function(recipe_base_name, ore_result_products, icon_names, ingredients_overrides)
   local recipes = {}
   for recipe_index, ore_result_product in pairs(ore_result_products) do
-    local ore_name =
-      type(ore_result_product) == "table" and (ore_result_product[1] or ore_result_product.name) or ore_result_product
+    local ore_name = type(ore_result_product) == "table" and (ore_result_product[1] or ore_result_product.name) or ore_result_product
     local ore_amount = type(ore_result_product) == "table" and (ore_result_product[2] or ore_result_product.amount) or 1
+    local type_name = type(ore_result_product) == "table" and ore_result_product.type or "item"
     local recipe = {
       name = string.format(recipe_base_name, recipe_index),
       results = {
         {"!!"},
         {
-          type = type(ore_result_product) == "table" and ore_result_product.type or "item",
+          type = type_name,
           name = ore_name,
           amount = ore_amount
-        }
-      }
+        },
+      },
+      localised_name = { type_name .. "-name." .. ore_name }
     }
     if angelsmods.trigger.ores[get_trigger_name[ore_name] or ore_name] and ore_amount > 0 then
       local icon_name = (icon_names or {})[recipe_index]

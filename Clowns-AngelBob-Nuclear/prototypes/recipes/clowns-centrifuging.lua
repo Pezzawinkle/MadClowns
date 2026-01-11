@@ -20,11 +20,11 @@ data:extend(
 			},
 			{
 				icon = "__Clowns-Processing__/graphics/icons/solid-uranium-hexafluoride.png",
+				icon_size=32,
 				scale = 1,
 				shift = {-16, -16},
 			},
 		},
-		icon_size = 32,
 		crafting_machine_tint =
 		{
 			primary = {r = 0, g = 1, b = 0},

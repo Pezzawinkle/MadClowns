@@ -13,12 +13,14 @@ data:extend(
 		enabled = false,
 		ingredients =
 		{
-			{"iron-plate", 10},
-			{"pipe", 20},
-			{"iron-gear-wheel", 20},
-			{"stone-brick", 10},
+			{type = "item", name = "iron-plate", amount = 10},
+			{type = "item", name = "pipe", amount = 20},
+			{type = "item", name = "iron-gear-wheel", amount = 20},
+			{type = "item", name = "stone-brick", amount = 10},
 		},
-		results ={{type="item", name="clowns-sluicer", amount = 1}},
+		results = {
+			{type = "item", name = "clowns-sluicer", amount = 1}
+		},
 		energy_required = 10,
 	},
 	{
@@ -119,12 +121,14 @@ data:extend(
 		enabled = false,
 		ingredients =
 		{
-			{"steel-plate", 20},
-			{"clowns-sluicer", 1},
-			{"iron-gear-wheel", 20},
-			{"concrete", 20},
+			{type = "item", name = "steel-plate", amount = 20},
+			{type = "item", name = "clowns-sluicer", amount = 1},
+			{type = "item", name = "iron-gear-wheel", amount = 20},
+			{type = "item", name = "concrete", amount = 20},
 		},
-		results = {{type="item",name="clowns-sluicer-2",amount=1}},
+		results = {
+			{type = "item", name = "clowns-sluicer-2", amount = 1}
+		},
 		energy_required = 10,
 	},
 	{

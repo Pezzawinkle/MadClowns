@@ -101,7 +101,6 @@ local create_mixed_sorting = function(num,tier)
         {
           {icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32},
         },
-        icon_size = 32,
         order = n_order.."[clowns-" .. style .. "-mix".. num .."-processing]",
       },
     }

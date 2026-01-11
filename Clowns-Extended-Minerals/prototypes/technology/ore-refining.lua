@@ -106,14 +106,14 @@ data:extend(
 }
 )
 if not clowns.special_vanilla then --add in the mixed sorting recipes to the techs
-  table.insert(data.raw.technology["clowns-ore-crushing"].effects,{type = "unlock-recipe",recipe = "manganese-pure-processing"})
-  table.insert(data.raw.technology["clowns-ore-crushing"].effects,{type = "unlock-recipe",recipe = "phosphorus-pure-processing"})
-  table.insert(data.raw.technology["clowns-ore-leaching"].effects,{type = "unlock-recipe",recipe = "chrome-pure-processing"})
-  table.insert(data.raw.technology["clowns-ore-floatation"].effects,{type = "unlock-recipe",recipe = "magnesium-pure-processing"})
-  table.insert(data.raw.technology["clowns-ore-refining"].effects,{type = "unlock-recipe",recipe = "osmium-pure-processing"})
+  table.insert(data.raw.technology["clowns-ore-crushing"].effects,{type = "unlock-recipe",recipe = "angels-manganese-pure-processing"})
+  table.insert(data.raw.technology["clowns-ore-crushing"].effects,{type = "unlock-recipe",recipe = "clowns-phosphorus-pure-processing"})
+  table.insert(data.raw.technology["clowns-ore-leaching"].effects,{type = "unlock-recipe",recipe = "angels-chrome-pure-processing"})
+  table.insert(data.raw.technology["clowns-ore-floatation"].effects,{type = "unlock-recipe",recipe = "clowns-magnesium-pure-processing"})
+  table.insert(data.raw.technology["clowns-ore-refining"].effects,{type = "unlock-recipe",recipe = "clowns-osmium-pure-processing"})
   if mods["Clowns-AngelBob-Nuclear"] and not (--[[(mods["angelsindustries"] and angelsmods.industries.overhaul) or]] (mods["bobpower"] and mods["bobplates"])) then
     --add in thorium
-    table.insert(data.raw.technology["clowns-ore-leaching"].effects,{type = "unlock-recipe",recipe = "thorium-pure-processing"})
+    table.insert(data.raw.technology["clowns-ore-leaching"].effects,{type = "unlock-recipe",recipe = "angels-thorium-pure-processing"})
   end
 end
 --add in advanced ore stuffs

@@ -1,35 +1,9 @@
---if mods["angelsbioprocessing"] then
+if angelsmods.trigger.smelting_products["lead"].plate == true then
   data:extend(
   {
     --------------
     -- MILITARY --
     --------------
-    --neurotixin-capsule
-    {
-      type = "recipe",
-      name = "clowns-neurotoxin-capsule",
-      category = "chemistry",
-      enabled = false,
-      energy_required = 4,
-      ingredients =
-      {
-        {type = "fluid", name = "clowns-liquid-dimethylmercury", amount = 100},
-        {type = "item", name = "steel-plate", amount = 2},
-        {type = "item", name = "plastic-bar", amount = 5},
-        {type = "item", name = "processing-unit", amount = 2},
-      },
-      results=
-      {
-        {type = "item", name = "clowns-neurotoxin-capsule", amount = 1},
-      },
-      icon_size = 32,
-    },
-  }
-  )
---end
-if angelsmods.trigger.smelting_products["lead"].plate == true then
-  data:extend(
-  {
     --alternative basic ammo
     {
       type = "recipe",
@@ -50,6 +24,30 @@ if angelsmods.trigger.smelting_products["lead"].plate == true then
 end
 data:extend(
 {
+  --------------
+  -- MILITARY --
+  --------------
+  --neurotixin-capsule
+  {
+    type = "recipe",
+    name = "clowns-neurotoxin-capsule",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 4,
+    ingredients =
+    {
+      {type = "fluid", name = "clowns-liquid-dimethylmercury", amount = 100},
+      {type = "item", name = "steel-plate", amount = 2},
+      {type = "item", name = "plastic-bar", amount = 5},
+      {type = "item", name = "processing-unit", amount = 2},
+    },
+    results=
+    {
+      {type = "item", name = "clowns-neurotoxin-capsule", amount = 1},
+    },
+    icons = angelsmods.functions.get_object_icons("clowns-neurotoxin-capsule"),
+    order = "m"
+  },
   ---------------------------------
   -- DEPLETED URANIUM PROCESSING --
   ---------------------------------
@@ -70,6 +68,7 @@ data:extend(
     {
       {type = "item", name = "clowns-processed-depleted-uranium", amount = 2},
     },
+    icons = angelsmods.functions.get_object_icons("clowns-processed-depleted-uranium"),
     order = "a",
   },
   --pellet
@@ -89,6 +88,7 @@ data:extend(
     {
       {type = "item", name = "clowns-pellet-depleted-uranium", amount = 4},
     },
+    icons = angelsmods.functions.get_object_icons("clowns-pellet-depleted-uranium"),
     order = "b",
   },
   --ingot
@@ -108,6 +108,7 @@ data:extend(
     {
       {type = "item", name = "clowns-powder-depleted-uranium", amount = 24},
     },
+    icons = angelsmods.functions.get_object_icons("clowns-powder-depleted-uranium"),
     order = "d",
   },
   --powder
@@ -127,7 +128,7 @@ data:extend(
     {
       {type = "item", name = "clowns-casting-powder-depleted-uranium", amount = 12},
     },
-    icon_size = 32,
+    icons = angelsmods.functions.get_object_icons("clowns-casting-powder-depleted-uranium"),
     order = "e-a",
   },
   --powder-mix
@@ -148,7 +149,7 @@ data:extend(
     {
       {type = "item", name = "clowns-casting-powder-depleted-uranium", amount = 24},
     },
-    icon_size = 32,
+    icons = angelsmods.functions.get_object_icons("clowns-casting-powder-depleted-uranium"),
     order = "e-b",
   },
   {
@@ -168,7 +169,7 @@ data:extend(
     {
       {type = "item", name = "clowns-casting-powder-depleted-uranium", amount = 24},
     },
-    icon_size = 32,
+    icons = angelsmods.functions.get_object_icons("clowns-casting-powder-depleted-uranium"),
     order = "e-c",
   },
   {
@@ -189,7 +190,7 @@ data:extend(
     {
       {type = "item", name = "clowns-casting-powder-depleted-uranium", amount = 36},
     },
-    icon_size = 32,
+    icons = angelsmods.functions.get_object_icons("clowns-casting-powder-depleted-uranium"),
     order = "e-d",
   },
   --plate
@@ -208,7 +209,7 @@ data:extend(
     {
       {type = "item", name = "clowns-plate-depleted-uranium", amount = 12}
     },
-    icon_size = 32,
+    icons = angelsmods.functions.get_object_icons("clowns-plate-depleted-uranium"),
     order = "f",
   },
   --------------------------
@@ -231,6 +232,7 @@ data:extend(
 		{
 			{type = "item", name = "clowns-processed-magnesium", amount = 2},
 		},
+    icons = angelsmods.functions.get_object_icons("clowns-processed-magnesium"),
 		order = "a",
   },
   --pellet
@@ -250,6 +252,7 @@ data:extend(
 		{
 			{type = "item", name = "clowns-pellet-magnesium", amount = 4},
 		},
+    icons = angelsmods.functions.get_object_icons("clowns-pellet-magnesium"),
 		order = "b",
   },
 	--ingot
@@ -273,8 +276,7 @@ data:extend(
 			{type = "item", name = "clowns-ingot-magnesium", amount = 24},
 			{type = "item", name = "angels-solid-calcium-chloride", amount = 2},
 		},
-		icon = "__Clowns-Processing__/graphics/icons/ingot-magnesium.png",
-		icon_size = 32,
+    icons = angelsmods.functions.get_object_icons("clowns-ingot-magnesium"),
 		order = "d",
   },
 	--molten
@@ -294,7 +296,6 @@ data:extend(
 		{
 		  {type = "fluid", name = "clowns-liquid-molten-magnesium", amount = 120},
 		},
-		icon_size = 32,
 		order = "i",
   },
 	--plate
@@ -313,7 +314,6 @@ data:extend(
     {
       {type = "item", name = "clowns-plate-magnesium", amount = 4}
     },
-		icon_size = 32,
 		order = "j",
   },
   -------------------------
@@ -408,6 +408,7 @@ data:extend(
 		{
 			{type = "item", name = "clowns-pellet-osmium", amount = 4},
 		},
+    icons = angelsmods.functions.get_object_icons("clowns-pellet-osmium"),
 		order = "b",
   },
 	--powder
@@ -447,9 +448,8 @@ data:extend(
 		results =
 		{
 			{type = "item", name = "clowns-casting-powder-osmium", amount = 16},
-      
 		},
-		icon_size = 32,
+    icons = angelsmods.functions.get_object_icons("clowns-casting-powder-osmium"),
 		order = "a",
     },
 	--plate
@@ -468,7 +468,7 @@ data:extend(
     {
       {type = "item", name = "clowns-plate-osmium", amount = 12}
     },
-		icon_size = 32,
+    icons = angelsmods.functions.get_object_icons("clowns-plate-osmium"),
 		order = "b",
   },
   ---------------------------
@@ -478,16 +478,6 @@ data:extend(
   {
     type = "recipe",
     name = "crushed-stone-sorting",
-    icons =
-    {
-      { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32, },
-      {
-        icon = "__angelsrefininggraphics__/graphics/icons/stone-crushed.png",
-        scale = 0.5,
-        shift = {8, 8},
-      },
-    },
-    icon_size = 32,
     category = "angels-ore-sorting",
     subgroup = "angels-ore-sorting-t1",
     order = "i",
@@ -503,13 +493,21 @@ data:extend(
       {type = "item", name = "angels-slag", amount = 7},
       {type = "item", name = "clowns-phosphorus-ore", amount = 1},
     },
+    icons =
+    {
+      { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32, },
+      {
+        icon = "__angelsrefininggraphics__/graphics/icons/stone-crushed.png",
+        icon_size = 32,
+        scale = 0.5,
+        shift = {8, 8},
+      },
+    },
   },
   --white phos from ore
   {
     type = "recipe",
     name = "clowns-white-phosphorus-smelting",
-    icon = "__Clowns-Processing__/graphics/icons/solid-white-phosphorus.png",
-    icon_size = 32,
     category = "angels-chemical-smelting",
     subgroup = "clowns-phosphorus",
     order = "a",
@@ -527,12 +525,12 @@ data:extend(
       {type = "item", name = "clowns-solid-white-phosphorus", amount = 24},--Should make phosphorus gas
       {type = "fluid", name = "angels-gas-carbon-monoxide", amount = 10}
     },
+    icons = angelsmods.functions.get_object_icons("clowns-solid-white-phosphorus"),
   },
   --phosphoric acid
   {
     type = "recipe",
     name = "clowns-phosphoric-acid-1",
-    icons = angelsmods.functions.create_liquid_recipe_icon({"clowns-liquid-phosphoric-acid"}, {{ r = 244, g = 125, b = 001 },{ 242, 242, 242 },{ 214, 012, 012 }}), 
     category = "chemistry",
     subgroup = "clowns-phosphorus",
     order = "b",
@@ -549,13 +547,12 @@ data:extend(
       {type = "fluid", name = "clowns-liquid-phosphoric-acid", amount = 10},
       {type = "item", name = "angels-solid-calcium-sulfate", amount = 1}
     },
+    icons = angelsmods.functions.create_liquid_recipe_icon({"clowns-liquid-phosphoric-acid"}, {{ r = 244, g = 125, b = 001 },{ 242, 242, 242 },{ 214, 012, 012 }}),
   },
   --phosphoric acid 2
   {
     type = "recipe",
     name = "clowns-white-phosphorus-smelting-2",
-    icon = "__Clowns-Processing__/graphics/icons/solid-white-phosphorus.png",
-    icon_size = 32,
     category = "angels-chemical-smelting-2",
     subgroup = "clowns-phosphorus",
     order = "a",
@@ -569,8 +566,9 @@ data:extend(
     },
     results =
     {
-      {type = "fluid", name = "clowns-liquid-phosphoric-acid", amount = 60},--48 phosphorus ore i.e. 33% productivity gain
+      {type = "fluid", name = "clowns-liquid-phosphoric-acid", amount = 60, ignored_by_productivity = 30},--48 phosphorus ore i.e. 33% productivity gain
     },
+    icons = angelsmods.functions.create_solid_recipe_icon(nil, "clowns-liquid-phosphoric-acid", {"clowns-solid-white-phosphorus"}),
   },
   --------------------------
   -- MAGNESIUM SALINATION --
@@ -610,7 +608,6 @@ data:extend(
 		{
 			{type = "item", name = "clowns-magnesium-ore", amount = 10},
 		},
-		main_product = "",
     icons = angelsmods.functions.create_solid_recipe_icon(nil, "clowns-magnesium-ore", {"angels-water-saline"}),
 		order = "g",
 	},
@@ -624,29 +621,23 @@ data:extend(
     energy_required = 5,--50% faster than vanilla
     enabled = false,
     category = "centrifuging",
-    ingredients = 
-    {
+    ingredients = {
       {type = "item", name = "clowns-solid-uranium-hexafluoride", amount = 8} --20% less ingredients than vanilla
     },
-    icons = 
-    {
-      {icon = "__Clowns-Processing__/graphics/icons/advanced-uranium-processing.png", icon_size = 32,}
-    },
-    icon_size=32,
-    subgroup = "raw-material",
-    order = "k-a",
-    results =
-    {
+    results = {
       {type = "item", name = "uranium-235", probability = 0.007, amount = 1},
       {type = "item", name = "uranium-238", probability = 0.993, amount = 1}
-    }
+    },
+    icons = {
+      {icon = "__Clowns-Processing__/graphics/icons/advanced-uranium-processing.png", icon_size = 32,}
+    },
+    subgroup = "raw-material",
+    order = "k-a",
   },
   --hexafluoride production
 	{
 		type = "recipe",
 		name = "clowns-solid-uranium-hexafluoride",
-		icon = "__Clowns-Processing__/graphics/icons/solid-uranium-hexafluoride.png",
-		icon_size = 32,
 		category = "chemistry",
 		subgroup = "clowns-uranium",
 		order = "f",
@@ -662,13 +653,12 @@ data:extend(
 		{
 			{type = "item", name = "clowns-solid-uranium-hexafluoride", amount = 12}
 		},
+    icons = angelsmods.functions.get_object_icons("clowns-solid-uranium-hexafluoride"),
   },
   --tetrafluoride
 	{
 		type = "recipe",
 		name = "clowns-solid-uranium-tetrafluoride",
-		icon = "__Clowns-Processing__/graphics/icons/solid-uranium-tetrafluoride.png",
-		icon_size = 32,
 		category = "chemistry",
 		subgroup = "clowns-uranium",
 		order = "e",
@@ -684,13 +674,12 @@ data:extend(
 		{
 			{type = "item", name = "clowns-solid-uranium-tetrafluoride", amount = 12}
 		},
+    icons = angelsmods.functions.get_object_icons("clowns-solid-uranium-tetrafluoride"),
   },
   --uranium oxide
 	{
 		type = "recipe",
 		name = "clowns-solid-uranium-oxide-1",
-		icon = "__Clowns-Processing__/graphics/icons/solid-uranium-oxide.png",
-		icon_size = 32,
 		category = "angels-chemical-smelting-3",
     localised_name = {"item-name.clowns-solid-uranium-oxide"},
 		subgroup = "clowns-uranium",
@@ -714,8 +703,6 @@ data:extend(
 	{
 		type = "recipe",
 		name = "clowns-solid-uranium-oxide-2",
-		icon = "__Clowns-Processing__/graphics/icons/solid-uranium-oxide.png",
-		icon_size = 32,
 		category = "angels-chemical-smelting-4",
 		subgroup = "clowns-uranium",
 		order = "d",
@@ -740,8 +727,6 @@ data:extend(
 	{
 		type = "recipe",
 		name = "clowns-solid-ammonium-diuranate",
-		icon = "__Clowns-Processing__/graphics/icons/solid-ammonium-diuranate.png",
-		icon_size = 32,
 		category = "chemistry",
 		subgroup = "clowns-uranium",
 		order = "b",
@@ -757,13 +742,12 @@ data:extend(
 		{
 			{type = "item", name = "clowns-solid-ammonium-diuranate", amount = 12}
 		},
+    icons = angelsmods.functions.get_object_icons("clowns-solid-ammonium-diuranate"),
   },
   --uranyl-nitrate
 	{
 		type = "recipe",
 		name = "clowns-solid-uranyl-nitrate",
-		icon = "__Clowns-Processing__/graphics/icons/solid-uranyl-nitrate.png",
-		icon_size = 32,
 		category = "chemistry",
 		subgroup = "clowns-uranium",
 		order = "a",
@@ -779,6 +763,7 @@ data:extend(
 		{
 			{type = "item", name = "clowns-solid-uranyl-nitrate", amount = 12}
 		},
+    icons = angelsmods.functions.get_object_icons("clowns-solid-uranyl-nitrate"),
 	},
   --Osmium Bullets
   {
@@ -796,6 +781,7 @@ data:extend(
     results = {
       {type="item",name="clowns-osmium-rounds-magazine",amount=1}
     },
+    icons = angelsmods.functions.get_object_icons("clowns-osmium-rounds-magazine"),
     order = "a[basic-clips]-d[osmium-rounds-magazine]"
   }
 }

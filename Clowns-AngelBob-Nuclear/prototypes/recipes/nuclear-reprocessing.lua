@@ -12,7 +12,6 @@ data:extend(
 			{type="fluid", name="angels-liquid-nitric-acid", amount=300}--20
 		},
 		icons = {{icon = "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-reprocessing.png", icon_size = 32,}},
-		icon_size=32,
 		subgroup = "clowns-nuclear-reprocessing",
 		order = "a[uranium]-b[reprocessing]-a",
 		results =
@@ -37,7 +36,6 @@ data:extend(
 			{type="fluid", name="angels-liquid-nitric-acid", amount=350}--20
 		},
 		icons = {{icon = "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-reprocessing.png", icon_size = 32,}},
-		icon_size=32,
 		subgroup = "clowns-nuclear-reprocessing",
 		order = "a[uranium]-b[reprocessing]-b",
 		results =
@@ -62,7 +60,6 @@ data:extend(
 			{type="fluid", name="angels-liquid-nitric-acid", amount=300}--20
 		},
 		icons = {{icon = "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-reprocessing.png",icon_size=32}},
-		icon_size=32,
 		subgroup = "clowns-nuclear-reprocessing",
 		order = "a[uranium]-b[reprocessing]-c",
 		results =
@@ -82,7 +79,6 @@ data:extend(
 		category = "centrifuging",
 		ingredients = {{type="item", name = "angels-depleted-thorium-fuel-cell", amount = 5}},
 		icons= {{icon = "__Clowns-Nuclear__/graphics/icons/thorium-nuclear-fuel-reprocessing.png", icon_size = 32,}},
-		icon_size=32,
 		crafting_machine_tint =
 		{
 			primary = {r = 1, g = 1, b = 0}, -- thorium
@@ -112,7 +108,6 @@ data:extend(
 			{type="fluid", name="angels-liquid-nitric-acid", amount=300}--20 (matching the waste liq)
 		},
 		icons= {{icon = "__Clowns-Nuclear__/graphics/icons/thorium-nuclear-fuel-reprocessing.png", icon_size = 32,}},
-		icon_size=32,
 		subgroup = "clowns-nuclear-reprocessing",
 		order = "c[thorium]-b[reprocessing]-c",
 		results =
@@ -136,7 +131,6 @@ data:extend(
 			{type="fluid", name="angels-liquid-nitric-acid", amount=150}--making this path lower than the other one, to give options, may need balance
 		},
 		icons= {{icon = "__Clowns-Nuclear__/graphics/icons/thorium-nuclear-fuel-reprocessing.png", icon_size = 32,}},
-		icon_size=32,
 		subgroup = "clowns-nuclear-reprocessing",
 		order = "c[thorium]-b[reprocessing]-d",
 		results =

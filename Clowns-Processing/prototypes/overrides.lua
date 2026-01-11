@@ -82,9 +82,9 @@ end
 --update titanium sponge
 if angelsmods.trigger.smelting_products["titanium"].plate then
 	data.raw.recipe["angels-sponge-titanium"].icons = angelsmods.functions.add_number_icon_layer(
-		{{icon = "__angelssmeltinggraphics__/graphics/icons/sponge-titanium.png",	icon_size = 32}},
+		angelsmods.functions.get_object_icons("angels-sponge-titanium"),
 		1, angelsmods.smelting.number_tint)
 	data.raw.recipe["angels-sponge-magnesium-titanium-smelting"].icons = angelsmods.functions.add_number_icon_layer(
-		{{icon = "__angelssmeltinggraphics__/graphics/icons/sponge-titanium.png",	icon_size = 32}},
+		angelsmods.functions.get_object_icons("angels-sponge-titanium"),
 		2, angelsmods.smelting.number_tint)
 end
