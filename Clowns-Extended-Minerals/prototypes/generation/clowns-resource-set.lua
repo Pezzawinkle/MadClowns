@@ -12,8 +12,8 @@ local ap_dat={
 	["infinite-clowns-resource1"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 }
 local resource_dat = {
-  ["clowns-resource1"] = {--[[stage="clowns-resource1",]]ore_sheet = "__Clowns-Extended-Minerals__/graphics/entity/alluvium",	order = "c-k",	mining_time = 1*0.2,	tint = {r = 0.9, g = 0.7, b = 0.7}, frame_c = 4, var_c= 8, acid = "clowns-liquid-phosphoric-acid"},
-  ["clowns-resource2"] = {--[[stage="clowns-resource2",]]ore_sheet = "__Clowns-Extended-Minerals__/graphics/entity/oil-sands",	order = "c-l",	mining_time = 1*0.5,	tint = {r = 0.2, g = 0.25, b = 0.25}, frame_c = 4, var_c = 8, acid = "steam"},
+  ["clowns-resource1"] = {--[[stage="clowns-resource1",]]ore_sheet = "__Clowns-Extended-Minerals__/graphics/entity/alluvium",	order = "c-k",	mining_time = 1*0.2,	tint = {r = 0.9, g = 0.7, b = 0.7}, frame_c = 4, var_c= 8, acid = "clowns-liquid-phosphoric-acid",icon_size=32},
+  ["clowns-resource2"] = {--[[stage="clowns-resource2",]]ore_sheet = "__Clowns-Extended-Minerals__/graphics/entity/oil-sands",	order = "c-l",	mining_time = 1*0.5,	tint = {r = 0.2, g = 0.25, b = 0.25}, frame_c = 4, var_c = 8, acid = "steam",icon_size=32},
 }
 ---------------------------------------------
 -- Create ores and auto-plate for each ore --
@@ -52,7 +52,7 @@ local build_tab =  {
     output_min = 1,
     output_max = 1,
     icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore_name..".png",
-    icon_size = 64,
+    icon_size = resource_dat[ore_name].icon_size,
     autoplace = {
       starting_area = ap_dat[ore_name].starting_area,
       base_density = ap_dat[ore_name].base_density,
