@@ -63,7 +63,6 @@ if mods["omnimatter_crystal"] then
     local ing = {}
     --ing[#ing+1]={type = "fluid", name = "hydromnic-acid", amount = 120}
     for _, i in pairs(recipe.results) do
-        --log(recipe..":"..i.name)
         if i.name ~= "slag" then
             ing[#ing+1]={type = "item", name=i.name.."-omnide-salt", amount = 5*i.amount}
         end
@@ -142,14 +141,10 @@ if mods["omnimatter_crystal"] then
 
   if not clowns.special_vanilla then
     for _,ore in pairs(pureOresList) do
-      --log(serpent.block(data.raw.item[ore .."-ore-omnide-salt"]))
       if not data.raw.item[ore .."-ore-omnide-salt"] then
         omni.crystal.add_crystal(ore .."-ore",ore:gsub("^%l", string.upper)) --incase it is missing
       end
       local rec = data.raw.recipe[ore.."-pure-processing"]
-      log(ore)
-      log(serpent.block(data.raw.recipe[ore.."-ore-pure-processing"]))
-      log(serpent.block(rec))
       if rec then
         local gradeSet = get_grade_set(rec)
         if not data.raw["item-subgroup"][rec.subgroup.."-omnide"] then
@@ -191,11 +186,9 @@ if mods["omnimatter_crystal"] then
 
         for _,each in pairs({"-crystal", "-omnide-solution", "-crystal-omnitraction","-pure-salting"}) do
           toTech[#toTech+1] = {"omnitech-crystallology-"..techlvl, ore.."-ore"..each}
-          log(serpent.block(toTech[#toTech]))
         end
       end
     end
-    --log(serpent.block(toAdd))
     data:extend(toAdd)
     --new additions list where name is clowns-tier-mix#-processing
     toAdd={} --nil it out
@@ -238,7 +231,6 @@ if mods["omnimatter_crystal"] then
             results = res,
             energy_required = 5,
           }
-          --log(serpent.block(toAdd[#toAdd]))
           if tier=="crushed" then
             toTech[#toTech+1] = {"omnitech-crystallology-1", "clowns-"..tier.."-mix"..j.."-pure-salting"}
           elseif tier=="chunk" then
@@ -262,7 +254,6 @@ if mods["omnimatter_crystal"] then
   end
   data:extend(toAdd)
   for i,n in pairs(toTech) do
-    --log(serpent.block(n))
     omni.lib.add_unlock_recipe(n[1],n[2])
   end
 end
