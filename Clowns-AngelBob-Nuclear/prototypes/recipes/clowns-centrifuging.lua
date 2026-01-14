@@ -9,7 +9,7 @@ data:extend(
 		enabled = false,
 		category = "centrifuging",
 		ingredients = {
-			{type = "item", name = "clowns-solid-uranium-hexafluoride", item = 48}
+			{type = "item", name = "clowns-solid-uranium-hexafluoride", amount = 48}
 		},--decent saving yo
 		icons =
 		{

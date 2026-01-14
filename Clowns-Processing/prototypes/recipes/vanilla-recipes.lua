@@ -285,7 +285,7 @@ data:extend(
 		name = "clowns-molten-magnesium-smelting",
 		category = "angels-induction-smelting-4",
 		subgroup = "clowns-magnesium-casting",
-    localised_name = {"item-name.clowns-liquid-molten-magnesium"},
+    localised_name = {"fluid-name.clowns-liquid-molten-magnesium"},
 		energy_required = 4,
 		enabled = false,
 		ingredients =

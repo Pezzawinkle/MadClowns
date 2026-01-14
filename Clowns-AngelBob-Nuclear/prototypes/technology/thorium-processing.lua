@@ -10,7 +10,7 @@ if data.raw.item["thorium-fuel-cell"] then
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "thorium-purification"
+				recipe = "clowns-thorium-purification"
 			},
       {
 				type = "unlock-recipe",

@@ -1,18 +1,18 @@
 --add modules to bombs
 if mods["bobmodules"] then
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"bob-speed-module-5", 3})
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"bob-productivity-module-5", 3})
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"bob-efficiency-module-5", 3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {type="item", name="bob-speed-module-5", amount=3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {type="item", name="bob-productivity-module-5", amount=3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {type="item", name="bob-efficiency-module-5", amount=3})
 else
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"speed-module-3", 3})
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"productivity-module-3", 3})
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"efficiency-module-3", 3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {type="item", name="speed-module-3", amount=3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {type="item", name="productivity-module-3", amount=3})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {type="item", name="efficiency-module-3", amount=3})
 end
 --fusion cores
 if data.raw.item["fusion-reactor-equipment-2"] then
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"fusion-reactor-equipment-2", 1})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {type="name",name="fusion-reactor-equipment-2", amount=1})
 else
-	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {"fission-reactor-equipment", 1})
+	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {type="name",name="fission-reactor-equipment", amount=1})
 end
 ---------------------------------------
 -- ANGELS NUCLEAR UPDATES --
