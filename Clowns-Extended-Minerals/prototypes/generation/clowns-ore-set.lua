@@ -12,12 +12,12 @@ local ap_dat={
 	["clowns-resource3"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["clowns-resource4"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
 	["clowns-resource5"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	["infinite-clowns-ore1"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	["infinite-clowns-ore4"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	["infinite-clowns-ore5"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-  ["infinite-clowns-ore7"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	["infinite-clowns-resource2"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
-	["infinite-clowns-resource1"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1},
+	["infinite-clowns-ore1"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1, acid="angels-liquid-hydrofluoric-acid"},
+	["infinite-clowns-ore4"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1, acid="angels-liquid-hydrochloric-acid"},
+	["infinite-clowns-ore5"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1, acid="angels-liquid-nitric-acid"},
+  ["infinite-clowns-ore7"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1, acid="angels-liquid-hydrofluoric-acid"},
+	["infinite-clowns-resource2"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1, acid = "steam"},
+	["infinite-clowns-resource1"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1, acid = "clowns-liquid-phosphoric-acid"},
 }
 local ore_dat = {
   ["clowns-ore1"] = {--[[stage="clowns_ore1",]]ore_sheet = 3, order = "c-a",	mining_time = 3*4--[[old time * hardness]], tint = {r = 0.6510, g = 0.3490, b = 0.6510}},
@@ -38,10 +38,10 @@ if not special_vanilla then
   ap_dat["clowns-ore9"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
   --ap_dat["clowns-ore10"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
   ap_dat["infinite-clowns-ore2"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
-	ap_dat["infinite-clowns-ore3"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
+	ap_dat["infinite-clowns-ore3"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1, acid = "angels-liquid-nitric-acid"}
   ap_dat["infinite-clowns-ore6"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
-  ap_dat["infinite-clowns-ore8"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
-  ap_dat["infinite-clowns-ore9"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1}
+  ap_dat["infinite-clowns-ore8"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1, acid = "angels-liquid-hydrochloric-acid"}
+  ap_dat["infinite-clowns-ore9"] = { starting_area = false, base_density = 10, regular_rq_factor_multiplier = 0.9, starting_rq_factor_multiplier = 1.1, acid = "clowns-liquid-phosphoric-acid"}
 
   ore_dat["clowns-ore2"] = {--[[stage="clowns_ore2",]]ore_sheet = 4,	order = "c-b",	mining_time = 1.75*2.75--[[old time * hardness]], tint = {r = 1, g = 0, b = 0.5}}
   ore_dat["clowns-ore3"] = {--[[stage="clowns_ore3",]]ore_sheet = 3,	order = "c-c",	mining_time = 1.5*0.9--[[old time * hardness]],	tint = {r = 0.4, g = 0.4, b = 0.4}}
@@ -92,7 +92,7 @@ if mods["angelsinfiniteores"] then
       local build_tab = {
         name = ore_name,
         get = base_ore,
-        order = "a"..ore_dat[base_ore].order, --place inf ores at the top of the list
+        order = "b"..ore_dat[base_ore].order, --place inf ores at the top of the list
         sheet = ore_dat[base_ore].sheet,
         infinite = true,
         glow = true,
@@ -104,7 +104,7 @@ if mods["angelsinfiniteores"] then
         minimum = angelsmods.ores.yield,
         normal = 1500,
         maximum = 6000,
-        acid_to_mine = "angels-liquid-sulfuric-acid",
+        acid_to_mine = ap_dat[ore_name].acid or "angels-liquid-sulfuric-acid",
         output_name = base_ore,
         output_min = 1,
         output_max = 1,
