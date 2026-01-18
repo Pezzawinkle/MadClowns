@@ -21,7 +21,7 @@ table.insert(data.raw["technology"]["oil-gathering"].effects, {type = "unlock-re
 if not clowns.special_vanilla then
   table.insert(data.raw["technology"]["angels-water-washing-2"].effects, {type = "unlock-recipe", recipe = "clowns-resource1-sluicing"}) --is this not a processing item?
 end
-
+require("prototypes.overrides.technology")
 --pyanodon updates
 require("prototypes.pyanodon_updates")
 --if omnimatter crystal, add crystals
