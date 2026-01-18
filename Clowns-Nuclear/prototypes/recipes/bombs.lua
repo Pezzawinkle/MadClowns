@@ -9,7 +9,6 @@ data:extend(
 		{
 			{type="item",name="processing-unit", amount=20},
 			{type="item",name="explosives", amount=10},
-			{type="item",name="plutonium-239", amount=10},
 		},
 		results = {{type="item",name="atomic-bomb",amount =1}},
 		icons =
@@ -70,4 +69,10 @@ if data.raw.item["advanced-processing-unit"] then
 	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {type="item",name="advanced-processing-unit", amount=200})
 else
 	table.insert(data.raw["recipe"]["thermonuclear-bomb"].ingredients, {type="item",name="processing-unit", amount=200})
+end
+
+if mods["angelspetrochem"] then
+	table.insert(data.raw["recipe"]["plutonium-atomic-bomb"].ingredients, {type="item",name="angels-plutonium-239", amount= 10})
+else
+	table.insert(data.raw["recipe"]["plutonium-atomic-bomb"].ingredients, {type="item",name="plutonium-239",amount= 10})
 end

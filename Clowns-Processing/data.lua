@@ -14,7 +14,8 @@ if mods["pyrawores"] then --force full mode
 end
 
 if not clowns.special_vanilla--[[=false]] then
-  angelsmods.trigger.smelting_products["enable-all"] = true -- to ensure we get all the powders
+  --angelsmods.trigger.smelting_products["enable-all"] = true -- to ensure we get all the powders
+  angelsmods.trigger.smelting_products["aluminium"].powder = true
   angelsmods.trigger.ores["aluminium"] = true
   angelsmods.trigger.ores["gold"] = true
   angelsmods.trigger.ores["platinum"] = true

@@ -75,9 +75,6 @@ end
 --update aluminium
 if angelsmods.trigger.smelting_products["aluminium"].plate then
 	data.raw.recipe["angels-liquid-molten-aluminium-3"].order = "i[liquid-molten-aluminium]-d"
-	data.raw.recipe["angels-liquid-molten-aluminium-3"].icons = angelsmods.functions.add_number_icon_layer(
-		angelsmods.functions.get_object_icons("angels-liquid-molten-aluminium"),
-		4, angelsmods.smelting.number_tint)
 end
 --update titanium sponge
 if angelsmods.trigger.smelting_products["titanium"].plate then

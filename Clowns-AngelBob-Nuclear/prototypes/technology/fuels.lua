@@ -14,7 +14,8 @@ data:extend(
 		},
 		prerequisites = {
 			"nuclear-power",
-			"rocket-fuel"
+			"rocket-fuel",
+			"centrifuging-1"
 	},
 		unit =
 		{
@@ -22,7 +23,9 @@ data:extend(
 			{
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
-				{"chemical-science-pack", 1}
+				{"chemical-science-pack", 1},
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1}
 			},
 			time = 30,
 			count = 100
@@ -41,14 +44,16 @@ data:extend(
 				recipe = "clowns-hypernuclear-fuel"
 			},
 		},
-		prerequisites = {"nuclear-fuel-1"},
+		prerequisites = {"nuclear-fuel-1", "nuclear-fuel-reprocessing-2"},
 		unit =
 		{
 			ingredients =
 			{
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
-				{"chemical-science-pack", 1}
+				{"chemical-science-pack", 1},
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1}
 			},
 			time = 30,
 			count = 100
@@ -74,7 +79,9 @@ data:extend(
 			{
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
-				{"chemical-science-pack", 1}
+				{"chemical-science-pack", 1},
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1}
 			},
 			time = 30,
 			count = 100
@@ -93,7 +100,7 @@ data:extend(
 				recipe = "clowns-radiothermal-fuel"
 			},
 		},
-		prerequisites = {"nuclear-power"},
+		prerequisites = {"nuclear-power", "nuclear-fuel-reprocessing-2"},
 		unit =
 		{
 			ingredients =

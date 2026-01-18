@@ -3,6 +3,7 @@ Version: 2.0.12
 Date: ????
   Bugfixes:
     - Fixed crash with Uranium Centrifuging to 20% Enrichment
+    - Recipe & Tech Tree fixes/updates
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.11
 Date: 2026-01-11

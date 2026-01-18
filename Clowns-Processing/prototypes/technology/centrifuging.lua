@@ -15,7 +15,7 @@ if settings.startup["MCP_enable_centrifuges"].value then
 			},
 			
 		},
-		prerequisites = {"nuclear-power", "production-science-pack"},
+		prerequisites = {"nuclear-power", "processing-unit", "production-science-pack"},
 		unit =
 		{
 			ingredients =

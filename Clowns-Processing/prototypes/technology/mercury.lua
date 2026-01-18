@@ -42,7 +42,7 @@ data:extend(
         recipe = "clowns-neurotoxin-capsule"
       },
     },
-    prerequisites = {"mercury-processing-1", "military-3"},
+    prerequisites = {"mercury-processing-1", "military-3", "angels-sodium-processing-1", "angels-chlorine-processing-2", "processing-unit"},
     unit =
     {
       ingredients =

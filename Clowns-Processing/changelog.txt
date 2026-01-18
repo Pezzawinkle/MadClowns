@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.12
+Date: ????
+  Bugfixes:
+    - Fixed issue with icons missing sizes causing start-up crashes
+    - Recipe & Tech Tree fixes/updates
+---------------------------------------------------------------------------------------------------
 Version: 2.0.11
 Date: 2026-01-11
   Bugfixes:

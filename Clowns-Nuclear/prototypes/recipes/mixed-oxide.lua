@@ -8,7 +8,6 @@ data:extend(
 		ingredients =
 		{
 			{type="item",name="iron-plate", amount=2},
-			{type="item",name="plutonium-239", amount=2},
 			{type="item",name="uranium-238", amount=2},
 		},
 		icon = "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-mixed-oxide.png",
@@ -25,3 +24,9 @@ data:extend(
 	
 }
 )
+
+if mods["angelspetrochem"] then
+	table.insert(data.raw["recipe"]["mixed-oxide"].ingredients, {type="item",name="angels-plutonium-239", amount= 2})
+else
+	table.insert(data.raw["recipe"]["mixed-oxide"].ingredients, {type="item",name="plutonium-239",amount= 2})
+end

@@ -32,7 +32,7 @@ data:extend(
 				recipe = "clowns-osmium-rounds-magazine"
 			},
 		},
-		prerequisites = {"angels-powder-metallurgy-4", "angels-ore-processing-3", "military-3"},
+		prerequisites = {"angels-powder-metallurgy-4", "angels-ore-processing-3", "angels-sodium-processing-2", "angels-rocket-booster-2", "military-3"},
 		unit =
 		{
 			ingredients =

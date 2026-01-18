@@ -9,6 +9,7 @@ if angelsmods.trigger.smelting_products["lead"].plate == true then
       type = "recipe",
       name = "copper-nickel-firearm-magazine",
       energy_required = 1,
+      enabled = false,
       ingredients = 
       {
         {type = "item", name = "copper-plate", amount = 3},

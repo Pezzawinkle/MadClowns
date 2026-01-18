@@ -1,8 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.07
+Date: ????
+  Bugfixes:
+    - Error with equipment in nuke recipe
+    - Recipe & Tech Tree fixes/updates
+---------------------------------------------------------------------------------------------------
 Version: 2.0.06
 Date: 2026-01-10
   Features:
     - small tweaks for bobs and angels compat
+  Bugfixes:
+    - Recipe & Tech Tree fixes/updates
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.05
 Date: 2025-06-15
