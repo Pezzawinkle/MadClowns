@@ -127,8 +127,3 @@ data.raw.item["nuclear-fuel"].order = "a-a"
 data.raw.item["nuclear-fuel"].subgroup = "clowns-nuclear-fuels"
 
 CF.replace_ing("uranium-processing","uranium-ore",{type="item", name = "uranium-ore", amount = 50},"ing")
-
-if data.raw.item["angels-plate-zince"] then 
-	CF.add_unlock("advanced-magnesium-smelting-2", "molten-aluminium-smelting-5")
-	CF.add_prereq("advanced-magnesium-smelting-2", "angels-zinc-smelting-3")
-end

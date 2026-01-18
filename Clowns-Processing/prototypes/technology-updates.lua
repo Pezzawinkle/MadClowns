@@ -28,6 +28,10 @@ if data.raw.recipe["angels-brass-smelting-4"] then
   table.insert(unlock_lists,{"angels-brass-smelting-3","angels-brass-smelting-4"})
   OV.add_prereq("angels-brass-smelting-3", "phosphorus-processing-2")
 end
+if angelsmods.trigger.smelting_products["zinc"].plate then
+	OV.add_unlock("advanced-magnesium-smelting-2", "molten-aluminium-smelting-5")
+	OV.add_prereq("advanced-magnesium-smelting-2", "angels-zinc-smelting-3")
+end
 if angelsmods.trigger.smelting_products["titanium"].plate then
   table.insert(unlock_lists,{"angels-titanium-smelting-2","angels-sponge-magnesium-titanium-smelting"})
   table.insert(unlock_lists,{"advanced-magnesium-smelting-2","angels-pellet-magnesium-titanium-smelting"})
