@@ -1,9 +1,13 @@
 -- function to know if this is special vanilla or not (DUPLICATE OF ANGELS, since this mod seems to be calling it earlier)
-if not clowns then clowns={} end
-if not clowns.functions then clowns.functions={} end
-if not clowns.tables then clowns.tables ={} end
+if not clowns then clowns = {} end
+if not clowns.functions then clowns.functions = {} end
+if not clowns.tables then clowns.tables = {} end
+clowns.trigger = clowns.trigger or {}
+clowns.trigger.smelting_products = clowns.trigger.smelting_products or {}
+clowns.trigger.smelting_products["magnesium"] = clowns.trigger.smelting_products["magnesium"] or {}
+
 --check vanilla settings
-clowns.special_vanilla = true --assume true, then find out if false 
+clowns.special_vanilla = true --assume true, then find out if false
 for ore_name, ore_enabled in pairs(angelsmods.trigger.ores or {}) do
   if ore_enabled and ore_name ~= "iron" and ore_name ~= "copper" and ore_name ~= "uranium" then
     clowns.special_vanilla = false
@@ -13,7 +17,7 @@ if mods["pyrawores"] then --force full mode
   clowns.special_vanilla = false
 end
 
-if not clowns.special_vanilla--[[=false]] then
+if not clowns.special_vanilla --[[=false]] then
   --angelsmods.trigger.smelting_products["enable-all"] = true -- to ensure we get all the powders
   angelsmods.trigger.smelting_products["aluminium"].powder = true
   angelsmods.trigger.ores["aluminium"] = true
@@ -32,7 +36,7 @@ require("prototypes.categories")
 -- ITEMS
 -- vanilla-items include things for angels-refining,smelting and petrochem
 require("prototypes.buildings.sluicer")
-require("prototypes.buildings.centrifuge")--active if setting
+require("prototypes.buildings.centrifuge") --active if setting
 
 require("prototypes.items.vanilla-items")
 require("prototypes.items.neurotoxin")

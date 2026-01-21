@@ -1,7 +1,7 @@
 --[[OPTIONAL REMOVE BOB'S BULLETS
 if settings.startup["bob-bullet-override"].value and mods["bobwarfare"] then
 	--DO THINGS SOME DAY :o
-end]]--
+end]] --
 
 --REPLACE URANIUM-238 WITH DEPLETED URANIUM FOR MILITARY APPLICATIONS
 
@@ -57,7 +57,7 @@ angelsmods.functions.OV.patch_recipes({
 end]]
 --centrifuge updates
 if settings.startup["MCP_enable_centrifuges"].value then
-	data.raw.item["centrifuge"].localised_name={"centrifuge","MK1"}
+	data.raw.item["centrifuge"].localised_name = { "centrifuge", "MK1" }
 	data.raw.item["centrifuge"].order = "a-a"
 	data.raw["assembling-machine"]["centrifuge"].fast_replaceable_group = "centrifuge"
 end
@@ -84,4 +84,16 @@ if angelsmods.trigger.smelting_products["titanium"].plate then
 	data.raw.recipe["angels-sponge-magnesium-titanium-smelting"].icons = angelsmods.functions.add_number_icon_layer(
 		angelsmods.functions.get_object_icons("angels-sponge-titanium"),
 		2, angelsmods.smelting.number_tint)
+end
+
+if clowns.trigger.smelting_products["magnesium"].plate then
+else
+	angelsmods.functions.OV.disable_recipe({
+		"clowns-molten-magnesium-smelting",
+		"clowns-plate-magnesium",
+	})
+	angelsmods.functions.hide({
+		"clowns-liquid-molten-magnesium",
+		"clowns-plate-magnesium",
+	})
 end
