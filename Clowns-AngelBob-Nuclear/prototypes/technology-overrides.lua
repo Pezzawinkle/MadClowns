@@ -51,9 +51,11 @@ clowns.functions.add_unlock("mixed-oxide-fuel", "angels-mixed-oxide-cell")      
 clowns.functions.add_unlock("mixed-oxide-fuel", "angels-mixed-oxide-reprocessing")      --take from kovarex
 
 clowns.functions.add_prereq("mixed-oxide-fuel", "production-science-pack")
-clowns.functions.add_prereq("angels-thorium-power", "mixed-oxide-fuel")
+clowns.functions.add_prereq("angels-thorium-power", "thorium-ore-processing")
+clowns.functions.add_prereq("thorium-nuclear-fuel-reprocessing-2", "angels-thorium-power")
 clowns.functions.add_prereq("nuclear-fuel-reprocessing-2", "angels-water-treatment-4")
 clowns.functions.add_unlock("nuclear-fuel-reprocessing-2", "radioactive-waste-water-purification")
+OV.set_science_pack("thorium-nuclear-fuel-reprocessing-2", "utility-science-pack", 1)
 
 if data.raw.technology["bobingabout-enrichment-process"] then
 	OV.remove_prereq("bobingabout-enrichment-process", "kovarex-enrichment-process")
