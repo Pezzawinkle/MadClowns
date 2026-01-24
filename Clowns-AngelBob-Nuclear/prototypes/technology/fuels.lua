@@ -72,7 +72,7 @@ data:extend(
 					recipe = "clowns-turbonuclear-fuel"
 				},
 			},
-			prerequisites = { "nuclear-fuel-2" },
+			prerequisites = { "nuclear-fuel-2", "thorium-nuclear-fuel-reprocessing-2" },
 			unit =
 			{
 				ingredients =
