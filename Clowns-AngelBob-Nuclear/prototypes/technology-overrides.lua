@@ -49,12 +49,22 @@ clowns.functions.add_unlock("mixed-oxide-fuel", "angels-plutonium-synthesis")   
 clowns.functions.add_unlock("mixed-oxide-fuel", "angels-americium-regeneration")        --take from kovarex
 clowns.functions.add_unlock("mixed-oxide-fuel", "angels-mixed-oxide-cell")              --take from kovarex
 clowns.functions.add_unlock("mixed-oxide-fuel", "angels-mixed-oxide-reprocessing")      --take from kovarex
+clowns.functions.add_unlock("mixed-oxide-fuel", "advanced-nuclear-fuel-reprocessing-b")
 
 clowns.functions.add_prereq("mixed-oxide-fuel", "production-science-pack")
+clowns.functions.add_prereq("mixed-oxide-fuel", "centrifuging-1")
+clowns.functions.add_prereq("angels-thorium-power", "thorium-ore-processing")
+clowns.functions.add_prereq("angels-thorium-power", "rocket-fuel")
+clowns.functions.add_prereq("thorium-nuclear-fuel-reprocessing-2", "angels-thorium-power")
 clowns.functions.add_prereq("angels-thorium-power", "thorium-ore-processing")
 clowns.functions.add_prereq("thorium-nuclear-fuel-reprocessing-2", "angels-thorium-power")
 clowns.functions.add_prereq("nuclear-fuel-reprocessing-2", "angels-water-treatment-4")
 clowns.functions.add_unlock("nuclear-fuel-reprocessing-2", "radioactive-waste-water-purification")
+clowns.functions.add_unlock("nuclear-fuel-reprocessing-2", "advanced-nuclear-fuel-reprocessing-2")
+clowns.functions.add_unlock("angels-thorium-power", "clowns-thorium-mixed-oxide")
+clowns.functions.add_unlock("angels-thorium-power", "clowns-thorium-fuel-cell")
+clowns.functions.add_unlock("angels-thorium-power", "angels-nuclear-fuel")
+clowns.functions.add_unlock("angels-thorium-power", "angels-nuclear-fuel-2")
 OV.set_science_pack("thorium-nuclear-fuel-reprocessing-2", "utility-science-pack", 1)
 
 if data.raw.technology["bobingabout-enrichment-process"] then
