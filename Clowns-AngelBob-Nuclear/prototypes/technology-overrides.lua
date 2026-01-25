@@ -17,8 +17,8 @@ if data.raw.technology["nuclear-fuel"] then
 	data.raw.technology["nuclear-fuel"].enabled = false
 end
 --if advanced centrifuging, push bomb behind it
-if data.raw.technology["advanced-centrifuging-2"] then
-	data.raw["technology"]["atomic-bomb"].prerequisites = { "advanced-centrifuging-2" }
+if data.raw.technology["centrifuging-2"] then
+	data.raw["technology"]["atomic-bomb"].prerequisites = { "centrifuging-2" }
 end
 --if thorium ore add thorium mox fuel cell recipe, or move advanced uranium to nuclear 2 to allow all fuels
 if data.raw.item["angels-thorium-fuel-cell"] --[[or data.raw.item["angels-thorium-fuel-cell"]] then
@@ -55,7 +55,6 @@ clowns.functions.add_unlock("mixed-oxide-fuel", "advanced-nuclear-fuel-reprocess
 clowns.functions.add_prereq("mixed-oxide-fuel", "production-science-pack")
 clowns.functions.add_prereq("angels-thorium-power", "thorium-ore-processing")
 clowns.functions.add_prereq("angels-thorium-power", "rocket-fuel")
-clowns.functions.add_prereq("angels-thorium-power", "centrifuging-1")
 clowns.functions.add_prereq("thorium-nuclear-fuel-reprocessing-2", "angels-thorium-power")
 clowns.functions.add_prereq("angels-thorium-power", "thorium-ore-processing")
 clowns.functions.add_prereq("thorium-nuclear-fuel-reprocessing-2", "angels-thorium-power")
@@ -83,13 +82,15 @@ if settings.startup["MCP_enable_centrifuges"].value then
 	centri_1 = "centrifuging-1"
 	centri_2 = "centrifuging-2"
 elseif mods["bobassembly"] and mods["bobassembly"] and settings.startup["bobmods-assembly-centrifuge"].value then
-	centri_1 = "centrifuge-2"
-	centri_2 = "centrifuge-3"
+	centri_1 = "bob-centrifuge-2"
+	centri_2 = "bob-centrifuge-3"
 end
 
 clowns.functions.add_unlock(centri_1, "depleted-uranium-reprocessing")
 clowns.functions.add_unlock(centri_1, "clowns-centrifuging-45pc")
 clowns.functions.add_unlock(centri_1, "clowns-centrifuging-55pc")
+clowns.functions.add_prereq("angels-thorium-power", centri_1)
+clowns.functions.add_prereq("nuclear-fuel-1", centri_1)
 clowns.functions.add_unlock(centri_2, "clowns-centrifuging-65pc")
 clowns.functions.add_unlock(centri_2, "clowns-centrifuging-70pc")
 clowns.functions.add_unlock(centri_2, "clowns-centrifuging-75pc")

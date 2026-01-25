@@ -15,7 +15,6 @@ data:extend(
 			prerequisites = {
 				"nuclear-power",
 				"rocket-fuel",
-				"centrifuging-1"
 			},
 			unit =
 			{
