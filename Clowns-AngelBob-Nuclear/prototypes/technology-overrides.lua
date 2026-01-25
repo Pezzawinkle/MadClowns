@@ -7,7 +7,7 @@ data.raw.technology["advanced-uranium-processing-1"].effects =
 	{ type = "unlock-recipe", recipe = "clowns-solid-uranium-tetrafluoride" },
 	{ type = "unlock-recipe", recipe = "clowns-solid-uranium-oxide-1" },
 	{ type = "unlock-recipe", recipe = "clowns-centrifuging-20pc-hexafluoride" },
-	--{type = "unlock-recipe", recipe = "advanced-uranium-processing"}, is this meant to be removed?
+	{ type = "unlock-recipe", recipe = "advanced-uranium-processing" },
 }
 --clobber vanilla and angels nuclear fuel recipes
 if data.raw.technology["angels-nuclear-fuel"] then
