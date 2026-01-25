@@ -17,11 +17,10 @@ data.raw.recipe["atomic-bomb"].icons =
 data.raw.recipe["atomic-bomb"].icon_size = 32
 data.raw["assembling-machine"]["centrifuge"].ingredient_count = 5
 
-CF.add_to_table("nuclear-fuel-reprocessing", { type = "item", name = "plutonium-239", amount = 5 }, "res")
-CF.replace_ing("nuclear-fuel-reprocessing", "uranium-238", { type = "item", name = "uranium-238", amount = 3 }, "res")
+CF.add_to_table("nuclear-fuel-reprocessing",{type="item",name="plutonium-239",amount=5},"res")
+CF.replace_ing("nuclear-fuel-reprocessing","uranium-238",{type="item", name = "uranium-238", amount = 3},"res")
 if mods["angelspetrochem"] then
-	CF.add_unlock("angels-thorium-power", "angels-nuclear-fuel")
-	CF.add_unlock("angels-thorium-power", "angels-nuclear-fuel-2")
+CF.add_prereq("angels-nuclear-fuel", "kovarex-enrichment-process")
 end
 
 data.raw.recipe["nuclear-fuel-reprocessing"].icons = { { icon = "__Clowns-Nuclear__/graphics/icons/nuclear-fuel-reprocessing.png", icon_size = 32 } }
@@ -31,14 +30,14 @@ data.raw.recipe["nuclear-fuel-reprocessing"].subgroup = "clowns-nuclear-reproces
 data.raw.recipe["nuclear-fuel-reprocessing"].order = "a[uranium]-a"
 
 --REBUILD NUCLEAR POWER TECHNOLOGY
-CF.add_unlock("nuclear-power", "nuclear-reactor")
+CF.add_unlock("nuclear-power","nuclear-reactor")
 --CF.add_unlock("nuclear-power","centrifuge")
-CF.add_unlock("uranium-processing", "clowns-centrifuging-20pc-ore")
-CF.add_unlock("uranium-processing", "clowns-centrifuging-35pc")
-CF.add_unlock("nuclear-power", "uranium-fuel-cell")
-CF.add_unlock("nuclear-power", "heat-exchanger")
-CF.add_unlock("nuclear-power", "steam-turbine")
-CF.remove_unlock("uranium-processing", "uranium-fuel-cell")
+CF.add_unlock("uranium-processing","clowns-centrifuging-20pc-ore")
+CF.add_unlock("uranium-processing","clowns-centrifuging-35pc")
+CF.add_unlock("nuclear-power","uranium-fuel-cell")
+CF.add_unlock("nuclear-power","heat-exchanger")
+CF.add_unlock("nuclear-power","steam-turbine")
+CF.remove_unlock("uranium-processing","uranium-fuel-cell")
 CF.add_prereq("mixed-oxide-fuel", "nuclear-fuel-reprocessing")
 
 if mods["bobpower"] then
@@ -46,7 +45,7 @@ if mods["bobpower"] then
 	CF.add_prereq("nuclear-power", "bob-steam-engine-3")
 	CF.add_prereq("nuclear-power", "bob-cobalt-processing")
 else
-	CF.add_unlock("nuclear-power", "heat-pipe")
+	CF.add_unlock("nuclear-power","heat-pipe")
 end
 
 if mods["bobequipment"] then
@@ -110,8 +109,8 @@ if settings.startup["artillery-shells"].value == true then
 	CF.add_unlock("atomic-bomb", "artillery-shell-nuclear")
 	CF.add_unlock("thermonuclear-bomb", "artillery-shell-thermonuclear")
 end
-CF.add_unlock("atomic-bomb", "plutonium-atomic-bomb")
-CF.add_prereq("atomic-bomb", "nuclear-fuel-reprocessing")
+CF.add_unlock("atomic-bomb","plutonium-atomic-bomb")
+CF.add_prereq("atomic-bomb","nuclear-fuel-reprocessing")
 
 data.raw.item["depleted-uranium-fuel-cell"].subgroup = "clowns-nuclear-cells"
 data.raw.item["depleted-uranium-fuel-cell"].order = "b-a"

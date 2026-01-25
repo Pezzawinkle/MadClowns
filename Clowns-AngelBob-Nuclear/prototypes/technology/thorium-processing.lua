@@ -1,4 +1,5 @@
-data:extend(
+  data:extend(
+{
 	{
 		{
 			type = "technology",
@@ -29,21 +30,28 @@ data:extend(
 				"mixed-oxide-fuel",
 				"angels-ore-electro-whinning-cell"
 			},
-			unit =
+      {
+				type = "unlock-recipe",
+				recipe = "clowns-thorium-ore-processing"
+			},
+		},
+		prerequisites = {
+			"advanced-uranium-processing-2",
+			"mixed-oxide-fuel",
+			"angels-ore-electro-whinning-cell"
+	},
+		unit =
+		{
+			ingredients =
 			{
-				ingredients =
-				{
-					{ "automation-science-pack", 1 },
-					{ "logistic-science-pack",   1 },
-					{ "chemical-science-pack",   1 },
-					{ "production-science-pack", 1 },
-					{ "utility-science-pack",    1 }
-				},
-				time = 30,
-				count = 100
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+        		{"production-science-pack",1},
+				{"utility-science-pack",1}
 			},
 			order = "e-p-b-c"
 		},
 
-	}
+}
 )
