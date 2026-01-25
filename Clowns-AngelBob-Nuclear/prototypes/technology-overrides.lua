@@ -31,12 +31,13 @@ end
 data.raw.technology["kovarex-enrichment-process"].enabled = false
 clowns.functions.pre_req_repl("atomic-bomb", "kovarex-enrichment-process", "nuclear-power")
 if mods["bobequipment"] then
-	clowns.functions.pre_req_repl("bob-fission-reactor-equipment-2", "kovarex-enrichment-process", "nuclear-power")
+	clowns.functions.pre_req_repl("bob-fission-reactor-equipment-2", "kovarex-enrichment-process", "mixed-oxide-fuel")
 end
 if mods["bobvehicleequipment"] then
-	clowns.functions.pre_req_repl("bob-vehicle-fission-cell-equipment-3", "kovarex-enrichment-process", "nuclear-power")
+	clowns.functions.pre_req_repl("bob-vehicle-fission-cell-equipment-3", "kovarex-enrichment-process",
+		"mixed-oxide-fuel")
 	clowns.functions.pre_req_repl("bob-vehicle-fission-reactor-equipment-3", "kovarex-enrichment-process",
-		"nuclear-power")
+		"mixed-oxide-fuel")
 end
 
 
@@ -49,14 +50,26 @@ clowns.functions.add_unlock("mixed-oxide-fuel", "angels-plutonium-synthesis")   
 clowns.functions.add_unlock("mixed-oxide-fuel", "angels-americium-regeneration")        --take from kovarex
 clowns.functions.add_unlock("mixed-oxide-fuel", "angels-mixed-oxide-cell")              --take from kovarex
 clowns.functions.add_unlock("mixed-oxide-fuel", "angels-mixed-oxide-reprocessing")      --take from kovarex
+clowns.functions.add_unlock("mixed-oxide-fuel", "advanced-nuclear-fuel-reprocessing-b")
 
 clowns.functions.add_prereq("mixed-oxide-fuel", "production-science-pack")
+clowns.functions.add_prereq("angels-thorium-power", "thorium-ore-processing")
+clowns.functions.add_prereq("angels-thorium-power", "rocket-fuel")
+clowns.functions.add_prereq("angels-thorium-power", "centrifuging-1")
+clowns.functions.add_prereq("thorium-nuclear-fuel-reprocessing-2", "angels-thorium-power")
 clowns.functions.add_prereq("angels-thorium-power", "thorium-ore-processing")
 clowns.functions.add_prereq("thorium-nuclear-fuel-reprocessing-2", "angels-thorium-power")
 clowns.functions.add_prereq("nuclear-fuel-reprocessing-2", "angels-water-treatment-4")
 clowns.functions.add_unlock("nuclear-fuel-reprocessing-2", "radioactive-waste-water-purification")
+clowns.functions.add_unlock("nuclear-fuel-reprocessing-2", "advanced-nuclear-fuel-reprocessing-2")
+clowns.functions.add_unlock("angels-thorium-power", "clowns-thorium-mixed-oxide")
+clowns.functions.add_unlock("angels-thorium-power", "clowns-thorium-fuel-cell")
+clowns.functions.add_unlock("angels-thorium-power", "angels-nuclear-fuel")
+clowns.functions.add_unlock("angels-thorium-power", "angels-nuclear-fuel-2")
 OV.set_science_pack("thorium-nuclear-fuel-reprocessing-2", "utility-science-pack", 1)
-
+if mods["bobassembly"] then
+	clowns.functions.add_prereq("mixed-oxide-fuel", "bob-centrifuge-2")
+end
 if data.raw.technology["bobingabout-enrichment-process"] then
 	OV.remove_prereq("bobingabout-enrichment-process", "kovarex-enrichment-process")
 	--OV.remove_prereq("thorium-nuclear-fuel-reprocessing-2", "bobingabout-enrichment-process")
