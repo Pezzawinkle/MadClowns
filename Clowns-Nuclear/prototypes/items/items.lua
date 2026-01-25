@@ -1,3 +1,4 @@
+if not mods["angelspetrochem"] then
 data:extend(
 {
 	{
@@ -9,6 +10,11 @@ data:extend(
 		order = "c",
 		stack_size = 50
 	},
+})
+end
+
+data:extend(
+{
 	{
 		type = "ammo",
 		name = "thermonuclear-bomb",

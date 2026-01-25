@@ -97,7 +97,7 @@ if not clowns.special_vanilla then
 		},
 		{
 			type = "recipe",
-			name = "angels-platinum-pure-processing",
+			name = "clowns-platinum-pure-processing",
 			localised_name = {"item-name.angels-platinum-ore"},
 			category = "angels-ore-sorting-4",
 			subgroup = "angels-ore-sorting-advanced",

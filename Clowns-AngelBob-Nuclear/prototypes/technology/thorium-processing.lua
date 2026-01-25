@@ -1,4 +1,3 @@
-if data.raw.item["thorium-fuel-cell"] then
   data:extend(
 {
 	{
@@ -18,12 +17,13 @@ if data.raw.item["thorium-fuel-cell"] then
 			},
       {
 				type = "unlock-recipe",
-				recipe = "thorium-ore-processing"
+				recipe = "clowns-thorium-ore-processing"
 			},
 		},
 		prerequisites = {
 			"advanced-uranium-processing-2",
-			"angels-mixed-oxide-fuel"
+			"mixed-oxide-fuel",
+			"angels-ore-electro-whinning-cell"
 	},
 		unit =
 		{
@@ -32,7 +32,8 @@ if data.raw.item["thorium-fuel-cell"] then
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1},
-        {"production-science-pack",1}
+        		{"production-science-pack",1},
+				{"utility-science-pack",1}
 			},
 			time = 30,
 			count = 100
@@ -42,4 +43,3 @@ if data.raw.item["thorium-fuel-cell"] then
 
 }
 )
-end

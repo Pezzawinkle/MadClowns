@@ -13,7 +13,7 @@ if not clowns.special_vanilla then
           recipe = "clowns-resource1-sluicing-advanced"
         },
       },
-      prerequisites = {"angels-water-washing-2"},
+      prerequisites = {"angels-water-washing-2", "production-science-pack"},
       unit =
       {
         ingredients =

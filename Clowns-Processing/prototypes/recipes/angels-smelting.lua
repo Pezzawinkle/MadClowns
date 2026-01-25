@@ -77,7 +77,7 @@ if angelsmods.trigger.smelting_products["aluminium"].plate then
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-liquid-molten-aluminium"),
-      3, angelsmods.smelting.number_tint),
+      4, angelsmods.smelting.number_tint),
     order = "i[liquid-molten-aluminium]-c",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-aluminium"),
   }
