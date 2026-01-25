@@ -30,7 +30,9 @@ if not clowns.special_vanilla --[[=false]] then
 end
 angelsmods.trigger.sintering_tech = true
 angelsmods.trigger.early_chemical_furnace = true
-
+if mods["bobassembly"] then
+  settings.startup["MCP_enable_centrifuges"].value = false
+end
 require("prototypes.categories")
 
 -- ITEMS
