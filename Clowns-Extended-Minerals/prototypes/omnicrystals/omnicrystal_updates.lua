@@ -35,9 +35,8 @@ if mods["omnimatter_crystal"] then
     table.insert(oresList, { ore = "clowns-ore9", name = "Nova-Leucoxene" })
   end
   -- icon updates
-
   if mods["bobplates"] then
-    local icon_fixes = {
+    icon_fixes = {
       ["angels-solid-lithium"] = "solid-lithium-crystal",
       ["angels-solid-sodium-carbonate"] = "solid-sodium-carbonate-crystal",
       ["angels-solid-calcium-sulfate"] = "solid-calcium-sulfate-crystal",
@@ -48,7 +47,7 @@ if mods["omnimatter_crystal"] then
       ["angels-slag"] = "solid-limestone-crystal",
     }
   else
-    local icon_fixes = {
+    icon_fixes = {
       ["angels-solid-sodium-carbonate"] = "solid-sodium-carbonate-crystal",
       ["angels-solid-calcium-sulfate"] = "solid-calcium-sulfate-crystal",
       ["angels-solid-limestone"] = "solid-limestone-crystal",
@@ -58,7 +57,6 @@ if mods["omnimatter_crystal"] then
       ["angels-slag"] = "solid-limestone-crystal",
     }
   end
-
 
   for i, k in pairs(icon_fixes) do
     data.raw.item[i .. "-crystal"].icons = { { icon = "__Clowns-Extended-Minerals__/graphics/icons/omnicrystals/" .. k .. ".png", icon_size = 32, } }
