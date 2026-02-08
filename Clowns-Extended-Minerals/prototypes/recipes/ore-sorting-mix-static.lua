@@ -12,8 +12,8 @@ if not clowns.special_vanilla then
 				energy_required = 1,
 				allow_productivity = true,
 				ingredients = {
-					{ type = "item", name = "clowns-ore6-crushed",  amount = 2 },
-					{ type = "item", name = "angels-ore2-crushed",  amount = 2 },
+					{ type = "item", name = "clowns-ore6-crushed",      amount = 2 },
+					{ type = "item", name = "angels-ore2-crushed",      amount = 2 },
 					{ type = "item", name = "angels-catalysator-brown", amount = 1 },
 				},
 				results = {
@@ -23,7 +23,7 @@ if not clowns.special_vanilla then
 					{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",     icon_size = 32, },
 					{ icon = "__angelssmeltinggraphics__/graphics/icons/ore-manganese.png", icon_size = 32, scale = 0.5, shift = { 8, 8 }, },
 				},
-				order = "o-a" --Just after Uranium
+				order = "r-a" --Just after Platinum
 			},
 			{
 				type = "recipe",
@@ -47,7 +47,7 @@ if not clowns.special_vanilla then
 					{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32, },
 					{ icon = "__Clowns-Processing__/graphics/icons/phosphorus-ore.png", icon_size = 32, scale = 0.5, shift = { 8, 8 }, },
 				},
-				order = "o-a" --Just after Uranium
+				order = "r-a" --Just after Platinum
 			},
 			{
 				type = "recipe",
@@ -71,7 +71,7 @@ if not clowns.special_vanilla then
 					{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",  icon_size = 32, },
 					{ icon = "__angelssmeltinggraphics__/graphics/icons/ore-chrome.png", icon_size = 32, scale = 0.5, shift = { 8, 8 }, },
 				},
-				order = "o-a" --Just after Uranium
+				order = "r-a" --Just after Platinum
 			},
 			{
 				type = "recipe",
@@ -97,7 +97,7 @@ if not clowns.special_vanilla then
 					{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32, },
 					{ icon = "__Clowns-Processing__/graphics/icons/magnesium-ore.png",  icon_size = 32, scale = 0.5, shift = { 8, 8 }, },
 				},
-				order = "o-a" --Just after Uranium
+				order = "r-a" --Just after Platinum
 			},
 			{
 				type = "recipe",
@@ -122,7 +122,7 @@ if not clowns.special_vanilla then
 					{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",    icon_size = 32 },
 					{ icon = "__angelssmeltinggraphics__/graphics/icons/ore-platinum.png", icon_size = 32, scale = 0.5, shift = { 8, 8 }, },
 				},
-				order = "o-a" --Just after Uranium
+				order = "r-a" --Just after Platinum
 			},
 			{
 				type = "recipe",
@@ -147,7 +147,7 @@ if not clowns.special_vanilla then
 					{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32, },
 					{ icon = "__Clowns-Processing__/graphics/icons/osmium-ore.png",     icon_size = 32, scale = 0.5, shift = { 8, 8 }, },
 				},
-				order = "o-a" --Just after Uranium
+				order = "r-a" --Just after Platinum
 			},
 		}
 	)
@@ -178,7 +178,7 @@ if mods["Clowns-AngelBob-Nuclear"] then
 					{ icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32, },
 					{ icon = "__Clowns-Nuclear__/graphics/icons/ore-5.png",             icon_size = 32, scale = 0.5, shift = { 8, 8 }, tint = { r = 1, g = 1, b = 0.25 } },
 				},
-				order = "o-a" --Just after Uranium
+				order = "r-a" --Just after Platinum
 			}
 		}
 	)
