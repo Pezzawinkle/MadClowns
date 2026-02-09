@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.15
+Date: ????
+  Bugfixes:
+    - Fixed missing productivity from Pure ore sorting
+    - Moved pure sorting icons from after uranium to after platinum
+---------------------------------------------------------------------------------------------------
 Version: 2.0.14
 Date: ????
   Bugfixes:
