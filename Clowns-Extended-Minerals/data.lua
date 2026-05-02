@@ -44,8 +44,8 @@ require("prototypes.omnicrystals.omnicrystal_functions")
 	ore7fluid = "angels-liquid-hydrofluoric-acid"
 	ore8fluid = "angels-liquid-hydrochloric-acid"
 	ore9fluid = "clowns-liquid-phosphoric-acid"
-	ore2fluid = "angels-liquid-sulfuric-acid"
-	ore6fluid = "angels-liquid-sulfuric-acid"
+	ore2fluid = "sulfuric-acid"
+	ore6fluid = "sulfuric-acid"
 	res1fluid = "clowns-liquid-phosphoric-acid"
 	res2fluid = "steam"]]
 

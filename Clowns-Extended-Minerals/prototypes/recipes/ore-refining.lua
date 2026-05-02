@@ -2,17 +2,17 @@
 local ore_table = clowns.tables.ores
 local ore_material = {
   ["clowns-ore1"] = {order = "a", acid = "angels-liquid-hydrofluoric-acid", geode="purple"},
-  ["clowns-ore2"] = {order = "b", acid = "angels-liquid-sulfuric-acid", geode="lightgreen"},
+  ["clowns-ore2"] = {order = "b", acid = "sulfuric-acid", geode="lightgreen"},
   ["clowns-ore3"] = {order = "c", acid = "angels-liquid-nitric-acid", geode="red"},
   ["clowns-ore4"] = {order = "d", acid = "angels-liquid-hydrochloric-acid", geode="lightgreen"},
   ["clowns-ore5"] = {order = "e", acid = "angels-liquid-nitric-acid", geode="yellow"},
-  ["clowns-ore6"] = {order = "f", acid = "angels-liquid-sulfuric-acid", geode="cyan"},
+  ["clowns-ore6"] = {order = "f", acid = "sulfuric-acid", geode="cyan"},
   ["clowns-ore7"] = {order = "g", acid = "angels-liquid-hydrofluoric-acid", geode="blue"},
   ["clowns-ore8"] = {order = "h", acid = "angels-liquid-hydrochloric-acid", geode="lightgreen"},
   ["clowns-ore9"] = {order = "i", acid = "clowns-liquid-phosphoric-acid", geode="cyan"},
 }
 local acid_wastewater = {
-  ["angels-liquid-sulfuric-acid"] = "angels-water-yellow-waste",
+  ["sulfuric-acid"] = "angels-water-yellow-waste",
   ["angels-liquid-hydrofluoric-acid"] = "angels-water-greenyellow-waste",
   ["angels-liquid-nitric-acid"] = "angels-water-red-waste",
   ["angels-liquid-hydrochloric-acid"] = "angels-water-green-waste",

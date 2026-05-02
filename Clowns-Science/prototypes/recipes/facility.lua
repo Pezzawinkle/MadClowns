@@ -116,7 +116,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 			icons = {new_icons.military,overlay},
 			ingredients =
 			{
-				{type="fluid", name="angels-liquid-sulfuric-acid", amount=gas_param},
+				{type="fluid", name="sulfuric-acid", amount=gas_param},
 				{type="fluid", name="angels-gas-carbon-monoxide", amount=gas_param}
 			},
 			result = clowns.triggers.angels_tech and "datacore-war-1" or "military-science-pack"

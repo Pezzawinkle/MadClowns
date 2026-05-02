@@ -128,7 +128,7 @@ data:extend(
 		{
 			type = "technology",
 			name = "clowns-ore-electro-whinning-cell",
-			icon_size = 256,
+			icon_size = 128,
 			effects = {},
 			icon = "__angelsrefininggraphics__/graphics/technology/electro-whinning-cell-tech.png",
 			prerequisites = { "clowns-ore-refining", "utility-science-pack" },
