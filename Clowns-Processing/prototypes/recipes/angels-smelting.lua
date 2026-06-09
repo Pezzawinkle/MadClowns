@@ -3,6 +3,7 @@ local recipe={}
 angelsmods.trigger.smelting_products["iron"].plate = true
 angelsmods.trigger.smelting_products["iron"].ingot = true
   angelsmods.trigger.smelting_products["manganese"].ingot = true
+if mods["bobplates"] or (mods["angelsindustries"] and angelsmods.industries.overhaul) then
   --iron ingot recipes
   recipe[#recipe+1]=
   {
@@ -29,7 +30,7 @@ angelsmods.trigger.smelting_products["iron"].ingot = true
     order = "i[liquid-molten-iron]-f",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-iron"),
   }
- --include a magnesium sink for vanilla cases
+else --include a magnesium sink for vanilla cases
   recipe[#recipe+1]=
   {
     type = "recipe",
@@ -55,6 +56,7 @@ angelsmods.trigger.smelting_products["iron"].ingot = true
     order = "i[liquid-molten-iron]-b",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-steel"),
   }
+end
 --aluminium ingot recipes
 if angelsmods.trigger.smelting_products["aluminium"].plate then
   recipe[#recipe+1]=
