@@ -27,7 +27,7 @@ for _, ore in pairs(ore_table) do
         type = "recipe",
         name = ore.."-crushed",
         localised_name = {"recipe-name.clowns-mix",{"entity-name."..ore},"Crushing"},
-        category = "angels-ore-refining-t1",
+        categories ={"angels-ore-refining-t1",},
         subgroup = "clowns-ore-processing-a",
         energy_required = 1,
         enabled = false,
@@ -48,7 +48,7 @@ for _, ore in pairs(ore_table) do
         type = "recipe",
         name = ore.."-chunk",
         localised_name = {"recipe-name.clowns-mix",{"entity-name."..ore},"Hydro Refining"},
-        category = "angels-ore-refining-t2",--t2
+        categories ={"angels-ore-refining-t2",},--t2
         subgroup = "clowns-ore-processing-b",
         energy_required = 2,
         enabled = false,
@@ -61,7 +61,7 @@ for _, ore in pairs(ore_table) do
         {
           {type = "item", name = ore.."-chunk", amount = 2},
           {type = "fluid", name = acid_wastewater[ore_material[ore].acid], amount = 50},
-          {type = "item", name = "angels-geode-"..ore_material[ore].geode, amount = 1, probability = 0.5},
+          {type = "item", name = "angels-geode-"..ore_material[ore].geode, amount = 1, independent_probability = 0.5},
         },
         icon = "__Clowns-Extended-Minerals__/graphics/icons/"..ore.."/chunk.png",
         icon_size = 64,
@@ -71,7 +71,7 @@ for _, ore in pairs(ore_table) do
 		  {
         type = "recipe",
         name = ore.."-crystal",
-        category = "angels-ore-refining-t3", --t3
+        categories ={"angels-ore-refining-t3",}, --t3
         subgroup = "clowns-ore-processing-c",
         energy_required = 2,
         enabled = false,
@@ -92,7 +92,7 @@ for _, ore in pairs(ore_table) do
       {
         type = "recipe",
         name = ore.."-pure",
-        category = "angels-ore-refining-t4", --t4
+        categories ={"angels-ore-refining-t4",}, --t4
         subgroup = "clowns-ore-processing-d",
         energy_required = 2,
         enabled = false,

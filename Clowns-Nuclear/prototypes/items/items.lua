@@ -32,7 +32,7 @@ data:extend(
 			range_modifier = 5,
 			cooldown_modifier = 10,
 			target_type = "position",
-			category = "rocket",
+			categories = "rocket",
 			action =
 			{
 				type = "direct",
@@ -79,7 +79,7 @@ if settings.startup["artillery-shells"].value == true then
 			icon_size = 32,
 			ammo_type =
 			{
-				category = "artillery-shell",
+				categories = "artillery-shell",
 				target_type = "position",
 				action =
 				{
@@ -124,7 +124,7 @@ if settings.startup["artillery-shells"].value == true then
 			icon_size=32,
 			ammo_type =
 			{
-				category = "artillery-shell",
+				categories = "artillery-shell",
 				target_type = "position",
 				action =
 				{

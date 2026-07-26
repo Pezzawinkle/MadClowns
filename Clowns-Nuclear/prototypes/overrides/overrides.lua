@@ -43,7 +43,9 @@ CF.add_prereq("mixed-oxide-fuel", "nuclear-fuel-reprocessing")
 if mods["bobpower"] then
 	CF.add_prereq("nuclear-power", "bob-boiler-2")
 	CF.add_prereq("nuclear-power", "bob-steam-engine-3")
-	CF.add_prereq("nuclear-power", "bob-cobalt-processing")
+	if mods["bobplates"] then -- some people play power without plates :O
+		CF.add_prereq("nuclear-power", "bob-cobalt-processing")
+	end
 else
 	CF.add_unlock("nuclear-power","heat-pipe")
 end

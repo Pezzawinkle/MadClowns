@@ -6,7 +6,7 @@ data:extend(
 	{
 	type = "recipe",
 	name = "limestone-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__angelsrefininggraphics__/graphics/icons/solid-limestone.png",
 	icon_size = 32,
@@ -23,7 +23,7 @@ data:extend(
 	{
 	type = "recipe",
 	name = "angels-stone-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__base__/graphics/icons/stone.png",
 	icon_size = 32,
@@ -39,7 +39,7 @@ data:extend(
 	{
 	type = "recipe",
 	name = "coal-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__base__/graphics/icons/coal.png",
 	icon_size = 32,
@@ -57,7 +57,7 @@ data:extend(
 	{
 	type = "recipe",
 	name = "angels-ore1-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1.png",
 	icon_size = 32,
@@ -75,7 +75,7 @@ data:extend(
 	{
 	type = "recipe",
 	name = "angels-ore2-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2.png",
 	icon_size = 32,
@@ -93,7 +93,7 @@ data:extend(
 	{
 	type = "recipe",
 	name = "angels-ore3-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3.png",
 	icon_size = 32,
@@ -111,7 +111,7 @@ data:extend(
 	{
 	type = "recipe",
 	name = "angels-ore4-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4.png",
 	icon_size = 32,
@@ -129,7 +129,7 @@ data:extend(
 	{
 	type = "recipe",
 	name = "angels-ore5-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5.png",
 	icon_size = 32,
@@ -147,7 +147,7 @@ data:extend(
 	{
 	type = "recipe",
 	name = "angels-ore6-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6.png",
 	icon_size = 32,
@@ -165,7 +165,7 @@ data:extend(
 	{
 	type = "recipe",
 	name = "clowns-ore1-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore1.png",
 	icon_size = 32,
@@ -182,7 +182,7 @@ data:extend(
 	--[[{
 	type = "recipe",
 	name = "clowns-ore6-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore6-ore.png",
 	icon_size = 32,
@@ -199,7 +199,7 @@ data:extend(
 	{
 	type = "recipe",
 	name = "clowns-ore3-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore3.png",
 	icon_size = 32,
@@ -216,7 +216,7 @@ data:extend(
 	{
 	type = "recipe",
 	name = "clowns-ore4-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore4.png",
 	icon_size = 32,
@@ -233,7 +233,7 @@ data:extend(
 	{
 	type = "recipe",
 	name = "clowns-ore5-mining",
-	category = "shaft-mining",
+	categories = {"shaft-mining"},
 	hidden = false,
 	icon = "__Clowns-Extended-Minerals__/graphics/icons/clowns-ore5.png",
 	icon_size = 32,

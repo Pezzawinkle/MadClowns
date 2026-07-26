@@ -26,7 +26,7 @@ end
     {
       type = "recipe",
       name = "sand-sluicing",
-      category = "sluicing",
+      categories ={"sluicing",},
       enabled = false,
       icon = "__angelsrefininggraphics__/graphics/icons/solid-sand.png",
       icon_size = 32,
@@ -36,12 +36,12 @@ end
       },
       results = {
         {type = "fluid", name = "angels-water-thin-mud", amount = 10},
-        {type = "item", name = "iron-ore", amount = 1, probability = 0.2},
-        {type = "item", name = "copper-ore", amount = 1, probability = 0.1},
-        {type = "item", name = "angels-crystal-dust", amount = 1, probability = 0.1},
-        angelsmods.trigger.ores["gold"] and {type = "item", name = "angels-gold-ore", amount = 1, probability = 0.05} or {type = "item", name = "uranium-ore", amount = 1, probability = 0.001},
-        {type = "item", name = "clowns-osmium-ore", amount = 1, probability = 0.01},
-        angelsmods.trigger.ores["platinum"] and {type = "item", name = "angels-platinum-ore", amount = 1, probability = 0.01} or nil,
+        {type = "item", name = "iron-ore", amount = 1, independent_probability = 0.1},
+        {type = "item", name = "angels-quartz", amount = 1, independent_probability = 0.2}, --was copper
+        {type = "item", name = "angels-crystal-dust", amount = 1, independent_probability = 0.1},
+        angelsmods.trigger.ores["gold"] and {type = "item", name = "angels-gold-ore", amount = 1, independent_probability = 0.05} or {type = "item", name = "uranium-ore", amount = 1, independent_probability = 0.001},
+        {type = "item", name = "clowns-osmium-ore", amount = 1, independent_probability = 0.01},
+        angelsmods.trigger.ores["platinum"] and {type = "item", name = "angels-platinum-ore", amount = 1, independent_probability = 0.01} or nil,
       },
       energy_required = 5,
       subgroup = "angels-water-washing",

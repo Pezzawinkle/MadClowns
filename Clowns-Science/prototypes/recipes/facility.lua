@@ -15,7 +15,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 		{
 			type = "recipe",
 			name = "advanced-logistic-science-pack-facility",
-			category = "facility",
+			categories ={"facility",},
 			enabled = false,
 			energy_required = energy_param,
 			subgroup = "bob-advanced-logistic-science-pack",
@@ -37,7 +37,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 		{
 			type = "recipe",
 			name = "omni-science-pack-facility",
-			category = "facility",
+			categories ={"facility",},
 			enabled = false,
 			energy_required = energy_param,
 			subgroup = "omni-science-pack",
@@ -59,7 +59,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 		{
 			type = "recipe",
 			name = "automation-science-pack-facility",
-			category = "facility",
+			categories ={"facility",},
 			enabled = false,
 			energy_required = energy_param,
 			subgroup = "automation-science-pack",
@@ -76,7 +76,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 		{
 			type = "recipe",
 			name = "logistic-science-pack-facility",
-			category = "facility",
+			categories ={"facility",},
 			enabled = false,
 			energy_required = energy_param,
 			subgroup = "logistic-science-pack",
@@ -92,7 +92,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 		{
 			type = "recipe",
 			name = "chemical-science-pack-facility",
-			category = "facility",
+			categories ={"facility",},
 			enabled = false,
 			energy_required = energy_param*2,
 			subgroup = "chemical-science-pack",
@@ -108,7 +108,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 		{
 			type = "recipe",
 			name = "military-science-pack-facility",
-			category = "facility",
+			categories ={"facility",},
 			enabled = false,
 			energy_required = energy_param,
 			subgroup = "military-science-pack",
@@ -124,7 +124,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 		{
 			type = "recipe",
 			name = "production-science-pack-facility",
-			category = "facility",
+			categories ={"facility",},
 			enabled = false,
 			energy_required = energy_param*2,
 			subgroup = "production-science-pack",
@@ -139,7 +139,7 @@ if mods["angelspetrochem"] then --i may also activate these with pyanodons
 		{
 			type = "recipe",
 			name = "utility-science-pack-facility",
-			category = "facility",
+			categories ={"facility",},
 			enabled = false,
 			energy_required = energy_param*2,
 			subgroup = "utility-science-pack",

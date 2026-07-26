@@ -9,7 +9,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "particle-accelerator-1",
-		category = "particle-accelerator",
+		categories ={"particle-accelerator",},
 		enabled = false,
 		energy_required = energy,
 		subgroup = "particle-accelerator-recipes",
@@ -25,7 +25,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "particle-accelerator-2",
-		category = "particle-accelerator",
+		categories ={"particle-accelerator",},
 		enabled = false,
 		energy_required = energy*2,
 		subgroup = "particle-accelerator-recipes",
@@ -41,7 +41,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "particle-accelerator-3",
-		category = "particle-accelerator",
+		categories ={"particle-accelerator",},
 		enabled = false,
 		energy_required = energy*3,
 		subgroup = "particle-accelerator-recipes",
@@ -57,7 +57,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "particle-accelerator-4",
-		category = "particle-accelerator",
+		categories ={"particle-accelerator",},
 		enabled = false,
 		energy_required = energy*4,
 		subgroup = "particle-accelerator-recipes",

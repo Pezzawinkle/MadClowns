@@ -3,7 +3,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "clowns-resource2-liquification",
-		category = "angels-liquifying",
+		categories = {"angels-liquifying",},
 		subgroup = "angels-petrochem-carbon-oil-feed",
 		enabled = false,
 		energy_required = 2,

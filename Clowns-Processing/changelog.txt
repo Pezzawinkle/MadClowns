@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.01
+Date: 2026-07-26
+  Bugfixes:
+    - Stopped crash with bad tech reference in tungsten (#78)
+  Features:
+    - Updated to 2.1
+    - Sluicing now gives silicon/quartz rather than copper (#76)
+    - Removed unintended magnesium use in tungsten in some cases (#77)
+---------------------------------------------------------------------------------------------------
 Version: 2.0.14
 Date: 2026-05-02
   Bugfixes:

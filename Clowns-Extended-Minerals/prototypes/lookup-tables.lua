@@ -50,7 +50,7 @@ clowns.tables.get_trigger_name = {
   --[[P]]["regolite-rock"] = "regolites",         --pyfusion
   --[[P]]["kimberlite-rock"] = "kimberlite",      --pyfusion diamond mine on volcanic-tube
 }
-local icon_lookup_table_fallback = { icon = "__angelsrefininggraphics__/graphics/icons/void.png" }
+local icon_lookup_table_fallback = { icon = "__angelsrefininggraphics__/graphics/icons/void.png", icon_size= 32 }
 clowns.tables.icon_lookup_table = {
   ["angels-bauxite-ore"] = mods["angelssmelting"] and
       { icon = "__angelssmeltinggraphics__/graphics/icons/ore-bauxite.png", icon_size = 32 } or

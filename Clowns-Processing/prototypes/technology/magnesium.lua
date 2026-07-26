@@ -55,10 +55,10 @@ data:extend(
 				type = "unlock-recipe",
 				recipe = "molten-iron-smelting-6"
 			},
-			{
+			--[[{
 				type = "unlock-recipe",
 				recipe = "molten-steel-smelting-c2"
-			},
+			},]]
 			{
 				type = "unlock-recipe",
 				recipe = "molten-aluminium-smelting-4"
@@ -82,3 +82,9 @@ data:extend(
 	},
 }
 )
+if not(mods["bobplates"]) then
+	table.insert(data.raw.technology["advanced-magnesium-smelting-2"].effects,{
+		type = "unlock-recipe",
+		recipe = "molten-steel-smelting-c2"
+	})
+end

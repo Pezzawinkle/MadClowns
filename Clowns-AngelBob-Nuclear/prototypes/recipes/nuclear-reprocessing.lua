@@ -5,7 +5,7 @@ data:extend(
 		name = "advanced-nuclear-fuel-reprocessing",
 		energy_required = 50,
 		enabled = false,
-		category = "chemistry",
+		categories = {"chemistry",},
 		ingredients =
 		{
 			{type="item", name="depleted-uranium-fuel-cell", amount=5},
@@ -29,7 +29,7 @@ data:extend(
 		name = "advanced-nuclear-fuel-reprocessing-b",
 		energy_required = 50,
 		enabled = false,
-		category = "chemistry",
+		categories = {"chemistry",},
 		ingredients =
 		{
 			{type="item", name="depleted-uranium-fuel-cell", amount=5},
@@ -53,7 +53,7 @@ data:extend(
 		name = "advanced-nuclear-fuel-reprocessing-2",
 		energy_required = 50,
 		enabled = false,
-		category = "chemistry",
+		categories = {"chemistry",},
 		ingredients =
 		{
 			{type="item", name="depleted-uranium-fuel-cell", amount=5},
@@ -76,7 +76,7 @@ data:extend(
 		name = "thorium-nuclear-fuel-reprocessing",
 		energy_required = 50,
 		enabled = false,
-		category = "centrifuging",
+		categories = {"centrifuging",},
 		ingredients = {{type="item", name = "angels-depleted-thorium-fuel-cell", amount = 5}},
 		icons= {{icon = "__Clowns-Nuclear__/graphics/icons/thorium-nuclear-fuel-reprocessing.png", icon_size = 32,}},
 		crafting_machine_tint =
@@ -92,8 +92,8 @@ data:extend(
 			{type="item", name="angels-thorium-232", amount=3},
 			{type="item", name="angels-plutonium-239", amount=1},
 			{type="item", name="angels-solid-aluminium-oxide", amount = 5, ignored_by_productivity = 5},
-			{type="item", name="angels-thorium-232", amount=1, probability=0.05},
-			{type="item", name="angels-plutonium-239", amount=1, probability=0.1},
+			{type="item", name="angels-thorium-232", amount=1, independent_probability=0.05},
+			{type="item", name="angels-plutonium-239", amount=1, independent_probability=0.1},
 		},
 	},
 	{
@@ -101,7 +101,7 @@ data:extend(
 		name = "advanced-thorium-nuclear-fuel-reprocessing",
 		energy_required = 50,
 		enabled = false,
-		category = "chemistry",
+		categories = {"chemistry",},
 		ingredients =
 		{
 			{type="item", name="angels-depleted-thorium-fuel-cell", amount=5},
@@ -124,7 +124,7 @@ data:extend(
 		name = "advanced-thorium-nuclear-fuel-reprocessing-b",
 		energy_required = 50,
 		enabled = false,
-		category = "chemistry",
+		categories = {"chemistry",},
 		ingredients =
 		{
 			{type="item", name="angels-depleted-thorium-fuel-cell", amount=5},

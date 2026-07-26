@@ -132,7 +132,7 @@ if mods["omnimatter_crystal"] then
         name = oreSet.ore .. "-" .. gradeSet .. "-salting",
         localised_name = { "recipe-name.clowns-omnide-salting", { "lookup." .. gradeSet }, oreSet.name },
         localised_description = { "recipe-description.clowns-omnide-salting", { "lookup." .. gradeSet }, oreSet.name },
-        category = "omniplant",
+        categories = {"omniplant",},
         subgroup = base.subgroup .. "-omnide",
         enabled = false,
         ingredients = ing,
@@ -180,7 +180,7 @@ if mods["omnimatter_crystal"] then
           name = ore .. "-pure-salting",
           localised_name = { "recipe-name.pure-omnide-salting", { "lookup." .. ore } },
           localised_description = { "recipe-description.pure-omnide-salting", { "lookup." .. ore } },
-          category = "omniplant",
+          categories = {"omniplant",},
           subgroup = rec.subgroup .. "-omnide",
           enabled = false,
           ingredients = ing,
@@ -238,7 +238,7 @@ if mods["omnimatter_crystal"] then
             name = "clowns-" .. tier .. "-mix" .. j .. "-pure-salting",
             localised_name = { "recipe-name.pure-omnide-salting", { "lookup." .. lookup } },
             localised_description = { "recipe-description.pure-omnide-salting", { "lookup." .. lookup } },
-            category = "omniplant",
+            categories = {"omniplant"},
             subgroup = rec.subgroup .. "-omnide",
             enabled = false,
             ingredients = ing,
@@ -259,10 +259,10 @@ if mods["omnimatter_crystal"] then
         end
         if mods["angelsrefining"] and settings.startup["angels-salt-sorting"].value then
           for i, rec in pairs(data.raw.recipe) do
-            if rec.category == "omniplant" and string.find(rec.name, "salting") then
+            if rec.categories[1] == "omniplant" and string.find(rec.name, "salting") then
               omni.lib.replace_recipe_ingredient(rec.name, "hydromnic-acid",
                 { type = "item", name = "omni-catalyst", amount = 1 })
-              rec.category = "angels-ore-sorting"
+              rec.categories = {"angels-ore-sorting"}
             end
           end
         end
